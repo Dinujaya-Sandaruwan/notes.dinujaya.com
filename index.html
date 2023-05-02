@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="scrollBar.css" />
+		<link rel="stylesheet" href="animation.css" />
+		<script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+		<title>Dinujaya's Notes</title>
+	</head>
+	<body>
+		<nav class="desktopMenu">
+			<div class="navList">
+				<a href="" class="navLink">
+					<div class="navItem">
+						<ion-icon class="listIcon" name="home"></ion-icon>Home
+					</div></a
+				>
+				<a href="" class="navLink">
+					<div class="navItem">
+						<ion-icon name="logo-youtube" class="listIcon"></ion-icon>YT
+						Playlist
+					</div></a
+				>
+				<a href="" class="navLink">
+					<div class="navItem">
+						<ion-icon name="bookmarks" class="listIcon"></ion-icon>BookMarks
+					</div></a
+				>
+				<a href="" class="navLink">
+					<div class="navItem">
+						<ion-icon name="logo-react" class="listIcon"></ion-icon>Boilerplate
+					</div></a
+				>
+			</div>
+			<ion-icon
+				name="menu"
+				class="burgerMenu"
+				onclick="mobileMenuDisplayBlock()"
+			></ion-icon>
+			<a href="https://github.com/Dinujaya-Sandaruwan" target="_blank">
+				<ion-icon name="logo-github"></ion-icon>
+			</a>
+		</nav>
+
+		<nav class="mobileMenu" id="mobileMenu">
+			<div class="mobileMenuItem">
+				<span class="close" onclick="mobileMenuDisplayNone()"
+					><ion-icon name="close" class="closeIcon"></ion-icon
+				></span>
+				<a class="navLink" href="">
+					<div class="navItemMobile odd">Home</div></a
+				>
+				<a class="navLink" href="">
+					<div class="navItemMobile even">YT Playlist</div></a
+				>
+				<a class="navLink" href="">
+					<div class="navItemMobile odd">BookMarks</div></a
+				>
+				<a class="navLink" href="">
+					<div class="navItemMobile even">Boilerplate</div></a
+				>
+			</div>
+		</nav>
+
+		<h1 class="heading">DINUJAYA'S NOTES</h1>
+
+		<!-- cards -->
+
+		<div class="cards bounce-in-bottom">
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My HTML Notes</h2>
+				<p class="cardText">
+					I learned HTML from Chanux Bro and these are my notes from studying.
+					HTML, the foundation of web development, allowed me to create and
+					structure websites with ease.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My CSS Notes</h2>
+				<p class="cardText">
+					CSS, I learned from Kevin Powell, helped me style my HTML pages with
+					great design aesthetics. Using cascading style sheets, I was able to
+					apply consistent styling throughout my web pages.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My SCSS Notes</h2>
+				<p class="cardText">
+					I learned SCSS from Jess Chan, the enhanced version of CSS. Using
+					nesting, variables, and mixins, I was able to write cleaner and more
+					modular styles for my web pages.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My JavaScript Notes</h2>
+				<p class="cardText">
+					JavaScript, a powerful programming language that enables interactivity
+					and dynamic behavior on web pages, I learned from Mosh Hamedani. With
+					JavaScript, I could validate forms, create animations, and more.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My JS OOP Notes</h2>
+				<p class="cardText">
+					Building on my JavaScript skills, I learned Object-Oriented
+					Programming in JavaScript from Mosh Hamedani. This paradigm allowed me
+					to write more scalable and maintainable code.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My PHP Notes</h2>
+				<p class="cardText">
+					PHP, a server-side language that enabled me to create dynamic web
+					pages and interact with databases, I learned from Dineth Siriwardhana.
+					With PHP, I could create web applications that responded to user
+					input.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My SQL Notes</h2>
+				<p class="cardText">
+					With SQL, I also learned from Dineth Siriwardhana, I learned how to
+					manage and query databases. SQL allowed me to store and retrieve
+					information efficiently for my web applications.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My C# Notes</h2>
+				<p class="cardText">
+					C#, a powerful programming language for building desktop and web
+					applications, I learned from Dineth Siriwardhana. With C#, I could
+					create robust and scalable software solutions.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My Python Notes</h2>
+				<p class="cardText">
+					Python, a versatile programming language used in web development, data
+					analysis, and artificial intelligence, I learned from Mosh Hamedani.
+					With Python, I could build web applications, scrape data from
+					websites, and automate tasks.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My Node JS Notes</h2>
+				<p class="cardText">
+					Using Node JS, I learned from Mosh Hamedani, I was able to create
+					server-side applications using JavaScript. Node JS enabled me to build
+					high-performance web applications that could handle a large number of
+					concurrent connections.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My React JS Notes</h2>
+				<p class="cardText">
+					React JS, a popular front-end library for building web interfaces, I
+					learned from Mosh Hamedani. With React JS, I could create reusable
+					components that made my code more modular and maintainable.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My React TS Notes</h2>
+				<p class="cardText">
+					Building on my React JS skills, I learned React TS from Mosh Hamedani,
+					which added type safety to my React code. TypeScript, also learned
+					from Mosh Hamedani, was a superset of JavaScript that provided static
+					type checking and other advanced features.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My GIT Notes</h2>
+				<p class="cardText">
+					GIT, a version control system that allowed me to track changes to my
+					code and collaborate with others, I learned from Mosh Hamedani. GIT
+					enabled me to manage my codebase effectively and work on multiple
+					features simultaneously.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My Electron JS Notes</h2>
+				<p class="cardText">
+					Electron JS, a framework for building cross-platform desktop
+					applications using web technologies, I learned from Ray Gabriel. With
+					Electron JS, I could create desktop applications that worked on
+					Windows, Mac, and Linux
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+			<div class="card">
+				<img src="img/img.webp" alt="" class="cardImg" />
+				<h2 class="cardHeading">My Selenium Notes</h2>
+				<p class="cardText">
+					Selenium, a tool for automating web browsers, I learned from Tim
+					Ruscica. With Selenium, I could write automated tests for my web
+					applications, saving me time and ensuring the quality of my code.
+				</p>
+				<button class="readNote">
+					<ion-icon name="book" class="buttonIcon"></ion-icon>
+					<span class="buttionSpan">Read Now</span>
+				</button>
+			</div>
+		</div>
+
+		<footer>
+			<span class="hart">💖💖🥰 &nbsp; &nbsp;</span> THANKS ALL OF MY TEACHERS
+			FOR TEACHING ME THOSE INCREDIBLE THINGS
+			<span class="hart">&nbsp; &nbsp; 🥰💖💖</span>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

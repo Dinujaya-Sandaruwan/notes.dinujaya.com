@@ -1,0 +1,32 @@
+Skill :- HTML | Teacher :- Chanux Bro
+
+Skill :- CSS | Teacher :- Kevin Powell 
+
+Skill :- SCSS | Teacher :- Jess Chan
+
+Skill :- JavaScript | Teacher :- Mosh Hamedani
+
+Skill :- JavaScript OOP | Teacher :- Mosh Hamedani
+
+Skill :- PHP | Teacher :- Dineth Siriwardhana
+
+Skill :- SQL | Teacher :- Dineth Siriwardhana
+
+Skill :- C# | Teacher :- Dineth Siriwardhana
+
+Skill :- Python | Teacher :- Mosh Hamedani
+
+Skill :- Node JS | Teacher :- Mosh Hamedani
+
+Skill :- React JS | Teacher :- Mosh Hamedani
+
+Skill :- React TS | Teacher :- Mosh Hamedani
+
+Skill :- TypeScript | Teacher :- Mosh Hamedani
+
+Skill :- GIT | Teacher :- Mosh Hamedani
+
+Skill :- Electron JS | Teacher :- Ray Gabriel
+
+Skill :- Selenium | Teacher :- Tim Ruscica
+
