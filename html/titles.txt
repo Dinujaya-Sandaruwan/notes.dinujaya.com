@@ -1,0 +1,34 @@
+01. Understanding the Basics of HTML
+02. Setting Up Your HTML Document
+03. Using Headings in HTML
+04. Formatting Text in HTML
+05. Creating Paragraphs in HTML
+06. Creating Lists in HTML
+07. Creating Links in HTML
+08. Creating Images in HTML
+09. Using Tables in HTML
+10. Creating Forms in HTML
+11. Creating Dropdown Menus in HTML
+12. Creating Radio Buttons and Checkboxes in HTML
+13. Adding Audio to Your HTML Page
+14. Adding Video to Your HTML Page
+15. Using the Canvas Element in HTML
+16. Embedding HTML Code in Your Web Page
+17. Working with HTML Comments
+18. Creating HTML Templates
+19. Understanding HTML Attributes
+20. Understanding HTML Tags
+21. HTML Best Practices: Writing Clean and Accessible Code
+22. Debugging Your HTML Code
+23. Creating Hyperlinks to Jump to Specific Sections of Your Web Page
+24. Adding Anchors to Your Web Page
+25. Creating a Responsive HTML Design
+26. Creating HTML Forms That Submit Data to a Server
+27. Using the HTML5 DOCTYPE Declaration
+28. Adding Metadata to Your Web Page
+29. Creating HTML Frames
+30. Understanding HTML Entities
+31. Creating Image Maps in HTML
+32. Creating Special Characters in HTML
+33. Using the HTML Script Tag to Load JavaScript Files
+34. Adding Favicon to Your Web Page

@@ -1,0 +1,35 @@
+01. What is CSS?
+02. CSS History, Present & Future
+03. Adding CSS to our Project with Inline Styles
+04. Understanding the <style> Tag & Creating a .css File
+05. Applying Additional Styles & Importing Google Fonts
+06. CSS Selectors
+07. Understanding the "Cascading" Style & Specificity​
+08. Understanding Inheritance
+09. Adding Combinators
+10. Introducing the CSS Box Model
+11. Understanding Margin Collapsing and Removing Default Margins
+12. Working with Shorthand Properties
+13. Diving Into the Height & Width Properties
+14. Understanding Box Sizing
+15. Understanding the Display Property
+16. Styling Anchor Tags
+17. Pseudo Classes & Pseudo Elements
+18. Working with "font-weight" & "border"
+19. Adding a Background Image 
+20. Using Multiple CSS Classes & Combined Selectors
+21. Classes or IDs?
+22. (Not) using !important
+23. Selecting the Opposite with :not()
+24. CSS & Browser Support
+25. Understanding the Z-Index
+26. CSS Sizes and Units
+27. Where Units Matter
+28. CSS for style forms  (Don't forget to add inside <article> tag)
+29. Styling fonts  (Don't forget to add inside <article> tag)
+30. Why our Project Should Become Responsive  (Don't forget to add inside <article> tag)
+31. Understanding Hardware Pixels vs. Software Pixels  (Don't forget to add inside <article> tag)
+32. Comparing the Viewport Metatag (HTML) and Media Queries (CSS)  (Don't forget to add inside <article> tag)
+33. Understanding the "viewport" Metatag  (Don't forget to add inside <article> tag)
+34. Designing Websites "Mobile First"  (Don't forget to add inside <article> tag)
+ 
