@@ -2,62 +2,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
 
 body {
-	color: #fff;
+  color: #fff;
 }
 
 .content {
-	width: 80%;
-	margin: auto;
-	margin-bottom: 35px;
-	text-align: justify;
-	margin-top: 30px;
-	font-weight: 300;
-	font-family: "Source Code Pro", monospace;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 35px;
+  text-align: justify;
+  margin-top: 30px;
+  font-weight: 300;
+  font-family: "Source Code Pro", monospace;
 }
 
 a {
-	color: yellow;
-	text-decoration: underline;
-	word-wrap: break-word;
+  color: yellow;
+  text-decoration: underline;
+  word-wrap: break-word;
 }
 
 p {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 h2 {
-	color: rgb(0, 247, 255);
-	margin-bottom: 20px;
+  color: rgb(0, 247, 255);
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 700px) {
-	h2 {
-		font-size: 16px;
-	}
-	p {
-		font-size: 14px;
-	}
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
 }
 
 pre {
-	background-color: black !important;
+  background-color: black !important;
 }
 
 article {
-	margin: 40px 0px 60px 0px;
+  margin: 40px 0px 60px 0px;
 }
 
 li {
-	margin-left: 40px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 700px) {
-	li {
-		margin-left: 30px;
-	}
+  li {
+    margin-left: 30px;
+  }
 }
 
 span {
-	color: rgb(0, 255, 0);
+  color: rgb(0, 255, 0);
+}
+
+table {
+  width: 85%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* outline: 1px solid red; */
+  border: 3px solid #fff;
+  padding: 10px;
 }

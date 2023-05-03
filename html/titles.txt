@@ -26,9 +26,8 @@
 26. Creating HTML Forms That Submit Data to a Server
 27. Using the HTML5 DOCTYPE Declaration
 28. Adding Metadata to Your Web Page
-29. Creating HTML Frames
-30. Understanding HTML Entities
-31. Creating Image Maps in HTML
-32. Creating Special Characters in HTML
-33. Using the HTML Script Tag to Load JavaScript Files
-34. Adding Favicon to Your Web Page
+29. Understanding HTML Entities
+30. Creating Image Maps in HTML
+31. Creating Special Characters in HTML
+32. Using the HTML Script Tag to Load JavaScript Files
+33. Adding Favicon to Your Web Page
