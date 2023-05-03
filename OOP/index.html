@@ -71,7 +71,2239 @@
 
     <!-- Content of this page -->
 
-    <div class="content"></div>
+    <div class="content">
+      <article>
+        <h2>01. What is OOP?</h2>
+        <p
+          >Object-oriented programming (OOP) is a programming paradigm that is
+          based on the concept of objects. An object is a data structure that
+          has properties and methods associated with it. Properties represent
+          the state of the object, while methods represent the behavior of the
+          object. OOP allows developers to organize code into reusable and
+          modular structures.</p
+        >
+        <p
+          >In JavaScript, objects can be created using the
+          <span>Object()</span> constructor or using object literals. Here is an
+          example of an object literal:</p
+        >
+        <pre class="language-javascript"><code>
+          const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            fullName: function() {
+              return this.firstName + " " + this.lastName;
+            }
+          };
+          console.log(person.fullName()); // "John Doe"
+        </code></pre>
+        <p
+          >In this example, we create an object called <span>person</span> with
+          four properties: <span>firstName</span>, <span>lastName</span>,
+          <span>age</span>, and <span>fullName</span>. The
+          <span>fullName</span> property is a function that returns the full
+          name of the person by concatenating the first and last name
+          properties.</p
+        >
+      </article>
+      <article>
+        <h2>02. Four Pillars of OOP</h2>
+        <p
+          >There are four main concepts, known as the four pillars of OOP, that
+          guide developers in designing and implementing object-oriented
+          software:</p
+        >
+        <ol>
+          <li
+            ><strong>Encapsulation:</strong> The process of grouping data and
+            methods that act on that data within a single unit, called a class.
+            This concept allows us to control access to data and prevent
+            unintended changes.</li
+          >
+          <li
+            ><strong>Inheritance:</strong> The process of creating new classes
+            by inheriting properties and methods from parent classes.
+            Inheritance allows us to reuse code and create a hierarchy of
+            classes.</li
+          >
+          <li
+            ><strong>Polymorphism:</strong> The ability of objects to take on
+            multiple forms. Polymorphism allows us to write more generic and
+            flexible code, making it easier to extend and maintain.</li
+          >
+          <li
+            ><strong>Abstraction:</strong> The process of identifying the
+            essential features of an object and ignoring the rest. Abstraction
+            allows us to simplify complex systems and focus on the most
+            important aspects.</li
+          >
+        </ol>
+        <p
+          >By understanding and applying these four concepts, developers can
+          create more organized, maintainable, and extensible code.</p
+        >
+      </article>
+      <article>
+        <h2>03. Setting Up the Development Environment</h2>
+        <p
+          >Before diving into object-oriented programming with JavaScript, it's
+          important to set up a development environment. Here are the steps to
+          follow:</p
+        >
+        <ol>
+          <li
+            ><strong>Install a text editor:</strong> Choose a text editor to
+            write your code. Some popular options include Visual Studio Code,
+            Sublime Text, and Atom.</li
+          >
+          <li
+            ><strong>Install Node.js:</strong> Node.js is a JavaScript runtime
+            that allows you to run JavaScript outside of a web browser. It
+            includes a package manager called npm, which is used to install
+            libraries and frameworks. You can download Node.js from the official
+            website: <a href="https://nodejs.org/">https://nodejs.org/</a>.</li
+          >
+          <li
+            ><strong>Create a new project:</strong> Create a new directory for
+            your project and initialize it with npm by running the following
+            command in your terminal: <span>npm init</span>. This will create a
+            <span>package.json</span> file in your directory that will track
+            your project's dependencies and other metadata.</li
+          >
+          <li
+            ><strong>Install dependencies:</strong> Install any libraries or
+            frameworks that you want to use in your project using npm. For
+            example, to install the popular testing framework Jest, run the
+            command <span>npm install jest --save-dev</span>. The
+            <span>--save-dev</span> flag saves the package as a development
+            dependency.</li
+          >
+          <li
+            ><strong>Write some code:</strong> Open your text editor and start
+            writing some code! You can run your JavaScript code using Node.js in
+            the terminal by running the command
+            <span>node path/to/your/file.js</span>.</li
+          >
+        </ol>
+        <p
+          >By following these steps, you'll have a development environment set
+          up and ready to start building object-oriented JavaScript
+          applications.</p
+        >
+      </article>
+      <article>
+        <h2>04. Object Literals</h2>
+        <p
+          >Object literals are a convenient way to create and initialize objects
+          in JavaScript. Here's an example:</p
+        >
+        <pre class="language-javascript"><code>const person = {
+        name: 'John Doe',
+        age: 30,
+        address: {
+          street: '123 Main St',
+          city: 'Anytown',
+          state: 'CA',
+          zip: '12345'
+        },
+        sayHello() {
+          console.log('Hello, my name is ' + this.name);
+        }
+      };</code></pre>
+        <p
+          >In this example, we've created an object called
+          <span>person</span> with several properties and a method. The
+          properties are defined using key-value pairs, where the key is the
+          property name and the value is the property value. We've also defined
+          a nested object called <span>address</span> and a method called
+          <span>sayHello</span>.</p
+        >
+        <p
+          >We can access the properties and methods of the object using dot
+          notation, like this:</p
+        >
+        <pre
+          class="language-javascript"
+        ><code>console.log(person.name); // Output: John Doe
+      person.sayHello(); // Output: Hello, my name is John Doe</code></pre>
+        <p
+          >Object literals are a powerful tool for creating and working with
+          objects in JavaScript.</p
+        >
+      </article>
+      <article>
+        <h2>05. Factories</h2>
+        <p
+          >In object-oriented programming, a factory is a function or method
+          that creates and returns objects of a particular type. Here's an
+          example of a factory function in JavaScript:</p
+        >
+        <pre
+          class="language-javascript"
+        ><code>function createPerson(name, age) {
+        return {
+          name: name,
+          age: age,
+          sayHello() {
+            console.log('Hello, my name is ' + this.name);
+          }
+        };
+      }</code></pre>
+        <p
+          >In this example, we've defined a factory function called
+          <span>createPerson</span> that takes two arguments:
+          <span>name</span> and <span>age</span>. The function creates and
+          returns an object with properties for name and age, as well as a
+          <span>sayHello</span> method.</p
+        >
+        <p
+          >We can use the factory function to create new person objects like
+          this:</p
+        >
+        <pre
+          class="language-javascript"
+        ><code>const person1 = createPerson('John Doe', 30);
+      const person2 = createPerson('Jane Smith', 25);
+      person1.sayHello(); // Output: Hello, my name is John Doe
+      person2.sayHello(); // Output: Hello, my name is Jane Smith</code></pre>
+
+        <p
+          >Factories provide a way to encapsulate object creation and provide a
+          simpler interface for creating new objects. They can be particularly
+          useful when we need to create multiple objects of the same type.</p
+        >
+      </article>
+      <article>
+        <h2>06. Constructors</h2>
+        <p
+          >In JavaScript, constructors are special functions that are used to
+          create new objects with the same properties and methods. Constructors
+          are invoked using the <span>new</span> keyword, and they are
+          conventionally named with a capitalized first letter.</p
+        >
+        <p>Here's an example of a constructor function in JavaScript:</p>
+        <pre class="language-javascript"><code>function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      this.sayHello = function() {
+      console.log('Hello, my name is ' + this.name);
+      }
+      }</code></pre>
+
+        <p
+          >In this example, we've defined a constructor function called
+          <span>Person</span> that takes two arguments: <span>name</span> and
+          <span>age</span>. The function creates and initializes a new object
+          with properties for name and age, as well as a
+          <span>sayHello</span> method.</p
+        >
+        <p
+          >We can use the constructor function to create new person objects like
+          this:</p
+        >
+        <pre
+          class="language-javascript"
+        ><code>const person1 = new Person('John Doe', 30);
+      const person2 = new Person('Jane Smith', 25);
+      person1.sayHello(); // Output: Hello, my name is John Doe
+      person2.sayHello(); // Output: Hello, my name is Jane Smith</code></pre>
+
+        <p
+          >Constructors provide a way to create objects with the same properties
+          and methods. They are particularly useful when we need to create
+          multiple objects of the same type.</p
+        >
+      </article>
+      <article>
+        <h2>07. Constructor Property</h2>
+        <p
+          >Every object in JavaScript has a <span>constructor</span> property
+          that refers to the constructor function that was used to create the
+          object. This property can be accessed and modified like any other
+          object property.</p
+        >
+        <p>Here's an example:</p>
+        <pre class="language-javascript"><code>function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      const person = new Person('John Doe', 30);
+      
+      console.log(person.constructor); // Output: ƒ Person(name, age) { this.name = name; this.age = age; }</code></pre>
+
+        <p
+          >In this example, we've defined a constructor function called
+          <span>Person</span> that creates and initializes a new object with
+          properties for name and age. We then create a new person object using
+          the constructor function, and log the value of the
+          <span>constructor</span> property to the console.</p
+        >
+        <p
+          >The <span>constructor</span> property can be useful for checking the
+          type of an object. For example, we can use it to determine if an
+          object was created using a particular constructor function:</p
+        >
+        <pre class="language-javascript"><code>function Dog(name) {
+        this.name = name;
+      }
+      const dog = new Dog('Fido');
+      
+      console.log(dog.constructor === Dog); // Output: true</code></pre>
+
+        <p
+          >In this example, we've defined a constructor function called
+          <span>Dog</span> that creates and initializes a new object with a
+          property for name. We then create a new dog object using the
+          constructor function, and check if the value of the
+          <span>constructor</span> property is equal to the
+          <span>Dog</span> function.</p
+        >
+      </article>
+      <article>
+        <h2>08. Functions are Objects</h2>
+        <p
+          >In JavaScript, functions are first-class objects. This means that
+          functions can be treated like any other object, such as being assigned
+          to variables, passed as arguments to other functions, or returned from
+          functions.</p
+        >
+        <p>Here's an example:</p>
+        <pre class="language-javascript"><code>function greet(name) {
+        console.log('Hello, ' + name + '!');
+      }
+      greet('John'); // Output: Hello, John!
+      
+      const myGreet = greet;
+      
+      myGreet('Jane'); // Output: Hello, Jane!</code></pre>
+
+        <p
+          >In this example, we've defined a function called
+          <span>greet</span> that logs a greeting to the console. We then assign
+          the function to a new variable called <span>myGreet</span>, and call
+          it with a different name argument.</p
+        >
+        <p
+          >Functions can also have properties, just like any other object.
+          Here's an example:</p
+        >
+        <pre class="language-javascript"><code>function greet(name) {
+        console.log('Hello, ' + name + '!');
+      }
+      greet.language = 'English';
+      
+      console.log(greet.language); // Output: English</code></pre>
+
+        <p
+          >In this example, we've defined a function called
+          <span>greet</span> that logs a greeting to the console. We then set a
+          property called <span>language</span> on the function, and log the
+          value of the property to the console.</p
+        >
+        <p
+          >Functions are powerful objects in JavaScript, and their ability to be
+          treated as data allows for a wide range of programming techniques.</p
+        >
+      </article>
+      <article>
+        <h2>09. Value vs Reference Types</h2>
+        <p
+          >When working with variables in JavaScript, it's important to
+          understand the difference between value types and reference types.
+          Value types store the actual value in the variable, while reference
+          types store a reference to an object in memory.</p
+        >
+        <p>Here's an example:</p>
+        <pre class="language-javascript"><code>// Value type
+      let x = 10;
+      let y = x;
+      x = 20;
+      console.log(x); // Output: 20
+      console.log(y); // Output: 10
+      
+      // Reference type
+      let a = { value: 10 };
+      let b = a;
+      a.value = 20;
+      
+      console.log(a.value); // Output: 20
+      console.log(b.value); // Output: 20</code></pre>
+
+        <p
+          >In this example, we have two variables <span>x</span> and
+          <span>y</span> that both contain a value type (a number). When we
+          assign the value of <span>x</span> to <span>y</span> and change the
+          value of <span>x</span>, the value of <span>y</span> remains
+          unchanged. This is because the value of <span>x</span> is copied into
+          <span>y</span> and the two variables are independent of each other.</p
+        >
+        <p
+          >On the other hand, we have two variables <span>a</span> and
+          <span>b</span> that both contain a reference type (an object). When we
+          assign the reference of <span>a</span> to <span>b</span> and change a
+          property of <span>a</span>, the property of <span>b</span> is also
+          changed. This is because <span>a</span> and <span>b</span> both
+          reference the same object in memory.</p
+        >
+        <p
+          >Understanding value types and reference types is important when
+          working with complex data structures in JavaScript, such as arrays and
+          objects.</p
+        >
+      </article>
+      <article>
+        <h2>10. Adding or Removing Properties</h2>
+        <p
+          >In JavaScript, you can add or remove properties to objects at any
+          time, even after they have been created. This can be useful when you
+          need to dynamically update an object based on user input or other
+          variables.</p
+        >
+        <p
+          >To add a new property to an object, you can simply assign a value to
+          a new property name:</p
+        >
+        <pre class="language-javascript"><code>let person = {
+        name: 'John',
+        age: 30
+      };
+      person.email = 'john@example.com';
+      
+      console.log(person); // Output: { name: 'John', age: 30, email: 'john@example.com' }</code></pre>
+
+        <p
+          >In this example, we add a new property <span>email</span> to the
+          <span>person</span> object by assigning a value to the property name.
+          The new property is added to the object and its value is set to
+          <span>'john@example.com'</span>.</p
+        >
+        <p
+          >To remove a property from an object, you can use the
+          <span>delete</span> keyword:</p
+        >
+        <pre class="language-javascript"><code>let person = {
+        name: 'John',
+        age: 30,
+        email: 'john@example.com'
+      };
+      delete person.email;
+      
+      console.log(person); // Output: { name: 'John', age: 30 }</code></pre>
+
+        <p
+          >In this example, we remove the <span>email</span> property from the
+          <span>person</span> object using the <span>delete</span> keyword.
+          After the deletion, the <span>person</span> object only contains the
+          <span>name</span> and <span>age</span> properties.</p
+        >
+        <p
+          >It's important to note that deleting a property from an object can
+          have performance implications, especially if the object has many
+          properties. In general, it's best to avoid using the
+          <span>delete</span> keyword unless absolutely necessary.</p
+        >
+      </article>
+      <article>
+        <h2>11. Enumerating Properties</h2>
+        <p
+          >In JavaScript, you can enumerate over the properties of an object
+          using a <span>for...in</span> loop. This can be useful when you need
+          to iterate over all the properties of an object or when you need to
+          check if a specific property exists in an object.</p
+        >
+        <p>Here's an example:</p>
+        <pre class="language-javascript"><code>let person = {
+        name: 'John',
+        age: 30,
+        email: 'john@example.com'
+      };
+      for (let prop in person) {
+      console.log(prop + ': ' + person[prop]);
+      }</code></pre>
+
+        <p
+          >In this example, we use a <span>for...in</span> loop to iterate over
+          all the properties of the <span>person</span> object. For each
+          property, we log the property name and its value to the console.</p
+        >
+        <p>The output of the above code would be:</p>
+        <pre class="language-javascript"><code>name: John
+      age: 30
+      email: john@example.com</code></pre>
+        <p
+          >It's important to note that the order in which properties are
+          enumerated in a <span>for...in</span> loop is not guaranteed, and may
+          vary between JavaScript engines.</p
+        >
+        <p
+          >If you need to iterate over the properties of an object in a specific
+          order, you should use an array of property names instead:</p
+        >
+        <pre class="language-javascript"><code>let person = {
+        name: 'John',
+        age: 30,
+        email: 'john@example.com'
+      };
+      let props = ['name', 'age', 'email'];
+      
+      for (let i = 0; i < props.length; i++) {
+      let prop = props[i];
+      console.log(prop + ': ' + person[prop]);
+      }</code></pre>
+
+        <p
+          >In this example, we use an array of property names to iterate over
+          the properties of the <span>person</span> object in a specific
+          order.</p
+        >
+      </article>
+      <article>
+        <h2>12. Abstraction</h2>
+        <p
+          >Abstraction is a fundamental concept in object-oriented programming.
+          It refers to the practice of hiding implementation details and
+          exposing only the necessary information to the user. In other words,
+          it allows us to focus on what an object does rather than how it does
+          it.</p
+        >
+        <p
+          >In JavaScript, we can achieve abstraction using constructor functions
+          and prototypes. Let's take a look at an example:</p
+        >
+        <pre class="language-javascript"><code>function Circle(radius) {
+        this.radius = radius;
+      this.calculateArea = function() {
+      return Math.PI * Math.pow(this.radius, 2);
+      };
+      }</code></pre>
+
+        <p
+          >In this example, we have a <span>Circle</span> constructor function
+          that takes a <span>radius</span> parameter and assigns it to the
+          <span>radius</span> property of the created object. We also have a
+          <span>calculateArea</span> method that calculates the area of the
+          circle.</p
+        >
+        <p
+          >The implementation details of the <span>calculateArea</span> method
+          are hidden from the user of the <span>Circle</span> object. The user
+          only needs to know that the <span>calculateArea</span> method
+          calculates the area of the circle, and does not need to know the
+          details of how the calculation is performed.</p
+        >
+        <p
+          >Abstraction helps us create objects that are easier to understand,
+          maintain, and extend. By hiding implementation details, we can reduce
+          the complexity of our code and make it more modular.</p
+        >
+      </article>
+      <article>
+        <h2>13. Private Properties and Methods</h2>
+        <p
+          >JavaScript does not provide a native way to declare private
+          properties and methods in an object. However, we can use a technique
+          called <em>closure</em> to achieve privacy.</p
+        >
+        <p>Let's take a look at an example:</p>
+        <pre class="language-javascript"><code>function Circle(radius) {
+        this.radius = radius;
+      let defaultLocation = { x: 0, y: 0 };
+      let computeOptimumLocation = function(factor) {
+      // ...
+      };
+      
+      this.draw = function() {
+      computeOptimumLocation(0.1);
+      console.log('draw');
+      };
+      }</code></pre>
+
+        <p
+          >In this example, we have a <span>Circle</span> constructor function
+          that takes a <span>radius</span> parameter and assigns it to the
+          <span>radius</span> property of the created object. We also have two
+          variables: <span>defaultLocation</span> and
+          <span>computeOptimumLocation</span>, which are declared using the
+          <code>let</code> keyword. These variables are not accessible from
+          outside the <span>Circle</span> function.</p
+        >
+        <p
+          >The <span>draw</span> method is a public method that is accessible
+          from outside the <span>Circle</span> function. It uses the
+          <span>computeOptimumLocation</span> method, which is a private method
+          that is not accessible from outside the <span>Circle</span> function.
+          This way, we can hide implementation details and provide a clean and
+          simple interface to the user of the <span>Circle</span> object.</p
+        >
+        <p
+          >Private properties and methods are important for creating robust and
+          secure objects. By hiding implementation details, we can prevent
+          unwanted modification and reduce the risk of errors in our code.</p
+        >
+      </article>
+      <article>
+        <h2>14. Getters and Setters</h2>
+        <p
+          >Getters and setters are functions that allow us to get or set the
+          value of an object's properties. They are useful for controlling
+          access to object properties and adding validation logic to the
+          property values.</p
+        >
+        <p>Let's take a look at an example:</p>
+        <pre class="language-javascript"><code>const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+        set fullName(value) {
+          const parts = value.split(' ');
+          this.firstName = parts[0];
+          this.lastName = parts[1];
+        }
+      };
+      console.log(person.fullName); // "John Doe"
+      
+      person.fullName = 'Jane Smith';
+      console.log(person.firstName); // "Jane"
+      console.log(person.lastName); // "Smith"</code></pre>
+
+        <p
+          >In this example, we define a <span>person</span> object with two
+          properties: <span>firstName</span> and <span>lastName</span>. We also
+          define a <span>fullName</span> property, which is a getter and a
+          setter function. The getter function returns the concatenated value of
+          the <span>firstName</span> and <span>lastName</span> properties, while
+          the setter function sets the value of the <span>firstName</span> and
+          <span>lastName</span> properties based on the value passed to it.</p
+        >
+        <p
+          >When we access the <span>fullName</span> property, the getter
+          function is called and returns the full name of the person. When we
+          set the <span>fullName</span> property, the setter function is called
+          and updates the <span>firstName</span> and
+          <span>lastName</span> properties accordingly.</p
+        >
+        <p
+          >Getters and setters are useful when we need to add additional logic
+          to the getting or setting of a property. They are also useful when we
+          want to control the access to a property or when we need to validate
+          the value of a property before setting it.</p
+        >
+      </article>
+      <article>
+        <h2>15. Inheritance</h2>
+        <p
+          >Inheritance is a mechanism in object-oriented programming that allows
+          one object to inherit properties and methods from another object. The
+          object that inherits properties and methods is called the
+          <em>subclass</em>, and the object that provides the properties and
+          methods is called the <em>superclass</em>.</p
+        >
+        <p>Let's take a look at an example:</p>
+        <pre class="language-javascript"><code>class Shape {
+        constructor(color) {
+          this.color = color;
+        }
+      draw() {
+      console.log('Drawing a shape');
+      }
+      }
+      
+      class Circle extends Shape {
+      constructor(color, radius) {
+      super(color);
+      this.radius = radius;
+      }
+      
+      draw() {
+      console.log(Drawing a ${this.color} circle with a radius of ${this.radius});
+      }
+      }
+      
+      const circle = new Circle('red', 10);
+      circle.draw(); // "Drawing a red circle with a radius of 10"</code></pre>
+
+        <p
+          >In this example, we define a <span>Shape</span> class with a
+          constructor that takes a <span>color</span> parameter and a
+          <span>draw</span> method. We then define a <span>Circle</span> class
+          that extends the <span>Shape</span> class and adds a
+          <span>radius</span> parameter to its constructor and overrides the
+          <span>draw</span> method to draw a circle with the given color and
+          radius.</p
+        >
+        <p
+          >When we create a new <span>Circle</span> object, we pass in a
+          <span>color</span> and <span>radius</span> parameter to its
+          constructor. We then call the <span>draw</span> method on the
+          <span>circle</span> object, which calls the overridden
+          <span>draw</span> method on the <span>Circle</span> class and prints
+          out the message "Drawing a red circle with a radius of 10".</p
+        >
+        <p
+          >Inheritance allows us to reuse code from existing classes and to
+          create new classes that are based on existing classes but with
+          additional functionality or customization.</p
+        >
+      </article>
+      <article>
+        <h2>16. Prototypes and Prototypical Inheritance</h2>
+        <p
+          >In JavaScript, every object has a prototype, which is an object that
+          it inherits properties and methods from. When we try to access a
+          property or method on an object, JavaScript first checks to see if
+          that property or method exists on the object itself. If it doesn't,
+          JavaScript looks for the property or method on the object's prototype,
+          and so on up the prototype chain.</p
+        >
+        <p>Let's take a look at an example:</p>
+        <pre class="language-javascript"><code>function Animal(name) {
+        this.name = name;
+      }
+      Animal.prototype.walk = function() {
+      console.log(${this.name} is walking);
+      };
+      
+      function Dog(name) {
+      Animal.call(this, name);
+      }
+      
+      Dog.prototype = Object.create(Animal.prototype);
+      Dog.prototype.constructor = Dog;
+      
+      Dog.prototype.bark = function() {
+      console.log(${this.name} is barking);
+      };
+      
+      const dog = new Dog('Max');
+      dog.walk(); // "Max is walking"
+      dog.bark(); // "Max is barking"</code></pre>
+
+        <p
+          >In this example, we define an <span>Animal</span> constructor
+          function that takes a <span>name</span> parameter and a
+          <span>walk</span> method on its prototype. We then define a
+          <span>Dog</span> constructor function that extends the
+          <span>Animal</span> constructor function and adds a
+          <span>bark</span> method to its prototype.</p
+        >
+        <p
+          >To set up the prototypical inheritance, we use the
+          <span>Object.create</span> method to create a new object that inherits
+          from the <span>Animal.prototype</span> object, and then set the
+          <span>Dog.prototype</span> object to this new object. We also set the
+          <span>Dog.prototype.constructor</span> property to the
+          <span>Dog</span> constructor function, which is necessary because the
+          <span>Object.create</span> method sets the constructor property to the
+          parent constructor function.</p
+        >
+        <p
+          >When we create a new <span>Dog</span> object, we pass in a
+          <span>name</span> parameter to its constructor. We can then call the
+          <span>walk</span> and <span>bark</span> methods on the
+          <span>dog</span> object, which will call the
+          <span>Animal.prototype.walk</span> and
+          <span>Dog.prototype.bark</span> methods, respectively, and print out
+          the messages "Max is walking" and "Max is barking".</p
+        >
+        <p
+          >Prototypical inheritance allows us to create new objects that inherit
+          properties and methods from existing objects, and to customize or add
+          functionality to those objects by modifying their own properties and
+          methods or by adding new properties and methods to their own
+          prototypes.</p
+        >
+      </article>
+      <article>
+        <h2>17. Multi-level Inheritance</h2>
+        <p
+          >In JavaScript, we can create multi-level inheritance by chaining
+          constructors and prototypes.</p
+        >
+        <p>Let's create an example to illustrate multi-level inheritance:</p>
+        <pre class="language-javascript"><code>function Shape() {}
+      Shape.prototype.duplicate = function() {
+      console.log('duplicate');
+      }
+      
+      function Circle(radius) {
+      this.radius = radius;
+      }
+      
+      Circle.prototype = Object.create(Shape.prototype);
+      
+      Circle.prototype.draw = function() {
+      console.log('draw');
+      }
+      
+      function Square(size) {
+      this.size = size;
+      }
+      
+      Square.prototype = Object.create(Shape.prototype);
+      
+      Square.prototype.duplicate = function() {
+      console.log('duplicate square');
+      }
+      
+      const shapes = [
+      new Circle(1),
+      new Square(10)
+      ];
+      
+      for (let shape of shapes)
+      shape.duplicate(); // duplicate, duplicate square
+      </code></pre>
+
+        <p
+          >In the example above, we have created a `Shape` constructor and added
+          a `duplicate` method to its prototype. We have also created a `Circle`
+          constructor and a `Square` constructor. We have used `Object.create()`
+          to set up the prototype chain so that the `Circle` and `Square`
+          objects inherit from the `Shape` object. We have added a `draw` method
+          to the `Circle` prototype and overridden the `duplicate` method in the
+          `Square` prototype.</p
+        >
+        <p
+          >We have then created an array of shapes that includes a `Circle`
+          object and a `Square` object. We have looped through the array and
+          called the `duplicate` method on each shape. As expected, the
+          `duplicate` method of the `Circle` object logs "duplicate" and the
+          `duplicate` method of the `Square` object logs "duplicate square".
+          This is an example of multi-level inheritance in JavaScript.</p
+        >
+      </article>
+      <article>
+        <h2>18. Property Descriptors</h2>
+        <p
+          >Property descriptors are used to define the behavior of object
+          properties, including whether a property is read-only, enumerable,
+          configurable, etc. We can use the `Object.defineProperty()` method to
+          add or modify properties of an object.</p
+        >
+        <p>Here is an example:</p>
+        <pre class="language-javascript"><code>const person = { name: 'John' };
+      Object.defineProperty(person, 'name', {
+      writable: false,
+      enumerable: false,
+      configurable: false
+      });
+      
+      person.name = 'Jane'; // Throws an error in strict mode
+      
+      console.log(Object.keys(person)); // []
+      </code></pre>
+
+        <p
+          >In the example above, we have defined the `name` property of the
+          `person` object using `Object.defineProperty()`. We have set
+          `writable`, `enumerable`, and `configurable` to `false`, which means
+          the property is read-only, not enumerable, and cannot be deleted or
+          modified using `delete` or `Object.defineProperty()`. We have then
+          attempted to modify the `name` property, which throws an error in
+          strict mode. Finally, we have logged the keys of the `person` object
+          using `Object.keys()`, which returns an empty array because the `name`
+          property is not enumerable.</p
+        >
+      </article>
+      <article>
+        <h2>19. Constructor Prototypes</h2>
+        <p
+          >Constructor prototypes are used to share properties and methods
+          between objects created with the same constructor. When we create an
+          object using a constructor, the object's prototype is set to the
+          constructor's `prototype` property. We can add properties and methods
+          to the constructor's `prototype` property, and these properties and
+          methods will be shared between all objects created with the
+          constructor.</p
+        >
+        <p>Here is an example:</p>
+        <pre class="language-javascript"><code>function Person(name) {
+        this.name = name;
+      }
+      Person.prototype.greet = function() {
+      console.log('Hello, my name is ' + this.name);
+      };
+      
+      const john = new Person('John');
+      const jane = new Person('Jane');
+      
+      john.greet(); // Hello, my name is John
+      jane.greet(); // Hello, my name is Jane
+      </code></pre>
+
+        <p
+          >In the example above, we have defined a `Person` constructor function
+          that takes a `name` parameter and sets the `name` property of the
+          object being created. We have then added a `greet()` method to the
+          `Person.prototype` object, which logs a greeting message including the
+          `name` property. We have then created two `Person` objects, `john` and
+          `jane`, and called the `greet()` method on each object, which logs a
+          greeting message including the object's `name` property.</p
+        >
+      </article>
+
+      <article>
+        <h2>20. Prototype vs. Instance Members</h2>
+        <p
+          >In JavaScript, we can define properties and methods on an object's
+          prototype, or directly on the object itself. Properties and methods
+          defined on the object's prototype are shared between all objects
+          created with the same constructor, while properties and methods
+          defined directly on the object itself are unique to that object.</p
+        >
+        <p>Here is an example:</p>
+        <pre class="language-javascript"><code>function Person(name) {
+  // Instance property
+  this.name = name;
+}
+// Prototype property
+Person.prototype.sayHello = function() {
+console.log('Hello, my name is ' + this.name);
+};
+
+const john = new Person('John');
+const jane = new Person('Jane');
+
+john.sayHello(); // Hello, my name is John
+jane.sayHello(); // Hello, my name is Jane
+
+// Set instance property
+john.age = 30;
+
+// Set prototype property
+Person.prototype.sayAge = function() {
+console.log(this.name + ' is ' + this.age + ' years old.');
+};
+
+john.sayAge(); // John is 30 years old.
+jane.sayAge(); // Jane is undefined years old.
+</code></pre>
+
+        <p
+          >In the example above, we have defined a `Person` constructor function
+          that takes a `name` parameter and sets the `name` property of the
+          object being created. We have then added a `sayHello()` method to the
+          `Person.prototype` object, which logs a greeting message including the
+          `name` property. We have then created two `Person` objects, `john` and
+          `jane`, and called the `sayHello()` method on each object, which logs
+          a greeting message including the object's `name` property.
+        </p>
+        <p
+          >After that, we have set an instance property `age` on the `john`
+          object, which is unique to that object. We have also added a
+          `sayAge()` method to the `Person.prototype` object, which logs a
+          message including the `name` and `age` properties of the object. When
+          we call the `sayAge()` method on the `john` object, we get the
+          expected result, but when we call it on the `jane` object, we get
+          `undefined` for the `age` property because it was not set on that
+          object.</p
+        >
+      </article>
+      <article>
+        <h2>21. Iterating Instance and Prototype Members</h2>
+        <p
+          >When we iterate over an object's properties, we may encounter
+          properties that belong to the instance or the prototype. In this note,
+          we will see how to iterate over both types of properties.</p
+        >
+        <h3>Iterating Instance Properties</h3>
+        <p
+          >To iterate over an object's instance properties, we can use a
+          <code>for...in</code> loop. This loop will iterate over all the
+          enumerable properties of an object, excluding properties inherited
+          from the prototype chain.</p
+        >
+        <pre class="language-javascript"><code>function Circle(radius) {
+        this.radius = radius;
+        this.draw = function() {
+          console.log('draw');
+        }
+      }
+      
+      const c = new Circle(1);
+      
+      for (let key in c) {
+        if (typeof c[key] !== 'function') {
+          console.log(key, c[key]);
+        }
+      }</code></pre>
+        <p
+          >In the above code, we use a <code>for...in</code> loop to iterate
+          over the instance properties of the <code>Circle</code> object. The
+          loop will iterate over the <code>radius</code> and
+          <code>draw</code> properties defined in the
+          <code>Circle</code> constructor.</p
+        >
+        <h3>Iterating Prototype Properties</h3>
+        <p
+          >To iterate over an object's prototype properties, we can use the
+          <code>Object.keys()</code> method to get an array of all the object's
+          own properties (excluding inherited properties). We can then use a
+          <code>for...of</code> loop to iterate over this array.</p
+        >
+        <pre class="language-javascript"><code>function Circle(radius) {
+        this.radius = radius;
+      }
+      
+      Circle.prototype.draw = function() {
+        console.log('draw');
+      }
+      
+      const c = new Circle(1);
+      
+      const prototypeProps = Object.keys(Object.getPrototypeOf(c));
+      
+      for (let key of prototypeProps) {
+        console.log(key);
+      }</code></pre>
+        <p
+          >In the above code, we use the <code>Object.keys()</code> method to
+          get an array of all the properties defined on the prototype of the
+          <code>Circle</code> object. We then use a <code>for...of</code> loop
+          to iterate over this array and log each property to the console. This
+          will output the <code>draw</code> method defined on the prototype of
+          the <code>Circle</code> object.</p
+        >
+      </article>
+      <article>
+        <h2>22. Avoid Extending the Built-in Objects</h2>
+        <p
+          >While working with JavaScript, you may feel the need to extend the
+          functionality of built-in objects like <code>Array</code>,
+          <code>String</code>, <code>Number</code>, etc. It's tempting to add
+          new methods or properties to these objects to improve their usability,
+          but it's not recommended to do so.</p
+        >
+        <p
+          >The main reason for avoiding extending the built-in objects is that
+          it can cause conflicts with other libraries or future versions of
+          JavaScript. If you add a new method to the
+          <code>Array.prototype</code> object and a library you're using also
+          adds a method with the same name, it can cause unexpected behavior or
+          errors.</p
+        >
+        <p
+          >Another reason to avoid extending built-in objects is that it can
+          make your code less maintainable and harder to understand for other
+          developers who may not be familiar with your extensions.</p
+        >
+        <p
+          >If you need to add functionality to a built-in object, you should
+          consider creating a utility function or a separate class that extends
+          the built-in object instead of modifying it directly.</p
+        >
+        <pre
+          class="language-javascript"
+        ><code>// Avoid extending built-in objects
+      Array.prototype.myCustomMethod = function() {
+        // ...
+      };
+      // Instead, use utility functions or classes to extend the built-in objects
+      function myCustomArrayMethod(arr) {
+      // ...
+      }
+      
+      class MyCustomArray extends Array {
+      // ...
+      }</code></pre>
+      </article>
+      <article>
+        <h2>23. Creating Your Own Prototypical Inheritance</h2>
+        <p
+          >In addition to using built-in prototypical inheritance, you can
+          create your own prototypical inheritance in JavaScript. This can be
+          useful if you want to create a more complex object hierarchy than is
+          possible with the simple constructor function method.</p
+        >
+        <p>Here's an example:</p>
+        <pre class="language-javascript"><code>function Shape() {}
+        Shape.prototype.duplicate = function() {
+        console.log('duplicate');
+        }
+        
+        function Circle(radius) {
+        this.radius = radius;
+        }
+        
+        Circle.prototype = Object.create(Shape.prototype);
+        Circle.prototype.constructor = Circle;
+        
+        Circle.prototype.draw = function() {
+        console.log('draw');
+        }
+        
+        const s = new Shape();
+        const c = new Circle(1);
+        
+        console.log(c); // Circle { radius: 1 }
+        console.log(s); // Shape {}
+        
+        c.duplicate(); // duplicate
+        c.draw(); // draw
+        </code></pre>
+
+        <p
+          >In this example, we have two constructor functions:
+          <code>Shape</code> and <code>Circle</code>. We want to create a
+          prototypical inheritance relationship between them, so we set the
+          <code>Circle</code> prototype to an object created with
+          <code>Object.create(Shape.prototype)</code>. This creates a new object
+          with its prototype set to the <code>Shape.prototype</code> object.</p
+        >
+        <p
+          >We also need to set the <code>constructor</code> property of the
+          <code>Circle.prototype</code> object back to <code>Circle</code>. This
+          is because when we overwrite the <code>Circle.prototype</code> object
+          with a new object (created with <code>Object.create</code>), the
+          <code>constructor</code> property gets lost.</p
+        >
+        <p
+          >Finally, we can see that the <code>Circle</code> object inherits the
+          <code>duplicate</code> method from the <code>Shape</code> object. We
+          can also see that the <code>Circle</code> object has its own
+          <code>draw</code> method, which is not present on the
+          <code>Shape</code> object.</p
+        >
+        <p
+          >When we create a new <code>Circle</code> object, we pass in a
+          <code>radius</code> parameter and set it as a property on the object.
+          When we call the <code>duplicate</code> method on the
+          <code>Circle</code> object, it is actually calling the
+          <code>duplicate</code> method on the <code>Shape</code> object, which
+          outputs 'duplicate' to the console.</p
+        >
+        <p
+          >Similarly, when we call the <code>draw</code> method on the
+          <code>Circle</code> object, it outputs 'draw' to the console.</p
+        >
+      </article>
+      <article>
+        <h2>24. Resetting the Constructor</h2>
+        <p
+          >When we create a new object using a constructor function, the
+          <code>constructor</code> property of the object points to the
+          constructor function that was used to create the object. However, when
+          we use prototypal inheritance, the <code>constructor</code> property
+          of the derived object points to the constructor function of the parent
+          object. This is because when we set the prototype of the derived
+          object to the parent object, the <code>constructor</code> property of
+          the derived object is overridden.</p
+        >
+        <p
+          >To fix this, we can reset the <code>constructor</code> property of
+          the derived object to point to its own constructor function. We can do
+          this by adding the following line of code to the constructor function
+          of the derived object:</p
+        >
+        <pre
+          class="language-javascript"
+        ><code>Derived.prototype.constructor = Derived;</code></pre>
+        <p>Here's an example:</p>
+        <pre class="language-javascript"><code>function Shape() {}
+      
+      function Circle(radius) {
+        this.radius = radius;
+      }
+      
+      Circle.prototype = Object.create(Shape.prototype);
+      
+      Circle.prototype.constructor = Circle;
+      
+      const circle = new Circle(1);
+      
+      console.log(circle.constructor); // Output: Circle</code></pre>
+        <p
+          >After resetting the <code>constructor</code> property, we can see
+          that it now points to the <code>Circle</code> function instead of the
+          <code>Shape</code> function.</p
+        >
+      </article>
+      <article>
+        <h2>25. Calling the Super Constructor</h2>
+        <p>
+          In object-oriented programming, we often have a child object that
+          needs to inherit from a parent object, but also needs to initialize
+          its own properties. One way to do this is to call the constructor of
+          the parent object from the child object using the
+          <code>call</code> method or the <code>apply</code> method.
+        </p>
+        <p>
+          In the following example, we have a <code>Shape</code> parent object
+          with a <code>color</code> property and a child object
+          <code>Circle</code> that inherits from <code>Shape</code>.
+          <code>Circle</code> has its own properties (<code>radius</code>), but
+          we also want to initialize the <code>color</code> property of
+          <code>Shape</code> in the <code>Circle</code> constructor. Here's how
+          we can do that:
+        </p>
+        <pre class="language-javascript"><code>function Shape(color) {
+        this.color = color;
+      }
+      function Circle(color, radius) {
+      Shape.call(this, color); // calling the constructor of the parent object
+      this.radius = radius;
+      }
+      
+      const circle = new Circle('red', 10);
+      console.log(circle); // Output: Circle { color: "red", radius: 10 }</code></pre>
+
+        <p>
+          In the <code>Circle</code> constructor, we call the constructor of the
+          <code>Shape</code> object using <code>Shape.call(this, color)</code>.
+          The <code>this</code> keyword inside the
+          <code>Shape</code> constructor refers to the new
+          <code>Circle</code> object that we're creating, and the
+          <code>color</code> argument is passed in to initialize the
+          <code>color</code> property of the <code>Shape</code> object.
+        </p>
+        <p>
+          By using this technique, we can easily extend the functionality of a
+          parent object while also initializing the properties of the child
+          object.
+        </p>
+      </article>
+      <article>
+        <h2>26. Intermediate Function Inheritance</h2>
+        <p>
+          Intermediate Function Inheritance is a technique used in JavaScript
+          for implementing inheritance by creating a function that acts as an
+          intermediate constructor. The intermediate function inherits from the
+          parent constructor's prototype and adds new methods or properties to
+          its own prototype. Child constructor functions are then created by
+          inheriting from the intermediate function's prototype using
+          Object.create() method.
+        </p>
+        <p>
+          Here's an example of how to use intermediate function inheritance in
+          JavaScript:
+        </p>
+        <pre class="language-javascript"><code>
+        function Shape() {}
+        
+        Shape.prototype.draw = function() {
+          console.log('draw');
+        }
+        
+        function Circle(radius) {
+          this.radius = radius;
+        }
+        
+        // Intermediate function
+        function extend(Child, Parent) {
+          Child.prototype = Object.create(Parent.prototype);
+          Child.prototype.constructor = Child;
+        }
+        
+        extend(Circle, Shape);
+        
+        Circle.prototype.draw = function() {
+          console.log('draw circle with radius ' + this.radius);
+        }
+        </code></pre>
+        <p>
+          In this example, we have a parent constructor function called Shape
+          that has a prototype method called draw. We then create a child
+          constructor function called Circle and pass it to an intermediate
+          function called extend along with the parent constructor function
+          Shape. The extend function sets the prototype of the child constructor
+          function to a new object that is created with the parent constructor
+          function's prototype, and then sets the constructor of the child
+          constructor function to itself. Finally, we add a new draw method to
+          the Circle constructor function's prototype, which overrides the draw
+          method inherited from the Shape constructor function's prototype.
+        </p>
+        <p>
+          By using intermediate function inheritance, we can implement
+          inheritance in JavaScript without having to use the ES6 class syntax
+          or modify the prototype of built-in objects.
+        </p>
+      </article>
+      <article>
+        <h2>27. Method Overriding</h2>
+        <p
+          >In object-oriented programming, method overriding is a feature that
+          allows a subclass or child class to provide a different implementation
+          of a method that is already defined in its superclass or parent class.
+          This can be useful when we want to modify the behavior of a method in
+          a subclass to suit its specific requirements.
+        </p>
+        <p>Here is an example of method overriding in JavaScript:</p>
+        <pre class="language-javascript"><code>class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+      
+        makeSound() {
+          console.log('The ' + this.name + ' makes a sound.');
+        }
+      }
+      
+      class Cat extends Animal {
+        makeSound() {
+          console.log('The ' + this.name + ' meows.');
+        }
+      }
+      
+      let animal = new Animal('animal');
+      let cat = new Cat('cat');
+      
+      animal.makeSound(); // output: "The animal makes a sound."
+      cat.makeSound(); // output: "The cat meows."</code></pre>
+        <p
+          >In this example, we have defined two classes: Animal and Cat. Cat is
+          a subclass of Animal, so it inherits all the properties and methods of
+          Animal. However, the makeSound() method in the Cat class overrides the
+          makeSound() method in the Animal class. When we create an instance of
+          the Cat class and call the makeSound() method, it will execute the
+          implementation provided by the Cat class.</p
+        >
+      </article>
+      <article>
+        <h2>28. Polymorphism</h2>
+        <p
+          >Polymorphism is a concept in object-oriented programming where an
+          object of a class can be treated as an object of any of its
+          subclasses. It allows the same method or property of an object to
+          behave differently depending on the type of object it is called on. In
+          other words, polymorphism is the ability of an object to take on many
+          forms.</p
+        >
+        <p>Let's consider an example of polymorphism in JavaScript:</p>
+        <pre class="language-javascript"><code>// Base class
+      class Shape {
+        calculateArea() {
+          throw new Error("Method 'calculateArea()' must be implemented.");
+        }
+      }
+      // Subclasses
+      class Rectangle extends Shape {
+      constructor(width, height) {
+      super();
+      this.width = width;
+      this.height = height;
+      }
+      
+      calculateArea() {
+      return this.width * this.height;
+      }
+      }
+      
+      class Circle extends Shape {
+      constructor(radius) {
+      super();
+      this.radius = radius;
+      }
+      
+      calculateArea() {
+      return Math.PI * Math.pow(this.radius, 2);
+      }
+      }
+      
+      // Create objects of different types and call the same method on them
+      const rectangle = new Rectangle(10, 5);
+      const circle = new Circle(10);
+      
+      console.log(rectangle.calculateArea()); // Output: 50
+      console.log(circle.calculateArea()); // Output: 314.1592653589793</code></pre>
+
+        <p
+          >In this example, we have a base class <code>Shape</code> and two
+          subclasses <code>Rectangle</code> and <code>Circle</code>. Both of
+          these subclasses override the <code>calculateArea()</code> method of
+          the base class to calculate their own area.</p
+        >
+        <p
+          >We then create objects of different types and call the same method
+          <code>calculateArea()</code> on them. As you can see, even though the
+          same method is called on both objects, the output is different because
+          the method is behaving differently depending on the type of the object
+          it is called on.</p
+        >
+      </article>
+      <article>
+        <h2>29. When to Use Inheritance</h2>
+        <p
+          >Inheritance is one of the key features of object-oriented
+          programming. It allows us to create new classes based on existing
+          classes, which can save us time and effort when designing our code.
+          However, it's important to use inheritance carefully and thoughtfully,
+          as it can also make our code more complex and difficult to
+          maintain.</p
+        >
+        <h3>When to use inheritance:</h3>
+        <ul>
+          <li
+            ><strong>Code reuse:</strong> Inheritance is useful when we want to
+            create a new class that is similar to an existing class, but with
+            some modifications or additions. By inheriting from the existing
+            class, we can reuse the code that is already there and avoid
+            duplicating it in the new class.</li
+          >
+          <li
+            ><strong>Abstraction:</strong> Inheritance can also be used to
+            create abstract classes or interfaces, which define a set of methods
+            or properties that a subclass must implement. This can help to
+            enforce consistency and maintainability in our code.</li
+          >
+          <li
+            ><strong>Polymorphism:</strong> Inheritance can also be used to
+            implement polymorphism, which allows us to treat objects of
+            different classes as if they were the same type. This can be useful
+            when we have a collection of objects that share some common
+            behavior, but also have some unique behavior.</li
+          >
+        </ul>
+        <h3>When not to use inheritance:</h3>
+        <ul>
+          <li
+            ><strong>Overuse:</strong> Inheritance can be overused, which can
+            make our code more complex and difficult to maintain. We should only
+            use inheritance when it makes sense, and when there is a clear
+            benefit to doing so.</li
+          >
+          <li
+            ><strong>Tight coupling:</strong> Inheritance can also lead to tight
+            coupling between classes, which can make our code less flexible and
+            more difficult to change. We should strive to minimize coupling
+            between classes, and use other design patterns (such as composition)
+            when appropriate.</li
+          >
+        </ul>
+        <p
+          >Overall, inheritance can be a powerful tool for designing
+          object-oriented programs. However, it should be used carefully and
+          thoughtfully, and we should be aware of its benefits and drawbacks.</p
+        >
+      </article>
+      <article>
+        <h2>30. Mixins</h2>
+        <p
+          >Mixins are a way to reuse code in multiple objects. A mixin is a
+          function that takes an object and adds properties and methods to it.
+          We can use mixins to extend objects without using inheritance.</p
+        >
+        <p>Here's an example:</p>
+        <pre
+          class="language-javascript"
+        ><code>function mixin(target, ...sources) {
+          Object.assign(target, ...sources);
+        }
+        
+        const canEat = {
+          eat: function() {
+            this.hunger--;
+            console.log('eating');
+          }
+        };
+        
+        const canWalk = {
+          walk: function() {
+            console.log('walking');
+          }
+        };
+        
+        const canSwim = {
+          swim: function() {
+            console.log('swimming');
+          }
+        };
+        
+        function Person() {}
+        mixin(Person.prototype, canEat, canWalk);
+        
+        function Fish() {}
+        mixin(Fish.prototype, canEat, canSwim);
+        
+        const person = new Person();
+        console.log(person);
+        person.walk();
+        
+        const fish = new Fish();
+        console.log(fish);
+        fish.swim();</code></pre>
+        <p
+          >In the above code, we have defined three mixins: canEat, canWalk, and
+          canSwim. Each of these mixins contains a method that can be added to
+          an object. We can add these methods to a target object using the mixin
+          function. The mixin function takes a target object and one or more
+          source objects. It then adds the properties and methods of the source
+          objects to the target object.</p
+        >
+        <p
+          >We have used the mixin function to add the canEat and canWalk mixins
+          to the Person prototype. We have also used the mixin function to add
+          the canEat and canSwim mixins to the Fish prototype. This way, we can
+          reuse the code of the canEat mixin in both the Person and Fish
+          objects, and we can also add the canSwim method to the Fish object.</p
+        >
+        <p
+          >We have then created instances of the Person and Fish objects and
+          tested their methods. The Person instance has the walk method, and the
+          Fish instance has the swim method.</p
+        >
+      </article>
+      <article>
+        <header>
+          <h2>31. ES6 Classes</h2>
+        </header>
+        <p>
+          ES6 (ECMAScript 2015) introduced a new syntax for creating classes in
+          JavaScript. Classes provide a way to define object blueprints, also
+          known as templates for creating objects. In previous versions of
+          JavaScript, classes were created using constructor functions and
+          prototypes.
+        </p>
+        <p>
+          ES6 classes are syntactical sugar over the previous way of creating
+          classes using constructor functions and prototypes. They make the
+          syntax for creating classes more similar to that used in other
+          object-oriented programming languages like Java and C++. The syntax
+          for creating a class in JavaScript is as follows:
+        </p>
+        <pre><code class="language-javascript">class MyClass {
+          constructor() {
+            // constructor code here
+          }
+        method1() {
+        // method code here
+        }
+        
+        method2() {
+        // method code here
+        }
+        }</code></pre>
+
+        <p>
+          The class keyword is used to create a new class. The name of the class
+          is provided after the class keyword. In the example above, the class
+          is named MyClass. The body of the class is contained within curly
+          braces.
+        </p>
+        <p>
+          The constructor method is a special method that is called when an
+          instance of the class is created. It is used to set up the initial
+          state of the object. In the example above, the constructor method is
+          empty, but it could be used to initialize instance variables or
+          perform other setup tasks.
+        </p>
+        <p>
+          The other methods in the class are defined using standard function
+          syntax. In the example above, the class has two methods, method1 and
+          method2.
+        </p>
+        <p>
+          To create a new instance of a class, the new keyword is used followed
+          by the name of the class and any arguments that should be passed to
+          the constructor. For example:
+        </p>
+        <pre><code class="language-javascript">const myObject = new MyClass();</code></pre>
+        <p>
+          The myObject variable now contains an instance of the MyClass class.
+          The methods defined in the class can be called on this object just
+          like any other object in JavaScript.
+        </p>
+        <p>
+          ES6 classes also support inheritance. To create a subclass that
+          inherits from a parent class, the extends keyword is used followed by
+          the name of the parent class. For example:
+        </p>
+        <pre><code class="language-javascript">class MySubclass extends MyClass {
+          constructor() {
+            super();
+            // subclass constructor code here
+          }
+        method3() {
+        // method code here
+        }
+        }</code></pre>
+
+        <p>
+          In the example above, MySubclass is a subclass of MyClass. It inherits
+          all of the methods from MyClass, including the constructor method. The
+          constructor method in MySubclass calls the constructor method in
+          MyClass using the super keyword. The subclass can then define its own
+          methods, such as method3.
+        </p>
+        <p>
+          ES6 classes are a useful tool for organizing and structuring code in a
+          more object-oriented way. They provide a familiar syntax for
+          developers who are used to working with classes in other languages,
+          and they make it easier to create objects that have the same
+          properties and behavior.
+        </p>
+      </article>
+      <article>
+        <header><h2>32. Hoisting</h2></header>
+        <p
+          >Hoisting is a term used in JavaScript to describe the behavior of
+          variable and function declarations being moved to the top of their
+          respective scopes during the compilation phase of the program's
+          execution.</p
+        >
+        <h3>Variable Hoisting</h3>
+        <p>
+          In JavaScript, variable declarations are "hoisted" to the top of their
+          respective scopes, regardless of where the actual declaration is made.
+          However, the variable assignment remains in its original place.
+        </p>
+        <h3>Function Hoisting</h3>
+        <p>
+          In addition to variable hoisting, JavaScript also hoists function
+          declarations to the top of their respective scopes. This means that a
+          function can be called before it is declared, and the JavaScript
+          interpreter will still be able to find it. However, function
+          expressions, which are defined using an anonymous function assigned to
+          a variable, are not hoisted.</p
+        >
+        <h3>Block Scoping</h3>
+        <p>
+          In JavaScript, variables declared with the `let` and `const` keywords
+          are not hoisted to the top of their respective scopes like variables
+          declared with the `var` keyword. Instead, they have block-level scope
+          and are only accessible within the block in which they are defined.</p
+        >
+        <h3>Benefits and Drawbacks of Hoisting</h3>
+        <p>
+          Hoisting can make code easier to read and write by allowing developers
+          to declare variables and functions in a logical order that reflects
+          their intended usage. However, hoisting can also lead to unexpected
+          behavior and bugs if not used carefully. It is generally recommended
+          to declare variables and functions at the beginning of their
+          respective scopes to avoid potential hoisting-related issues.</p
+        >
+      </article>
+      <article>
+        <header>
+          <h2>33. Static Methods</h2>
+        </header>
+        <p>
+          In object-oriented programming, static methods are methods that belong
+          to the class instead of instances of the class. They are defined with
+          the static keyword and are accessed using the class name instead of an
+          instance of the class.
+        </p>
+        <p>
+          In JavaScript, static methods are introduced in ECMAScript 6 (ES6) and
+          are now available in modern web browsers. Prior to ES6, there was no
+          built-in way to create static methods in JavaScript classes.
+        </p>
+        <p> Here's an example of a static method in a class: </p>
+        <pre><code class="language-javascript">
+        class Circle {
+          constructor(radius) {
+            this.radius = radius;
+          }
+        static createFromDiameter(diameter) {
+        return new Circle(diameter / 2);
+        }
+        
+        get area() {
+        return Math.PI * this.radius ** 2;
+        }
+        }
+        
+        const circle = new Circle(10);
+        console.log(circle.area); // 314.1592653589793
+        
+        const circle2 = Circle.createFromDiameter(10);
+        console.log(circle2.area); // 78.53981633974483
+        </code></pre>
+
+        <p>
+          In this example, we have a Circle class that has a static method
+          called createFromDiameter. This method creates a new Circle instance
+          using the diameter of the circle instead of the radius. The method
+          takes the diameter as a parameter, calculates the radius, and then
+          returns a new Circle instance using the radius.
+        </p>
+        <p>
+          Notice that we call the createFromDiameter method using the Circle
+          class name, not an instance of the Circle class. This is because the
+          method belongs to the class, not to any instance of the class.
+        </p>
+        <p>
+          Static methods are useful when we want to define utility methods that
+          are related to the class but don't require an instance of the class to
+          be created. They can be used for things like creating new instances of
+          the class from different inputs or performing some kind of calculation
+          related to the class.
+        </p>
+        <p>
+          It's important to note that static methods cannot access instance
+          properties or methods of the class, only static properties and
+          methods. This is because they do not have access to the instance
+          context, which is the this keyword.
+        </p>
+        <p>
+          In conclusion, static methods are a powerful tool for organizing
+          related functionality within a class and providing utility methods
+          that don't require an instance of the class to be created.
+        </p>
+      </article>
+      <article>
+        <header>
+          <h2>34. The This Keyword</h2>
+        </header>
+        <p>
+          In JavaScript, the <code>this</code> keyword is a special keyword that
+          refers to the object that the function is a property of. The
+          <code>this</code> keyword can take different values depending on how
+          the function is called.
+        </p>
+        <h3>Global Scope</h3>
+        <p>
+          If the <code>this</code> keyword is used outside of any function, it
+          refers to the global object. In a browser environment, the global
+          object is the <code>window</code> object.
+        </p>
+        <h3>Function Scope</h3>
+        <p>
+          If the <code>this</code> keyword is used inside a function, its value
+          depends on how the function is called. If the function is called as a
+          standalone function, the <code>this</code> keyword will refer to the
+          global object.
+        </p>
+        <pre><code>
+        function myFunction() {
+          console.log(this); // logs the global object (window in a browser)
+        }
+        myFunction();
+        </code></pre>
+
+        <p>
+          If the function is called as a method of an object, the
+          <code>this</code> keyword will refer to the object that the method is
+          a property of.
+        </p>
+        <pre><code>
+        const myObject = {
+          myMethod: function() {
+            console.log(this); // logs myObject
+          }
+        };
+        myObject.myMethod();
+        </code></pre>
+
+        <h3>Constructor Function Scope</h3>
+        <p>
+          If a function is used as a constructor function (i.e. with the
+          <code>new</code> keyword), the <code>this</code> keyword will refer to
+          the new object being created.
+        </p>
+        <pre><code>
+        function Person(name) {
+          this.name = name;
+        }
+        const john = new Person('John');
+        console.log(john.name); // logs "John"
+        </code></pre>
+
+        <h3>Explicitly Setting the This Keyword</h3>
+        <p>
+          In JavaScript, you can explicitly set the value of the
+          <code>this</code> keyword using the <code>call</code>,
+          <code>apply</code>, or <code>bind</code> methods.
+        </p>
+        <p>
+          The <code>call</code> and <code>apply</code> methods are used to call
+          a function with a specified <code>this</code> value and arguments. The
+          difference between them is the way arguments are passed to the
+          function. In the <code>call</code> method, arguments are passed
+          individually, while in the <code>apply</code> method, arguments are
+          passed as an array.
+        </p>
+        <pre><code>
+        function myFunction() {
+          console.log(this);
+        }
+        myFunction.call('hello'); // logs "hello"
+        myFunction.apply('world'); // logs "world"
+        </code></pre>
+
+        <p>
+          The <code>bind</code> method returns a new function with the
+          <code>this</code> value set to the specified value. This is useful for
+          creating new functions that use the same <code>this</code> value.
+        </p>
+        <pre><code>
+        const myObject = {
+          myMethod: function() {
+            console.log(this);
+          }
+        };
+        const myFunction = myObject.myMethod.bind(myObject);
+        
+        myFunction(); // logs myObject
+        </code></pre>
+      </article>
+      <article>
+        <h2>35. Private Members Using Symbols</h2>
+        <p>
+          In JavaScript, until the introduction of ES6, there was no built-in
+          support for private members. However, with the advent of ES6, the
+          language introduced a new type of object called Symbols, which can be
+          used to create private members in an object. A Symbol is an immutable
+          primitive value that is unique and can be used as a property key for
+          objects.
+        </p>
+        <p>
+          To create a private member using Symbols, we can declare a Symbol
+          property on an object and use that as a reference to a private
+          property or method. The Symbol property can be accessed only by code
+          inside the object and cannot be accessed from outside the object.
+          Let's look at an example:
+        </p>
+        <pre><code>
+            const _radius = Symbol();
+            const _draw = Symbol();
+            class Circle {
+              constructor(radius) {
+                  this[_radius] = radius;
+              }
+      
+              [_draw]() {
+                  console.log('drawing a circle');
+              }
+          }
+      
+          const c = new Circle(10);
+          console.log(c); // Circle { [_radius]: 10 }
+          c[_draw](); // drawing a circle
+          console.log(c._radius); // undefined
+      </code></pre>
+        <p>
+          In the above example, we have declared two Symbols, _radius and _draw,
+          and used them to create a private radius property and a private _draw
+          method in the Circle class. Notice that we have used square brackets
+          to create a computed property name with the Symbol reference inside
+          it. This allows us to use the Symbol as a property name.
+        </p>
+        <p>
+          When we create a new Circle object, we can see that the _radius
+          property is added to the object as expected. However, when we try to
+          access the _radius property using the dot notation, we get undefined,
+          since the Symbol property is not accessible from outside the object.
+        </p>
+        <p>
+          Similarly, we can call the private _draw method using the Symbol
+          reference inside square brackets. This is a powerful feature of
+          Symbols, as it allows us to create truly private members in JavaScript
+          classes.
+        </p>
+      </article>
+      <article>
+        <h2>36. Private Members Using WeakMaps</h2>
+        <p
+          >One limitation of using symbols for private members is that they are
+          still accessible through object introspection. This means that if you
+          have a reference to the object, you can access its private members. A
+          more robust solution for private members is to use WeakMaps. A WeakMap
+          is a collection of key-value pairs, where the keys are objects and the
+          values can be any type of value. The key objects are weakly
+          referenced, meaning that they can be garbage collected if there are no
+          other references to them. This makes WeakMaps ideal for implementing
+          private members, as the private members will be automatically garbage
+          collected when the object is garbage collected.</p
+        >
+        <p
+          >Here's an example of how to use WeakMaps to implement private
+          members:</p
+        >
+        <pre><code class="language-javascript">const _radius = new WeakMap();
+        
+        class Circle {
+          constructor(radius) {
+            _radius.set(this, radius);
+          }
+        
+          draw() {
+            console.log(`Circle with radius ${_radius.get(this)}`);
+          }
+        }
+        
+        const c = new Circle(1);
+        c.draw(); // output: Circle with radius 1
+        
+        console.log(_radius.get(c)); // output: undefined</code></pre>
+        <p
+          >In this example, the private member <code>_radius</code> is a WeakMap
+          that stores the radius of the circle for each instance of the Circle
+          class. The constructor sets the value of <code>_radius</code> for the
+          current instance using <code>_radius.set(this, radius)</code>, and the
+          <code>draw</code> method uses <code>_radius.get(this)</code> to
+          retrieve the radius for the current instance. Note that the private
+          member cannot be accessed outside of the class using
+          <code>_radius.get(c)</code>, as <code>_radius</code> is not defined
+          outside of the class.</p
+        >
+        <p
+          >Using WeakMaps for private members ensures that they are truly
+          private and cannot be accessed outside of the class. However, it's
+          worth noting that this comes with a performance cost, as WeakMaps are
+          less performant than regular object properties. As with any
+          performance optimization, it's important to balance the benefits of
+          using private members with the cost of reduced performance.</p
+        >
+      </article>
+      <article>
+        <h2>37. Method Riding</h2>
+        <p>
+          Method riding is a concept in object-oriented programming where you
+          can override an existing method of a parent class in a subclass. In
+          JavaScript, method riding can be achieved using prototypical
+          inheritance, ES6 classes, or constructor functions.
+        </p>
+        <p>
+          When you override a method in a subclass, the subclass's
+          implementation of the method is used instead of the parent class's
+          implementation when that method is called on an object of the
+          subclass. This allows you to provide a specialized implementation of a
+          method for a specific class or set of classes, while still inheriting
+          the common behavior from the parent class.
+        </p>
+        <p>
+          For example, suppose you have a class called `Animal` with a method
+          called `makeSound` that returns the string "generic animal sound".
+          Now, suppose you have a subclass of `Animal` called `Cat` and you want
+          to make the `Cat` class return a different sound from the `Animal`
+          class. You can override the `makeSound` method in the `Cat` class to
+          return a different sound:
+        </p>
+        <pre><code>
+    class Animal {
+      makeSound() {
+        return "generic animal sound";
+      }
+    }
+    class Cat extends Animal {
+    makeSound() {
+    return "meow";
+    }
+    }
+    </code></pre>
+        <p>
+          In this example, when you call makeSound on an object of the Cat
+          class, the implementation of makeSound in the Cat class is used
+          instead of the implementation in the Animal class. For example:
+        </p>
+        <pre><code>
+    const cat = new Cat();
+    console.log(cat.makeSound()); // "meow"
+    </code></pre>
+        <p>
+          Method riding is a powerful concept that allows you to customize the
+          behavior of classes while still leveraging the common functionality
+          provided by parent classes. However, it can also lead to complex
+          inheritance hierarchies if used excessively, so it's important to use
+          it judiciously.
+        </p>
+      </article>
+      <article>
+        <h2>38. Modules</h2>
+        <p>
+          In JavaScript, modules are a way to organize code into separate files,
+          making it easier to manage and maintain large codebases. A module is
+          simply a JavaScript file that exports one or more objects, functions,
+          or values that can be imported by other modules. Each module has its
+          own scope, which means that any variables or functions declared within
+          a module are not visible outside of that module unless explicitly
+          exported.
+        </p>
+        <p>
+          There are several ways to create modules in JavaScript, including the
+          CommonJS and AMD (Asynchronous Module Definition) formats. However,
+          since the introduction of ES6 (ECMAScript 2015), JavaScript has its
+          own built-in module system, which is now widely supported by modern
+          browsers and Node.js.
+        </p>
+        <p>
+          In the ES6 module system, each file is treated as a separate module,
+          and you can export and import objects and functions using the
+          <code>export</code> and <code>import</code> statements respectively.
+          When you import a module, its code is executed only once, and the
+          exported objects are cached for later use. This means that you can
+          safely import the same module from different parts of your code
+          without worrying about duplicated code or state.
+        </p>
+        <p>
+          The ES6 module system also supports named exports and default exports.
+          Named exports allow you to export multiple objects or functions from a
+          module under different names, while the default export allows you to
+          export a single object or function as the default value of the module.
+          When importing a default export, you can choose any name you want,
+          whereas named exports must be imported under their original names.
+        </p>
+      </article>
+      <article>
+        <h2>39. CommonJS Modules</h2>
+        <p
+          >CommonJS modules were one of the first module systems developed for
+          JavaScript, designed to work on the server-side with Node.js. It
+          provides a way to structure JavaScript code in a modular way, making
+          it easier to manage and reuse.</p
+        >
+        <p
+          >CommonJS modules use a simple syntax to export and import code
+          between files. In order to export a module, you simply assign the
+          values or functions you want to export to the
+          <code>module.exports</code> object. For example:</p
+        >
+        <pre><code class="language-javascript">
+        // greet.js
+        function greet(name) {
+          console.log(`Hello, ${name}!`);
+        }
+        module.exports = { greet };
+        </code></pre>
+
+        <p
+          >In the example above, we define a function <code>greet</code> and
+          then assign it to the <code>module.exports</code> object, making it
+          available to other modules.</p
+        >
+        <p
+          >To import this module in another file, we use the
+          <code>require</code> function, which returns the exported module. For
+          example:</p
+        >
+        <pre><code class="language-javascript">
+        // app.js
+        const { greet } = require('./greet');
+        greet('John');
+        </code></pre>
+
+        <p
+          >In the example above, we use the <code>require</code> function to
+          import the <code>greet</code> function from the
+          <code>greet.js</code> module. We then call the
+          <code>greet</code> function with the argument 'John', which will log
+          the message 'Hello, John!' to the console.</p
+        >
+        <p
+          >CommonJS modules have some limitations, including their synchronous
+          nature, which can make them less suitable for use in browser
+          environments. However, they are still widely used in Node.js and can
+          be a good choice for structuring code in server-side applications.</p
+        >
+      </article>
+      <article>
+        <h2>40. ES6 Modules</h2>
+        <p
+          >ES6 introduced a new way of defining and exporting modules using the
+          <code>export</code> and <code>import</code> statements. This is a
+          standardized way of modularizing JavaScript code and is now widely
+          supported by modern web browsers and Node.js.</p
+        >
+        <h3>Exporting Modules</h3>
+        <p
+          >The <code>export</code> keyword is used to export a module from a
+          file. There are two ways to export a module:</p
+        >
+        <ul>
+          <li
+            ><strong>Named exports:</strong> One or more named exports can be
+            exported using the <code>export</code> keyword. These exports can
+            then be imported in other modules using their respective names.</li
+          >
+          <li
+            ><strong>Default export:</strong> A single default export can be
+            exported using the <code>export default</code> syntax. This export
+            can then be imported in other modules using any name of the
+            programmer's choice.</li
+          >
+        </ul>
+        <p>Here's an example of exporting a module using named exports:</p>
+        <pre><code class="language-javascript">
+        // math.js
+        
+        export const add = (a, b) =&gt; a + b;
+        export const subtract = (a, b) =&gt; a - b;
+        </code></pre>
+        <p
+          >And here's an example of exporting a module using a default
+          export:</p
+        >
+        <pre><code class="language-javascript">
+        // greet.js
+        
+        export default name =&gt; `Hello, ${name}!`;
+        </code></pre>
+        <h2>41. Importing Modules</h2>
+        <p
+          >The <code>import</code> keyword is used to import modules in a file.
+          Here are a few ways to use the <code>import</code> keyword:</p
+        >
+        <ul>
+          <li
+            ><strong>Importing named exports:</strong> A named export can be
+            imported using its respective name.</li
+          >
+          <li
+            ><strong>Importing a default export:</strong> A default export can
+            be imported using any name of the programmer's choice.</li
+          >
+          <li
+            ><strong>Importing all exports as an object:</strong> All exports
+            from a module can be imported as an object using the
+            <code>*</code> wildcard character.</li
+          >
+        </ul>
+        <p>Here's an example of importing named exports:</p>
+        <pre><code class="language-javascript">
+        // app.js
+        
+        import { add, subtract } from './math.js';
+        
+        console.log(add(2, 3)); // Output: 5
+        console.log(subtract(5, 2)); // Output: 3
+        </code></pre>
+        <p>And here's an example of importing a default export:</p>
+        <pre><code class="language-javascript">
+        // app.js
+        
+        import greet from './greet.js';
+        
+        console.log(greet('John')); // Output: Hello, John!
+        </code></pre>
+        <p>Finally, here's an example of importing all exports as an object:</p>
+        <pre><code class="language-javascript">
+        // app.js
+        
+        import * as math from './math.js';
+        
+        console.log(math.add(2, 3)); // Output: 5
+        console.log(math.subtract(5, 2)); // Output: 3
+        </code></pre>
+        <h3>Conclusion</h3>
+        <p
+          >ES6 modules provide a standardized way of defining and exporting
+          modules in JavaScript. This helps improve the organization and
+          maintainability of code by making it more modular and reusable. It
+          also helps to avoid naming conflicts between different parts of the
+          code.
+        </p>
+      </article>
+      <article>
+        <h2>42. ES6 Tooling</h2>
+        <p>
+          ES6 Tooling refers to the various tools and libraries available to
+          developers to aid in the development and deployment of ES6 (ECMAScript
+          2015) applications. Before ES6, developers used libraries such as
+          jQuery, Underscore, and Lodash to work with the DOM and perform common
+          utility functions. However, with the introduction of ES6, many of
+          these features were built into the language itself, making it easier
+          to write modern, efficient, and maintainable code.
+        </p>
+        <p>
+          ES6 Tooling includes various tools such as transpilers, bundlers, and
+          package managers that make it easier to write and deploy modern
+          JavaScript applications. Transpilers such as Babel can be used to
+          convert ES6 code into ES5 code, which is compatible with older
+          browsers that do not support ES6 natively. This allows developers to
+          write code using the latest features of ES6 while still ensuring
+          backward compatibility with older browsers.
+        </p>
+        <p>
+          Bundlers such as Webpack can be used to package and bundle code,
+          allowing developers to split their code into smaller modules and load
+          only the required modules when necessary. This helps to reduce the
+          load time of the application and improve performance. Package managers
+          such as NPM and Yarn can be used to manage dependencies and install
+          third-party libraries required for the application.
+        </p>
+        <p>
+          ES6 Tooling also includes various development environments and editors
+          such as Visual Studio Code, Atom, and Sublime Text, which have plugins
+          and extensions that support ES6 development. These tools provide
+          features such as syntax highlighting, code completion, and debugging,
+          making it easier for developers to write and debug ES6 code.
+        </p>
+        <p>
+          In conclusion, ES6 Tooling plays a crucial role in modern web
+          development, providing developers with the necessary tools and
+          libraries to write efficient, maintainable, and scalable code.
+        </p>
+      </article>
+      <article>
+        <h2>42. Babel</h2>
+        <p>
+          Babel is a popular JavaScript compiler that can transform code written
+          in modern ECMAScript standards to backward-compatible versions of
+          JavaScript that can be run in older browsers. Babel can convert the
+          latest JavaScript syntax into a version of JavaScript that is
+          compatible with most browsers, even those that are several years old.
+        </p>
+        <p>
+          Babel's main function is to take code written using the latest
+          ECMAScript standards and transpile it to an older, more
+          widely-supported version. Babel can also add polyfills and other
+          features that allow modern JavaScript code to be executed in older
+          browsers that don't support the latest features natively.
+        </p>
+        <p>
+          Babel can be used as a standalone tool or as a part of a larger
+          development toolchain. It integrates easily with other JavaScript
+          tools and can be used to optimize, debug, and test JavaScript code.
+          Babel is highly configurable, allowing developers to customize its
+          behavior to match their specific needs.
+        </p>
+        <p>
+          Overall, Babel is a powerful tool that enables developers to write
+          modern, clean JavaScript code that can be executed in almost any
+          browser, regardless of its age or level of support for newer
+          JavaScript features.
+        </p>
+      </article>
+      <article>
+        <header>
+          <h2>43. Webpack</h2>
+        </header>
+        <p>
+          Webpack is a popular open-source module bundler for modern JavaScript
+          applications. It allows developers to manage and organize their code
+          into modules, and then bundles them together into a single file for
+          deployment. Webpack provides a powerful set of features for managing
+          dependencies, optimizing code, and enabling hot reloading for faster
+          development. It is highly configurable and can be customized to fit a
+          wide range of use cases.
+        </p>
+        <p>
+          Webpack can be used to build a variety of projects, including simple
+          static websites, single-page applications, and complex enterprise
+          applications. It is especially useful for modern web development
+          workflows that require multiple build steps and pre-processing tools.
+          With Webpack, developers can write their code in a modular,
+          maintainable way, and then let the tool handle the heavy lifting of
+          bundling and optimization.
+        </p>
+        <p>
+          Webpack is based on a plugin architecture, which allows developers to
+          add or modify its functionality to fit their specific needs. It
+          supports a wide range of plugins for things like code splitting, tree
+          shaking, and optimizing images and other assets. Additionally, Webpack
+          integrates with many other popular development tools and frameworks,
+          such as Babel, TypeScript, React, and Vue.js.
+        </p>
+        <p>
+          One of the key benefits of Webpack is its ability to handle complex
+          dependency graphs. It can automatically resolve and load dependencies,
+          even for complex projects with multiple entry points and deep nested
+          imports. Webpack can also perform advanced optimizations like code
+          splitting, which allows applications to load only the code they need
+          when they need it, resulting in faster load times and better
+          performance.
+        </p>
+        <p>
+          In summary, Webpack is a powerful tool for managing dependencies,
+          bundling code, and optimizing JavaScript applications. It is highly
+          configurable and can be customized to fit a wide range of use cases,
+          making it an essential tool for modern web development workflows.
+        </p>
+      </article>
+    </div>
 
     <script src="../script.js"></script>
     <script src="../prism.js"></script>
