@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../scrollBar.css" />
+    <link rel="stylesheet" href="../animation.css" />
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../prism.css" />
+    <link rel="stylesheet" href="../page.css" />
+  </head>
+  <body>
+    <nav class="desktopMenu">
+      <div class="navList">
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon class="listIcon" name="home"></ion-icon>Home
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-youtube" class="listIcon"></ion-icon>YT
+            Playlist
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="bookmarks" class="listIcon"></ion-icon>BookMarks
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-react" class="listIcon"></ion-icon>Boilerplate
+          </div></a
+        >
+      </div>
+      <ion-icon
+        name="menu"
+        class="burgerMenu"
+        onclick="mobileMenuDisplayBlock()"
+      ></ion-icon>
+      <a href="https://github.com/Dinujaya-Sandaruwan" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+    </nav>
+
+    <nav class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuItem">
+        <span class="close" onclick="mobileMenuDisplayNone()"
+          ><ion-icon name="close" class="closeIcon"></ion-icon
+        ></span>
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">Home</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">YT Playlist</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">BookMarks</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">Boilerplate</div></a
+        >
+      </div>
+    </nav>
+
+    <h1 class="heading">CSS NOTES</h1>
+
+    <!-- Content of this page -->
+
+    <div class="content">
+      <article>
+        <h2>01. What is CSS?</h2>
+        <p
+          >CSS stands for Cascading Style Sheets. It is a style sheet language
+          used for describing the presentation of a document written in HTML or
+          XML. CSS separates the content from presentation, making it easy to
+          maintain and style documents on the web. Here's an example of how CSS
+          is applied:</p
+        >
+        <pre class="language-css"><code>
+          /* Selects all h1 elements */
+          h1 {
+            font-size: 2em;
+            color: #333;
+            text-align: center;
+          }
+        </code></pre>
+        <p
+          >In the example above, the CSS selects all the
+          <span>&lt;h1&gt;</span> elements and applies the styles defined within
+          the curly braces. The <span>font-size</span>, <span>color</span>, and
+          <span>text-align</span> properties are set to <span>2em</span>,
+          <span>#333</span>, and <span>center</span> respectively. This will
+          make all <span>&lt;h1&gt;</span> elements on the page have a font size
+          of 2em, color of #333, and centered text alignment.</p
+        >
+      </article>
+      <article>
+        <h2>02. CSS History, Present & Future</h2>
+        <p
+          >CSS was first introduced in 1996 by the World Wide Web Consortium
+          (W3C). The first version of CSS, known as CSS1, was very basic and had
+          limited styling capabilities. However, it paved the way for the
+          development of modern CSS.</p
+        >
+        <p
+          >Over the years, CSS has undergone several updates and enhancements,
+          with CSS2 being released in 1998 and CSS3 in 1999. CSS3 is the latest
+          version of CSS and includes new features like animations, gradients,
+          and flexbox layouts.</p
+        >
+        <p
+          >The future of CSS looks promising with ongoing development and
+          updates. The latest version, CSS4, is currently in development and is
+          expected to bring even more advanced features to CSS, including native
+          support for variables, nesting, and more.</p
+        >
+        <p
+          >Here's an example of using CSS3 to create a simple gradient
+          background:</p
+        >
+        <pre class="language-css"><code>
+          /* Applies a linear gradient background to the body element */
+          body {
+            background: linear-gradient(to bottom, #fff, #ccc);
+          }
+        </code></pre>
+        <p
+          >The above CSS code will create a gradient background for the
+          <span>&lt;body&gt;</span> element, with the gradient going from white
+          (#fff) at the top to light gray (#ccc) at the bottom.</p
+        >
+      </article>
+      <article>
+        <h2>03. Adding CSS to our Project with Inline Styles</h2>
+        <p
+          >There are several ways to add CSS to an HTML document. One of the
+          easiest ways is by using inline styles. Inline styles are defined
+          within the HTML tag using the <span>style</span> attribute.</p
+        >
+        <p
+          >Here's an example of adding inline styles to a
+          <span>&lt;p&gt;</span> element:</p
+        >
+        <pre class="language-html"><code>
+          &lt;p style="font-size: 1.2em; color: #333;"&gt;This is a paragraph with inline styles.&lt;/p&gt;
+        </code></pre>
+        <p
+          >In the above example, the <span>style</span> attribute is added to
+          the <span>&lt;p&gt;</span> tag with two CSS properties:
+          <span>font-size</span> and <span>color</span>. The value for
+          <span>font-size</span> is set to 1.2em and the value for
+          <span>color</span> is set to #333.</p
+        >
+        <p
+          >Inline styles are useful when you want to apply styles to individual
+          elements, but they can become difficult to manage if you have a lot of
+          styles or multiple pages with similar styles. In those cases, it's
+          better to use an external stylesheet or internal styles within the
+          <span>&lt;head&gt;</span> tag.</p
+        >
+      </article>
+      <article>
+        <h2>04. Understanding the &lt;style&gt; Tag & Creating a .css File</h2>
+        <p
+          >The <span>&lt;style&gt;</span> tag is used to define styles within an
+          HTML document. It can be used in two ways:</p
+        >
+        <ol>
+          <li
+            >Inline styles: The <span>&lt;style&gt;</span> tag can be added
+            within the <span>&lt;head&gt;</span> tag to define styles for the
+            entire document.</li
+          >
+          <li
+            >External stylesheets: The <span>&lt;style&gt;</span> tag can be
+            used to link to an external stylesheet file that contains all the
+            CSS styles for the document.</li
+          >
+        </ol>
+        <p
+          >Here's an example of using the <span>&lt;style&gt;</span> tag to
+          define styles for a <span>&lt;p&gt;</span> element:</p
+        >
+        <pre class="language-html"><code>
+          &lt;head&gt;
+            &lt;style&gt;
+              p {
+                font-size: 1.2em;
+                color: #333;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;p&gt;This is a paragraph with styles defined in the &lt;style&gt; tag.&lt;/p&gt;
+          &lt;/body&gt;
+        </code></pre>
+        <p
+          >In the above example, the <span>&lt;style&gt;</span> tag is added
+          within the <span>&lt;head&gt;</span> tag and contains CSS styles for
+          the <span>&lt;p&gt;</span> element. The styles defined within the
+          <span>&lt;style&gt;</span> tag will be applied to all
+          <span>&lt;p&gt;</span> elements within the document.</p
+        >
+        <p
+          >Alternatively, you can create an external CSS file with all the
+          styles and link to it using the <span>&lt;link&gt;</span> tag. Here's
+          an example:</p
+        >
+        <pre class="language-html"><code>
+          &lt;head&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+        </code></pre>
+        <p
+          >In the above example, the <span>&lt;link&gt;</span> tag is used to
+          link to an external CSS file named "styles.css". This file should
+          contain all the CSS styles for the document.</p
+        >
+      </article>
+      <article>
+        <h2>05. Applying Additional Styles & Importing Google Fonts</h2>
+        <p
+          >Now that we know how to add CSS styles to our HTML document, let's
+          look at some additional styles we can apply and how to import external
+          fonts using Google Fonts.</p
+        >
+        <p
+          >Here's an example of applying some additional styles to a
+          <span>&lt;div&gt;</span> element:</p
+        >
+        <pre class="language-css"><code>
+          div {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+          }
+        </code></pre>
+        <p
+          >In the above example, we've added a background color, a border, and
+          some padding to a <span>&lt;div&gt;</span> element. These styles will
+          be applied to all <span>&lt;div&gt;</span> elements within the
+          document.</p
+        >
+        <p
+          >Next, let's look at how to import external fonts using Google Fonts.
+          Here's an example:</p
+        >
+        <pre class="language-html"><code>
+          &lt;head&gt;
+            &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+            &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+            &lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"&gt;
+            &lt;style&gt;
+              body {
+                font-family: 'Open Sans', sans-serif;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+        </code></pre>
+        <p
+          >In the above example, we've added three
+          <span>&lt;link&gt;</span> tags to import the Google Fonts stylesheet.
+          The first two <span>&lt;link&gt;</span> tags are used for
+          preconnecting to Google Fonts and improving the font loading
+          performance. The third <span>&lt;link&gt;</span> tag is used to import
+          the Open Sans font family with two weights: 400 and 700.</p
+        >
+        <p
+          >Finally, we've added a <span>&lt;style&gt;</span> tag within the
+          <span>&lt;head&gt;</span> tag to apply the Open Sans font family to
+          the entire document's body.</p
+        >
+      </article>
+      <article>
+        <h2>06. CSS Selectors</h2>
+        <p
+          >CSS selectors are used to target specific HTML elements and apply
+          styles to them. Here are some examples of CSS selectors:</p
+        >
+        <ul>
+          <li
+            ><span>Element Selector:</span> This targets all instances of a
+            specific HTML element. For example:</li
+          >
+          <pre class="language-css"><code>p {
+        color: red;
+      }</code></pre>
+          <li
+            ><span>ID Selector:</span> This targets a specific HTML element with
+            a unique ID. For example:</li
+          >
+          <pre class="language-css"><code>#header {
+        background-color: blue;
+      }</code></pre>
+          <li
+            ><span>Class Selector:</span> This targets all instances of a
+            specific class in the HTML document. For example:</li
+          >
+          <pre class="language-css"><code>.container {
+        max-width: 800px;
+      }</code></pre>
+          <li
+            ><span>Attribute Selector:</span> This targets HTML elements based
+            on their attributes. For example:</li
+          >
+          <pre class="language-css"><code>a[href="https://www.google.com"] {
+        color: green;
+      }</code></pre>
+          <li
+            ><span>Pseudo-class Selector:</span> This targets HTML elements
+            based on their state, such as :hover or :active. For example:</li
+          >
+          <pre class="language-css"><code>a:hover {
+        text-decoration: underline;
+      }</code></pre>
+        </ul>
+        <p
+          >By combining these selectors with CSS properties and values, we can
+          apply styles to specific HTML elements and create visually appealing
+          websites.</p
+        >
+      </article>
+      <article>
+        <h2>07. Understanding the "Cascading" Style & Specificity</h2>
+        <p
+          >The term "cascading" in Cascading Style Sheets (CSS) refers to the
+          way in which styles are applied to HTML elements. In simple terms,
+          when multiple styles are applied to the same element, the browser
+          determines which styles to use based on their specificity and the
+          order in which they appear in the CSS code.</p
+        >
+        <p
+          >Specificity refers to how "specific" a style selector is. The more
+          specific a selector is, the higher its priority will be. Here are some
+          examples of selectors and their specificity:</p
+        >
+        <ul>
+          <li><span>Element Selector:</span> Has a specificity of 1.</li>
+          <li><span>Class Selector:</span> Has a specificity of 10.</li>
+          <li><span>ID Selector:</span> Has a specificity of 100.</li>
+          <li><span>Inline Style:</span> Has a specificity of 1000.</li>
+        </ul>
+        <p
+          >When two or more selectors have the same specificity, the one that
+          appears last in the CSS code will take precedence. Here's an
+          example:</p
+        >
+        <pre class="language-css"><code>
+          p {
+            color: blue;
+          }
+          p {
+            color: red;
+          }
+        </code></pre>
+        <p
+          >In the above example, all <span>&lt;p&gt;</span> elements will have a
+          red color, as the second rule appears last in the CSS code.</p
+        >
+        <p
+          >Understanding specificity and the cascading style order is important
+          for writing efficient and maintainable CSS code.</p
+        >
+      </article>
+
+      <article>
+        <h2>08. Understanding Inheritance</h2>
+        <p
+          >CSS inheritance is the process by which styles are passed down from
+          parent elements to their child elements. This means that if a parent
+          element has a certain style applied to it, that style will
+          automatically be applied to its child elements unless they have their
+          own styles defined.</p
+        >
+        <p>For example, consider the following HTML code:</p>
+        <pre class="language-html"><code>
+    &lt;div class="parent"&gt;
+      &lt;p&gt;This is some text&lt;/p&gt;
+    &lt;/div&gt;
+  </code></pre>
+        <p
+          >If we define a style for the <span>.parent</span> class like this:</p
+        >
+        <pre class="language-css"><code>
+    .parent {
+      color: blue;
+    }
+  </code></pre>
+        <p
+          >Then the <span>&lt;p&gt;</span> element inside the
+          <span>&lt;div class="parent"&gt;</span> will also have a blue color,
+          unless it has its own style defined. This is because the
+          <span>&lt;p&gt;</span> element inherits the color property from its
+          parent element.</p
+        >
+        <p
+          >It's important to note that not all CSS properties are inherited. For
+          example, properties related to layout or positioning are typically not
+          inherited. To see if a particular property is inherited, you can check
+          the CSS documentation for that property.</p
+        >
+        <p
+          >Understanding inheritance can help you write more efficient and
+          maintainable CSS code by reducing the amount of redundant code you
+          need to write.</p
+        >
+      </article>
+      <article>
+        <h2>09. Adding Combinators</h2>
+        <p
+          >CSS combinators are used to select elements based on their
+          relationship to other elements. There are four types of combinators in
+          CSS:</p
+        >
+        <ul>
+          <li
+            ><span>Descendant Selector (space):</span> Selects an element that
+            is a descendant of another element.</li
+          >
+          <li
+            ><span>Child Selector (>):</span> Selects an element that is a
+            direct child of another element.</li
+          >
+          <li
+            ><span>Adjacent Sibling Selector (+):</span> Selects an element that
+            is directly after another element.</li
+          >
+          <li
+            ><span>General Sibling Selector (~):</span> Selects all elements
+            that come after another element.</li
+          >
+        </ul>
+        <p
+          >Here's an example of using the descendant selector to select all
+          <span>&lt;p&gt;</span> elements inside a
+          <span>&lt;div&gt;</span> element:</p
+        >
+        <pre class="language-css"><code>
+          div p {
+            color: blue;
+          }
+        </code></pre>
+        <p
+          >This will select all <span>&lt;p&gt;</span> elements that are
+          descendants of a <span>&lt;div&gt;</span> element, regardless of how
+          deeply they are nested.</p
+        >
+        <p
+          >Here's an example of using the child selector to select only the
+          direct <span>&lt;p&gt;</span> children of a
+          <span>&lt;div&gt;</span> element:</p
+        >
+        <pre class="language-css"><code>
+          div > p {
+            color: blue;
+          }
+        </code></pre>
+        <p
+          >This will select only the <span>&lt;p&gt;</span> elements that are
+          direct children of a <span>&lt;div&gt;</span> element.</p
+        >
+        <p
+          >Using combinators can help you write more targeted and specific CSS
+          selectors, which can make your styles more efficient and easier to
+          maintain.</p
+        >
+      </article>
+
+      <article>
+        <h2>10. Introducing the CSS Box Model</h2>
+        <p
+          >The CSS box model is a fundamental concept in web design that defines
+          how HTML elements are displayed on a webpage. Every HTML element is
+          essentially a rectangular box that consists of four parts:</p
+        >
+        <ul>
+          <li
+            ><span>Content:</span> The actual content of the element, such as
+            text or images.</li
+          >
+          <li
+            ><span>Padding:</span> The space between the content and the
+            element's border.</li
+          >
+          <li
+            ><span>Border:</span> The line that surrounds the element's padding
+            and content.</li
+          >
+          <li
+            ><span>Margin:</span> The space between the element's border and
+            neighboring elements.</li
+          >
+        </ul>
+        <p>Here's an example of how the box model is represented in CSS:</p>
+        <pre class="language-css"><code>
+    div {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 2px solid black;
+      margin: 10px;
+    }
+  </code></pre>
+        <p
+          >This code will create a <span>&lt;div&gt;</span> element that is 200
+          pixels wide and 100 pixels tall. It will have 20 pixels of padding, a
+          2 pixel border that is solid and black, and 10 pixels of margin around
+          the entire element.</p
+        >
+        <p
+          >Understanding the box model is crucial for creating layouts and
+          positioning elements on a webpage. It can also help you troubleshoot
+          layout issues and understand how different CSS properties affect an
+          element's size and position.</p
+        >
+      </article>
+      <article>
+        <h2
+          >11. Understanding Margin Collapsing and Removing Default Margins</h2
+        >
+        <p
+          >Margin collapsing is a phenomenon that occurs when two adjacent
+          elements have vertical margins. In some cases, the margins will
+          "collapse" into a single margin that is equal to the larger of the two
+          margins. This can be confusing and unexpected, but it is an important
+          concept to understand.</p
+        >
+        <p
+          >To avoid margin collapsing, you can use one of several techniques:</p
+        >
+        <ul>
+          <li>Use padding instead of margin on one of the elements.</li>
+          <li>Add a border or padding to one of the elements.</li>
+          <li>Add a non-zero height to one of the elements.</li>
+          <li
+            >Add a non-zero float or position property to one of the
+            elements.</li
+          >
+        </ul>
+        <p
+          >Another important aspect of margins is that many HTML elements have
+          default margins that can interfere with your layout. For example, the
+          <span>&lt;body&gt;</span> element typically has a margin around the
+          entire page, which can cause issues if you're trying to create a
+          full-width layout.</p
+        >
+        <p>To remove default margins, you can use the following CSS code:</p>
+        <pre class="language-css"><code>
+          body {
+            margin: 0;
+          }
+        </code></pre>
+        <p
+          >This code will set the margin of the
+          <span>&lt;body&gt;</span> element to zero, effectively removing any
+          default margin. You can also use this technique with other elements
+          that have default margins, such as <span>&lt;p&gt;</span> or
+          <span>&lt;h1&gt;</span>.</p
+        >
+      </article>
+      <article>
+        <h2>12. Working with Shorthand Properties</h2>
+        <p
+          >In CSS, shorthand properties allow you to specify multiple related
+          properties in a single line of code. This can make your code shorter
+          and easier to read, but it's important to understand how shorthand
+          properties work so that you can use them effectively.</p
+        >
+        <p>Here's an example of a shorthand property:</p>
+        <pre class="language-css"><code>
+          margin: 10px 20px 10px 20px;
+        </code></pre>
+        <p
+          >This code sets the margin of an element to 10 pixels on the top, 20
+          pixels on the right, 10 pixels on the bottom, and 20 pixels on the
+          left. The order of the values is top, right, bottom, left, going
+          clockwise around the element.</p
+        >
+        <p
+          >Another example of a shorthand property is the
+          <span>font</span> property:</p
+        >
+        <pre class="language-css"><code>
+          font: italic small-caps bold 16px/1.5 Arial, sans-serif;
+        </code></pre>
+        <p
+          >This code sets several properties related to the font of an element,
+          including the font-style, font-variant, font-weight, font-size,
+          line-height, and font-family. The values are listed in a specific
+          order, and not all values are required.</p
+        >
+        <p
+          >Using shorthand properties can save you time and help keep your code
+          organized, but it's important to be aware of the properties you're
+          setting and the order in which they're listed.</p
+        >
+      </article>
+      <article>
+        <h2>13. Diving Into the Height & Width Properties</h2>
+        <p
+          >The <span>height</span> and <span>width</span> properties in CSS
+          allow you to set the height and width of an element. These properties
+          are commonly used for layout purposes, such as setting the size of a
+          container or an image.</p
+        >
+        <p>Here's an example of how to use these properties:</p>
+        <pre class="language-css"><code>
+          .container {
+            width: 500px;
+            height: 300px;
+          }
+        </code></pre>
+        <p
+          >This code sets the width of the element with the class of "container"
+          to 500 pixels and the height to 300 pixels. You can also use other
+          units of measurement, such as percentages or ems, to set the height
+          and width.</p
+        >
+        <p
+          >It's important to note that the height and width properties only set
+          the dimensions of the content box of an element, not including any
+          padding, border, or margin. If you want to set the size of the entire
+          element, including padding and border, you can use the
+          <span>box-sizing</span> property:</p
+        >
+        <pre class="language-css"><code>
+          .container {
+            box-sizing: border-box;
+            width: 500px;
+            height: 300px;
+            padding: 20px;
+            border: 1px solid black;
+          }
+        </code></pre>
+        <p
+          >This code sets the box-sizing property to border-box, which includes
+          the padding and border in the width and height of the element. This
+          means that the content box will be 500 pixels wide and 300 pixels
+          high, including the 20-pixel padding and 1-pixel border on each
+          side.</p
+        >
+      </article>
+      <article>
+        <h2>14. Understanding Box Sizing</h2>
+        <p
+          >The <span>box-sizing</span> property in CSS allows you to control how
+          the size of an element is calculated, taking into account its padding
+          and border.</p
+        >
+        <p
+          >The default value of the <span>box-sizing</span> property is
+          <span>content-box</span>, which means that the width and height
+          properties only apply to the content box of the element, not including
+          its padding and border.</p
+        >
+        <p
+          >If you want to include the padding and border in the width and height
+          of the element, you can set the <span>box-sizing</span> property to
+          <span>border-box</span>:</p
+        >
+        <pre class="language-css"><code>
+          .container {
+            box-sizing: border-box;
+            width: 500px;
+            height: 300px;
+            padding: 20px;
+            border: 1px solid black;
+          }
+        </code></pre>
+        <p
+          >This code sets the <span>box-sizing</span> property to
+          <span>border-box</span>, which means that the width and height
+          properties now include the padding and border of the element. The
+          resulting element will have a content box of 460 pixels wide (500 - 2
+          * 20 - 2 * 1) and 260 pixels high (300 - 2 * 20 - 2 * 1), with a total
+          width of 500 pixels and a total height of 300 pixels.</p
+        >
+        <p
+          >It's important to note that changing the
+          <span>box-sizing</span> property can affect the layout of your entire
+          page, so it's important to use it consistently throughout your
+          code.</p
+        >
+      </article>
+      <article>
+        <h2>15. Understanding the Display Property</h2>
+        <p
+          >The <span>display</span> property in CSS controls how an element is
+          displayed on a web page. There are several values that the
+          <span>display</span> property can take:</p
+        >
+        <ul>
+          <li><span>block</span>: the element generates a block-level box.</li>
+          <li
+            ><span>inline</span>: the element generates an inline-level box.</li
+          >
+          <li
+            ><span>inline-block</span>: the element generates a block-level box
+            that will flow with the surrounding text as if it were an inline
+            element.</li
+          >
+          <li
+            ><span>none</span>: the element is completely removed from the page
+            and takes up no space.</li
+          >
+        </ul>
+        <p
+          >The default value for most HTML elements is <span>block</span>, which
+          means that they will take up the entire width of their container and
+          create a new line after them. However, there are some exceptions, such
+          as <span>inline</span> elements like <span>&lt;a&gt;</span> and
+          <span>&lt;span&gt;</span>.</p
+        >
+        <p
+          >The <span>display</span> property can also be used to create
+          responsive designs by changing the layout of elements depending on the
+          size of the screen. For example, you can set an element to
+          <span>block</span> on desktop screens and <span>inline-block</span> on
+          mobile screens to create a more compact layout.</p
+        >
+        <p
+          >It's important to note that changing the
+          <span>display</span> property can affect the layout of your entire
+          page, so it's important to use it carefully and test your code across
+          different devices.</p
+        >
+      </article>
+      <article>
+        <h2>16. Styling Anchor Tags</h2>
+        <p
+          >Anchor tags (<span>&lt;a&gt;</span>) are commonly used in web design
+          to create hyperlinks to other pages or resources. To style anchor
+          tags, you can use the <span>:link</span>, <span>:visited</span>, and
+          <span>:hover</span> pseudo-classes.</p
+        >
+        <p
+          >The <span>:link</span> pseudo-class is used to style links that have
+          not been visited by the user, while the
+          <span>:visited</span> pseudo-class is used to style links that have
+          already been visited. The <span>:hover</span> pseudo-class is used to
+          style links when the user hovers over them with their mouse.</p
+        >
+        <p>Here's an example of how to style anchor tags:</p>
+        <pre class="language-css">
+<code>a:link {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: underline;
+}</code></pre>
+
+        <p
+          >In this example, the <span>:link</span> pseudo-class sets the color
+          of unvisited links to blue and removes the underline, while the
+          <span>:visited</span> pseudo-class sets the color of visited links to
+          purple. The <span>:hover</span> pseudo-class underlines the link when
+          the user hovers over it.</p
+        >
+        <p
+          >You can also style anchor tags using other CSS properties, such as
+          <span>font-size</span>, <span>background-color</span>, and
+          <span>padding</span>, to create custom link styles that match your
+          website's design.</p
+        >
+      </article>
+      <article>
+        <h2>17. Pseudo Classes & Pseudo Elements</h2>
+        <p
+          >Pseudo-classes and pseudo-elements are special selectors in CSS that
+          allow you to style elements based on their state or position in the
+          HTML document.</p
+        >
+        <h3>Pseudo-classes</h3>
+        <p
+          >Pseudo-classes are used to select elements based on their state, such
+          as when a user hovers over an element or clicks on it. Here are some
+          common pseudo-classes:</p
+        >
+        <ul>
+          <li
+            ><span>:hover</span> - Selects an element when the user hovers over
+            it with their mouse</li
+          >
+          <li
+            ><span>:active</span> - Selects an element when it is being clicked
+            or activated</li
+          >
+          <li
+            ><span>:focus</span> - Selects an element when it has focus, such as
+            when a user clicks on a form field</li
+          >
+          <li
+            ><span>:nth-child()</span> - Selects elements based on their
+            position in the parent container</li
+          >
+        </ul>
+        <p
+          >Here's an example of how to use the <span>:hover</span> pseudo-class
+          to change the background color of a button when the user hovers over
+          it:</p
+        >
+        <pre class="language-css"><code>button:hover {
+        background-color: #FFD700;
+      }</code></pre>
+        <h3>Pseudo-elements</h3>
+        <p
+          >Pseudo-elements are used to select and style parts of an element,
+          such as the first letter of a paragraph or the content after an
+          element. Here are some common pseudo-elements:</p
+        >
+        <ul>
+          <li
+            ><span>::before</span> - Inserts content before the selected
+            element</li
+          >
+          <li
+            ><span>::after</span> - Inserts content after the selected
+            element</li
+          >
+          <li
+            ><span>::first-letter</span> - Selects the first letter of the text
+            in the selected element</li
+          >
+          <li
+            ><span>::first-line</span> - Selects the first line of text in the
+            selected element</li
+          >
+        </ul>
+        <p
+          >Here's an example of how to use the
+          <span>::before</span> pseudo-element to insert an icon before a
+          button:</p
+        >
+        <pre class="language-css"><code>button::before {
+        content: url(icon.png);
+        margin-right: 5px;
+      }</code></pre>
+        <p
+          >In this example, the <span>::before</span> pseudo-element inserts an
+          image of an icon before the button text and adds a 5-pixel margin to
+          the right of the icon.</p
+        >
+      </article>
+      <article>
+        <h2>18. Working with "font-weight" & "border"</h2>
+        <p
+          >The <code>font-weight</code> property specifies the weight or
+          boldness of the text in an element. The values can range from 100 to
+          900, with 400 being the default normal weight and 700 being the
+          default bold weight.</p
+        >
+        <pre
+          class="language-css"
+        ><code>/* Set the font weight of all paragraphs to bold */
+p {
+  font-weight: bold;
+}
+/* Set the font weight of all headings to normal */
+h1, h2, h3 {
+  font-weight: normal;
+}</code></pre>
+
+        <p
+          >The <code>border</code> property allows you to set the border of an
+          element. It has three sub-properties: <code>border-width</code>,
+          <code>border-style</code>, and <code>border-color</code>. You can also
+          use the shorthand property <code>border</code> to set all three
+          sub-properties at once.</p
+        >
+        <pre
+          class="language-css"
+        ><code>/* Set a 2-pixel solid black border around all images */
+img {
+  border: 2px solid #000;
+}
+/* Set a dotted 1-pixel red border around all links */
+a {
+  border: 1px dotted #f00;
+}</code></pre>
+
+        <p
+          >You can also set different border widths, styles, and colors for each
+          side of an element using the <code>border-top</code>,
+          <code>border-right</code>, <code>border-bottom</code>, and
+          <code>border-left</code> properties.</p
+        >
+        <pre
+          class="language-css"
+        ><code>/* Set a 1-pixel solid blue border on the top and bottom of a div */
+div {
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+/* Set a 2-pixel dotted green border on the left and right of an element */
+.element {
+  border-left: 2px dotted green;
+  border-right: 2px dotted green;
+}</code></pre>
+      </article>
+      <article>
+        <h2>19. Adding a Background Image</h2>
+        <p
+          >You can add a background image to an element using the
+          <code>background-image</code> property in CSS. The value of the
+          property should be the URL of the image you want to use as the
+          background.</p
+        >
+        <pre
+          class="language-css"
+        ><code>/* Set the background image of the body to a local file */
+body {
+  background-image: url('image.jpg');
+}
+/* Set the background image of a div to a remote image */
+div {
+  background-image: url('https://example.com/image.jpg');
+}</code></pre>
+
+        <p
+          >You can also use the <code>background-repeat</code> property to
+          control whether the background image is repeated or not, and in which
+          direction it is repeated. The values for this property include
+          <code>repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>, and
+          <code>no-repeat</code>.</p
+        >
+        <pre
+          class="language-css"
+        ><code>/* Set the background image of a div to repeat horizontally */
+      div {
+        background-image: url('image.jpg');
+        background-repeat: repeat-x;
+      }</code></pre>
+        <p
+          >You can use the <code>background-size</code> property to control the
+          size of the background image. The value of the property can be set to
+          <code>auto</code>, <code>cover</code>, or <code>contain</code>, or to
+          a specific length or percentage.</p
+        >
+        <pre
+          class="language-css"
+        ><code>/* Set the background image of a div to cover the entire element */
+      div {
+        background-image: url('image.jpg');
+        background-size: cover;
+      }</code></pre>
+      </article>
+
+      <article>
+        <h2>20. Using Multiple CSS Classes & Combined Selectors</h2>
+        <p
+          >You can apply multiple CSS classes to an HTML element by including
+          all the classes in the <code>class</code> attribute, separated by a
+          space. Each class can have its own styles, which are combined when
+          applied to the element.</p
+        >
+        <pre
+          class="language-html"
+        ><code>&lt;div class="box red"&gt;This is a red box&lt;/div&gt;</code></pre>
+        <pre class="language-css"><code>.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.red {
+  background-color: red;
+}</code></pre>
+
+        <p
+          >In this example, the <code>.box</code> class defines the width,
+          height, and border of the element, while the <code>.red</code> class
+          adds a red background to the element. When both classes are applied to
+          the <code>&lt;div&gt;</code> element, the styles from both classes are
+          combined to create a red box with a border.</p
+        >
+        <p
+          >You can also use combined selectors to apply styles to elements that
+          meet multiple criteria. For example, the following selector will apply
+          styles to all <code>&lt;a&gt;</code> elements with a class of
+          <code>external</code> that are located within a
+          <code>&lt;nav&gt;</code> element:</p
+        >
+        <pre class="language-css"><code>nav a.external {
+  color: red;
+}</code></pre>
+        <p
+          >Combined selectors can be very powerful and allow you to create very
+          specific styles for specific elements in your HTML structure.</p
+        >
+      </article>
+
+      <article>
+        <h2>21. Classes or IDs?</h2>
+        <p
+          >When selecting elements in CSS, you have two options: classes and
+          IDs. Both have their uses and are appropriate in different
+          situations.</p
+        >
+        <h3>Classes</h3>
+        <p
+          >Classes are used to group elements that share a common style. You can
+          apply the same class to multiple elements, and each element will
+          inherit the styles defined for that class.</p
+        >
+        <pre
+          class="language-html"
+        ><code>&lt;p class="important"&gt;This is an important paragraph.&lt;/p&gt;
+&lt;p class="important"&gt;This is another important paragraph.&lt;/p&gt;</code></pre>
+        <pre class="language-css"><code>.important {
+  font-weight: bold;
+  color: red;
+}</code></pre>
+        <p
+          >In this example, the <code>.important</code> class is applied to two
+          <code>&lt;p&gt;</code> elements, both of which are styled with a bold
+          font weight and red text color.</p
+        >
+        <h3>IDs</h3>
+        <p
+          >IDs are used to uniquely identify an element on a page. Unlike
+          classes, each ID can only be used once per page, and should be used
+          sparingly to avoid conflicts.</p
+        >
+        <pre
+          class="language-html"
+        ><code>&lt;div id="header"&gt;This is the page header.&lt;/div&gt;</code></pre>
+        <pre class="language-css"><code>#header {
+  background-color: black;
+  color: white;
+}</code></pre>
+        <p
+          >In this example, the <code>#header</code> ID is applied to a
+          <code>&lt;div&gt;</code> element, which is styled with a black
+          background and white text color.</p
+        >
+        <h3>When to Use Classes vs. IDs</h3>
+        <p
+          >As a general rule, you should use classes when you want to apply a
+          style to multiple elements on a page, and IDs when you want to
+          uniquely identify a single element. However, there are exceptions to
+          this rule, and it's ultimately up to you to decide which to use based
+          on the specific needs of your project.</p
+        >
+      </article>
+      <article>
+        <h2>22. (Not) using !important</h2>
+        <p
+          >The <code>!important</code> keyword is used to give a CSS declaration
+          more weight than normal. When an !important declaration is used, it
+          will override any other declarations for that property on that
+          element, regardless of specificity.</p
+        >
+        <p
+          >While <code>!important</code> can be a useful tool in certain
+          situations, it should be used sparingly and with caution. Overuse of
+          <code>!important</code> can make it difficult to debug and maintain
+          your CSS, and can lead to unexpected and unintended results.</p
+        >
+        <h3>When to Use !important</h3>
+        <p
+          >There are some situations where <code>!important</code> can be a
+          useful tool:</p
+        >
+        <ul>
+          <li
+            >When you need to override a style applied by a third-party library
+            or plugin.</li
+          >
+          <li
+            >When you need to ensure that a style is always applied, regardless
+            of specificity.</li
+          >
+        </ul>
+        <h3>When Not to Use !important</h3>
+        <p
+          >On the other hand, there are many situations where
+          <code>!important</code> should be avoided:</p
+        >
+        <ul>
+          <li
+            >When there are other, more specific selectors that could be used
+            instead.</li
+          >
+          <li
+            >When you are working on a large project where it could be difficult
+            to track down unexpected behavior caused by overuse of
+            <code>!important</code>.</li
+          >
+        </ul>
+        <p
+          >Remember, <code>!important</code> should be used only when necessary
+          and with caution. It's always better to rely on specificity and
+          careful use of selectors to achieve the desired style.</p
+        >
+      </article>
+      <article>
+        <h2>23. Selecting the Opposite with :not()</h2>
+        <p
+          >The <code>:not()</code> pseudo-class allows you to select all
+          elements that do not match a particular selector. This can be
+          especially useful in situations where you want to apply a style to all
+          elements except for a few specific ones.</p
+        >
+        <h3>Syntax</h3>
+        <pre class="language-css"><code>selector:not(other-selector) {
+        /* styles */
+      }</code></pre>
+        <p
+          >The <code>:not()</code> pseudo-class takes a single argument, which
+          is a selector that specifies the elements to exclude from the
+          selection.</p
+        >
+        <h3>Examples</h3>
+        <p>Select all paragraphs except the first one:</p>
+        <pre class="language-css"><code>p:not(:first-of-type) {
+        /* styles */
+      }</code></pre>
+        <p>Select all elements with the class "button" except for links:</p>
+        <pre class="language-css"><code>.button:not(a) {
+        /* styles */
+      }</code></pre>
+        <p>Select all list items except for the first and last ones:</p>
+        <pre
+          class="language-css"
+        ><code>li:not(:first-of-type):not(:last-of-type) {
+        /* styles */
+      }</code></pre>
+        <p
+          >Remember that the <code>:not()</code> pseudo-class is supported in
+          modern browsers, but older browsers may not support it. As always,
+          it's a good idea to test your code in multiple browsers to ensure
+          cross-browser compatibility.</p
+        >
+      </article>
+      <article>
+        <h2>24. CSS & Browser Support</h2>
+        <p
+          >One of the biggest challenges when working with CSS is ensuring that
+          your styles are properly displayed across different browsers. While
+          modern browsers generally support the same CSS features, older
+          browsers may have limited or no support for some properties or
+          selectors. Here are a few tips to help ensure cross-browser
+          compatibility:</p
+        >
+        <ol>
+          <li
+            >Check the compatibility of CSS features you plan to use on
+            <a href="https://caniuse.com/">Can I Use</a> to see which browsers
+            support them.</li
+          >
+          <li
+            >Use feature detection to apply styles selectively based on browser
+            support. For example, you can use the <code>@supports</code> rule to
+            apply styles only if a certain CSS feature is supported by the
+            browser:</li
+          >
+        </ol>
+        <pre class="language-css"><code>@supports (display: grid) {
+        /* styles for browsers that support CSS Grid */
+      }</code></pre>
+        <ol start="3">
+          <li
+            >Avoid using proprietary prefixes (such as -webkit-, -moz-, -ms-, or
+            -o-) whenever possible, as they are specific to certain browsers and
+            may become obsolete over time.</li
+          >
+          <li
+            >Use CSS resets or normalizers to ensure consistent styles across
+            different browsers. These tools help to eliminate the default styles
+            that different browsers apply to HTML elements, giving you a clean
+            slate to work with.</li
+          >
+        </ol>
+        <p
+          >By following these tips and staying up-to-date on the latest CSS
+          features and browser support, you can create styles that look great
+          across a wide range of devices and browsers.</p
+        >
+      </article>
+
+      <article>
+        <h2>25. Understanding the Z-Index</h2>
+        <p
+          >The z-index property is used to specify the stack order of positioned
+          elements that overlap within a document. Elements with a higher
+          z-index value will appear on top of elements with a lower z-index
+          value. Here are some important things to keep in mind when using the
+          z-index property:</p
+        >
+        <ul>
+          <li
+            >The z-index property only works on positioned elements (elements
+            with position: absolute, position: relative, position: fixed, or
+            position: sticky).</li
+          >
+          <li
+            >The z-index property can take any integer value (positive or
+            negative).</li
+          >
+          <li
+            >The default value of the z-index property is auto, which means that
+            the element will be positioned in the normal document flow and will
+            not be affected by the z-index values of other elements.</li
+          >
+          <li
+            >The z-index property can be used in conjunction with other CSS
+            properties like opacity and transform, as long as the element is
+            positioned.</li
+          >
+          <li
+            >When two elements overlap and have the same z-index value, the one
+            that appears later in the HTML document (i.e. appears lower in the
+            code) will be placed on top.</li
+          >
+        </ul>
+        <p>Here is an example of how to use the z-index property:</p>
+        <pre class="language-css"><code>.box {
+  position: relative;
+  z-index: 1;
+}
+.box2 {
+  position: relative;
+  z-index: 2;
+}</code></pre>
+
+        <p
+          >In this example, the .box2 element will appear on top of the .box
+          element because it has a higher z-index value.</p
+        >
+      </article>
+      <article>
+        <h2>26. CSS Sizes and Units</h2>
+        <p
+          >When styling with CSS, it's important to choose the appropriate size
+          and unit for your properties. Here are some of the most common units
+          used in CSS:</p
+        >
+        <ul>
+          <li
+            >px (pixels) - A pixel is a single dot on a screen. This unit is
+            commonly used for specifying font sizes and element dimensions. For
+            example, "font-size: 16px" or "width: 300px".</li
+          >
+          <li
+            >% (percentages) - A percentage is a relative unit that is based on
+            the size of the parent element. For example, "width: 50%" will make
+            an element take up half the width of its parent element.</li
+          >
+          <li
+            >em - An em is a unit that is based on the size of the font that is
+            being used. For example, if the font-size of an element is 16px,
+            then 1em is equal to 16px. This unit is commonly used for setting
+            line-heights and spacing between elements.</li
+          >
+          <li
+            >rem - A rem is similar to an em, but it is based on the size of the
+            root element (i.e. the HTML element) rather than the current
+            element. This unit is commonly used for creating scalable layouts
+            that can be easily adjusted for different screen sizes.</li
+          >
+          <li
+            >vh and vw - These units are based on the size of the viewport (i.e.
+            the visible area of the browser window). 1vh is equal to 1% of the
+            viewport height, while 1vw is equal to 1% of the viewport width.
+            These units are commonly used for creating full-screen layouts or
+            for setting element sizes relative to the viewport.</li
+          >
+        </ul>
+      </article>
+      <article>
+        <h2>27. Where Units Matter</h2>
+        <p
+          >When it comes to sizing elements in CSS, choosing the right unit is
+          important to achieve the desired result. Here are some cases where
+          units matter:</p
+        >
+        <ul>
+          <li
+            ><b>Font size:</b> The most commonly used unit for font sizes is
+            <code>px</code>. However, using <code>em</code> or
+            <code>rem</code> is recommended because they are relative units and
+            allow for more responsive design. For example:</li
+          >
+          <pre class="language-css"><code>body {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2em; /* equivalent to 32px */
+}
+
+p {
+  font-size: 1rem; /* equivalent to 16px */
+}</code></pre>
+          <li
+            ><b>Padding and margin:</b> Padding and margin can be specified in
+            <code>px</code>, <code>em</code>, <code>rem</code>, <code>%</code>,
+            and other units. <code>em</code> and <code>rem</code> are again
+            recommended for responsive design. For example:</li
+          >
+          <pre class="language-css"><code>.box {
+    padding: 1em;
+    margin: 0.5rem;
+}</code></pre>
+          <li
+            ><b>Width and height:</b> The most commonly used units for
+            specifying width and height are <code>px</code> and <code>%</code>.
+            <code>em</code> and <code>rem</code> can also be used, but they are
+            relative units and can cause unexpected results in certain cases.
+            For example:</li
+          >
+          <pre class="language-css"><code>.container {
+    width: 100%;
+    height: 400px;
+}
+    
+    .box {
+    width: 50%; /* of the parent container /
+    height: 2em;
+}</code></pre>
+          <li
+            ><b>Viewport units:</b> Viewport units are relative to the size of
+            the viewport and can be useful for creating responsive designs. The
+            most commonly used viewport units are <code>vw</code> (viewport
+            width) and <code>vh</code> (viewport height). For example:</li
+          >
+          <pre class="language-css"><code>.box {
+    width: 50vw; / 50% of the viewport width /
+    height: 50vh; / 50% of the viewport height */
+}</code></pre>
+        </ul>
+        <p
+          >By choosing the right unit for each case, you can make your CSS more
+          flexible and responsive to different screen sizes and devices.</p
+        >
+      </article>
+      <article>
+        <h2>28. CSS for Styling Forms</h2>
+        <p
+          >CSS can be used to style HTML forms, including input fields,
+          checkboxes, radio buttons, and buttons.</p
+        >
+        <p>For example, to style an input field:</p>
+        <pre class="language-css"><code>input {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}</code></pre>
+        <p>The CSS properties used above are:</p>
+        <ul>
+          <li
+            ><span>background-color</span>: sets the background color of the
+            input field.</li
+          >
+          <li><span>border</span>: sets the border of the input field.</li>
+          <li
+            ><span>padding</span>: sets the padding inside the input field.</li
+          >
+          <li><span>margin</span>: sets the margin outside the input field.</li>
+          <li
+            ><span>box-sizing</span>: sets how the width and height of the input
+            field are calculated (in this case, including the border and
+            padding).</li
+          >
+        </ul>
+        <p>Similarly, checkboxes and radio buttons can be styled:</p>
+        <pre
+          class="language-css"
+        ><code>input[type="checkbox"], input[type="radio"] {
+        margin: 4px 0;
+      }
+      
+      input[type="checkbox"] {
+        /* style the checkbox */
+      }
+      
+      input[type="radio"] {
+        /* style the radio button */
+      }</code></pre>
+        <p>To style a button:</p>
+        <pre class="language-css"><code>button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}</code></pre>
+        <p>The CSS properties used above are:</p>
+        <ul>
+          <li
+            ><span>background-color</span>: sets the background color of the
+            button.</li
+          >
+          <li
+            ><span>color</span>: sets the color of the text inside the
+            button.</li
+          >
+          <li><span>padding</span>: sets the padding inside the button.</li>
+          <li><span>margin</span>: sets the margin outside the button.</li>
+          <li><span>border</span>: sets the border of the button.</li>
+          <li
+            ><span>cursor</span>: sets the mouse cursor style when hovering over
+            the button.</li
+          >
+          <li><span>width</span>: sets the width of the button.</li>
+        </ul>
+      </article>
+      <article>
+        <h2>29. Styling Fonts</h2>
+        <p
+          >There are several properties in CSS that can be used to style
+          fonts:</p
+        >
+        <ul>
+          <li
+            ><code>font-family</code>: specifies the font(s) to be used for the
+            text</li
+          >
+          <li><code>font-size</code>: specifies the size of the font</li>
+          <li
+            ><code>font-weight</code>: specifies the weight (boldness) of the
+            font</li
+          >
+          <li
+            ><code>font-style</code>: specifies the style (italic, oblique,
+            etc.) of the font</li
+          >
+          <li
+            ><code>text-transform</code>: specifies the capitalization of the
+            text</li
+          >
+          <li
+            ><code>text-decoration</code>: specifies the decoration of the text
+            (underline, overline, line-through, etc.)</li
+          >
+          <li
+            ><code>text-align</code>: specifies the horizontal alignment of the
+            text</li
+          >
+          <li
+            ><code>line-height</code>: specifies the distance between lines of
+            text</li
+          >
+        </ul>
+        <p>Here's an example of how to use some of these properties:</p>
+        <pre class="language-css"><code>
+    p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: italic;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-align: center;
+        line-height: 1.5;
+    }
+        </code></pre>
+        <p
+          >This will style all <code>&lt;p&gt;</code> elements on the page with
+          Arial (or a sans-serif font if Arial isn't available), a size of 16
+          pixels, a normal weight, italic style, uppercase letters, underlined
+          text, centered alignment, and a line height of 1.5 times the font
+          size.</p
+        >
+      </article>
+      <article>
+        <h2>30. Why our Project Should Become Responsive</h2>
+        <p
+          >With the increasing usage of mobile devices, it's more important than
+          ever to ensure that our web projects are responsive. Responsive design
+          means that our website can adapt to different screen sizes and device
+          types, providing a better user experience for all users.</p
+        >
+        <p>There are many benefits to creating a responsive website:</p>
+        <ol>
+          <li
+            >Improved user experience: Users can access your site from any
+            device, and it will look and function properly.</li
+          >
+          <li
+            >Increased traffic: Google rewards responsive websites with higher
+            search engine rankings.</li
+          >
+          <li
+            >Cost-effective: Rather than creating separate websites for desktop
+            and mobile, responsive design allows you to create one website that
+            works for all devices.</li
+          >
+        </ol>
+        <p
+          >In order to make our project responsive, we need to use CSS media
+          queries. Media queries allow us to apply different styles based on the
+          screen size of the device being used. We can use media queries to
+          adjust our layout, font sizes, and even hide or show elements
+          depending on the device screen size.</p
+        >
+        <pre class="language-css"><code>
+        /* Example of a media query */
+        @media screen and (max-width: 600px) {
+          /* Styles applied to devices with a maximum width of 600px */
+          body {
+            font-size: 14px;
+          }
+        }
+        </code></pre>
+        <p
+          >With media queries, we can create a website that looks great on any
+          device, improving user experience and helping to increase traffic to
+          our site.</p
+        >
+      </article>
+      <article>
+        <h2>31. Understanding Hardware Pixels vs. Software Pixels</h2>
+        <p
+          >When we talk about screens and displays, there are two types of
+          pixels: hardware pixels and software pixels.
+        </p>
+        <p
+          >Hardware pixels are the physical dots that make up a screen, and
+          their size and density are fixed, meaning that a screen with a
+          resolution of 1920 x 1080 pixels will always have 1920 x 1080 physical
+          pixels. On the other hand, software pixels, or logical pixels, are the
+          units used by software to render content on the screen.
+        </p>
+        <p
+          >One important concept related to software pixels is the device pixel
+          ratio (DPR). This is the ratio between the physical size of a pixel
+          and its logical size. For example, if a screen has a DPR of 2, this
+          means that each logical pixel is represented by 2 physical pixels.
+        </p>
+        <p
+          >Understanding hardware and software pixels is important when it comes
+          to creating responsive designs that look good on different devices.
+          When we specify dimensions and positions in CSS, we should use logical
+          units like em, rem, or %, rather than physical units like px, because
+          logical units will adjust to the DPR of the device and look consistent
+          across different screens.
+        </p>
+      </article>
+      <article>
+        <h2
+          >32. Comparing the Viewport Metatag (HTML) and Media Queries (CSS)</h2
+        >
+        <p
+          >Both the viewport metatag and media queries are used to make a
+          website responsive.</p
+        >
+        <p
+          >The viewport metatag is used in HTML to control the width and scaling
+          of the viewport on mobile devices. It specifies the viewport's width,
+          the initial scale, and maximum scale. For example:</p
+        >
+        <pre
+          class="language-html"
+        ><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"&gt;</code></pre>
+        <p
+          >The above meta tag sets the viewport width to be the same as the
+          device width, and disables zooming.</p
+        >
+        <p
+          >Media queries, on the other hand, are used in CSS to apply different
+          styles depending on the device width. They allow us to create a
+          responsive design by defining different styles for different devices.
+          For example:</p
+        >
+        <pre
+          class="language-css"
+        ><code>@media only screen and (max-width: 768px) {
+  /* Styles for devices with a maximum width of 768px */
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for devices with a minimum width of 769px and maximum width of 1024px */
+}
+@media only screen and (min-width: 1025px) {
+  /* Styles for devices with a minimum width of 1025px */
+}</code></pre>
+        <p
+          >The above media queries define three different sets of styles for
+          devices with different screen sizes. The first set of styles applies
+          to devices with a maximum width of 768px, the second set of styles
+          applies to devices with a minimum width of 769px and a maximum width
+          of 1024px, and the third set of styles applies to devices with a
+          minimum width of 1025px.</p
+        >
+        <p
+          >By using both the viewport metatag and media queries, we can create a
+          fully responsive website that looks great on all devices.</p
+        >
+      </article>
+      <article>
+        <h2>33. Understanding the "viewport" Metatag</h2>
+        <p
+          >The <code>viewport</code> meta tag is used to specify the viewport
+          for mobile browsers. It helps the browser to adjust the page layout
+          according to the size of the device screen.</p
+        >
+        <p
+          >The viewport meta tag is placed inside the <code>head</code> section
+          of your HTML document. Here is an example:</p
+        >
+        <pre class="language-html"><code>&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+      </code></pre>
+        <p
+          >The <code>content</code> attribute is used to define the settings for
+          the viewport. In the example above, we set the width of the viewport
+          to the device width and set the initial zoom level to 1.0. This means
+          that the webpage will be displayed with a 1:1 ratio between CSS pixels
+          and device-independent pixels.</p
+        >
+        <p
+          >By using the viewport meta tag, we can make sure that our web page
+          looks good on all devices, from small smartphones to large desktop
+          screens.</p
+        >
+      </article>
+      <article>
+        <h2>34. Designing Websites "Mobile First"</h2>
+        <p
+          >Mobile-first design is a web design strategy in which mobile devices
+          are the first priority when designing a website. It involves designing
+          the website for smaller screen sizes first and then gradually scaling
+          up to larger screens. This approach has become increasingly popular
+          because mobile devices account for a significant portion of web
+          traffic, and it's essential to ensure that your website is optimized
+          for smaller screens.</p
+        >
+        <p
+          >One of the main advantages of mobile-first design is that it
+          encourages simplicity and efficiency. It forces designers to focus on
+          the most critical elements of the website and avoid unnecessary
+          clutter that can slow down the page's load time. Additionally, it can
+          also help ensure that the website is more accessible to people with
+          disabilities and older devices.</p
+        >
+        <p
+          >Mobile-first design can be achieved using responsive design
+          techniques. A responsive website is one that adjusts its layout and
+          content based on the screen size and orientation of the device being
+          used. This is achieved using CSS media queries, which allow you to
+          specify different styles for different screen sizes.</p
+        >
+        <p
+          >By designing with mobile devices in mind first, you can create a
+          website that is optimized for a wide range of devices and screen
+          sizes, which can ultimately lead to a better user experience and
+          increased engagement.</p
+        >
+      </article>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../prism.js"></script>
+  </body>
+</html>

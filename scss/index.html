@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../scrollBar.css" />
+    <link rel="stylesheet" href="../animation.css" />
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../prism.css" />
+    <link rel="stylesheet" href="../page.css" />
+  </head>
+  <body>
+    <nav class="desktopMenu">
+      <div class="navList">
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon class="listIcon" name="home"></ion-icon>Home
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-youtube" class="listIcon"></ion-icon>YT
+            Playlist
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="bookmarks" class="listIcon"></ion-icon>BookMarks
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-react" class="listIcon"></ion-icon>Boilerplate
+          </div></a
+        >
+      </div>
+      <ion-icon
+        name="menu"
+        class="burgerMenu"
+        onclick="mobileMenuDisplayBlock()"
+      ></ion-icon>
+      <a href="https://github.com/Dinujaya-Sandaruwan" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+    </nav>
+
+    <nav class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuItem">
+        <span class="close" onclick="mobileMenuDisplayNone()"
+          ><ion-icon name="close" class="closeIcon"></ion-icon
+        ></span>
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">Home</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">YT Playlist</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">BookMarks</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">Boilerplate</div></a
+        >
+      </div>
+    </nav>
+
+    <h1 class="heading">SCSS NOTES</h1>
+
+    <!-- Content of this page -->
+
+    <div class="content">
+      <article>
+        <h2>01. What is Sass?</h2>
+        <p
+          >Sass is a preprocessor scripting language that is interpreted or
+          compiled into Cascading Style Sheets (CSS). Sass extends CSS with
+          features like variables, nested rules, mixins, and functions, making
+          it easier to write and maintain CSS code.</p
+        >
+        <p>Here's an example of how to define a variable in Sass:</p>
+        <pre class="language-sass"><code>$primary-color: #3498db;</code></pre>
+        <p>You can then use the variable in your styles:</p>
+        <pre class="language-sass"><code>body {
+        background-color: $primary-color;
+}</code></pre>
+      </article>
+      <article>
+        <h2>02. Compiling Sass with VS Code extensions</h2>
+        <p
+          >You can use various extensions in Visual Studio Code to compile Sass
+          code into CSS. One popular extension is the "Live Sass Compiler"
+          extension. Here are the steps to set up the extension:</p
+        >
+        <ol>
+          <li
+            >Open Visual Studio Code and click on the "Extensions" icon in the
+            left-hand sidebar.</li
+          >
+          <li
+            >Search for "Live Sass Compiler" and click on the "Install"
+            button.</li
+          >
+          <li
+            >Once the extension is installed, click on the "Settings" icon in
+            the left-hand sidebar.</li
+          >
+          <li
+            >Search for "Live Sass Compiler Config" and click on "Edit in
+            settings.json".</li
+          >
+          <li>Add the following configuration to the settings.json file:</li>
+        </ol>
+        <pre class="language-sass"><code>{
+        "liveSassCompile.settings.formats": [
+          {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css"
+          }
+        ]
+}</code></pre>
+        <p
+          >This configuration tells the extension to compile Sass into minified
+          CSS and save it in the "/css" directory.</p
+        >
+        <p
+          >Once you have set up the extension, you can start writing Sass code
+          in your project and the extension will automatically compile it into
+          CSS.</p
+        >
+      </article>
+      <article>
+        <h2>03. Sass Partials</h2>
+        <p
+          >Sass partials are separate Sass files that contain snippets of CSS
+          code. They are called "partials" because their filenames start with an
+          underscore "_" character, which tells Sass not to compile them into
+          standalone CSS files.</p
+        >
+        <p
+          >Here's an example of a partial file called "_variables.scss" that
+          contains variables:</p
+        >
+        <pre class="language-scss"><code>// _variables.scss
+$primary-color: #3498db;
+$secondary-color: #2ecc71;</code></pre>
+        <p
+          >You can import this partial file into your main Sass file using the
+          @import directive:</p
+        >
+        <pre class="language-scss"><code>// main.scss
+@import 'variables';
+body {
+      background-color: $primary-color;
+}</code></pre>
+
+        <p
+          >When you compile the main.scss file, Sass will automatically include
+          the variables defined in the "_variables.scss" partial.</p
+        >
+      </article>
+      <article>
+        <h2>04. Sass Variables and CSS Custom Properties</h2>
+        <p
+          >Sass variables and CSS custom properties are both used to store and
+          reuse values in CSS code. While they serve a similar purpose, there
+          are some differences between the two.</p
+        >
+        <p
+          >Sass variables are defined in Sass code using the "$" symbol, while
+          CSS custom properties are defined in CSS code using the "--"
+          symbol.</p
+        >
+        <p>Here's an example of defining a Sass variable:</p>
+        <pre class="language-scss"><code>$primary-color: #3498db;
+body {
+    background-color: $primary-color;
+}</code></pre>
+
+        <p>Here's an example of defining a CSS custom property:</p>
+        <pre class="language-css"><code>:root {
+    --primary-color: #3498db;
+}
+body {
+    background-color: var(--primary-color);
+}</code></pre>
+
+        <p
+          >Note that CSS custom properties can also be used in Sass code, but
+          they must be wrapped in the "var()" function:</p
+        >
+        <pre class="language-scss"><code>$primary-color: var(--primary-color);
+body {
+    background-color: $primary-color;
+}</code></pre>
+
+        <p
+          >Using variables and custom properties can make your CSS code more
+          flexible and easier to maintain.</p
+        >
+      </article>
+      <article>
+        <h2>05. Sass and BEM</h2>
+        <p
+          >Sass and BEM (Block Element Modifier) are two popular approaches to
+          writing modular and maintainable CSS code.</p
+        >
+        <p
+          >BEM is a naming convention for CSS classes that helps to ensure
+          consistency and modularity. BEM classes are made up of three parts:</p
+        >
+        <ul>
+          <li
+            >The block: A standalone component that can be reused across
+            different parts of a website. Block names are written in lowercase
+            and separated by hyphens (e.g. "menu-item").</li
+          >
+          <li
+            >The element: A part of a block that has no standalone meaning.
+            Element names are written in lowercase and separated from the block
+            name by a double underscore (e.g. "menu-item__link").</li
+          >
+          <li
+            >The modifier: A variant or extension of a block or element.
+            Modifier names are written in lowercase and separated from the block
+            or element name by a double hyphen (e.g.
+            "menu-item__link--active").</li
+          >
+        </ul>
+        <p>Here's an example of using BEM classes in Sass code:</p>
+        <pre class="language-scss"><code>.menu-item {
+        background-color: #f1f1f1;
+      &__link {
+      color: #333;
+      text-decoration: none;
+      &--active {
+        color: #fff;
+        background-color: #3498db;
+      }
+    }
+  }</code></pre>
+
+        <p
+          >This Sass code defines a "menu-item" block with an
+          "element__modifier" structure for the link element. The "&" symbol is
+          used to reference the parent class in Sass code.</p
+        >
+        <p
+          >Using BEM with Sass can help to keep your CSS code organized and
+          maintainable.</p
+        >
+      </article>
+      <article>
+        <h2>06. Building the Responsive Mobile</h2>
+        <p
+          >Building a responsive mobile design is an important part of modern
+          web development. Here are some tips for building a responsive mobile
+          design with Sass:</p
+        >
+        <ul>
+          <li
+            >Use Sass variables for commonly used values such as font sizes,
+            colors, and spacing. This makes it easier to adjust these values for
+            different screen sizes.</li
+          >
+          <li
+            >Use media queries to adjust styles for different screen sizes. Sass
+            makes it easy to write media queries with its "@media"
+            directive.</li
+          >
+          <li
+            >Use the "rem" unit for font sizes and "em" units for spacing. These
+            units are relative to the root font size and make it easier to
+            maintain consistent proportions across different screen sizes.</li
+          >
+          <li
+            >Use the "mobile first" approach, which means designing for mobile
+            screens first and then adding styles for larger screens. This helps
+            to ensure that your design is optimized for smaller screens.</li
+          >
+        </ul>
+        <p
+          >Here's an example of using Sass variables and media queries for a
+          responsive mobile design:</p
+        >
+        <pre class="language-scss"><code>$primary-color: #3498db;
+$font-size: 16px;
+body {
+    font-size: $font-size;
+    color: #333;
+    
+    @media (min-width: 768px) {
+      font-size: $font-size * 1.2;
+    }
+    
+    @media (min-width: 992px) {
+      font-size: $font-size * 1.5;
+    }
+    
+    @media (min-width: 1200px) {
+      font-size: $font-size * 1.8;
+    }
+}</code></pre>
+
+        <p
+          >This Sass code defines a variable for the primary color and a
+          variable for the base font size. It also uses media queries to adjust
+          the font size for different screen sizes.</p
+        >
+        <p
+          >Following these tips can help you to build a responsive mobile design
+          that looks great on a variety of devices.</p
+        >
+      </article>
+      <article>
+        <h2>07. Building the Desktop Layout</h2>
+        <p
+          >Building a desktop layout requires a different approach than building
+          a mobile layout. Here are some tips for building a desktop layout with
+          Sass:</p
+        >
+        <ul>
+          <li
+            >Use a grid system to lay out your content. Sass has many grid
+            systems available as libraries or you can create your own using CSS
+            Grid or Flexbox.</li
+          >
+          <li
+            >Use media queries to adjust styles for different screen sizes. Sass
+            makes it easy to write media queries with its "@media"
+            directive.</li
+          >
+          <li
+            >Use the "em" unit for spacing to ensure that your layout scales
+            proportionally with changes in font size.</li
+          >
+          <li>Use Sass mixins to simplify repetitive CSS code.</li>
+        </ul>
+        <p
+          >Here's an example of using a Sass mixin to create a desktop
+          layout:</p
+        >
+        <pre class="language-scss"><code>$grid-columns: 12;
+$grid-gutter: 20px;
+@mixin grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $grid-gutter / 2;
+}
+
+@mixin grid-column($columns) {
+  width: 100% / $grid-columns * $columns;
+  float: left;
+  padding: 0 $grid-gutter / 2;
+}
+
+.container {
+  @include grid-container;
+}
+
+.row {
+  margin: 0 -$grid-gutter / 2;
+  &:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+}
+
+.col {
+  @include grid-column(12);
+
+@media (min-width: 768px) {
+  @include grid-column(6);
+}
+
+@media (min-width: 992px) {
+  @include grid-column(4);
+}
+}</code></pre>
+
+        <p
+          >This Sass code defines a grid system with a 12-column layout and 20px
+          gutters. It also uses media queries to adjust the column widths for
+          different screen sizes.</p
+        >
+        <p
+          >Using these tips can help you to build a desktop layout that is both
+          functional and visually appealing.</p
+        >
+      </article>
+      <article>
+        <h2>10. Setting Widths</h2>
+        <p
+          >Sass makes it easy to set widths for your elements using variables
+          and mixins. Here's an example:</p
+        >
+        <pre class="language-scss"><code>$max-width: 1200px;
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 25%;
+  @include breakpoint(md) {
+    width: 33.33%;
+  }
+}
+
+.content {
+  width: 75%;
+  @include breakpoint(md) {
+    width: 66.66%;
+  }
+}</code></pre>
+
+        <p
+          >In this example, we define a variable for the maximum width of our
+          container. We then use that variable to set the maximum width and
+          margin of the container.</p
+        >
+        <p
+          >Next, we set the width of our sidebar and content elements. We use a
+          mixin called "breakpoint" to adjust the widths for different screen
+          sizes. The "breakpoint" mixin is defined elsewhere in our Sass code
+          and generates media queries.</p
+        >
+        <p
+          >By using variables and mixins in this way, we can quickly and easily
+          adjust the widths of our elements and ensure that they scale properly
+          on different screen sizes.</p
+        >
+      </article>
+      <article>
+        <h2>09. Sass Mixins</h2>
+        <p
+          >Sass mixins are a powerful way to reduce code duplication in your
+          CSS. Mixins allow you to define a block of CSS code and then include
+          it in multiple places throughout your stylesheet.</p
+        >
+        <p>Here's an example of how to create and use a Sass mixin:</p>
+        <pre class="language-scss"><code>@mixin button($bg-color, $text-color) {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: darken($bg-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($bg-color, 20%);
+  }
+  }
+
+  .button-primary {
+    @include button(#0074D9, #FFFFFF);
+  }
+
+  .button-secondary {
+    @include button(#FFFFFF, #0074D9);
+  }</code></pre>
+
+        <p
+          >In this example, we define a mixin called "button" that takes two
+          parameters: the background color and text color for the button. The
+          mixin includes all of the common styles for a button, such as padding,
+          border-radius, and font-size.</p
+        >
+        <p
+          >We can then include the "button" mixin in our ".button-primary" and
+          ".button-secondary" classes, passing in the appropriate background and
+          text colors as parameters. This results in clean, readable code and
+          makes it easy to update the styles for all of our buttons at once by
+          simply changing the mixin.</p
+        >
+      </article>
+      <article>
+        <h2>10. Responsive Typography</h2>
+        <p
+          >Responsive typography is an important aspect of building responsive
+          websites. Sass makes it easy to set up responsive typography using
+          mixins and functions.</p
+        >
+        <p
+          >Here's an example of how to use Sass to create a responsive
+          typography system:</p
+        >
+        <pre
+          class="language-scss"
+        ><code>@function calculate-rem($size, $context: 16) {
+@return $size / $context * 1rem;
+}
+@mixin font-size($size, $line-height: $size * 1.5) {
+  font-size: $size;
+  line-height: $line-height;
+  font-size: calculate-rem($size);
+  line-height: calculate-rem($line-height);
+}
+
+h1 {
+  @include font-size(48px);
+}
+
+h2 {
+  @include font-size(36px);
+}
+
+p {
+  @include font-size(16px);
+}</code></pre>
+
+        <p
+          >In this example, we define a function called "calculate-rem" that
+          calculates the size of a font in rem units based on a given context.
+          We then define a mixin called "font-size" that takes a font size and
+          line height as parameters and sets the font size and line height using
+          both pixels and rem units.</p
+        >
+        <p
+          >We can then use the "font-size" mixin to set the font size and line
+          height for our headings and paragraphs. By using both pixels and rem
+          units, our typography will be responsive and scale properly on
+          different screen sizes.</p
+        >
+      </article>
+      <article>
+        <h2>11. Sass Functions</h2>
+        <p
+          >Sass provides a variety of built-in functions that allow you to
+          perform common tasks, such as manipulating colors, converting units,
+          and generating random numbers.</p
+        >
+        <p>Here are some examples of Sass functions:</p>
+        <pre class="language-scss"><code>// Color Functions
+$primary-color: #0074D9;
+$secondary-color: #FF4136;
+$tertiary-color: #2ECC40;
+
+body {
+  background-color: $primary-color;
+  color: mix($secondary-color, $tertiary-color, 50%);
+}
+
+// Unit Conversion Functions
+$width: 1000px;
+$padding: 20px;
+
+.container {
+  width: percentage($width / 1200);
+  padding: em($padding);
+}
+
+// Math Functions
+$font-size: 16px;
+$line-height: 1.5;
+
+h1 {
+  font-size: $font-size * 2;
+  line-height: round($line-height * 1.2);
+}
+
+// String Functions
+$font-family: "Open Sans", sans-serif;
+
+h2 {
+  font-family: unquote(""#{$font-family}"");
+}</code></pre>
+
+        <p
+          >In this example, we use the "mix" function to create a color that is
+          a mix of our secondary and tertiary colors. We also use the
+          "percentage" and "em" functions to convert pixels to percentages and
+          ems, respectively.</p
+        >
+        <p
+          >We use math functions like "round" to round our line height and
+          "font-size" values to ensure that they are whole numbers. We also use
+          the "unquote" function to remove the quotes around our font family
+          name.</p
+        >
+        <p
+          >By using Sass functions, we can write more efficient and readable
+          code that performs common tasks with ease.</p
+        >
+      </article>
+      <article>
+        <h2>12. Why I Use Em Units in Media Queries</h2>
+        <p
+          >Using em units in media queries can provide some advantages over
+          using pixels or other units. Em units are relative to the font size of
+          the element they are applied to, which makes them more flexible and
+          easier to work with when designing responsive websites.</p
+        >
+        <p>Here's an example of how to use em units in a media query:</p>
+        <pre class="language-scss"><code>// Define breakpoint
+$breakpoint: 768px;
+// Apply media query using em units
+@media screen and (min-width: em($breakpoint)) {
+  // Styles for larger screens
+}</code></pre>
+
+        <p
+          >In this example, we define a breakpoint at 768 pixels and use the
+          "em" function to convert this value to em units. We then use the em
+          unit breakpoint in our media query, which means that the breakpoint
+          will be based on the font size of the element it is applied to.</p
+        >
+        <p
+          >Using em units in media queries can also make it easier to work with
+          nested elements. When using pixels, nested elements inherit the pixel
+          value of their parent, which can make it difficult to create
+          responsive designs. However, when using em units, nested elements will
+          inherit the font size of their parent, which can make it easier to
+          create responsive designs that scale properly on different screen
+          sizes.</p
+        >
+        <p
+          >Overall, using em units in media queries can make it easier to create
+          flexible and responsive designs that work well on different screen
+          sizes.</p
+        >
+      </article>
+      <article>
+        <h2>13. Nesting and BEM</h2>
+        <p
+          >BEM is a popular naming convention for CSS classes that helps make
+          code more modular and maintainable. One of the benefits of BEM is that
+          it makes it easy to nest classes and create more complex, modular
+          designs.</p
+        >
+        <p>Here's an example of how to use BEM and nesting in Sass:</p>
+        <pre class="language-scss"><code>// BEM class names
+.block {
+    &__element {
+      // Styles for element
+    }
+    &--modifier {
+    // Styles for modifier
+    }
+
+    &--modifier &__element {
+    // Styles for modifier on element
+    }
+  }
+
+  // Example of nested BEM class
+  .header {
+  &__logo {
+  // Styles for logo
+  }
+
+  &__nav {
+    // Styles for navigation
+    &__item {
+    // Styles for navigation item
+    }
+  }
+}</code></pre>
+
+        <p
+          >In this example, we define BEM class names for a block, element, and
+          modifier. We use the "&" symbol to reference the parent selector,
+          which allows us to create nested classes for modifiers and elements.
+          We also show an example of how to use nested BEM classes for a header
+          element that contains a logo and navigation.</p
+        >
+        <p
+          >Using BEM and nesting can help make your code more modular and
+          maintainable by breaking it down into smaller, reusable pieces. This
+          can make it easier to manage larger codebases and create more complex
+          designs that are easy to modify and update.</p
+        >
+      </article>
+      <article>
+        <h2>14. Helper/Utility Classes</h2>
+        <p
+          >Helper or utility classes are CSS classes that are designed to
+          perform a specific function or apply a specific style to an element.
+          They are typically used to help style common elements or provide
+          shortcuts for commonly-used styles.</p
+        >
+        <p>Here's an example of how to create helper classes in Sass:</p>
+        <pre class="language-scss"><code>// Helper class to center an element
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Helper class to hide an element
+.hide {
+  display: none;
+}
+
+// Example of using helper classes
+      
+<div class="center hide">
+This element is centered and hidden
+</div></code></pre>
+        <p
+          >In this example, we create two helper classes: one to center an
+          element using flexbox, and one to hide an element by setting its
+          display property to "none". We then show an example of how to use
+          these helper classes in HTML by applying both classes to a div
+          element.</p
+        >
+        <p
+          >Using helper or utility classes can help make your code more modular
+          and maintainable by providing a set of pre-defined styles that can be
+          easily applied to elements. This can make it easier to manage larger
+          codebases and ensure consistent styling across your website or
+          application.</p
+        >
+      </article>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../prism.js"></script>
+  </body>
+</html>

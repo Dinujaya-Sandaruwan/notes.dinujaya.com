@@ -1,34 +1,11 @@
-/* Disable context menu */
-body {
-	/* Disable context menu on the entire page */
-	/* Note: this can be bypassed with keyboard shortcuts */
-	-webkit-touch-callout: none; /* Safari */
-	-webkit-user-select: none; /* Safari, Chrome, Opera */
-	-khtml-user-select: none; /* Konqueror */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently not supported in Safari */
-}
-
-/* Make it difficult to select text */
-* {
-	/* Prevent selection on all elements */
-	-webkit-touch-callout: none; /* Safari */
-	-webkit-user-select: none; /* Safari, Chrome, Opera */
-	-khtml-user-select: none; /* Konqueror */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently not supported in Safari */
-}
-
 /* WebKit-based browsers (Google Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-	width: 10px; /* width of the scrollbar */
-	background-color: black; /* background color of the scrollbar */
+  width: 10px; /* width of the scrollbar */
+  background-color: black; /* background color of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #303030; /* color of the thumb */
-	border-radius: 10px; /* rounding of the thumb corners */
-	border-radius: 0px;
+  background-color: #303030; /* color of the thumb */
+  border-radius: 10px; /* rounding of the thumb corners */
+  border-radius: 0px;
 }
