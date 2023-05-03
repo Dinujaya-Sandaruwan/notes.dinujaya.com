@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../scrollBar.css" />
+    <link rel="stylesheet" href="../animation.css" />
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../prism.css" />
+    <link rel="stylesheet" href="../page.css" />
+  </head>
+  <body>
+    <nav class="desktopMenu">
+      <div class="navList">
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon class="listIcon" name="home"></ion-icon>Home
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-youtube" class="listIcon"></ion-icon>YT
+            Playlist
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="bookmarks" class="listIcon"></ion-icon>BookMarks
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-react" class="listIcon"></ion-icon>Boilerplate
+          </div></a
+        >
+      </div>
+      <ion-icon
+        name="menu"
+        class="burgerMenu"
+        onclick="mobileMenuDisplayBlock()"
+      ></ion-icon>
+      <a href="https://github.com/Dinujaya-Sandaruwan" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+    </nav>
+
+    <nav class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuItem">
+        <span class="close" onclick="mobileMenuDisplayNone()"
+          ><ion-icon name="close" class="closeIcon"></ion-icon
+        ></span>
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">Home</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">YT Playlist</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">BookMarks</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">Boilerplate</div></a
+        >
+      </div>
+    </nav>
+
+    <h1 class="heading">JAVASCRIPT OOP NOTES</h1>
+
+    <!-- Content of this page -->
+
+    <div class="content"></div>
+
+    <script src="../script.js"></script>
+    <script src="../prism.js"></script>
+  </body>
+</html>

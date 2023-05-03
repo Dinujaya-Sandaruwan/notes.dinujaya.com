@@ -1,0 +1,3682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../scrollBar.css" />
+    <link rel="stylesheet" href="../animation.css" />
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../prism.css" />
+    <link rel="stylesheet" href="../page.css" />
+  </head>
+  <body>
+    <nav class="desktopMenu">
+      <div class="navList">
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon class="listIcon" name="home"></ion-icon>Home
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-youtube" class="listIcon"></ion-icon>YT
+            Playlist
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="bookmarks" class="listIcon"></ion-icon>BookMarks
+          </div></a
+        >
+        <a href="" class="navLink">
+          <div class="navItem">
+            <ion-icon name="logo-react" class="listIcon"></ion-icon>Boilerplate
+          </div></a
+        >
+      </div>
+      <ion-icon
+        name="menu"
+        class="burgerMenu"
+        onclick="mobileMenuDisplayBlock()"
+      ></ion-icon>
+      <a href="https://github.com/Dinujaya-Sandaruwan" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+    </nav>
+
+    <nav class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuItem">
+        <span class="close" onclick="mobileMenuDisplayNone()"
+          ><ion-icon name="close" class="closeIcon"></ion-icon
+        ></span>
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">Home</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">YT Playlist</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile odd">BookMarks</div></a
+        >
+        <a class="navLink" href="">
+          <div class="navItemMobile even">Boilerplate</div></a
+        >
+      </div>
+    </nav>
+
+    <h1 class="heading">JAVASCRIPT NOTES</h1>
+
+    <!-- Content of this page -->
+
+    <div class="content">
+      <article>
+        <h2>01. What is JavaScript?</h2>
+        <p>
+          JavaScript is a high-level, dynamic, and interpreted programming
+          language that is used primarily in web development to create
+          interactive effects within web browsers. It is a client-side scripting
+          language that runs on the user's web browser and helps to create
+          dynamic web pages. JavaScript can be used for a variety of purposes,
+          including validating user input, manipulating the HTML content of a
+          webpage, creating animations, and communicating with web servers.
+        </p>
+        <p>
+          Here's a simple example of a JavaScript function that prompts the user
+          for their name and then displays a greeting:
+        </p>
+        <pre class="line-numbers language-javascript"><code>
+function greetUser() {
+let name = prompt("What's your name?");
+alert("Hello, " + name + "!");
+}
+greetUser();
+				</code></pre>
+      </article>
+      <article>
+        <h2>02. Setting Up the Development</h2>
+        <p>
+          Before you can start developing with JavaScript, you'll need to set up
+          your development environment. This typically involves installing a
+          text editor or integrated development environment (IDE) and a web
+          browser. Here's a brief overview of the steps involved:
+        </p>
+        <ol>
+          <li>
+            Choose a text editor or IDE. Popular options include Visual Studio
+            Code, Sublime Text, and Atom. Install the editor of your choice.
+          </li>
+          <li>
+            Install a web browser. Popular options include Google Chrome,
+            Mozilla Firefox, and Safari.
+          </li>
+          <li>
+            Create a new HTML file in your text editor and save it with a .html
+            extension. This will be the file where you write your JavaScript
+            code.
+          </li>
+          <li>
+            Link to the JavaScript file in your HTML file using the
+            <code>&lt;script&gt;</code> tag. For example: <br /><br />
+            <pre class="line-numbers language-html"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+	&lt;title&gt;My JavaScript Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+	&lt;script src="app.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+				  </code></pre>
+          </li>
+          <li>
+            Start writing your JavaScript code in the linked file. For example:
+            <br /><br />
+            <pre class="line-numbers language-javascript"><code>
+function sayHello() {
+  alert("Hello, world!");
+}
+sayHello();
+				  </code></pre>
+          </li>
+        </ol>
+        <p>
+          Once you've completed these steps, you're ready to start developing
+          with JavaScript! Good luck!
+        </p>
+      </article>
+      <article>
+        <h2>03. JavaScript in Browsers</h2>
+        <p>
+          JavaScript is primarily used in web development to create interactive
+          effects within web browsers. Here are a few things you should know
+          about using JavaScript in browsers:
+        </p>
+        <ul>
+          <li>
+            JavaScript can be included in an HTML file using the
+            <code>&lt;script&gt;</code> tag. You can either include the
+            JavaScript code directly in the tag, or you can link to an external
+            JavaScript file using the <code>src</code> attribute.
+          </li>
+          <li>
+            The <code>&lt;script&gt;</code> tag should be placed in the
+            <code>&lt;head&gt;</code> section of your HTML document, or at the
+            end of the <code>&lt;body&gt;</code> section. Placing it in the head
+            section is recommended for better performance.
+          </li>
+          <li>
+            JavaScript can be used to manipulate the HTML content of a webpage
+            using the Document Object Model (DOM). For example, you can use
+            JavaScript to add, remove, or modify HTML elements on the page.
+          </li>
+          <li>
+            JavaScript can be used to handle user interactions, such as mouse
+            clicks and keyboard input. You can add event listeners to HTML
+            elements to listen for these events and execute JavaScript code in
+            response.
+          </li>
+          <li>
+            JavaScript can communicate with web servers using the XMLHttpRequest
+            (XHR) API, which allows you to retrieve data from a server and
+            update the page without refreshing it.
+          </li>
+          <li>
+            JavaScript is supported by all major web browsers, including Google
+            Chrome, Mozilla Firefox, Microsoft Edge, and Safari. However,
+            different browsers may have different implementations of JavaScript
+            and may support different features.
+          </li>
+        </ul>
+        <p>
+          Overall, JavaScript is a powerful tool for creating dynamic and
+          interactive web pages. With a good understanding of the basics, you
+          can use JavaScript to add a wide range of functionality to your web
+          projects.
+        </p>
+      </article>
+      <article>
+        <h2>04. Separation of Concerns</h2>
+        <p>
+          Separation of concerns is a design principle that is often applied in
+          software engineering to improve the readability, maintainability, and
+          scalability of code. In the context of JavaScript development, it
+          involves separating the different concerns or responsibilities of a
+          program into distinct modules or files. Here are a few things to keep
+          in mind when applying this principle:
+        </p>
+        <ul>
+          <li>
+            Separate your JavaScript code into distinct modules that each have a
+            specific responsibility or concern. For example, you might have one
+            module that handles user input and another module that handles data
+            storage and retrieval.
+          </li>
+          <li>
+            Avoid creating modules that have multiple responsibilities or
+            concerns. This can make your code harder to understand and maintain
+            over time.
+          </li>
+          <li>
+            Use a modular pattern, such as the Revealing Module Pattern, to
+            encapsulate the implementation details of each module and expose a
+            clean and simple API to other parts of your program.
+          </li>
+          <li>
+            Minimize the coupling between your modules by reducing the amount of
+            shared state or dependencies between them. This can make it easier
+            to modify or replace individual modules without affecting the rest
+            of your codebase.
+          </li>
+          <li>
+            Use a build system, such as Webpack or Gulp, to bundle your modules
+            into a single JavaScript file that can be served to the browser.
+            This can help reduce the number of HTTP requests and improve the
+            performance of your web application.
+          </li>
+        </ul>
+        <p>
+          By applying the principle of separation of concerns to your JavaScript
+          code, you can create a more maintainable and scalable codebase that is
+          easier to understand and modify over time. Good luck!
+        </p>
+      </article>
+      <article>
+        <h2>05. JavaScript in Node</h2>
+        <p>
+          Node.js is an open-source, cross-platform JavaScript runtime
+          environment that allows you to run JavaScript code outside of a web
+          browser. Here are a few things you should know about using JavaScript
+          in Node:
+        </p>
+        <ul>
+          <li>
+            You can install Node.js on your computer by downloading the
+            installer from the official Node.js website. Once installed, you can
+            run JavaScript code using the <code>node</code> command in your
+            terminal.
+          </li>
+          <li>
+            Node.js provides a number of built-in modules, such as the
+            <code>fs</code> module for working with the file system and the
+            <code>http</code> module for creating web servers. You can use these
+            modules to build command-line tools, web servers, and other types of
+            applications in JavaScript.
+          </li>
+          <li>
+            You can also install third-party modules using the Node Package
+            Manager (npm). There are thousands of open-source npm packages
+            available for a wide range of use cases, from data processing and
+            visualization to web scraping and machine learning.
+          </li>
+          <li>
+            Node.js uses the CommonJS module system for organizing and sharing
+            code. You can export functions, objects, or variables from one
+            module and import them into another using the
+            <code>require</code> function.
+          </li>
+          <li>
+            Node.js provides a number of global objects, such as
+            <code>process</code> and <code>console</code>, that you can use in
+            your JavaScript code. These objects allow you to interact with the
+            Node.js environment and perform common tasks, such as reading
+            command-line arguments and logging messages to the console.
+          </li>
+        </ul>
+        <p>
+          Overall, Node.js provides a powerful and flexible platform for
+          building JavaScript applications outside of the web browser. With a
+          good understanding of the basics, you can use Node.js to build a wide
+          range of server-side applications and tools.
+        </p>
+      </article>
+      <article>
+        <h2>05. Variables in JavaScript</h2>
+        <p>
+          Variables are used in JavaScript to store values that can be accessed
+          and modified throughout the course of a program. Here are a few things
+          you should know about working with variables in JavaScript:
+        </p>
+        <ul>
+          <li>
+            To declare a variable in JavaScript, you can use the
+            <code>var</code>, <code>let</code>, or <code>const</code> keyword,
+            followed by the variable name. For example:
+          </li>
+        </ul>
+        <pre class="line-numbers language-javascript"><code>var x = 10;
+let y = 'hello';
+const z = true;</code></pre>
+        <ul>
+          <li>
+            The <code>var</code> keyword is used to declare a variable in the
+            global scope or function scope. The <code>let</code> keyword is used
+            to declare a variable in the block scope. The
+            <code>const</code> keyword is used to declare a constant variable
+            that cannot be reassigned.
+          </li>
+          <li>
+            Variables in JavaScript are dynamically typed, which means that you
+            don't need to specify the data type of a variable when you declare
+            it. Instead, the data type is determined automatically based on the
+            value that you assign to the variable.
+          </li>
+          <li>
+            You can assign any type of value to a variable in JavaScript,
+            including strings, numbers, booleans, arrays, objects, and
+            functions.
+          </li>
+          <li>
+            To access the value of a variable in JavaScript, you simply refer to
+            its name. For example, <code>console.log(x);</code> would log the
+            value of the variable <code>x</code> to the console.
+          </li>
+        </ul>
+        <p>
+          Overall, variables are a fundamental part of working with JavaScript,
+          and understanding how to declare, assign, and access variables is
+          essential for writing effective code. Keep these tips in mind as you
+          work with variables in your own JavaScript programs!
+        </p>
+      </article>
+      <article>
+        <h2>06. Constants in JavaScript</h2>
+        <p>
+          Constants are a type of variable in JavaScript that cannot be
+          reassigned once they are declared. Here are a few things you should
+          know about working with constants in JavaScript:
+        </p>
+        <ul>
+          <li>
+            To declare a constant in JavaScript, you use the
+            <code>const</code> keyword, followed by the constant name and its
+            value. For example:
+          </li>
+        </ul>
+        <pre class="line-numbers language-javascript"><code>const PI = 3.14159;
+const WEBSITE_URL = 'https://example.com';
+const IS_PRODUCTION = true;</code></pre>
+        <ul>
+          <li>
+            Constants are block-scoped, which means that they are only
+            accessible within the block in which they are declared, or in any
+            nested blocks.
+          </li>
+          <li>
+            Constants are usually used to store values that should not be
+            changed throughout the course of a program, such as mathematical
+            constants or configuration settings.
+          </li>
+          <li>
+            When you try to reassign a constant, JavaScript will throw an error.
+            For example, the following code would result in a syntax error:
+          </li>
+        </ul>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>const MY_CONSTANT = 10;
+MY_CONSTANT = 20; // Error: Assignment to constant variable.</code></pre>
+        <ul>
+          <li>
+            It's important to note that while the value of a constant cannot be
+            reassigned, it does not mean that the value itself is immutable. For
+            example, if you have a constant that stores an object or an array,
+            you can still modify the properties or elements of that object or
+            array.
+          </li>
+        </ul>
+        <p>
+          Overall, constants are a useful tool for creating readable and
+          maintainable code in JavaScript. By using constants to store values
+          that should not be changed, you can ensure that your program behaves
+          predictably and avoid accidental errors or bugs.
+        </p>
+      </article>
+      <article>
+        <h2>07. Primitive Types in JavaScript</h2>
+        <p>JavaScript has six primitive types:</p>
+        <ol>
+          <li>
+            <span>undefined</span>: represents the absence of a value, usually
+            the default value of uninitialized variables.
+          </li>
+          <li>
+            <span>null</span>: represents the intentional absence of any object
+            value.
+          </li>
+          <li>
+            <span>boolean</span>: represents a logical value, either
+            <span>true</span> or <span>false</span>.
+          </li>
+          <li>
+            <span>number</span>: represents a numeric value, including integer
+            and floating-point values.
+          </li>
+          <li>
+            <span>string</span>: represents a sequence of characters, used for
+            text.
+          </li>
+          <li>
+            <span>symbol</span>: represents a unique identifier, introduced in
+            ES6.
+          </li>
+        </ol>
+        <p>
+          Here are a few things you should know about working with primitive
+          types in JavaScript:
+        </p>
+        <ul>
+          <li>
+            Primitive types are immutable, which means that their values cannot
+            be changed once they are created. For example:
+          </li>
+        </ul>
+        <pre class="line-numbers language-javascript"><code>let myNumber = 5;
+myNumber = 10; // OK
+console.log(myNumber); // 10
+let myString = "Hello";
+myString[0] = "J"; // Fails silently
+console.log(myString); // "Hello"</code></pre>
+
+        <ul>
+          <li>
+            Primitive types are compared by value, not by reference. This means
+            that two variables containing the same primitive value will always
+            be considered equal, even if they are not the same variable.
+          </li>
+          <li>
+            JavaScript automatically converts between primitive types as needed.
+            For example, you can concatenate a string and a number using the
+            <code>+</code> operator, and JavaScript will convert the number to a
+            string:
+          </li>
+        </ul>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>let myString = "The answer is " + 42;
+console.log(myString); // "The answer is 42"</code></pre>
+        <ul>
+          <li>
+            When you pass a primitive type as an argument to a function, the
+            function receives a copy of the value, not a reference to the
+            original variable.
+          </li>
+        </ul>
+        <p>
+          Overall, understanding primitive types is an important foundation for
+          working with JavaScript. By knowing the properties and behavior of
+          each type, you can write code that is correct, efficient, and easy to
+          maintain.
+        </p>
+      </article>
+      <article>
+        <h2>08. Dynamic Typing in JavaScript</h2>
+        <p>
+          JavaScript is a dynamically-typed language, which means that variable
+          types are not explicitly defined and can change during runtime:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>let myVariable = "Hello";
+console.log(typeof myVariable); // "string"
+myVariable = 42;
+console.log(typeof myVariable); // "number"</code></pre>
+
+        <p>
+          As you can see, the <code>typeof</code> operator can be used to
+          determine the current type of a variable.
+        </p>
+        <p>
+          This dynamic typing behavior has both advantages and disadvantages. On
+          the one hand, it allows for more flexibility and can make code easier
+          to write and read. On the other hand, it can also make code harder to
+          debug and can introduce unexpected behavior if types are not properly
+          managed.
+        </p>
+        <p>
+          To mitigate these issues, it is important to follow best practices for
+          variable naming and type management. For example, use descriptive
+          variable names that indicate their intended purpose, and try to avoid
+          changing variable types unnecessarily. Additionally, you can use
+          TypeScript or other type-checking tools to add more explicit type
+          management to your JavaScript code.
+        </p>
+      </article>
+      <article>
+        <h2>09. Objects in JavaScript</h2>
+        <p>
+          Objects are one of the most important data structures in JavaScript.
+          They are used to store collections of data in a structured way, and
+          can contain properties and methods:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Creating an object using object literal notation
+let myObj = {
+	property1: "value1",
+	property2: "value2",
+	myMethod: function() {
+	  console.log("This is my method.");
+	}
+};
+// Accessing object properties
+console.log(myObj.property1); // "value1"
+console.log(myObj.property2); // "value2"
+
+// Calling object methods
+myObj.myMethod(); // "This is my method."</code></pre>
+
+        <p>
+          Objects in JavaScript are dynamic, which means that you can add or
+          remove properties and methods from an object at any time:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Adding a new property to an object
+myObj.newProperty = "newValue";
+console.log(myObj.newProperty); // "newValue"
+// Removing a property from an object
+delete myObj.property2;
+console.log(myObj.property2); // undefined</code></pre>
+
+        <p>
+          Objects can also be used to represent more complex data structures,
+          such as arrays or even other objects:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Creating an array of objects
+let myArray = [
+	{name: "John", age: 25},
+	{name: "Jane", age: 30},
+	{name: "Bob", age: 40}
+];
+// Accessing object properties in an array
+console.log(myArray[0].name); // "John"
+console.log(myArray[2].age); // 40</code></pre>
+
+        <p>
+          Overall, understanding how to use objects in JavaScript is crucial for
+          writing effective and efficient code. Take the time to experiment with
+          object creation, manipulation, and use cases to become more
+          comfortable with this important data structure.
+        </p>
+      </article>
+      <article>
+        <h2>10. Arrays in JavaScript</h2>
+        <p>
+          Arrays are another important data structure in JavaScript that are
+          used to store collections of data. Unlike objects, which use key-value
+          pairs, arrays use numeric indices to keep track of their elements:
+        </p>
+        <pre class="line-numbers language-javascript"><code>// Creating an array
+let myArray = [1, 2, 3, 4, 5];
+// Accessing array elements
+console.log(myArray[0]); // 1
+console.log(myArray[2]); // 3
+			  
+// Modifying array elements
+myArray[1] = "two";
+console.log(myArray); // [1, "two", 3, 4, 5]
+			  
+// Adding elements to an array
+myArray.push(6);
+console.log(myArray); // [1, "two", 3, 4, 5, 6]</code></pre>
+
+        <p>
+          Arrays also have a number of built-in methods that can be used to
+          manipulate their elements, such as <code>slice</code>,
+          <code>splice</code>, and <code>sort</code>:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Using the slice method to create a new array
+let newArray = myArray.slice(1, 4);
+console.log(newArray); // ["two", 3, 4]
+// Using the splice method to remove elements from an array
+myArray.splice(2, 2);
+console.log(myArray); // [1, "two", 5, 6]
+			  
+// Using the sort method to sort an array
+let unsortedArray = [5, 1, 4, 2, 3];
+unsortedArray.sort();
+console.log(unsortedArray); // [1, 2, 3, 4, 5]</code></pre>
+
+        <p>
+          Finally, arrays can also contain other data structures, such as
+          objects:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Creating an array of objects
+let myObjectArray = [
+	{name: "John", age: 25},
+	{name: "Jane", age: 30},
+	{name: "Bob", age: 40}
+];
+// Accessing object properties in an array
+console.log(myObjectArray[0].name); // "John"
+console.log(myObjectArray[2].age); // 40</code></pre>
+
+        <p>
+          Understanding how to use arrays effectively is an important part of
+          writing JavaScript code. Take the time to experiment with array
+          creation, manipulation, and use cases to become more comfortable with
+          this essential data structure.
+        </p>
+      </article>
+      <article>
+        <h2>11. Functions in JavaScript</h2>
+        <p>
+          Functions are an essential part of JavaScript programming that allow
+          you to create reusable blocks of code. They can take input parameters
+          and return output values, and can be defined in a number of different
+          ways:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Declaring a function using the function keyword
+function add(a, b) {
+	return a + b;
+}
+// Declaring a function using a function expression
+let multiply = function(a, b) {
+return a * b;
+};
+
+// Declaring a function using an arrow function expression
+let subtract = (a, b) => {
+return a - b;
+};</code></pre>
+
+        <p>
+          Functions can also be passed as parameters to other functions, and can
+          be assigned to variables or properties of objects:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Passing a function as a parameter
+function applyOperation(a, b, operation) {	return operation(a, b);
+}
+console.log(applyOperation(2, 3, add)); // 5
+
+// Assigning a function to a variable
+let divide = function(a, b) {
+return a / b;
+};
+
+console.log(divide(10, 2)); // 5
+
+// Assigning a function to an object property
+let calculator = {
+add: add,
+subtract: subtract,
+multiply: multiply,
+divide: divide
+};
+
+console.log(calculator.multiply(3, 4)); // 12</code></pre>
+
+        <p>
+          Functions also have access to their surrounding lexical environment,
+          including any variables declared in their parent scope:
+        </p>
+        <pre class="line-numbers language-javascript"><code>let a = 2;
+function square() {
+	return a * a;
+}
+			  
+console.log(square()); // 4</code></pre>
+
+        <p>
+          Understanding how to use functions effectively is an important part of
+          writing JavaScript code. Take the time to experiment with different
+          function types and use cases to become more comfortable with this
+          essential programming concept.
+        </p>
+      </article>
+      <article>
+        <h2>12. JavaScript Operators</h2>
+        <p>
+          JavaScript operators are symbols or keywords used to perform
+          operations on values. They include arithmetic operators, comparison
+          operators, logical operators, and assignment operators:
+        </p>
+        <ul>
+          <li>
+            Arithmetic operators:
+            <ul>
+              <li>Addition: <code>+</code></li>
+              <li>Subtraction: <code>-</code></li>
+              <li>Multiplication: <code>*</code></li>
+              <li>Division: <code>/</code></li>
+              <li>Modulo: <code>%</code></li>
+              <li>Increment: <code>++</code></li>
+              <li>Decrement: <code>--</code></li>
+            </ul>
+          </li>
+          <li>
+            Comparison operators:
+            <ul>
+              <li>Equal to: <code>==</code></li>
+              <li>Not equal to: <code>!=</code></li>
+              <li>Strict equal to: <code>===</code></li>
+              <li>Strict not equal to: <code>!==</code></li>
+              <li>Greater than: <code>&gt;</code></li>
+              <li>Greater than or equal to: <code>&gt;=</code></li>
+              <li>Less than: <code>&lt;</code></li>
+              <li>Less than or equal to: <code>&lt;=</code></li>
+            </ul>
+          </li>
+          <li>
+            Logical operators:
+            <ul>
+              <li>Logical AND: <code>&amp;&amp;</code></li>
+              <li>Logical OR: <code>||</code></li>
+              <li>Logical NOT: <code>!</code></li>
+            </ul>
+          </li>
+          <li>
+            Assignment operators:
+            <ul>
+              <li>Assignment: <code>=</code></li>
+              <li>Addition assignment: <code>+=</code></li>
+              <li>Subtraction assignment: <code>-=</code></li>
+              <li>Multiplication assignment: <code>*=</code></li>
+              <li>Division assignment: <code>/=</code></li>
+              <li>Modulo assignment: <code>%=</code></li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          It's important to understand how operators work and their order of
+          precedence, which can affect the outcome of expressions. You can use
+          parentheses to group operations and control the order of evaluation:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>let result = 5 + 10 * 2; // 25
+let result2 = (5 + 10) * 2; // 30</code></pre>
+        <p>
+          Using operators effectively is an essential part of writing JavaScript
+          code. Take the time to study the different types of operators and
+          experiment with using them in your own code to become more comfortable
+          with this important programming concept.
+        </p>
+      </article>
+      <article>
+        <h2>13. Assignment Operators</h2>
+        <ol>
+          <li>
+            <code>=</code>: Assigns the value of the right operand to the left
+            operand.
+            <pre class="line-numbers language-javascript"><code>let x = 5;
+x = 10; // x will be 10</code></pre>
+          </li>
+          <li>
+            <code>+=</code>: Adds the value of the right operand to the value of
+            the left operand and assigns the result to the left operand.
+            <pre class="line-numbers language-javascript"><code>let x = 5;
+x += 3; // equivalent to x = x + 3; x will be 8</code></pre>
+          </li>
+          <li>
+            <code>-=</code>: Subtracts the value of the right operand from the
+            value of the left operand and assigns the result to the left
+            operand.
+            <pre class="line-numbers language-javascript"><code>let x = 5;
+x -= 3; // equivalent to x = x - 3; x will be 2</code></pre>
+          </li>
+          <li>
+            <code>*=</code>: Multiplies the value of the left operand by the
+            value of the right operand and assigns the result to the left
+            operand.
+            <pre class="line-numbers language-javascript"><code>let x = 5;
+x *= 3; // equivalent to x = x * 3; x will be 15</code></pre>
+          </li>
+          <li>
+            <code>/=</code>: Divides the value of the left operand by the value
+            of the right operand and assigns the result to the left operand.
+            <pre class="line-numbers language-javascript"><code>let x = 15;
+x /= 3; // equivalent to x = x / 3; x will be 5</code></pre>
+          </li>
+          <li>
+            <code>%=</code>: Divides the value of the left operand by the value
+            of the right operand and assigns the remainder to the left operand.
+            <pre class="line-numbers language-javascript"><code>let x = 15;
+x %= 4; // equivalent to x = x % 4; x will be 3</code></pre>
+          </li>
+          <li>
+            <code>**=</code>: Raises the value of the left operand to the power
+            of the value of the right operand and assigns the result to the left
+            operand.
+            <pre class="line-numbers language-javascript"><code>let x = 5;
+x **= 3; // equivalent to x = x ** 3; x will be 125</code></pre>
+          </li>
+        </ol>
+      </article>
+      <article>
+        <h2>13. Comparison Operators</h2>
+        <p>
+          To compare different values in JavaScript, we can use comparison
+          operators. These operators return a Boolean value (true or false)
+          based on the comparison result.
+        </p>
+        <p>Here are the comparison operators available in JavaScript:</p>
+        <ol>
+          <li>
+            <strong>Equal to (==):</strong> This operator compares two values
+            for equality.
+          </li>
+          <li>
+            <strong>Not equal to (!=):</strong> This operator compares two
+            values for inequality.
+          </li>
+          <li>
+            <strong>Strict equal to (===):</strong> This operator compares two
+            values for equality without type coercion.
+          </li>
+          <li>
+            <strong>Strict not equal to (!==):</strong> This operator compares
+            two values for inequality without type coercion.
+          </li>
+          <li>
+            <strong
+              >Greater than (>), greater than or equal to (>=), less than
+              (<),</strong
+            >
+            and <strong>less than or equal to (<=):</strong> These operators
+            compare two values and return a Boolean value based on the
+            comparison result.
+          </li>
+        </ol>
+        <p>Here are some examples of using these operators:</p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>console.log(5 == '5'); // true
+console.log(5 != '5'); // false
+console.log(5 === '5'); // false
+console.log(5 !== '5'); // true
+console.log(5 > 3); // true
+console.log(5 >= 5); // true
+console.log(5 < 2); // false
+console.log(5 <= 10); // true</code></pre>
+      </article>
+      <article>
+        <h2>14. Equality Operators</h2>
+        <p>
+          Equality operators are used to compare two values and return a Boolean
+          value (true or false) based on the comparison result. JavaScript has
+          two equality operators:
+        </p>
+        <ol>
+          <li>
+            <strong>== (loose equality operator):</strong> This operator
+            compares two values for equality after performing type coercion, if
+            necessary.
+          </li>
+          <li>
+            <strong>=== (strict equality operator):</strong> This operator
+            compares two values for equality without performing any type
+            coercion.
+          </li>
+        </ol>
+        <p>Here are some examples of using these operators:</p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>console.log(5 == '5'); // true
+console.log(5 === '5'); // false</code></pre>
+        <p>
+          The first example returns true because the loose equality operator
+          converts the string '5' to a number before comparing it to the number
+          5. The second example returns false because the strict equality
+          operator compares the value and type of the two operands without
+          performing any type coercion.
+        </p>
+        <p>
+          It's generally recommended to use the strict equality operator in
+          JavaScript to avoid unexpected results due to type coercion.
+        </p>
+      </article>
+      <article>
+        <h2>15. Ternary Operators</h2>
+        <p>
+          The ternary operator is a concise way of writing an if-else statement
+          in JavaScript. It takes three operands: a condition, a value to return
+          if the condition is true, and a value to return if the condition is
+          false. Here's an example:
+        </p>
+        <pre class="line-numbers language-javascript"><code>let age = 18;
+let message = (age &gt;= 18) ? "You are an adult" : "You are not an adult";
+console.log(message); // "You are an adult"</code></pre>
+        <p>
+          In the above example, we check whether the age is greater than or
+          equal to 18. If the condition is true, we assign the string "You are
+          an adult" to the variable message; otherwise, we assign the string
+          "You are not an adult".
+        </p>
+        <p>
+          The ternary operator can make your code more concise and readable,
+          especially when you have simple if-else statements with only one
+          statement in each block.
+        </p>
+      </article>
+      <article>
+        <h2>16. Logical Operators with Non-booleans</h2>
+        <p>
+          In JavaScript, the logical operators <code>&&</code>, <code>||</code>,
+          and <code>!</code> can also be used with non-boolean values. When used
+          with non-boolean values, these operators still return a value of a
+          non-boolean type, but they perform the logical operation based on the
+          truthiness of the operands.
+        </p>
+        <p>Here's an example:</p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>let result1 = null && "value"; // null
+let result2 = "value" && null; // null
+let result3 = "value" && "another value"; // "another value"
+let result4 = "" || "value"; // "value"
+let result5 = "value" || ""; // "value"
+let result6 = "" || null || 0 || "value"; // "value"
+let result7 = !""; // true</code></pre>
+        <p>In the above example, we see that:</p>
+        <ul>
+          <li>
+            The <code>&amp;&amp;</code> operator returns the first falsy operand
+            or the last truthy operand. In result1 and result2, since the first
+            operand is falsy (null), the expression returns null. In result3,
+            both operands are truthy, so the expression returns the second
+            operand ("another value").
+          </li>
+          <li>
+            The <code>||</code> operator returns the first truthy operand or the
+            last falsy operand. In result4 and result5, since the first operand
+            is falsy (an empty string), the expression returns the second
+            operand ("value"). In result6, all of the operands are falsy, so the
+            expression returns the last operand ("value").
+          </li>
+          <li>
+            The <code>!</code> operator returns the boolean opposite of the
+            operand. In result7, the empty string is falsy, so the expression
+            returns the boolean opposite (true).
+          </li>
+        </ul>
+        <p>
+          Keep in mind that using non-boolean values with logical operators can
+          make your code more concise, but it can also make it harder to read
+          and understand. Use this feature sparingly and make sure that your
+          code remains clear and easy to understand.
+        </p>
+      </article>
+      <article>
+        <h2>17. Bitwise Operators</h2>
+        <p>
+          Bitwise operators treat their operands as a sequence of 32 bits (zeros
+          and ones) and perform logical operations on each pair of corresponding
+          bits. These operators can be used to perform low-level operations such
+          as encryption and compression, or to manipulate bit fields within
+          larger data structures.
+        </p>
+        <p>Here are the bitwise operators in JavaScript:</p>
+        <ol>
+          <li><code>&amp;</code> (Bitwise AND)</li>
+          <li><code>|</code> (Bitwise OR)</li>
+          <li><code>^</code> (Bitwise XOR)</li>
+          <li><code>~</code> (Bitwise NOT)</li>
+          <li><code>&lt;&lt;</code> (Left shift)</li>
+          <li><code>&gt;&gt;</code> (Signed right shift)</li>
+          <li><code>&gt;&gt;&gt;</code> (Unsigned right shift)</li>
+        </ol>
+        <p>
+          Here's an example that demonstrates how the
+          <code>&amp;</code> operator works:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>const num1 = 5; // 101 in binary
+const num2 = 3; // 011 in binary
+
+const result = num1 &amp; num2; // 001 in binary (which is 1 in decimal)
+
+console.log(result); // Output: 1</code></pre>
+        <p>
+          Here's an example that demonstrates how the <code>|</code> operator
+          works:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>const num1 = 5; // 101 in binary
+const num2 = 3; // 011 in binary
+
+const result = num1 | num2; // 111 in binary (which is 7 in decimal)
+
+console.log(result); // Output: 7</code></pre>
+        <p>
+          And here's an example that demonstrates how the
+          <code>^</code> operator works:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>const num1 = 5; // 101 in binary
+const num2 = 3; // 011 in binary
+
+const result = num1 ^ num2; // 110 in binary (which is 6 in decimal)
+
+console.log(result); // Output: 6</code></pre>
+      </article>
+      <article>
+        <h2>18. Operator Precedence</h2>
+
+        <p>
+          Operator precedence determines the order in which JavaScript evaluates
+          expressions with different operators. JavaScript has a set of
+          predefined rules that dictate which operator takes precedence over the
+          others.
+        </p>
+
+        <p>
+          For example, in the expression <code>4 + 3 * 2</code>, the
+          multiplication (<code>*</code>) operator has a higher precedence than
+          the addition (<code>+</code>) operator. Therefore, JavaScript will
+          first evaluate <code>3 * 2</code>, then add the result to
+          <code>4</code>, resulting in <code>10</code>.
+        </p>
+
+        <p>
+          You can use parentheses to group expressions and control the order of
+          evaluation. For example, <code>(4 + 3) * 2</code> will evaluate to
+          <code>14</code>.
+        </p>
+
+        <p>
+          Here is a table of JavaScript operators and their precedence (from
+          highest to lowest):
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>()</td>
+              <td>Grouping</td>
+            </tr>
+            <tr>
+              <td>++ --</td>
+              <td>Postfix increment/decrement</td>
+            </tr>
+            <tr>
+              <td>++ --</td>
+              <td>Prefix increment/decrement</td>
+            </tr>
+            <tr>
+              <td>! ~ + - typeof</td>
+              <td>Logical and bitwise NOT, unary plus and minus, type of</td>
+            </tr>
+            <tr>
+              <td>* / %</td>
+              <td>Multiplication, division, modulus</td>
+            </tr>
+            <tr>
+              <td>+ -</td>
+              <td>Addition, subtraction</td>
+            </tr>
+            <tr>
+              <td>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</td>
+              <td>Bitwise shift</td>
+            </tr>
+            <tr>
+              <td>&lt;= &lt; &gt; &gt;=</td>
+              <td>Relational operators</td>
+            </tr>
+            <tr>
+              <td>== != === !==</td>
+              <td>Equality operators</td>
+            </tr>
+            <tr>
+              <td>&amp;</td>
+              <td>Bitwise AND</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>Bitwise XOR</td>
+            </tr>
+            <tr>
+              <td>|</td>
+              <td>Bitwise OR</td>
+            </tr>
+            <tr>
+              <td>&&</td>
+              <td>Logical AND</td>
+            </tr>
+            <tr>
+              <td>||</td>
+              <td>Logical OR</td>
+            </tr>
+            <tr>
+              <td>?:</td>
+              <td>Ternary operator</td>
+            </tr>
+            <tr>
+              <td>
+                = += -= *= /= %= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;= &= ^= |=
+              </td>
+              <td>Assignment operators</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          It's important to note that when in doubt, you can always use
+          parentheses to explicitly specify the order of operations in your
+          code.
+        </p>
+      </article>
+      <article>
+        <h2>19. If...else</h2>
+        <p>
+          The if statement is used to test a condition. If the condition is
+          true, a block of code is executed. If the condition is false, the code
+          will continue to execute without the block. You can also use the else
+          statement to execute a block of code when the condition is false.
+        </p>
+        <pre class="line-numbers language-javascript"><code>if (condition) {
+  // code to be executed if condition is true
+} else {
+  // code to be executed if condition is false
+}</code></pre>
+        <p>
+          The else statement is optional, but it's useful when you want to
+          execute a different block of code when the condition is false. You can
+          also use the else if statement to test multiple conditions.
+        </p>
+        <pre class="line-numbers language-javascript"><code>if (condition1) {
+  // code to be executed if condition1 is true
+} else if (condition2) {
+  // code to be executed if condition2 is true
+} else {
+  // code to be executed if condition1 and condition2 are false
+}</code></pre>
+        <p>
+          You can also use the ternary operator as a shorthand for the if...else
+          statement. This is useful when you want to assign a value to a
+          variable based on a condition:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>let result = (condition) ? value1 : value2;</code></pre>
+        <p>
+          This code will assign value1 to the result variable if the condition
+          is true, and value2 if the condition is false.
+        </p>
+      </article>
+      <article>
+        <h2>21. Switch...case</h2>
+        <p>
+          The switch statement is used to perform different actions based on
+          different conditions.
+        </p>
+        <pre class="line-numbers language-javascript"><code>let role;
+			  
+switch (role) {
+	case 'guest':
+	  console.log('Guest User');
+	  break;
+	case 'moderator':
+	  console.log('Moderator User');
+	  break;
+	default:
+	  console.log('Unknown User');
+}</code></pre>
+        <p>
+          In the example above, we have a variable named <code>role</code>,
+          which is being compared to different cases in the switch statement. If
+          the value of the <code>role</code> variable is <code>'guest'</code>,
+          the code inside the first <code>case</code> block will be executed. If
+          the value of the <code>role</code> variable is
+          <code>'moderator'</code>, the code inside the second
+          <code>case</code> block will be executed. If none of the cases match,
+          the code inside the <code>default</code> block will be executed.
+        </p>
+        <p>
+          Note that each case block ends with the <code>break</code> keyword.
+          This is important because it prevents the code from executing the code
+          inside the next case block. If you forget to include the
+          <code>break</code> keyword, the code will continue executing until the
+          end of the switch statement.
+        </p>
+      </article>
+      <article>
+        <h2>22. For loop</h2>
+        <p>
+          The <code>for</code> loop is a common loop in JavaScript used to
+          execute a block of code repeatedly.
+        </p>
+        <p>The general syntax of a <code>for</code> loop is:</p>
+
+        <pre
+          class="line-numbers language-javascript"
+        ><code>for (initialExpression; condition; incrementExpression) {
+// code to be executed
+}</code></pre>
+
+        <p>
+          The <code>initialExpression</code> is executed before the loop starts,
+          and is typically used to initialize a counter variable. The
+          <code>condition</code> is checked at the beginning of each iteration,
+          and if it evaluates to <code>true</code>, the loop continues to
+          execute. If it evaluates to <code>false</code>, the loop stops. The
+          <code>incrementExpression</code> is executed at the end of each
+          iteration, and is typically used to update the counter variable.
+        </p>
+
+        <p>
+          Here's an example of a <code>for</code> loop that logs the numbers
+          from 1 to 10:
+        </p>
+
+        <pre
+          class="line-numbers language-javascript"
+        ><code>for (let i = 1; i &lt;= 10; i++) {
+	console.log(i);
+}</code></pre>
+        <p>
+          The <code>initialExpression</code> is executed before the loop starts,
+          and is typically used to initialize a counter variable. The
+          <code>condition</code> is checked at the beginning of each iteration,
+          and if it evaluates to <code>true</code>, the loop continues to
+          execute. If it evaluates to <code>false</code>, the loop stops. The
+          <code>incrementExpression</code> is executed at the end of each
+          iteration, and is typically used to update the counter variable.
+        </p>
+
+        <p>
+          Here's an example of a <code>for</code> loop that logs the numbers
+          from 1 to 10:
+        </p>
+
+        <pre
+          class="line-numbers language-javascript"
+        ><code>for (let i = 1; i &lt;= 10; i++) {
+	console.log(i);
+}</code></pre>
+        <p>
+          The above code initializes the <code>i</code> variable to 1, checks if
+          it's less than or equal to 10, and then increments it by 1 on each
+          iteration. The loop continues to execute as long as the condition is
+          true, and logs the value of <code>i</code> to the console on each
+          iteration.
+        </p>
+
+        <p>
+          The <code>for</code> loop can be used to iterate over arrays and other
+          iterable objects by using the length property:
+        </p>
+
+        <pre
+          class="line-numbers language-javascript"
+        ><code>const arr = [1, 2, 3, 4, 5];
+for (let i = 0; i < arr.length; i++) {
+	console.log(arr[i]);
+}</code></pre>
+        <p>
+          In this example, the loop starts at index 0 and iterates over the
+          array until the index is less than the length of the array.
+        </p>
+      </article>
+      <article>
+        <h2>23. While loop</h2>
+        <p>
+          The <code>while</code> loop is used to execute a block of code
+          repeatedly as long as a specified condition is true.
+        </p>
+        <pre class="line-numbers language-javascript">
+<code>
+let i = 0;
+while (i < 5) {
+	console.log(i);
+	i++;
+}
+				</code>
+				</pre>
+        <p>
+          In the example above, the loop will execute 5 times, and output the
+          value of <code>i</code> on each iteration.
+        </p>
+        <p>
+          It's important to note that the condition in the while loop should
+          eventually become false, otherwise the loop will run indefinitely.
+        </p>
+      </article>
+      <article>
+        <h2>24. Do...While loop</h2>
+        <p>
+          The <code>do-while</code> loop is similar to the
+          <code>while</code> loop, but the block of code is executed at least
+          once before the condition is checked.
+        </p>
+        <pre class="line-numbers language-javascript">
+<code>
+let i = 0;
+do {
+	console.log(i);
+	i++;
+} while (i < 5);
+</code>
+</pre>
+        <p>
+          In the example above, the loop will execute 5 times, just like the
+          <code>while</code> loop. However, the first iteration will always run,
+          regardless of whether the condition is true or false.
+        </p>
+        <p>
+          It's important to note that the condition in the
+          <code>do-while</code> loop is checked at the end of each iteration,
+          rather than at the beginning like the <code>while</code> loop. This
+          means that the block of code will always be executed at least once,
+          even if the condition is false.
+        </p>
+      </article>
+      <article>
+        <h2>25. Infinite Loops</h2>
+        <p>
+          Infinite loops are loops that run indefinitely without a stop
+          condition. They can be useful in certain situations, but in most
+          cases, they are unintentional and can cause performance issues or
+          crashes. It's important to ensure that our loops have a condition that
+          will eventually evaluate to false so that the loop can exit.
+        </p>
+        <p>Here is an example of an infinite loop:</p>
+        <pre class="line-numbers language-javascript"><code>
+while (true) {
+  console.log('This is an infinite loop');
+}
+				</code></pre>
+      </article>
+      <article>
+        <h2>26. For...In</h2>
+        <p>
+          The <code>for...in</code> loop is used to iterate over the properties
+          of an object. The syntax is:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>for (let key in object) {
+	// code to be executed
+}</code></pre>
+        <p>
+          The loop iterates over each enumerable property of the object,
+          assigning the property key to the variable specified in the loop
+          header. The loop body is executed once for each property of the
+          object.
+        </p>
+        <p>Here's an example:</p>
+        <pre class="line-numbers language-javascript"><code>const person = {
+	name: 'John',
+	age: 30,
+	profession: 'Web Developer'
+};
+for (let key in person) {
+	console.log(key, person[key]);
+}</code></pre>
+
+        <p>This will output:</p>
+        <pre class="language-javascript"><code>name John
+age 30
+profession Web Developer</code></pre>
+        <p>
+          Here, we're iterating over the properties of the
+          <code>person</code> object and logging the property key and value to
+          the console.
+        </p>
+      </article>
+      <article>
+        <h2>27. For...of</h2>
+        <p>
+          The <code>for...of</code> statement is used to loop over iterable
+          objects, such as arrays or strings, and execute a block of code for
+          each element. It is a simpler and more concise syntax compared to the
+          traditional <code>for</code> loop or <code>forEach</code> method.
+        </p>
+        <p>
+          Here's an example that demonstrates how to use the
+          <code>for...of</code> loop to iterate over an array:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>const colors = ['red', 'green', 'blue'];
+				
+for (const color of colors) {
+  console.log(color);
+}</code></pre>
+        <p>This code will output:</p>
+        <pre class="language-javascript"><code>red
+green
+blue</code></pre>
+        <p>
+          In this example, the <code>for...of</code> loop iterates over the
+          <code>colors</code> array and assigns each element to the
+          <code>color</code> variable. The code inside the loop then logs the
+          value of <code>color</code> to the console.
+        </p>
+        <p>
+          The <code>for...of</code> loop can also be used with other iterable
+          objects such as strings and maps.
+        </p>
+      </article>
+      <article>
+        <h2>28. Break and Continue</h2>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Using break statement
+for(let i = 1; i <= 10; i++){
+  if(i === 6){
+	break;
+  }
+  console.log(i); // Output: 1 2 3 4 5
+}
+
+// Using continue statement
+for(let i = 1; i <= 10; i++){
+  if(i === 6){
+	continue;
+  }
+  console.log(i); // Output: 1 2 3 4 5 7 8 9 10
+}</code></pre>
+        <p>
+          In the first example, the loop will break when the value of `i` is
+          equal to 6, so only the numbers 1 through 5 will be logged to the
+          console.
+        </p>
+        <p>
+          In the second example, the loop will skip the iteration when the value
+          of `i` is equal to 6, so all numbers from 1 to 10 will be logged to
+          the console except 6.
+        </p>
+      </article>
+      <article>
+        <h2>29. Max of Two Numbers</h2>
+        <pre class="line-numbers language-javascript"><code>
+function max(num1, num2) {
+	if (num1 > num2) {
+	  return num1;
+	} else {
+	  return num2;
+	}
+}
+
+let result = max(10, 5);
+console.log(result); // Output: 10
+			  </code></pre>
+        <p>
+          In the code above, we define a function max that takes two parameters
+          num1 and num2. The function then checks if num1 is greater than num2.
+          If it is, then the function returns num1. If not, it returns num2. We
+          then call the max function with the arguments 10 and 5 and store the
+          result in a variable result. Finally, we log the result to the
+          console, which outputs 10 as 10 is greater than 5.
+        </p>
+      </article>
+      <article>
+        <h2>30. Let's talk about Objects (Introduction)</h2>
+        <p>
+          Objects are a fundamental concept in JavaScript, which allows us to
+          represent a collection of related data and behavior in a single unit.
+          In other words, objects allow us to create more complex data
+          structures that contain properties and methods.
+        </p>
+        <p>
+          To define an object in JavaScript, we use curly braces {} and create a
+          key-value pair for each property we want to define. Here's an example:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Defining an object
+let person = {
+  name: 'John',
+  age: 30,
+  isEmployed: true,
+  sayHello: function() {
+	console.log(`Hello, my name is ${this.name}.`);
+  }
+};</code></pre>
+        <p>
+          In the above example, we have defined an object named "person" with
+          four properties: "name", "age", "isEmployed", and "sayHello". The
+          "name" and "age" properties are string and number types, respectively.
+          The "isEmployed" property is a boolean type, and the "sayHello"
+          property is a method that logs a message to the console.
+        </p>
+        <p>
+          We can access the properties and methods of an object using the dot
+          notation. Here's an example:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>// Accessing properties and methods
+console.log(person.name); // Output: 'John'
+console.log(person.age); // Output: 30
+console.log(person.isEmployed); // Output: true
+person.sayHello(); // Output: 'Hello, my name is John.'</code></pre>
+        <p>
+          Using objects, we can create more complex data structures to represent
+          real-world entities in our code. Objects are also widely used in
+          JavaScript libraries and frameworks to represent UI elements, data
+          models, and more.
+        </p>
+      </article>
+      <article>
+        <h2>31. Factory Functions</h2>
+        <p>
+          In JavaScript, a factory function is a function that returns an
+          object. It's called a factory function because it's like a factory
+          that produces objects. These functions are useful when we need to
+          create multiple objects with the same properties and methods. Instead
+          of creating each object manually, we can use a factory function to
+          create the objects for us.
+        </p>
+        <p>Here's an example:</p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>function createPerson(name, age) {
+return {
+	name: name,
+	age: age,
+	sayHello: function() {
+	  console.log("Hello, my name is " + this.name + " and I'm " + this.age + " years old.");
+	}
+};
+	
+
+const person1 = createPerson("John", 30);
+const person2 = createPerson("Jane", 25);
+
+person1.sayHello(); // Output: "Hello, my name is John and I'm 30 years old."
+person2.sayHello(); // Output: "Hello, my name is Jane and I'm 25 years old."</code></pre>
+        <p>
+          In the example above, we have a factory function called
+          <code>createPerson</code> that takes two arguments:
+          <code>name</code> and <code>age</code>. The function returns an object
+          with two properties and a method: <code>name</code>, <code>age</code>,
+          and <code>sayHello</code>. We can create new objects by calling this
+          function and passing in different values for the <code>name</code> and
+          <code>age</code> arguments.
+        </p>
+        <p>
+          By using a factory function, we can avoid writing repetitive code to
+          create objects with the same properties and methods. We can also
+          easily create variations of objects by passing in different values to
+          the factory function.
+        </p>
+        <p>
+          Factory functions are just one way to create objects in JavaScript.
+          Other ways include using constructor functions and classes, which
+          we'll cover later.
+        </p>
+      </article>
+      <article>
+        <h2>32. Constructor Functions</h2>
+        <p>
+          In JavaScript, constructor functions are used to create objects of the
+          same type. They are similar to factory functions, but instead of
+          returning a new object, they use the <code>this</code> keyword to set
+          the properties of the object being created. Constructor functions are
+          always named with a capital letter to differentiate them from regular
+          functions.
+        </p>
+        <p>Here is an example of a constructor function:</p>
+        <pre><code class="language-javascript line-numbers">function Person(name, age, gender) {
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+}
+				
+let person1 = new Person("John", 30, "male");
+let person2 = new Person("Jane", 25, "female");
+				
+console.log(person1);
+console.log(person2);</code></pre>
+        <p>
+          In this example, we define a constructor function called
+          <code>Person</code> that takes three parameters: <code>name</code>,
+          <code>age</code>, and <code>gender</code>. Inside the constructor
+          function, we use the <code>this</code> keyword to set the properties
+          of the object being created.
+        </p>
+        <p>
+          To create a new object from the <code>Person</code> constructor, we
+          use the <code>new</code> keyword followed by the constructor function
+          and the arguments to be passed to the constructor.
+        </p>
+        <p>
+          When the <code>new</code> keyword is used with a constructor function,
+          a new object is created and assigned to the variable on the left-hand
+          side of the assignment operator. In this example,
+          <code>person1</code> and <code>person2</code> are both objects created
+          using the <code>Person</code> constructor function.
+        </p>
+        <p>
+          Constructor functions are useful when you need to create multiple
+          objects of the same type, as you can define the properties and methods
+          of the object in the constructor function and then create new objects
+          from it.
+        </p>
+      </article>
+      <article>
+        <h2>33. Dynamic Nature of Objects</h2>
+        <p>
+          One of the powerful features of JavaScript objects is their dynamic
+          nature. This means that you can add and remove properties from an
+          object at any time, even after it has been created. Let's take a look
+          at an example:
+        </p>
+        <pre class="line-numbers language-javascript"><code>const person = { 
+	name: 'John', 
+	age: 30 
+};
+			  
+person.gender = 'male'; // add new property
+delete person.age; // remove age property</code></pre>
+        <p>
+          In the example above, we created an object called
+          <code>person</code> with two properties: <code>name</code> and
+          <code>age</code>. Then, we added a new property called
+          <code>gender</code> and removed the <code>age</code> property using
+          the <code>delete</code> operator.
+        </p>
+        <p>
+          This dynamic nature of JavaScript objects can be very useful in
+          certain situations, such as when you need to add or remove properties
+          based on user input or other dynamic factors. However, it can also
+          make your code more complex and harder to maintain if you're not
+          careful.
+        </p>
+        <p>
+          It's also important to note that this dynamic nature only applies to
+          objects and not to primitive values such as strings, numbers, and
+          booleans. These values cannot have properties added or removed from
+          them.
+        </p>
+      </article>
+      <article>
+        <h2>34. Constructor Property</h2>
+        <p>
+          Every JavaScript object has a constructor property that returns a
+          reference to the constructor function that created it. This can be
+          useful for checking the type of an object or creating new instances of
+          the same type.
+        </p>
+        <p>For example:</p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code class="language-javascript">
+function Circle(radius) {
+	this.radius = radius;
+}
+const circle = new Circle(1);
+
+console.log(circle.constructor); // Output: Circle(radius)
+				</code></pre>
+
+        <p>
+          In the above example, the <code>constructor</code> property of the
+          <code>circle</code> object returns a reference to the
+          <code>Circle</code> function.
+        </p>
+      </article>
+      <article>
+        <h2>35. Functions are Objects</h2>
+        <p>
+          In JavaScript, functions are actually objects. This means that you can
+          assign them to variables, pass them as arguments to other functions,
+          and even return them from functions, just like any other object.
+        </p>
+        <p>
+          For example, you can create a function and assign it to a variable:
+        </p>
+        <pre class="line-numbers language-javascript"><code>// Create a function
+function greet(name) {
+  console.log('Hello, ' + name + '!');
+}
+// Assign the function to a variable
+var sayHello = greet;
+
+// Call the function using the variable
+sayHello('John'); // Output: Hello, John!</code></pre>
+
+        <p>You can also pass a function as an argument to another function:</p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>function greeting(name, callback) {
+  console.log('Hello, ' + name + '!');
+  callback();
+}
+function callbackFunction() {
+console.log('This is the callback function.');
+}
+				
+greeting('John', callbackFunction);</code></pre>
+
+        <p>
+          The <code>callbackFunction</code> is a separate function that we pass
+          to the <code>greeting</code> function as an argument. Inside the
+          <code>greeting</code> function, we call the callback function using
+          the <code>callback()</code> syntax.
+        </p>
+        <p>
+          Functions can also have properties and methods, just like any other
+          object. For example:
+        </p>
+        <pre
+          class="line-numbers language-javascript"
+        ><code>function greet(name) {
+  console.log('Hello, ' + name + '!');
+}
+greet.language = 'English';
+
+console.log(greet.language); // Output: English</code></pre>
+
+        <p>
+          In this example, we've added a property called
+          <code>language</code> to the <code>greet</code> function object, and
+          we can access it just like any other property of an object.
+        </p>
+      </article>
+      <article>
+        <h2>36. Value vs. Reference Types</h2>
+        <p>
+          In JavaScript, there are two main categories of data types: primitive
+          types and reference types. Understanding the difference between these
+          two types is important because it affects how they are stored and
+          passed around in memory.
+        </p>
+        <h3>Primitive Types</h3>
+        <p>
+          Primitive types are basic types of data that are immutable (i.e.,
+          cannot be changed). They include:
+        </p>
+        <ul>
+          <li>Numbers</li>
+          <li>Strings</li>
+          <li>Booleans</li>
+          <li>Null</li>
+          <li>Undefined</li>
+          <li>Symbol (added in ES6)</li>
+        </ul>
+        <p>
+          When you create a variable and assign it a primitive value, the value
+          is stored directly in the variable. If you assign the value to another
+          variable, a new copy of the value is created and stored in the new
+          variable. For example:
+        </p>
+        <pre class="line-numbers language-javascript"><code>let x = 10;
+let y = x;
+x = 20;
+console.log(x); // output: 20
+console.log(y); // output: 10</code></pre>
+        <p>
+          In this example, we create a variable <code>x</code> and assign it the
+          value <code>10</code>. We then create a variable <code>y</code> and
+          assign it the value of <code>x</code>. When we update
+          <code>x</code> to be <code>20</code>, the value of
+          <code>y</code> remains unchanged at <code>10</code> because
+          <code>y</code> holds a copy of the value of <code>x</code> at the time
+          of assignment.
+        </p>
+        <h3>Reference Types</h3>
+        <p>
+          Reference types are more complex types of data that are mutable (i.e.,
+          can be changed). They include:
+        </p>
+        <ul>
+          <li>Objects</li>
+          <li>Arrays</li>
+          <li>Functions</li>
+          <li>Date</li>
+          <li>RegExp</li>
+        </ul>
+        <p>
+          When you create a variable and assign it a reference value, the
+          variable stores a reference to the value in memory, rather than the
+          value itself. If you assign the value to another variable, both
+          variables point to the same object in memory. For example:
+        </p>
+        <pre class="line-numbers language-javascript"><code>let a = [1, 2, 3];
+let b = a;
+a.push(4);
+console.log(a); // output: [1, 2, 3, 4]
+console.log(b); // output: [1, 2, 3, 4]</code></pre>
+        <p>
+          In this example, we create an array <code>a</code> and assign it the
+          values <code>[1, 2, 3]</code>. We then create a variable
+          <code>b</code> and assign it the value of <code>a</code>. When we push
+          the value <code>4</code> onto the end of <code>a</code>, the value of
+          <code>b</code> also changes to reflect this change, because both
+          variables are pointing to the same array object in memory.
+        </p>
+        <p>
+          It's important to keep this difference between value and reference
+          types in mind when working with data in JavaScript, as it can affect
+          the behavior of your code in unexpected ways.
+        </p>
+      </article>
+      <article>
+        <h2>37. Enumerating Properties of an Object</h2>
+        <p>
+          In JavaScript, objects have properties, which can be primitive types,
+          functions or even other objects. Sometimes, we need to loop through
+          all the properties of an object, and perform an action on each of
+          them. We can achieve this using the for...in loop.
+        </p>
+        <p>
+          The for...in loop allows us to loop through all the properties of an
+          object. The syntax is as follows:
+        </p>
+        <pre
+          class="language-javascript line-numbers"
+        ><code>for (let propertyName in object) {
+// code to execute on each property
+}</code></pre>
+        <p>
+          Here, the variable <code>propertyName</code> represents the name of
+          each property, and <code>object</code> is the object we want to loop
+          through.
+        </p>
+        <p>Let's see an example:</p>
+        <pre class="language-javascript line-numbers"><code>const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+				
+for (let property in person) {
+  console.log(property + ": " + person[property]);
+}</code></pre>
+        <p>
+          In this example, we define an object called <code>person</code> with
+          three properties: <code>name</code>, <code>age</code>, and
+          <code>city</code>. Then we use the for...in loop to loop through all
+          the properties of the object and log each property name and value to
+          the console.
+        </p>
+        <p>
+          It's important to note that the properties are not guaranteed to be
+          enumerated in any particular order.
+        </p>
+        <p>
+          In addition, the for...in loop also loops through the properties of
+          the object's prototype chain. To avoid this, we can use the
+          <code>hasOwnProperty</code> method to check if a property belongs to
+          the object itself or to its prototype chain.
+        </p>
+        <pre class="language-javascript line-numbers"><code>const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+for (let property in person) {
+  if (person.hasOwnProperty(property)) {
+	console.log(property + ": " + person[property]);
+  }
+}</code></pre>
+        <p>
+          This example is similar to the previous one, but we use the
+          <code>hasOwnProperty</code> method to check if each property belongs
+          to the <code>person</code> object itself or to its prototype chain.
+          This ensures that only the properties of the object itself are logged
+          to the console.
+        </p>
+        <p>
+          By using the for...in loop and the <code>hasOwnProperty</code> method,
+          we can enumerate the properties of an object and perform actions on
+          each of them as needed.
+        </p>
+      </article>
+      <article>
+        <h2>38. Cloning an Object</h2>
+        <p
+          >In JavaScript, we can clone an object by creating a new object and
+          copying the properties of the original object to the new object. There
+          are a few different ways to accomplish this:</p
+        >
+        <ul>
+          <li
+            ><strong>Object.assign():</strong> This method creates a new object
+            and copies the properties of one or more existing objects to it.</li
+          >
+          <li
+            ><strong>Spread operator:</strong> The spread operator can be used
+            to clone an object by spreading the properties of the original
+            object into a new object.</li
+          >
+          <li
+            ><strong>JSON.parse() and JSON.stringify():</strong> We can also
+            clone an object by using JSON.stringify() to convert the original
+            object to a JSON string, and then using JSON.parse() to create a new
+            object from the JSON string.</li
+          >
+        </ul>
+        <p>Here are examples of each of these methods:</p>
+        <h3>Using Object.assign()</h3>
+        <pre
+          class="line-numbers language-javascript"
+        ><code class="language-javascript">
+const person = { name: "John", age: 30 };
+const clone = Object.assign({}, person);
+console.log(clone); // { name: "John", age: 30 }
+		</code></pre>
+        <h3>Using Spread Operator</h3>
+        <pre
+          class="line-numbers language-javascript"
+        ><code class="language-javascript">
+const person = { name: "John", age: 30 };
+const clone = { ...person };
+console.log(clone); // { name: "John", age: 30 }
+		</code></pre>
+        <h3>Using JSON.stringify() and JSON.parse()</h3>
+        <pre
+          class="line-numbers language-javascript"
+        ><code class="language-javascript">
+const person = { name: "John", age: 30 };
+const clone = JSON.parse(JSON.stringify(person));
+console.log(clone); // { name: "John", age: 30 }
+		</code></pre>
+        <p
+          >Note that using JSON.stringify() and JSON.parse() can be slower and
+          less efficient than the other methods, especially for large objects
+          with many nested properties.</p
+        >
+      </article>
+      <article>
+        <h2>Title: 39. Garbage Collection</h2>
+        <p
+          >Garbage collection is a process used by programming languages to
+          manage memory automatically. In JavaScript, this process is performed
+          by the JavaScript engine.
+        </p>
+        <p
+          >Garbage collection is important because it helps to prevent memory
+          leaks. Memory leaks occur when memory is allocated to an object or
+          variable, but is never released back to the system. Over time, these
+          small memory leaks can accumulate and lead to performance issues and
+          even crashes.
+        </p>
+        <p
+          >In JavaScript, the garbage collector works by automatically freeing
+          up memory that is no longer being used by an application. This process
+          is performed by the JavaScript engine itself, without the need for
+          manual intervention from the programmer.
+        </p>
+        <p
+          >The garbage collector looks for objects in memory that are no longer
+          being referenced by the application. Once these objects are
+          identified, the garbage collector frees up the memory associated with
+          them.
+        </p>
+        <p
+          >It's important to note that the garbage collector is not perfect and
+          can sometimes fail to identify objects that are no longer needed. To
+          minimize the likelihood of memory leaks, it's important to use best
+          practices when writing JavaScript code. This includes properly
+          managing variables and objects, and avoiding circular references.</p
+        >
+      </article>
+      <article>
+        <h2>40. Math</h2>
+        <p
+          >The built-in <code>Math</code> object in JavaScript provides a wide
+          range of mathematical operations and functions that can be used in
+          your code.</p
+        >
+        <h3>Commonly Used Math Methods</h3>
+        <ul>
+          <li
+            ><code>Math.round()</code> - rounds a number to the nearest
+            integer</li
+          >
+          <li><code>Math.ceil()</code> - rounds up to the nearest integer</li>
+          <li
+            ><code>Math.floor()</code> - rounds down to the nearest integer</li
+          >
+          <li
+            ><code>Math.abs()</code> - returns the absolute value of a
+            number</li
+          >
+          <li
+            ><code>Math.max()</code> - returns the largest of zero or more
+            numbers</li
+          >
+          <li
+            ><code>Math.min()</code> - returns the smallest of zero or more
+            numbers</li
+          >
+          <li
+            ><code>Math.random()</code> - returns a random number between 0 and
+            1</li
+          >
+          <li
+            ><code>Math.pow(x, y)</code> - returns the value of x to the power
+            of y</li
+          >
+          <li
+            ><code>Math.sqrt()</code> - returns the square root of a number</li
+          >
+        </ul>
+        <p
+          >Here's an example of using the <code>Math</code> object to generate a
+          random number between 1 and 10:</p
+        >
+        <pre
+          class="line-numbers language-javascript"
+        ><code class="language-javascript">let randomNumber = Math.floor(Math.random() * 10) + 1;
+console.log(randomNumber); // output: a random number between 1 and 10</code></pre>
+        <p
+          >Notice how we first used the <code>Math.random()</code> method to
+          generate a random decimal between 0 and 1. Then, we multiplied it by
+          10 to get a random decimal between 0 and 10. Finally, we used the
+          <code>Math.floor()</code> method to round the decimal down to the
+          nearest integer and added 1 to shift the range to 1 to 10.</p
+        >
+      </article>
+      <article>
+        <h2>41. String</h2>
+        <p
+          >A string is a sequence of characters that is used to represent text.
+          In JavaScript, strings are enclosed in quotes (single or double) and
+          can be manipulated using various string methods.</p
+        >
+        <pre
+          class="line-numbers language-javascript"
+        ><code>const str = 'hello world';
+
+// Length of the string
+console.log(str.length); // Output: 11
+
+// Finding a substring in a string
+console.log(str.indexOf('world')); // Output: 6
+console.log(str.indexOf('John')); // Output: -1
+
+// Extracting a substring
+console.log(str.slice(0, 5)); // Output: 'hello'
+console.log(str.substring(6)); // Output: 'world'
+
+// Replacing a substring
+console.log(str.replace('world', 'John')); // Output: 'hello John'
+
+// Converting to uppercase and lowercase
+console.log(str.toUpperCase()); // Output: 'HELLO WORLD'
+console.log(str.toLowerCase()); // Output: 'hello world'</code>
+		</pre>
+      </article>
+      <article>
+        <h2>42. Template Literals</h2>
+        <p
+          >Template literals are a new way of defining strings in JavaScript,
+          introduced in ES6 (ECMAScript 2015).</p
+        >
+        <p
+          >Template literals use backticks <code>`</code> to enclose the string,
+          and allow for string interpolation and multiline strings.</p
+        >
+        <h3>String Interpolation</h3>
+        <p
+          >String interpolation is the ability to include expressions within a
+          string. In template literals, expressions are enclosed in curly braces
+          <code>{}</code> and preceded by a dollar sign <code>$</code>.</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">
+		const name = 'John';
+		const greeting = `Hello, ${name}!`;
+		
+		console.log(greeting); // output: "Hello, John!"
+		</code></pre>
+        <h3>Multiline Strings</h3>
+        <p
+          >Template literals allow for multiline strings, which can be written
+          on multiple lines without the need for escape characters like
+          <code>\n</code>.</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">
+		const message = `This is a
+		multiline
+		string.`;
+		
+		console.log(message); // output: "This is a
+							  //          multiline
+							  //          string."
+		</code></pre>
+        <p
+          >Template literals also support tags, which are functions that can be
+          used to parse the template literal. This allows for advanced string
+          processing and manipulation.</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">
+		function myTag(strings, ...values) {
+		  console.log(strings); // output: ["Hello, ", "!"]
+		  console.log(values); // output: ["John"]
+		
+		  return `${strings[0]}${values[0]}${strings[1]}`;
+		}
+		
+		const name = 'John';
+		const greeting = myTag`Hello, ${name}!`;
+		
+		console.log(greeting); // output: "Hello, John!"
+		</code></pre>
+      </article>
+      <article>
+        <h2>43. Date</h2>
+        <p
+          >The <code>Date</code> object in JavaScript is used to represent a
+          date and time value. It provides methods to work with dates and times.
+          Here are some examples:</p
+        >
+        <pre class="language-javascript line-numbers">
+		<code class="language-javascript line-numbers">
+		// Creating a new Date object
+		const today = new Date();
+		console.log(today);
+		
+		// Creating a new Date object with a specific date and time
+		const dateOfBirth = new Date('1990-05-23T04:00:00Z');
+		console.log(dateOfBirth);
+		
+		// Creating a new Date object with a specific date and time using numbers
+		const weddingDate = new Date(2022, 6, 30, 14, 0, 0);
+		console.log(weddingDate);
+		
+		// Getting the current date
+		const currentDate = today.getDate();
+		console.log(currentDate);
+		
+		// Getting the current month
+		const currentMonth = today.getMonth();
+		console.log(currentMonth);
+		
+		// Getting the current year
+		const currentYear = today.getFullYear();
+		console.log(currentYear);
+		
+		// Getting the current hour
+		const currentHour = today.getHours();
+		console.log(currentHour);
+		
+		// Getting the current minute
+		const currentMinute = today.getMinutes();
+		console.log(currentMinute);
+		
+		// Getting the current second
+		const currentSecond = today.getSeconds();
+		console.log(currentSecond);
+		
+		// Getting the current millisecond
+		const currentMillisecond = today.getMilliseconds();
+		console.log(currentMillisecond);
+		
+		// Getting the day of the week
+		const currentDayOfWeek = today.getDay();
+		console.log(currentDayOfWeek);
+		</code>
+		</pre>
+        <p
+          >The <code>Date</code> object can also be used to perform date and
+          time arithmetic. For example, to add 10 days to a date:</p
+        >
+        <pre class="language-javascript line-numbers">
+		<code class="language-javascript line-numbers">
+		const today = new Date();
+		const tenDaysLater = new Date(today.getTime() + (10 * 24 * 60 * 60 * 1000));
+		console.log(tenDaysLater);
+		</code>
+		</pre>
+        <p
+          >There are also many other methods available in the
+          <code>Date</code> object that can be used for various purposes. For
+          more information, refer to the
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+            >MDN documentation</a
+          >.</p
+        >
+      </article>
+      <article>
+        <h2>44. Introduction to Arrays</h2>
+        <p
+          >An array is a collection of values that can be accessed using an
+          index. It is a data structure that can hold multiple values of the
+          same data type. Arrays are useful for storing and manipulating data in
+          an organized manner.</p
+        >
+        <p
+          >In JavaScript, arrays are defined using square brackets [] and can
+          contain any data type, including other arrays. Arrays in JavaScript
+          are dynamically sized, which means that they can grow or shrink as
+          needed.</p
+        >
+        <p
+          >Arrays can be accessed using their index, which starts from 0. The
+          first element of an array is at index 0, the second element is at
+          index 1, and so on.</p
+        >
+        <p
+          >Here's an example of creating an array and accessing its elements:</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript">const myArray = ['apple', 'banana', 'orange'];
+		console.log(myArray[0]); // Output: 'apple'
+		console.log(myArray[1]); // Output: 'banana'
+		console.log(myArray[2]); // Output: 'orange'</code></pre>
+        <p
+          >You can also modify an array by assigning a new value to an existing
+          index:</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript">myArray[1] = 'grape';
+		console.log(myArray); // Output: ['apple', 'grape', 'orange']</code></pre>
+        <p
+          >Arrays have many built-in methods for manipulating and transforming
+          their elements. We'll cover some of these methods in later
+          sections.</p
+        >
+      </article>
+      <article>
+        <h2>45. Adding Elements</h2>
+        <p
+          >Arrays are dynamic in nature, which means that elements can be added
+          and removed at any time. In this section, we will discuss how to add
+          elements to an array in JavaScript.</p
+        >
+        <h3>Push</h3>
+        <p
+          >The push method adds one or more elements to the end of an array and
+          returns the new length of the array.</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">let fruits = ['apple', 'banana', 'cherry'];
+		
+		fruits.push('date');
+		console.log(fruits); // ['apple', 'banana', 'cherry', 'date']
+		
+		fruits.push('elderberry', 'fig');
+		console.log(fruits); // ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig']</code></pre>
+        <h3>Unshift</h3>
+        <p
+          >The unshift method adds one or more elements to the beginning of an
+          array and returns the new length of the array.</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">let fruits = ['apple', 'banana', 'cherry'];
+		
+		fruits.unshift('date');
+		console.log(fruits); // ['date', 'apple', 'banana', 'cherry']
+		
+		fruits.unshift('elderberry', 'fig');
+		console.log(fruits); // ['elderberry', 'fig', 'date', 'apple', 'banana', 'cherry']</code></pre>
+        <h3>Splice</h3>
+        <p
+          >The splice method can be used to add or remove elements from an
+          array. The first argument specifies the index at which to start adding
+          or removing elements, the second argument specifies the number of
+          elements to remove, and any additional arguments specify the elements
+          to add. If no elements are specified to add, the method will simply
+          remove elements from the array.</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">let fruits = ['apple', 'banana', 'cherry'];
+		
+		fruits.splice(1, 0, 'date');
+		console.log(fruits); // ['apple', 'date', 'banana', 'cherry']
+		
+		fruits.splice(2, 1, 'elderberry', 'fig');
+		console.log(fruits); // ['apple', 'date', 'elderberry', 'fig', 'cherry']</code></pre>
+        <p
+          >Using the splice method, we can also add elements to the end of an
+          array by specifying a large index.</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">let fruits = ['apple', 'banana', 'cherry'];
+		
+		fruits.splice(3, 0, 'date');
+		console.log(fruits); // ['apple', 'banana', 'cherry', 'date']</code></pre>
+      </article>
+      <article>
+        <h2>46. Finding Elements (Primitives)</h2>
+        <p
+          >Arrays have several built-in methods for finding elements. When
+          working with primitive values (like numbers or strings), we can use
+          the following methods:</p
+        >
+        <ul>
+          <li
+            ><code>indexOf()</code>: Returns the index of the first occurrence
+            of a specified value in an array, or -1 if it is not present.</li
+          >
+          <li
+            ><code>lastIndexOf()</code>: Returns the index of the last
+            occurrence of a specified value in an array, or -1 if it is not
+            present.</li
+          >
+          <li
+            ><code>includes()</code>: Returns a boolean indicating whether or
+            not an array includes a certain value.</li
+          >
+        </ul>
+        <p>Here's an example:</p>
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">
+		const numbers = [1, 2, 3, 4, 5];
+		console.log(numbers.indexOf(3)); // Output: 2
+		console.log(numbers.lastIndexOf(3)); // Output: 2
+		console.log(numbers.includes(3)); // Output: true
+		console.log(numbers.includes(6)); // Output: false
+		</code></pre>
+
+        <p
+          >In this example, we have an array of numbers and we use the
+          <code>indexOf()</code>, <code>lastIndexOf()</code>, and
+          <code>includes()</code> methods to find the number 3 in the array. We
+          get the expected results of 2, 2, and true respectively. When we look
+          for the number 6, which is not present in the array, we get false.</p
+        >
+      </article>
+      <article>
+        <h2>47. Finding Elements (Reference Types)</h2>
+        <p
+          >When working with arrays that contain reference types, such as
+          objects or arrays, finding elements can be a bit tricky. The reason
+          for this is that two variables that reference the same object in
+          memory are not considered equal, even if they have the same
+          properties.</p
+        >
+        <p>For example:</p>
+        <pre class="language-javascript line-numbers">
+	<code class="language-javascript">
+	const myObj = { name: 'John' };
+	const myArr = [myObj];
+	
+	console.log(myArr.indexOf(myObj)); // 0
+	console.log(myArr.indexOf({ name: 'John' })); // -1
+	</code>
+	</pre>
+        <p
+          >In the above code, we have an array <code>myArr</code> that contains
+          an object <code>myObj</code>. When we call the
+          <code>indexOf</code> method on <code>myArr</code> and pass in
+          <code>myObj</code>, it correctly returns the index of the element,
+          which is 0. However, when we pass in a new object that has the same
+          properties as <code>myObj</code>, <code>indexOf</code> returns -1
+          because the new object is not the same object in memory as
+          <code>myObj</code>.</p
+        >
+        <p
+          >To overcome this issue, we can use the <code>find</code> method,
+          which takes a callback function that tests each element in the array
+          and returns the first element that passes the test. For example:</p
+        >
+        <pre class="language-javascript line-numbers">
+	<code class="language-javascript">
+	const myObj = { name: 'John' };
+	const myArr = [myObj];
+	
+	const foundObj = myArr.find(obj => obj.name === 'John');
+	
+	console.log(foundObj); // { name: 'John' }
+	</code>
+	</pre>
+        <p
+          >In the above code, we use the <code>find</code> method to find the
+          element in <code>myArr</code> that has a property
+          <code>name</code> with a value of 'John'. The <code>find</code> method
+          returns the first element that passes the test, which is
+          <code>myObj</code>.</p
+        >
+        <p
+          >It's important to note that the <code>find</code> method returns
+          <code>undefined</code> if no elements in the array pass the test.</p
+        >
+      </article>
+      <article>
+        <h2>48. Arrow Functions</h2>
+        <p
+          >Arrow functions are a shorthand way to write function expressions in
+          JavaScript. They were introduced in ES6 and have become a popular way
+          to write functions in modern JavaScript.</p
+        >
+        <p>Here is an example of a traditional function expression:</p>
+        <pre class="line-numbers language-javascript">
+		<code class="language-javascript">
+		const add = function(x, y) {
+		  return x + y;
+		};
+		</code>
+		</pre>
+        <p>The same function can be written using an arrow function:</p>
+        <pre class="line-numbers language-javascript">
+		<code class="language-javascript">
+		const add = (x, y) => {
+		  return x + y;
+		};
+		</code>
+		</pre>
+        <p
+          >Arrow functions have a more concise syntax than traditional
+          functions, which can make your code easier to read and write. They
+          also have a few important differences:</p
+        >
+        <ul>
+          <li
+            >The "this" keyword in an arrow function refers to the enclosing
+            lexical context, while in a traditional function, "this" refers to
+            the function itself.</li
+          >
+          <li
+            >Arrow functions cannot be used as constructors, so they cannot be
+            used with the "new" keyword to create new objects.</li
+          >
+          <li
+            >Arrow functions do not have their own "arguments" object, so you
+            need to use the rest parameter syntax if you want to access the
+            function's arguments.</li
+          >
+        </ul>
+        <p
+          >Here is an example of using the rest parameter syntax with an arrow
+          function:</p
+        >
+        <pre class="line-numbers language-javascript">
+		<code class="language-javascript">
+		const add = (...args) => {
+		  let sum = 0;
+		  for (let arg of args) sum += arg;
+		  return sum;
+		};
+		</code>
+		</pre>
+        <p
+          >Arrow functions are a powerful tool in modern JavaScript and can help
+          make your code more concise and readable.</p
+        >
+      </article>
+      <article>
+        <h2>49. Removing Elements</h2>
+        <p>Arrays provide several methods to remove elements:</p>
+        <ul>
+          <li
+            ><code>pop()</code>: Removes the last element from the array and
+            returns that element.</li
+          >
+          <li
+            ><code>shift()</code>: Removes the first element from the array and
+            returns that element. This method modifies the length of the
+            array.</li
+          >
+          <li
+            ><code>splice(startIndex, deleteCount, item1, item2, ...)</code>:
+            Removes elements from an array and, if necessary, inserts new
+            elements in their place. The first argument specifies the index at
+            which to start changing the array, the second argument specifies the
+            number of elements to remove, and any additional arguments specify
+            the new elements to be inserted into the array. This method modifies
+            the original array.</li
+          >
+        </ul>
+        <p>Example:</p>
+        <pre><code class="language-javascript line-numbers">
+		let numbers = [1, 2, 3, 4, 5];
+		let last = numbers.pop();
+		console.log(last); // 5
+		console.log(numbers); // [1, 2, 3, 4]
+		
+		let first = numbers.shift();
+		console.log(first); // 1
+		console.log(numbers); // [2, 3, 4]
+		
+		numbers.splice(1, 2);
+		console.log(numbers); // [2]
+		</code></pre>
+
+        <p
+          >In the example above, we first remove the last element of the array
+          using the <code>pop()</code> method, which returns the removed
+          element. Then we remove the first element of the array using the
+          <code>shift()</code> method, which returns the removed element.
+          Finally, we remove elements at index 1 and 2 using the
+          <code>splice()</code> method, which removes two elements starting at
+          index 1 and modifies the original array.</p
+        >
+      </article>
+
+      <article>
+        <h2>50. Emptying an Array</h2>
+        <p>There are several ways to empty an array in JavaScript:</p>
+        <ol>
+          <li>Setting length to 0</li>
+          <li
+            >Using splice method with start index 0 and delete count as array
+            length</li
+          >
+          <li>Using pop method in a loop until array length is 0</li>
+        </ol>
+        <p>Let's see examples of each method:</p>
+        <h3>Method 1: Setting length to 0</h3>
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript">
+	let array1 = [1, 2, 3, 4, 5];
+	console.log(array1); // Output: [1, 2, 3, 4, 5]
+	array1.length = 0;
+	console.log(array1); // Output: []
+	</code></pre>
+
+        <h3>Method 2: Using splice method</h3>
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript">
+	let array2 = [1, 2, 3, 4, 5];
+	console.log(array2); // Output: [1, 2, 3, 4, 5]
+	array2.splice(0, array2.length);
+	console.log(array2); // Output: []
+	</code></pre>
+
+        <h3>Method 3: Using pop method in a loop</h3>
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript">
+	let array3 = [1, 2, 3, 4, 5];
+	console.log(array3); // Output: [1, 2, 3, 4, 5]
+	while (array3.length) {
+	array3.pop();
+	}
+	
+	console.log(array3); // Output: []
+	</code></pre>
+
+        <p
+          >Any of these methods will empty the array. However, the best method
+          to use depends on the situation.</p
+        >
+      </article>
+      <article>
+        <header><h2>51. Combining and Slicing Arrays</h2></header>
+        <pre class="language-javascript line-numbers"><code>
+		//Combining Arrays
+		const first = [1, 2, 3];
+		const second = [4, 5, 6];
+		
+		const combined = first.concat(second); // Combine two arrays using concat method.
+		console.log(combined);
+		
+		const slice = combined.slice(2, 4); // Slice an array to get a new one.
+		console.log(slice);
+		
+		</code></pre>
+      </article>
+      <article>
+        <h2>52. The Spread Operator</h2>
+        <p
+          >The spread operator (...) is a new addition to JavaScript that allows
+          an iterable such as an array expression or string to be expanded in
+          places where zero or more arguments (for function calls) or elements
+          (for array literals) are expected, or an object expression to be
+          expanded in places where zero or more key-value pairs (for object
+          literals) are expected. It provides a more concise way of
+          concatenating arrays, copying arrays, and more.</p
+        >
+        <h3>Concatenating Arrays</h3>
+        <p
+          >One of the most common use cases of the spread operator is to
+          concatenate arrays. Here's an example:</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">const array1 = [1, 2, 3];
+		const array2 = [4, 5, 6];
+		
+		const result = [...array1, ...array2];
+		console.log(result); // Output: [1, 2, 3, 4, 5, 6]</code></pre>
+        <p
+          >The spread operator expands each array into individual elements and
+          then combines them into a new array.</p
+        >
+        <h3>Copying Arrays</h3>
+        <p
+          >Another common use case of the spread operator is to create a copy of
+          an existing array. Here's an example:</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">const array1 = [1, 2, 3];
+		const array2 = [...array1];
+		
+		console.log(array2); // Output: [1, 2, 3]</code></pre>
+        <p
+          >The spread operator expands the elements of the original array into
+          individual elements and creates a new array with those elements.</p
+        >
+        <h3>Passing Arguments to Functions</h3>
+        <p
+          >The spread operator can also be used to pass arguments to functions.
+          Here's an example:</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">function sum(a, b, c) {
+		  return a + b + c;
+		}
+		
+		const numbers = [1, 2, 3];
+		const result = sum(...numbers);
+		
+		console.log(result); // Output: 6</code></pre>
+        <p
+          >The spread operator expands the elements of the numbers array into
+          individual arguments that are then passed to the sum() function.</p
+        >
+        <h3>Cloning Objects</h3>
+        <p
+          >The spread operator can also be used to create a clone of an object.
+          Here's an example:</p
+        >
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript line-numbers">const obj1 = { foo: 'bar', x: 42 };
+		const obj2 = { ...obj1 };
+		
+		console.log(obj2); // Output: { foo: 'bar', x: 42 }</code></pre>
+        <p
+          >The spread operator expands the key-value pairs of the original
+          object into individual key-value pairs and creates a new object with
+          those pairs.</p
+        >
+      </article>
+      <article>
+        <h2>53. Iterating an Array</h2>
+        <p
+          >Arrays in JavaScript have built-in methods that allow you to iterate
+          over the elements of an array. Here are some common ways to iterate
+          over an array:</p
+        >
+        <pre><code class="language-javascript line-numbers">const numbers = [1, 2, 3, 4, 5];
+		// Using a for loop
+		for (let i = 0; i < numbers.length; i++) {
+		console.log(numbers[i]);
+		}
+		
+		// Using forEach method
+		numbers.forEach(function(number) {
+		console.log(number);
+		});
+		
+		// Using for...of loop
+		for (let number of numbers) {
+		console.log(number);
+		}
+		
+		// Using map method
+		const newNumbers = numbers.map(function(number) {
+		return number * 2;
+		});
+		console.log(newNumbers);
+		</code></pre>
+
+        <p
+          >The <code>for</code> loop is a basic way to iterate over an array. It
+          uses an index variable to access each element of the array in order.
+          The <code>forEach</code> method is another way to iterate over an
+          array. It calls a function for each element of the array, passing the
+          current element as an argument. The <code>for...of</code> loop is a
+          new feature in ES6 that allows you to iterate over an array without
+          using an index variable. The <code>map</code> method is a way to
+          create a new array by applying a function to each element of the
+          original array.</p
+        >
+      </article>
+      <article>
+        <h2>54. Joining Arrays</h2>
+        <p
+          >The <code>join()</code> method joins all elements of an array into a
+          string. You can specify the separator to be used between each
+          element.</p
+        >
+        <h3>Syntax:</h3>
+        <pre><code class="language-javascript line-numbers">
+		array.join(separator)
+		</code></pre>
+        <p
+          ><strong>separator:</strong> Optional. Specifies a string to separate
+          each element of the array. If omitted, the array elements are
+          separated with a comma. If separator is an empty string, all elements
+          are joined without any characters in between them.</p
+        >
+        <h3>Example:</h3>
+        <pre><code class="language-javascript line-numbers">
+		const fruits = ["apple", "banana", "orange", "mango"];
+		const result = fruits.join(", ");
+		console.log(result); // Output: "apple, banana, orange, mango"
+		</code></pre>
+
+        <p
+          >The <code>join()</code> method does not change the original array, it
+          only returns the result.
+        </p>
+      </article>
+      <article>
+        <h2>55. Sorting Arrays</h2>
+        <p
+          >Arrays can be sorted using the <code>sort</code> method. By default,
+          the <code>sort</code> method sorts the elements of an array in
+          alphabetical order. However, you can also use it to sort numbers and
+          custom objects.</p
+        >
+        <p
+          >To sort an array of numbers, you can pass a function to the
+          <code>sort</code> method that defines the sorting order. The function
+          should return a negative value if the first argument is less than the
+          second, a positive value if the first argument is greater than the
+          second, and zero if they are equal. For example:</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		const numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+		numbers.sort((a, b) =&gt; a - b);
+		console.log(numbers); // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+		</code></pre>
+        <p>This sorts the <code>numbers</code> array in ascending order.</p>
+        <p
+          >You can also sort arrays of objects based on the value of one of
+          their properties. For example:</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		const products = [
+		  { name: 'Laptop', price: 800 },
+		  { name: 'Phone', price: 500 },
+		  { name: 'Tablet', price: 700 },
+		  { name: 'Desktop', price: 1200 }
+		];
+		products.sort((a, b) => a.price - b.price);
+		console.log(products);
+		// [
+		// { name: 'Phone', price: 500 },
+		// { name: 'Tablet', price: 700 },
+		// { name: 'Laptop', price: 800 },
+		// { name: 'Desktop', price: 1200 }
+		// ]
+		</code></pre>
+
+        <p
+          >This sorts the <code>products</code> array in ascending order of
+          price.</p
+        >
+      </article>
+      <article>
+        <h2>56. Testing the Elements of an Array</h2>
+        <p
+          >JavaScript provides several methods to test the elements of an array.
+          Here are some of the commonly used methods:</p
+        >
+        <ul>
+          <li
+            ><code>every()</code>: tests whether all elements in the array pass
+            the test implemented by the provided function.</li
+          >
+          <li
+            ><code>some()</code>: tests whether at least one element in the
+            array passes the test implemented by the provided function.</li
+          >
+          <li
+            ><code>includes()</code>: determines whether an array includes a
+            certain value among its entries, returning <code>true</code> or
+            <code>false</code> as appropriate.</li
+          >
+          <li
+            ><code>indexOf()</code>: returns the first index at which a given
+            element can be found in the array, or -1 if it is not present.</li
+          >
+          <li
+            ><code>lastIndexOf()</code>: returns the last index at which a given
+            element can be found in the array, or -1 if it is not present. The
+            array is searched backwards, from the end to the beginning.</li
+          >
+        </ul>
+        <pre>
+<code class="language-javascript line-numbers">
+	const numbers = [1, 2, 3, 4, 5];
+	// Using every()
+	const isPositive = (number) => number > 0;
+	console.log(numbers.every(isPositive)); // true
+	
+	// Using some()
+	const isEven = (number) => number % 2 === 0;
+	console.log(numbers.some(isEven)); // true
+	
+	// Using includes()
+	console.log(numbers.includes(3)); // true
+	
+	// Using indexOf()
+	console.log(numbers.indexOf(3)); // 2
+	
+	// Using lastIndexOf()
+	console.log(numbers.lastIndexOf(3)); // 2
+	</code>
+	</pre>
+      </article>
+      <article>
+        <h2>57. Filtering an Array</h2>
+        <p
+          >The <code>filter()</code> method creates a new array with all
+          elements that pass the test implemented by the provided function. It
+          does not modify the original array.</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		const numbers = [1, -1, 2, 3];
+		const filtered = numbers.filter(function(value) {
+		return value >= 0;
+		});
+		
+		console.log(filtered); // Output: [1, 2, 3]
+		</code></pre>
+
+        <p
+          >The <code>filter()</code> method takes a callback function as an
+          argument. This function is executed for each element in the array. If
+          the function returns <code>true</code> for an element, the element is
+          included in the new array. If the function returns <code>false</code>,
+          the element is excluded.</p
+        >
+        <p
+          >The <code>filter()</code> method can also take an optional second
+          argument to set the value of <code>this</code> in the callback
+          function.</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		const products = [
+		  {name: 'apple', type: 'fruit'},
+		  {name: 'carrot', type: 'vegetable'},
+		  {name: 'banana', type: 'fruit'},
+		  {name: 'celery', type: 'vegetable'}
+		];
+		const filtered = products.filter(function(product) {
+		return product.type === 'fruit';
+		});
+		
+		console.log(filtered);
+		// Output: [{name: 'apple', type: 'fruit'}, {name: 'banana', type: 'fruit'}]
+		</code></pre>
+
+        <p
+          >In this example, the <code>filter()</code> method is used to create a
+          new array that contains only the products with a <code>type</code> of
+          <code>'fruit'</code>.</p
+        >
+      </article>
+      <article>
+        <h2>58. Mapping an Array</h2>
+        <p
+          >The <code>map()</code> method creates a new array by calling a
+          provided function on every element in the calling array.</p
+        >
+        <p>The syntax of the <code>map()</code> method is:</p>
+        <pre><code class="language-javascript line-numbers">$array.map(function(currentValue, index, array) {
+		  // return element for new_array
+		}, thisArg)</code></pre>
+        <p>The parameters of the <code>map()</code> method are:</p>
+        <ul>
+          <li
+            ><code>function(currentValue, index, array)</code>: A function that
+            accepts up to three arguments. The
+            <code>currentValue</code> parameter represents the value of the
+            current element in the array. The <code>index</code> parameter
+            represents the index of the current element in the array. The
+            <code>array</code> parameter is the array that the
+            <code>map()</code> method is being called on.</li
+          >
+          <li
+            ><code>thisArg</code> (Optional): An object to which the
+            <code>this</code> keyword can refer inside the
+            <code>function</code>.</li
+          >
+        </ul>
+        <p
+          >The <code>map()</code> method calls the provided function once for
+          each element in the array, in order. It creates a new array with the
+          results of calling the provided function on every element in the
+          calling array.</p
+        >
+        <p
+          >Here's an example of using the <code>map()</code> method to double
+          each number in an array:</p
+        >
+        <pre><code class="language-javascript line-numbers">const numbers = [1, 2, 3, 4, 5];
+		const doubledNumbers = numbers.map(function(number) {
+		  return number * 2;
+		});
+		console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]</code></pre>
+        <p
+          >In this example, we pass a function that doubles each number in the
+          <code>numbers</code> array to the <code>map()</code> method. The
+          method creates a new array (<code>doubledNumbers</code>) that contains
+          the doubled values.</p
+        >
+      </article>
+
+      <article>
+        <h2>59. Reducing an Array</h2>
+        <p
+          >The <code>reduce()</code> method is used to reduce an array into a
+          single value. It executes a provided function for each element of the
+          array and accumulates the result into a single value.</p
+        >
+        <p>The <code>reduce()</code> method takes two arguments:</p>
+        <ul>
+          <li
+            >A <em>callback function</em> to execute on each element of the
+            array, which takes two arguments:</li
+          >
+          <ul>
+            <li
+              >The first argument is the <em>accumulator</em>, which stores the
+              accumulated result. It is initialized with an initial value, or
+              the first element of the array if no initial value is
+              provided.</li
+            >
+            <li
+              >The second argument is the <em>current value</em> being
+              processed.</li
+            >
+          </ul>
+          <li
+            >An optional <em>initial value</em> to use as the initial value of
+            the accumulator.</li
+          >
+        </ul>
+        <p>Here is the basic syntax for the <code>reduce()</code> method:</p>
+        <pre><code class="language-javascript line-numbers">
+	array.reduce(callback[, initialValue])
+	</code></pre>
+        <p>Let's take a look at an example:</p>
+        <pre><code class="language-javascript line-numbers">
+	const numbers = [1, 2, 3, 4, 5];
+	
+	const sum = numbers.reduce((accumulator, currentValue) =&gt; {
+	  return accumulator + currentValue;
+	}, 0);
+	
+	console.log(sum); // Output: 15
+	</code></pre>
+        <p
+          >In this example, we first declare an array of numbers. We then call
+          the <code>reduce()</code> method on this array, passing in a callback
+          function as the first argument. This callback function takes two
+          arguments: <code>accumulator</code> and <code>currentValue</code>.</p
+        >
+        <p
+          >Inside the callback function, we simply add the
+          <code>accumulator</code> to the <code>currentValue</code> and return
+          the result. The <code>reduce()</code> method then takes this returned
+          value and sets it as the new value for the
+          <code>accumulator</code> for the next iteration.</p
+        >
+        <p
+          >Finally, we log the value of <code>sum</code> to the console, which
+          outputs <code>15</code>.</p
+        >
+        <p
+          >The <code>reduce()</code> method is very powerful and can be used to
+          perform many different types of operations on arrays. It is especially
+          useful when you need to calculate a single value from an array, such
+          as finding the maximum or minimum value, or calculating the average or
+          total.</p
+        >
+      </article>
+
+      <article>
+        <h2>60. Introduction to Functions</h2>
+        <p
+          >Functions are an essential part of JavaScript programming. They are
+          reusable blocks of code that can be executed at any time throughout a
+          program. Functions allow you to write a block of code once and use it
+          multiple times, making your code more efficient and easier to read.</p
+        >
+        <p
+          >Functions can take arguments (inputs) and return values (outputs).
+          They can also be named or anonymous, and they can be defined in a
+          variety of ways.</p
+        >
+        <p>JavaScript functions have several important features:</p>
+        <ul>
+          <li
+            >They can take any number of arguments, or no arguments at all.</li
+          >
+          <li>They can return any type of data, including other functions.</li>
+          <li
+            >They can be assigned to variables, passed as arguments to other
+            functions, and returned from other functions.</li
+          >
+        </ul>
+        <p
+          >Overall, functions are a powerful tool in JavaScript that can help
+          you write cleaner, more efficient, and more maintainable code.</p
+        >
+      </article>
+      <article>
+        <h2>61. Function Declarations vs. Expressions</h2>
+        <p
+          >In JavaScript, functions can be created using two different syntaxes:
+          function declarations and function expressions.</p
+        >
+        <h3>Function Declarations</h3>
+        <p
+          >A function declaration is the most common way to create a function.
+          It starts with the "function" keyword, followed by the name of the
+          function, a set of parentheses (which may or may not contain
+          parameters), and a block of code enclosed in curly braces.</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		// Function Declaration
+		function greet(name) {
+		  console.log(`Hello, ${name}!`);
+		}
+		greet("John"); // Output: Hello, John!
+		</code></pre>
+
+        <p
+          >Function declarations are hoisted, which means that they are moved to
+          the top of their scope by the JavaScript interpreter. This allows you
+          to call the function before it is defined in your code.</p
+        >
+        <h3>Function Expressions</h3>
+        <p
+          >A function expression is created by assigning a function to a
+          variable or constant. It starts with the "function" keyword, followed
+          by an optional name, a set of parentheses (which may or may not
+          contain parameters), and a block of code enclosed in curly braces. The
+          variable or constant is then assigned the function.</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		// Function Expression
+		const greet = function(name) {
+		  console.log(`Hello, ${name}!`);
+		};
+		greet("John"); // Output: Hello, John!
+		</code></pre>
+
+        <p
+          >Function expressions are not hoisted, which means that you must
+          define the function before you can call it.</p
+        >
+        <h3>Key Differences</h3>
+        <ul>
+          <li
+            >Function declarations are hoisted, while function expressions are
+            not.</li
+          >
+          <li
+            >Function declarations have a name, while function expressions can
+            be anonymous or have a name.</li
+          >
+          <li
+            >Function declarations are statements, while function expressions
+            are values.</li
+          >
+          <li
+            >Function declarations cannot be used as function arguments or
+            return values, while function expressions can.</li
+          >
+        </ul>
+        <p
+          >Both function declarations and function expressions are useful and
+          have their own advantages and disadvantages. Choosing the right syntax
+          depends on the specific use case.</p
+        >
+      </article>
+
+      <article>
+        <header>
+          <h2>62. Hoisting</h2>
+        </header>
+        <p
+          >Hoisting is a term used to describe the behavior of JavaScript in
+          which variable and function declarations are moved to the top of their
+          respective scopes during the compilation phase, before the code is
+          executed. This means that you can use a variable or function before it
+          is declared without causing an error.</p
+        >
+        <p
+          >However, it's important to note that only the declaration is hoisted,
+          not the assignment or initialization. So if you try to use a variable
+          before it's assigned a value, you will get undefined.</p
+        >
+        <p>Let's take a look at some examples:</p>
+        <pre class="language-javascript line-numbers">
+	<code>// Function Declaration
+	helloWorld();
+	
+	function helloWorld() {
+	  console.log("Hello, world!");
+	}
+	
+	// Function Expression
+	helloWorld2(); // TypeError: helloWorld2 is not a function
+	
+	var helloWorld2 = function() {
+	  console.log("Hello, world 2!");
+	};
+	</code>
+	</pre>
+        <p
+          >In the first example, we're calling the function
+          <code>helloWorld</code> before it's declared. This works because the
+          function declaration is hoisted to the top of the scope.</p
+        >
+        <p
+          >In the second example, we're trying to call a function expression
+          <code>helloWorld2</code> before it's assigned a value. This results in
+          a TypeError because only the declaration is hoisted, not the
+          assignment.</p
+        >
+        <p
+          >Hoisting can be a useful feature, but it can also lead to unexpected
+          behavior if you're not careful. It's best to declare all variables and
+          functions at the beginning of their respective scopes to avoid any
+          potential issues.</p
+        >
+      </article>
+      <article>
+        <h2>63. Arguments</h2>
+        <p
+          >Arguments in JavaScript are values passed to a function when it is
+          called. These values are stored in an array-like object called the
+          "arguments" object, which can be accessed from within the function
+          body.</p
+        >
+        <p
+          >The "arguments" object contains all the arguments passed to the
+          function, including those that were not defined in the function's
+          parameter list. This means that you can call a function with more or
+          fewer arguments than it expects, and the extra arguments will still be
+          available in the "arguments" object.</p
+        >
+        <p>Here's an example:</p>
+        <pre><code class="language-javascript line-numbers">
+function greet(name, message) {
+  console.log(arguments.length);
+  console.log(name);
+  console.log(message);
+}
+greet("John", "Hello!"); // Output: 2, John, Hello!
+greet("Jane"); // Output: 1, Jane, undefined
+greet(); // Output: 0, undefined, undefined
+		</code></pre>
+        <p
+          >In the above example, the "greet" function expects two arguments:
+          "name" and "message". When called with two arguments, the function
+          logs the length of the "arguments" object (which is 2), as well as the
+          values of "name" and "message". When called with only one argument
+          ("name"), the function logs the length of the "arguments" object
+          (which is 1), as well as the value of "name" and "undefined" for
+          "message". When called with no arguments, the function logs the length
+          of the "arguments" object (which is 0) and "undefined" for both "name"
+          and "message".</p
+        >
+        <p
+          >It's important to note that the "arguments" object is not an array,
+          even though it behaves like one. It has a length property and can be
+          accessed using numerical indexes, but it doesn't have any of the array
+          methods like "push", "pop", "slice", etc. If you need to manipulate
+          the arguments passed to a function like an array, you can convert the
+          "arguments" object to an array using the "Array.from()" method, like
+          so:</p
+        >
+        <pre><code class="language-javascript line-numbers">
+			function sum() {
+			  var args = Array.from(arguments);
+			  return args.reduce(function(total, current) {
+				return total + current;
+			  }, 0);
+			}
+			
+			sum(1, 2, 3, 4); // Output: 10
+		</code></pre>
+        <p
+          >In the above example, the "sum" function takes an arbitrary number of
+          arguments and returns their sum. To manipulate the arguments like an
+          array, we first convert the "arguments" object to an array using the
+          "Array.from()" method. We then use the "reduce()" method to add up all
+          the values in the array and return the total.</p
+        >
+      </article>
+      <article>
+        <header>
+          <h2>64. The Rest Operator</h2>
+        </header>
+        <p>
+          The rest operator, represented by three dots `...`, is used to collect
+          all remaining elements in an array into a new array. It can be used to
+          replace the `arguments` object in function definitions.
+        </p>
+        <p>
+          Here is an example of using the rest operator to collect all remaining
+          elements in an array:
+        </p>
+        <pre><code class="language-javascript line-numbers">
+		const arr = [1, 2, 3, 4, 5];
+		const [first, second, ...rest] = arr;
+		
+		console.log(first); // 1
+		console.log(second); // 2
+		console.log(rest); // [3, 4, 5]
+		</code></pre>
+
+        <p>
+          In this example, we have an array `arr` with five elements. We then
+          use destructuring to assign the first two elements to variables
+          `first` and `second`, and the rest of the elements to an array called
+          `rest`.
+        </p>
+        <p>
+          Here is an example of using the rest operator to replace the
+          `arguments` object in a function definition:
+        </p>
+        <pre><code class="language-javascript line-numbers">
+		function sum(...args) {
+		  return args.reduce((acc, curr) => acc + curr, 0);
+		}
+		console.log(sum(1, 2, 3, 4, 5)); // 15
+		</code></pre>
+
+        <p>
+          In this example, the `sum` function takes any number of arguments
+          using the rest operator `...args`. The `args` variable will be an
+          array containing all the arguments passed to the function. We then use
+          the `reduce` method to add up all the numbers in the array and return
+          the result.
+        </p>
+      </article>
+      <article>
+        <h2>65. Default Parameters</h2>
+        <p
+          >Default parameters allow you to specify default values for function
+          parameters. If a parameter is not passed to the function, the default
+          value will be used instead.</p
+        >
+        <p>Here is an example:</p>
+        <pre><code class="language-javascript line-numbers">
+		function greet(name = "friend") {
+		  console.log(`Hello, ${name}!`);
+		}
+		
+		greet(); // logs "Hello, friend!"
+		greet("John"); // logs "Hello, John!"
+		</code></pre>
+        <p
+          >In the above example, the <code>name</code> parameter has a default
+          value of "friend". If no argument is passed to the function, the
+          default value is used. If an argument is passed, the argument value is
+          used instead of the default value.</p
+        >
+        <p
+          >It is important to note that default parameters are only used when
+          the corresponding argument is <code>undefined</code>. If a value is
+          passed for the parameter, even if it is <code>null</code>,
+          <code>false</code>, <code>0</code>, or an empty string, the passed
+          value will be used instead of the default value.</p
+        >
+        <p
+          >Default parameters can also be used in combination with
+          destructuring:</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		function greet({ name = "friend", age }) {
+		  console.log(`Hello, ${name}! You are ${age} years old.`);
+		}
+		
+		greet({ age: 30 }); // logs "Hello, friend! You are 30 years old."
+		greet({ name: "John", age: 40 }); // logs "Hello, John! You are 40 years old."
+		</code></pre>
+        <p
+          >In the above example, the <code>greet</code> function takes an object
+          as its parameter. The object has two properties: <code>name</code> and
+          <code>age</code>. The <code>name</code> property has a default value
+          of "friend". If no <code>name</code> property is passed in the object,
+          the default value is used.</p
+        >
+      </article>
+
+      <article>
+        <header>
+          <h2>66. Getters and Setters</h2>
+        </header>
+        <p>
+          JavaScript provides the ability to define getter and setter methods
+          for object properties. These methods allow you to control the access
+          and manipulation of object properties.
+        </p>
+        <p>
+          A getter is a method that gets the value of a property. A setter is a
+          method that sets the value of a property. You can define a getter or
+          setter using the `get` or `set` keyword followed by the property name.
+        </p>
+        <p>Here is an example:</p>
+        <pre
+          class="language-javascript line-numbers"
+        ><code class="language-javascript">
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  get fullName() {
+	return `${this.firstName} ${this.lastName}`;
+},
+set fullName(value) {
+	const [firstName, lastName] = value.split(" ");
+	this.firstName = firstName;
+	this.lastName = lastName;
+  },
+};
+	
+console.log(person.fullName); // "John Doe"
+person.fullName = "Jane Doe";
+console.log(person.fullName); // "Jane Doe"
+console.log(person.firstName); // "Jane"
+console.log(person.lastName); // "Doe"
+	</code>
+	</pre>
+        <p>
+          In the example above, we have defined a person object with a
+          `fullName` property that is a combination of the `firstName` and
+          `lastName` properties. The `get` method for `fullName` returns the
+          concatenated string of `firstName` and `lastName`. The `set` method
+          for `fullName` takes a string value, splits it into `firstName` and
+          `lastName`, and assigns them to their respective properties.
+        </p>
+        <p>
+          Getters and setters are useful for enforcing validation rules or
+          performing other tasks when a property is accessed or modified. They
+          can be used in class declarations as well as in object literals.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h1>67. Try and Catch</h1>
+        </header>
+        <p>
+          In JavaScript, <code>try</code> and <code>catch</code> are used for
+          error handling, allowing you to gracefully handle errors that may
+          occur during the execution of your code. By placing code that may
+          throw an error inside a <code>try</code> block, you can catch and
+          handle the error inside the corresponding <code>catch</code> block.
+        </p>
+        <p>
+          The syntax for a <code>try</code> and <code>catch</code> statement is
+          as follows:
+        </p>
+        <pre><code class="language-javascript line-numbers">
+	try {
+	  // code that may throw an error
+	} catch (error) {
+	  // code to handle the error
+	}
+	</code></pre>
+        <p>
+          When the code inside the <code>try</code> block throws an error, the
+          program execution jumps to the corresponding <code>catch</code> block.
+          The <code>catch</code> block receives an error object as an argument,
+          which can be used to determine the type of error that occurred and
+          take appropriate action.
+        </p>
+        <p>
+          It's important to note that a <code>try</code> and
+          <code>catch</code> statement can have multiple
+          <code>catch</code> blocks, allowing you to handle different types of
+          errors in different ways. For example:
+        </p>
+        <pre><code class="language-javascript line-numbers">
+	try {
+	  // code that may throw an error
+	} catch (error) {
+	  if (error instanceof TypeError) {
+		// handle TypeError
+	  } else if (error instanceof RangeError) {
+		// handle RangeError
+	  } else {
+		// handle all other errors
+	  }
+	}
+	</code></pre>
+        <p>
+          In this example, the <code>catch</code> block first checks if the
+          error is an instance of <code>TypeError</code>, and if so, takes the
+          appropriate action. If the error is an instance of
+          <code>RangeError</code>, a different action is taken. If the error is
+          of any other type, a generic action is taken.
+        </p>
+        <p>
+          Finally, it's worth noting that <code>try</code> and
+          <code>catch</code> statements can also be used with asynchronous code.
+          In this case, the <code>await</code> keyword can be used to wait for
+          the completion of an asynchronous operation inside the
+          <code>try</code> block, and any errors that occur during the operation
+          can be caught in the corresponding <code>catch</code> block.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h2>68. Local vs. Global Scope</h2>
+        </header>
+        <p>
+          In JavaScript, scope refers to the accessibility of variables,
+          objects, and functions in a particular part of the code. Variables can
+          have either local or global scope.
+        </p>
+        <p>
+          Global scope refers to variables that are defined outside of any
+          function. These variables are accessible from anywhere in the code,
+          including within functions.
+        </p>
+        <p>
+          Local scope refers to variables that are defined within a function.
+          These variables are only accessible within the function in which they
+          are defined, and cannot be accessed from outside of that function.
+        </p>
+        <p>
+          It is generally considered best practice to use local variables
+          whenever possible, as this helps to prevent naming conflicts and makes
+          the code easier to manage and debug.
+        </p>
+        <p> Here is an example of local and global scope in JavaScript: </p>
+        <pre class="language-javascript line-numbers"><code>
+	// Global variable
+	var globalVariable = "I am global!";
+	
+	function scopeExample() {
+	  // Local variable
+	  var localVariable = "I am local!";
+	  
+	  console.log(globalVariable); // Outputs: "I am global!"
+	  console.log(localVariable); // Outputs: "I am local!"
+	}
+	
+	scopeExample();
+	
+	console.log(globalVariable); // Outputs: "I am global!"
+	console.log(localVariable); // Throws a ReferenceError: localVariable is not defined
+	</code></pre>
+        <p>
+          In this example, the variable <code>globalVariable</code> has global
+          scope, as it is defined outside of any function. The variable
+          <code>localVariable</code> has local scope, as it is defined within
+          the function <code>scopeExample</code>.
+        </p>
+        <p>
+          When the function <code>scopeExample</code> is called, it can access
+          both the global and local variables. However, when the function
+          finishes executing, the local variable is no longer accessible.
+        </p>
+        <p>
+          When we try to access <code>localVariable</code> outside of the
+          function, we get a ReferenceError, because the variable does not exist
+          in that scope.
+        </p>
+      </article>
+      <article>
+        <h2>69. Let vs Var</h2>
+        <p
+          >Before the introduction of let and const keywords in ES6, variables
+          in JavaScript could only be declared using the var keyword. The main
+          difference between let and var is the scope in which they are
+          defined.</p
+        >
+        <h3>Var</h3>
+        <p
+          >The scope of a variable declared with var is the function it is
+          declared in, or the global scope if it is declared outside of a
+          function. This means that a variable declared with var can be accessed
+          anywhere within the function or global scope, even if it is declared
+          inside a block statement like a for loop or if statement.</p
+        >
+        <pre class="language-javascript line-numbers"><code>
+	function example() {
+		if (true) {
+			var x = 5;
+		}
+		console.log(x); // Outputs 5
+	}
+	example();
+	</code></pre>
+        <p
+          >In the above example, the variable x is declared inside the if
+          statement block, but it can still be accessed outside of the block
+          because it was declared with var. This is because the scope of var is
+          the function scope.</p
+        >
+        <h3>Let</h3>
+        <p
+          >The let keyword was introduced in ES6 and it allows you to declare
+          block-scoped variables. This means that a variable declared with let
+          is only accessible within the block it is declared in. If you try to
+          access it outside of the block, you will get a reference error.</p
+        >
+        <pre class="language-javascript line-numbers"><code>
+	function example() {
+	if (true) {
+	let x = 5;
+	}
+	console.log(x); // ReferenceError: x is not defined
+	}
+	
+	example();
+	</code></pre>
+        <p
+          >In the above example, the variable x is declared with let inside the
+          if statement block. This means that it is only accessible within the
+          block and if you try to access it outside of the block, you will get a
+          reference error.</p
+        >
+        <p
+          >It is generally recommended to use let instead of var when declaring
+          variables, as it helps to avoid some common bugs related to variable
+          scoping.</p
+        >
+      </article>
+      <article>
+        <h2>70. The This Keyword</h2>
+        <p
+          >The "this" keyword refers to the object that is executing the current
+          function. In other words, "this" is a reference to the current context
+          in which the function is being executed. This context can be the
+          global object, a function or an object.</p
+        >
+        <p
+          >The value of "this" depends on how the function is called. There are
+          four ways to call a function:</p
+        >
+        <ul>
+          <li
+            >As a function - in this case, "this" refers to the global object
+            (window in a browser, global in Node.js).</li
+          >
+          <li
+            >As a method of an object - in this case, "this" refers to the
+            object that the method is a property of.</li
+          >
+          <li
+            >With the "new" keyword - in this case, "this" refers to the new
+            object that is being created.</li
+          >
+          <li
+            >Using call() or apply() - in this case, "this" refers to the first
+            argument passed to call() or apply().</li
+          >
+        </ul>
+        <p
+          >The "this" keyword can be confusing, especially when used in nested
+          functions or in callbacks. It's important to understand the context in
+          which the function is being executed and to use "this"
+          appropriately.</p
+        >
+      </article>
+      <article>
+        <header>
+          <h2>71. Changing This</h2>
+        </header>
+        <p
+          >The "this" keyword in JavaScript is used to refer to the object that
+          the current function or method is a part of. It allows access to the
+          object's properties and methods. However, the value of "this" can
+          change depending on the context in which it is used.
+        </p>
+        <p
+          >One common situation where the value of "this" can be changed is when
+          a function or method is passed as an argument to another function. In
+          such cases, "this" can be set to a different value if the function is
+          invoked in a different context.</p
+        >
+        <p
+          >To avoid this issue, we can use the "bind" method to set the value of
+          "this" explicitly. The "bind" method creates a new function with the
+          specified value of "this", which can then be passed as an argument to
+          another function without losing its original value.</p
+        >
+        <p>Here's an example:</p>
+        <pre><code class="language-javascript line-numbers">
+		const person = {
+		  firstName: "John",
+		  lastName: "Doe",
+		  fullName: function() {
+			return this.firstName + " " + this.lastName;
+		  }
+		};
+		
+		const fullName = person.fullName;
+		console.log(fullName()); // Returns undefined undefined
+		
+		const boundFullName = fullName.bind(person);
+		console.log(boundFullName()); // Returns "John Doe"
+		</code></pre>
+        <p
+          >In the above example, the "fullName" method is assigned to the
+          "fullName" variable, which loses its reference to the "person" object.
+          When "fullName" is called on its own, it returns undefined undefined
+          because "this" is not set to the "person" object. However, when we use
+          the "bind" method to create a new function with "this" set to the
+          "person" object, it returns the expected result.</p
+        >
+        <p
+          >Another way to set the value of "this" is by using arrow functions.
+          Arrow functions inherit the value of "this" from their parent scope,
+          so they do not create a new value of "this" in the same way that
+          regular functions do. Here's an example:</p
+        >
+        <pre><code class="language-javascript line-numbers">
+		const person = {
+		  firstName: "John",
+		  lastName: "Doe",
+		  fullName: function() {
+			const fullNameFunc = () => {
+			  return this.firstName + " " + this.lastName;
+			};
+			return fullNameFunc();
+		  }
+		};
+		
+		console.log(person.fullName()); // Returns "John Doe"
+		</code></pre>
+        <p
+          >In this example, we use an arrow function "fullNameFunc" inside the
+          "fullName" method. Since arrow functions inherit the value of "this"
+          from their parent scope, "fullNameFunc" has access to the "person"
+          object through the "fullName" method, and it returns the expected
+          result.</p
+        >
+        <p
+          >It is important to understand the context in which "this" is used to
+          avoid confusion and unexpected results.</p
+        >
+      </article>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../prism.js"></script>
+  </body>
+</html>
