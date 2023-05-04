@@ -1,0 +1,38 @@
+01. Introduction to PHP
+02. Setting up a PHP Development Environment
+03. Variables and Data Types in PHP
+04. Operators in PHP
+05. Control Structures in PHP
+06. Loops in PHP
+07. Arrays in PHP
+08. Functions in PHP
+09. Object-Oriented Programming in PHP
+10. Classes and Objects in PHP
+11. Inheritance in PHP
+12. Polymorphism in PHP
+
+13. Exceptions and Error Handling in PHP
+14. Strings and Regular Expressions in PHP
+15. Working with Dates and Times in PHP
+16. Handling Forms and User Input in PHP
+17. Uploading files into server via forms in PHP
+18. File Handling in PHP
+19. Handling Cookies and Sessions in PHP
+20. Working with Databases in PHP
+
+21. Getting data from MySQL Database with PHP
+22. PDO (PHP Data Objects) in PHP
+23. Handling Images and Graphics in PHP
+24. Debugging and Testing in PHP
+25. Security in PHP
+26. Best Practices for PHP Development
+27. Frameworks and Libraries in PHP
+28. WordPress Development with PHP
+29. eCommerce Development with PHP
+30. Web Services and APIs in PHP
+31. AJAX and JSON in PHP
+32. Deploying PHP Applications
+33. Advanced PHP Concepts
+
+
+continue writting
