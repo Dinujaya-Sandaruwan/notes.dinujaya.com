@@ -67,1621 +67,1891 @@
       </div>
     </nav>
 
-    <h1 class="heading">HTML NOTES</h1>
+    <h1 class="heading">C# NOTES</h1>
 
     <!-- Content of this page -->
 
     <div class="content">
       <article>
-        <h2>01. Understanding the Basics of HTML</h2>
+        <h2>01. Introduction to C# programming language</h2>
         <p
-          >HTML stands for Hyper Text Markup Language. It is the standard markup
-          language used to create web pages. HTML uses various tags to structure
-          content on a webpage. Here are some of the basic tags:</p
+          >C# is a modern, object-oriented programming language developed by
+          Microsoft. It is commonly used to build desktop applications, web
+          applications, and games for Windows devices.</p
+        >
+        <p>Here are some basic concepts you should know about C#:</p>
+        <ul>
+          <li
+            >C# is strongly typed, which means you must declare the data type of
+            a variable before you use it.</li
+          >
+          <li
+            >C# supports object-oriented programming, which means you can define
+            classes, interfaces, and other objects to encapsulate data and
+            behavior.</li
+          >
+          <li
+            >C# uses a syntax similar to other C-style languages, such as C++
+            and Java.</li
+          >
+        </ul>
+        <p>Here is an example of declaring and using a variable in C#:</p>
+        <pre class="language-csharp"><code>// Declare a string variable
+string greeting;
+// Assign a value to the variable
+greeting = "Hello, world!";
+// Print the value to the console
+Console.WriteLine(greeting);</code></pre>
+        <p>Output:</p>
+        <pre class="language-csharp"><code>Hello, world!</code></pre>
+      </article>
+      <article>
+        <h2>02. Understanding the .NET framework</h2>
+        <p
+          >The .NET framework is a software framework developed by Microsoft
+          that provides a way to build and run applications on the Windows
+          operating system. It includes a large class library, a runtime
+          environment, and various tools for building, testing, and deploying
+          applications.</p
+        >
+        <p
+          >Here are some basic concepts you should know about the .NET
+          framework:</p
         >
         <ul>
           <li
-            ><span>&lt;!DOCTYPE html&gt;</span> - defines the document type and
-            version of HTML being used.</li
+            >The .NET framework provides a common language runtime (CLR), which
+            manages memory, security, and other aspects of running code on the
+            Windows operating system.</li
           >
           <li
-            ><span>&lt;html&gt;</span> - the container for all other HTML tags
-            on a webpage.</li
+            >The .NET framework includes a large class library, which provides a
+            wide range of pre-built classes and APIs for common programming
+            tasks.</li
           >
           <li
-            ><span>&lt;head&gt;</span> - contains metadata such as title,
-            styles, and scripts for the webpage.</li
-          >
-          <li
-            ><span>&lt;body&gt;</span> - contains the main content of the
-            webpage.</li
-          >
-          <li
-            ><span>&lt;h1&gt;</span> to <span>&lt;h6&gt;</span> - used to define
-            headings on a webpage with <span>&lt;h1&gt;</span> being the most
-            important and <span>&lt;h6&gt;</span> being the least important.</li
-          >
-          <li
-            ><span>&lt;p&gt;</span> - used to define paragraphs on a
-            webpage.</li
-          >
-          <li
-            ><span>&lt;a&gt;</span> - used to create hyperlinks on a
-            webpage.</li
-          >
-          <li
-            ><span>&lt;img&gt;</span> - used to insert images on a webpage.</li
+            >The .NET framework supports multiple programming languages,
+            including C#, Visual Basic, and F#.</li
           >
         </ul>
-        <p>Here's an example of HTML code that uses some of the basic tags:</p>
-        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My Webpage&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Welcome to my webpage&lt;/h1&gt;
-    &lt;p&gt;This is the main content of my webpage.&lt;/p&gt;
-    &lt;a href="https://www.example.com"&gt;Visit example.com&lt;/a&gt;
-    &lt;img src="image.jpg" alt="A beautiful image"&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+        <p
+          >Here is an example of using the .NET framework to create a simple
+          console application in C#:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>// Declare a namespace for the application
+      namespace HelloWorld
+{
+    // Declare a class for the application
+    class Program
+    {
+        // Define the entry point for the application
+        static void Main(string[] args)
+        {
+            // Print a greeting to the console
+            Console.WriteLine("Hello, world!");
+        }
+    }
+}</code></pre>
+        <p>Output:</p>
+        <pre class="language-csharp"><code>Hello, world!</code></pre>
       </article>
       <article>
-        <h2>02. Setting Up Your HTML Document</h2>
+        <h2>03. Setting up your development environment</h2>
         <p
-          >Before you can start creating a webpage with HTML, you need to set up
-          the basic structure of your HTML document. Here are the steps:</p
+          >Before you can start writing C# code, you need to set up a
+          development environment. Here are the steps you should follow:</p
         >
         <ol>
-          <li>Open a text editor such as Notepad or Sublime Text.</li>
           <li
-            >Create a new file and save it with the <span>.html</span> file
-            extension. For example, <span>index.html</span>.</li
+            >Install the .NET SDK: The .NET SDK is a set of tools that you need
+            to build and run C# applications. You can download it from the
+            official Microsoft website.</li
           >
           <li
-            >Start with the <span>&lt;!DOCTYPE html&gt;</span> tag. This tag is
-            required and tells the browser which version of HTML you are
-            using.</li
+            >Choose an integrated development environment (IDE): An IDE is a
+            software application that provides a graphical interface for
+            writing, testing, and debugging code. Visual Studio is a popular IDE
+            for C# programming, but there are also other options available, such
+            as Visual Studio Code, JetBrains Rider, and SharpDevelop.</li
           >
           <li
-            >Next, create the <span>&lt;html&gt;</span> tag. This tag is the
-            container for all other HTML tags on your webpage.</li
-          >
-          <li
-            >Inside the <span>&lt;html&gt;</span> tag, create the
-            <span>&lt;head&gt;</span> tag. This tag contains metadata such as
-            the title of your webpage, links to stylesheets, and scripts.</li
-          >
-          <li
-            >Inside the <span>&lt;head&gt;</span> tag, create the
-            <span>&lt;title&gt;</span> tag. This tag is used to define the title
-            of your webpage that appears in the browser tab.</li
-          >
-          <li
-            >After the <span>&lt;head&gt;</span> tag, create the
-            <span>&lt;body&gt;</span> tag. This tag contains the main content of
-            your webpage such as text, images, and links.</li
+            >Create a new project: Once you have installed the .NET SDK and
+            chosen an IDE, you can create a new C# project. The exact steps will
+            depend on your IDE, but typically involve choosing a project
+            template and specifying the project name and location.</li
           >
         </ol>
-        <p>Here's an example of what your HTML document should look like:</p>
-        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My Webpage&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Welcome to my webpage&lt;/h1&gt;
-    &lt;p&gt;This is the main content of my webpage.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-      </article>
-      <article>
-        <h2>03. Using Headings in HTML</h2>
         <p
-          >Headings in HTML are used to define the structure and hierarchy of
-          content on a webpage. There are six levels of headings, from
-          <span>&lt;h1&gt;</span> for the main heading down to
-          <span>&lt;h6&gt;</span> for subheadings. Here's an example of how to
-          use headings in HTML:</p
+          >Here is an example of using Visual Studio to create a new console
+          application in C#:</p
         >
-        <pre class="language-html"><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
-&lt;h2&gt;Subheading&lt;/h2&gt;
-&lt;h3&gt;Sub-subheading&lt;/h3&gt;
-&lt;h4&gt;Sub-sub-subheading&lt;/h4&gt;
-&lt;h5&gt;Sub-sub-sub-subheading&lt;/h5&gt;
-&lt;h6&gt;Sub-sub-sub-sub-subheading&lt;/h6&gt;</code></pre>
-        <p
-          >It's important to use headings appropriately to improve the
-          accessibility and readability of your webpage. Here are some tips:</p
-        >
-        <ul>
-          <li
-            >Use <span>&lt;h1&gt;</span> for the main heading of your webpage.
-            There should only be one <span>&lt;h1&gt;</span> per page.</li
-          >
-          <li
-            >Use headings to break up content into sections and subsections.</li
-          >
-          <li
-            >Avoid skipping heading levels. For example, don't use
-            <span>&lt;h2&gt;</span> followed by <span>&lt;h4&gt;</span>.</li
-          >
-          <li
-            >Make sure your headings are descriptive and accurately reflect the
-            content of the section.</li
-          >
-        </ul>
-      </article>
-      <article>
-        <h2>04. Formatting Text in HTML</h2>
-        <p
-          >HTML provides several ways to format text on a webpage. Here are some
-          examples:</p
-        >
-        <ul>
-          <li
-            ><span>&lt;b&gt;</span> and <span>&lt;strong&gt;</span> - bold
-            text</li
-          >
-          <li
-            ><span>&lt;i&gt;</span> and <span>&lt;em&gt;</span> - italicized
-            text</li
-          >
-          <li
-            ><span>&lt;u&gt;</span> and <span>&lt;ins&gt;</span> - underlined
-            text</li
-          >
-          <li
-            ><span>&lt;s&gt;</span> and <span>&lt;del&gt;</span> - strikethrough
-            text</li
-          >
-          <li><span>&lt;sub&gt;</span> - subscript text</li>
-          <li><span>&lt;sup&gt;</span> - superscript text</li>
-        </ul>
-        <p>Here's an example of how to use some of these formatting tags:</p>
-        <pre
-          class="language-html"
-        ><code>&lt;p&gt;This text is &lt;b&gt;bold&lt;/b&gt; and this text is &lt;i&gt;italicized&lt;/i&gt;.&lt;/p&gt;
-&lt;p&gt;This text is &lt;u&gt;underlined&lt;/u&gt; and this text is &lt;del&gt;strikethrough&lt;/del&gt;.&lt;/p&gt;
-&lt;p&gt;This is an example of &lt;sub&gt;subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt; text.&lt;/p&gt;</code></pre>
-        <p
-          >You can also use CSS to format text in HTML, but these basic
-          formatting tags can be useful for quick and simple formatting.</p
-        >
-      </article>
-      <article>
-        <h2>05. Creating Paragraphs in HTML</h2>
-        <p
-          >Paragraphs are used to group text together and create visual breaks
-          between different sections of content on a webpage. Here's an example
-          of how to create a paragraph in HTML:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
-        <p
-          >You can add as much text as you want between the opening
-          <span>&lt;p&gt;</span> and closing <span>&lt;/p&gt;</span> tags to
-          create longer paragraphs. You can also use other HTML tags within
-          paragraphs to format text or add links and images.</p
-        >
-        <p>Here's an example of a paragraph that includes a link:</p>
-        <pre
-          class="language-html"
-        ><code>&lt;p&gt;This is a paragraph of text that includes a &lt;a href="https://www.example.com"&gt;link&lt;/a&gt; to another webpage.&lt;/p&gt;</code></pre>
-        <p
-          >Using paragraphs appropriately can help to break up long blocks of
-          text and make your webpage more readable and visually appealing.</p
-        >
-      </article>
-      <article>
-        <h2>06. Creating Lists in HTML</h2>
-        <p
-          >Lists are used to group related items together on a webpage. HTML
-          provides two types of lists: ordered lists and unordered lists.</p
-        >
-        <h3>Ordered Lists</h3>
-        <p
-          >Ordered lists are used when the order of the items is important.
-          Here's an example of how to create an ordered list:</p
-        >
-        <pre class="language-html"><code>&lt;ol&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item&lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-        <p>This will create a numbered list that looks like this:</p>
         <ol>
-          <li>First item</li>
-          <li>Second item</li>
-          <li>Third item</li>
-        </ol>
-        <h3>Unordered Lists</h3>
-        <p
-          >Unordered lists are used when the order of the items is not
-          important. Here's an example of how to create an unordered list:</p
-        >
-        <pre class="language-html"><code>&lt;ul&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item&lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-        <p>This will create a bulleted list that looks like this:</p>
-        <ul>
-          <li>First item</li>
-          <li>Second item</li>
-          <li>Third item</li>
-        </ul>
-        <p
-          >You can also nest lists within each other to create more complex
-          lists. Here's an example of a nested list:</p
-        >
-        <pre class="language-html"><code>&lt;ul&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-&lt;ul&gt;
-  &lt;li&gt;Nested item 1&lt;/li&gt;
-  &lt;li&gt;Nested item 2&lt;/li&gt;
-&lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-        <p
-          >This will create an unordered list with a nested unordered list that
-          looks like this:</p
-        >
-        <ul>
-          <li>First item</li>
           <li
-            >Second item
-            <ul>
-              <li>Nested item 1</li>
-              <li>Nested item 2</li>
-            </ul>
-          </li>
-          <li>Third item</li>
+            >Open Visual Studio and select "Create a new project" from the start
+            page.</li
+          >
+          <li>Choose "Console App (.NET)" as the project template.</li>
+          <li>Specify the project name and location, and click "Create".</li>
+          <li
+            >Open the "Program.cs" file in the project, which contains the code
+            for the console application.</li
+          >
+          <li>Replace the contents of the file with the following code:</li>
+        </ol>
+        <pre
+          class="language-csharp"
+        ><code>// Declare a namespace for the application
+namespace HelloWorld
+{
+    // Declare a class for the application
+    class Program
+    {
+        // Define the entry point for the application
+        static void Main(string[] args)
+        {
+            // Print a greeting to the console
+            Console.WriteLine("Hello, world!");
+        }
+    }
+}</code></pre>
+        <p>Output:</p>
+        <pre class="language-csharp"><code>Hello, world!</code></pre>
+      </article>
+      <article>
+        <h2>04. Creating your first C# program</h2>
+        <p
+          >Now that you have set up your development environment, you can create
+          your first C# program. Here is an example of a simple "Hello, world!"
+          program:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>// Declare a namespace for the application
+namespace HelloWorld
+{
+    // Declare a class for the application
+    class Program
+    {
+        // Define the entry point for the application
+        static void Main(string[] args)
+        {
+            // Print a greeting to the console
+            Console.WriteLine("Hello, world!");
+        }
+    }
+}</code></pre>
+        <p>Output:</p>
+        <pre class="language-csharp"><code>Hello, world!</code></pre>
+        <p>Let's break down the code:</p>
+        <ul>
+          <li
+            >The first line declares a namespace for the application. Namespaces
+            are used to organize related classes and avoid naming conflicts with
+            other code.</li
+          >
+          <li
+            >The second line declares a class for the application. Classes are
+            used to encapsulate data and behavior.</li
+          >
+          <li
+            >The third line declares the entry point for the application, which
+            is the <code>Main</code> method. The <code>static</code> keyword
+            means that the method can be called without creating an instance of
+            the class.</li
+          >
+          <li
+            >The <code>string[] args</code> parameter allows the program to
+            accept command-line arguments.</li
+          >
+          <li
+            >The <code>Console.WriteLine()</code> method writes a line of text
+            to the console.</li
+          >
         </ul>
         <p
-          >Using lists appropriately can help to organize content on your
-          webpage and make it easier for users to read and understand.</p
+          >Try running the program and see the output for yourself.
+          Congratulations, you have just created your first C# program!</p
         >
       </article>
       <article>
-        <h2>07. Creating Links in HTML</h2>
+        <h2>05. Data types and variables in C#</h2>
         <p
-          >Links, also known as hyperlinks, are used to connect one webpage to
-          another or to a specific section within the same webpage. Here's an
-          example of how to create a basic link:</p
+          >C# supports a wide range of data types, including numeric, character,
+          boolean, and reference types. Here are some of the most commonly used
+          data types:</p
         >
-        <pre
-          class="language-html"
-        ><code>&lt;a href="https://www.example.com"&gt;Click here&lt;/a&gt;</code></pre>
+        <ul>
+          <li><code>int</code>: a 32-bit signed integer</li>
+          <li><code>double</code>: a double-precision floating-point number</li>
+          <li><code>char</code>: a Unicode character</li>
+          <li
+            ><code>bool</code>: a Boolean value, which can be either
+            <code>true</code> or <code>false</code></li
+          >
+          <li><code>string</code>: a sequence of Unicode characters</li>
+        </ul>
         <p
-          >This will create a link that looks like this:
-          <a href="https://www.example.com">Click here</a>.</p
+          >To declare a variable in C#, you need to specify the data type and a
+          name for the variable. Here are some examples:</p
         >
-        <p
-          >The <code>href</code> attribute specifies the URL of the webpage or
-          section that the link will go to when clicked. You can also use
-          relative URLs to link to pages within your own website.</p
-        >
-        <p
-          >You can also use links to create email addresses, telephone numbers,
-          and other types of links. Here's an example of how to create a mailto
-          link:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;a href="mailto:example@example.com"&gt;Send email&lt;/a&gt;</code></pre>
-        <p
-          >This will create a link that, when clicked, will open the user's
-          default email client and start a new email to the address specified in
-          the <code>href</code> attribute.</p
-        >
-        <p
-          >You can also use links to open new windows or tabs, or to link to
-          specific sections within a webpage. Here's an example of how to create
-          a link that opens in a new tab:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;a href="https://www.example.com" target="_blank"&gt;Click here&lt;/a&gt;</code></pre>
-        <p
-          >This will create a link that, when clicked, will open in a new tab or
-          window.</p
-        >
-        <p
-          >To link to a specific section within a webpage, you can use the
-          <code>id</code> attribute to create a unique identifier for the
-          section, and then use the <code>href</code> attribute to link to that
-          identifier. Here's an example:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;a href="#section2"&gt;Go to Section 2&lt;/a&gt;
+        <pre class="language-csharp"><code>// Declare an integer variable
+int age;
+// Assign a value to the integer variable
+age = 30;
 
-&lt;h2 id="section2">Section 2&lt;/h2&gt;</code></pre>
+// Declare and assign a value to a double variable
+double height = 1.75;
+
+// Declare and assign a value to a string variable
+string name = "Alice";</code></pre>
 
         <p
-          >This will create a link that, when clicked, will take the user to the
-          section with the <code>id="section2"</code> attribute.</p
+          >You can also declare and assign a value to a variable in a single
+          statement:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>// Declare and assign a value to a boolean variable
+bool isStudent = true;</code></pre>
+        <p
+          >Once you have declared a variable, you can use it in your program.
+          For example:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>// Declare and assign values to two integer variables
+int x = 5;
+int y = 3;
+// Calculate the sum of the two integer variables
+int sum = x + y;
+
+// Print the sum to the console
+Console.WriteLine("The sum of {0} and {1} is {2}", x, y, sum);</code></pre>
+
+        <p>Output:</p>
+        <pre class="language-csharp"><code>The sum of 5 and 3 is 8</code></pre>
+        <p
+          >In this example, we declare two integer variables <code>x</code> and
+          <code>y</code>, assign them the values 5 and 3, respectively, and then
+          calculate their sum and assign it to the variable <code>sum</code>.
+          Finally, we print the sum to the console using the
+          <code>Console.WriteLine()</code> method and string interpolation.</p
         >
         <p
-          >Links are an important part of web development, and using them
-          appropriately can help to make your website more user-friendly and
-          easier to navigate.</p
+          >Understanding data types and variables is crucial for writing C#
+          programs. Experiment with different data types and variable
+          declarations to gain a better understanding of how they work.</p
         >
       </article>
       <article>
-        <h2>08. Creating Images in HTML</h2>
+        <h2>06. Operators and expressions in C#</h2>
         <p
-          >Images can add visual interest and context to your webpage. Here's an
-          example of how to add an image to your HTML code:</p
+          >Operators are symbols that perform operations on one or more
+          operands. In C#, operators are used to perform arithmetic, comparison,
+          logical, and bitwise operations. Here are some examples:</p
         >
-        <pre
-          class="language-html"
-        ><code>&lt;img src="example.jpg" alt="Example Image"&gt;</code></pre>
+        <ul>
+          <li
+            >Arithmetic operators: <code>+</code> (addition),
+            <code>-</code> (subtraction), <code>*</code> (multiplication),
+            <code>/</code> (division), <code>%</code> (modulus)</li
+          >
+          <li
+            >Comparison operators: <code>==</code> (equality),
+            <code>!=</code> (inequality), <code>&lt;</code> (less than),
+            <code>&lt;=</code> (less than or equal to),
+            <code>&gt;</code> (greater than), <code>&gt;=</code> (greater than
+            or equal to)</li
+          >
+          <li
+            >Logical operators: <code>&amp;&amp;</code> (logical AND),
+            <code>||</code> (logical OR), <code>!</code> (logical NOT)</li
+          >
+          <li
+            >Bitwise operators: <code>&amp;</code> (bitwise AND),
+            <code>|</code> (bitwise OR), <code>^</code> (bitwise XOR),
+            <code>~</code> (bitwise NOT), <code>&lt;&lt;</code> (left shift),
+            <code>&gt;&gt;</code> (right shift)</li
+          >
+        </ul>
         <p
-          >This will display the image named "example.jpg" on your webpage. The
-          <code>src</code> attribute specifies the location of the image file,
-          and the <code>alt</code> attribute provides alternative text to be
-          displayed if the image cannot be loaded or if the user is using a
-          screen reader.</p
+          >Expressions are combinations of operators, operands, and method calls
+          that produce a value. Here are some examples:</p
         >
+        <pre class="language-csharp"><code>// Arithmetic expression
+int sum = 5 + 3;
+// Comparison expression
+bool isGreater = 5 > 3;
+
+// Logical expression
+bool isTrue = (5 > 3) && (2 < 4);
+
+// Bitwise expression
+int result = 5 & 3;</code></pre>
+
         <p
-          >You can also specify the height and width of the image using the
-          <code>height</code> and <code>width</code> attributes, respectively.
+          >You can also use parentheses to group subexpressions and control the
+          order of evaluation:</p
+        >
+        <pre class="language-csharp"><code>// Expression with parentheses
+int result = (5 + 3) * 2;</code></pre>
+        <p
+          >Understanding operators and expressions is essential for writing C#
+          programs. Experiment with different operators and expressions to gain
+          a better understanding of how they work.</p
+        >
+      </article>
+      <article>
+        <h2>07. Control flow statements in C#</h2>
+        <p
+          >Control flow statements are used to control the flow of execution in
+          a C# program. There are three main types of control flow statements:
+          conditional statements, loop statements, and jump statements.</p
+        >
+        <h3>Conditional statements</h3>
+        <p
+          >Conditional statements are used to execute different blocks of code
+          based on the value of a Boolean expression. The most common
+          conditional statements in C# are <code>if</code>,
+          <code>else if</code>, and <code>else</code>. Here's an example:</p
+        >
+        <pre class="language-csharp"><code>int x = 5;
+if (x > 0)
+{
+  Console.WriteLine("x is positive");
+}
+else if (x < 0)
+{
+  Console.WriteLine("x is negative");
+}
+else
+{
+  Console.WriteLine("x is zero");
+}</code></pre>
+
+        <h3>Loop statements</h3>
+        <p
+          >Loop statements are used to execute a block of code repeatedly until
+          a certain condition is met. The most common loop statements in C# are
+          <code>for</code>, <code>while</code>, and <code>do while</code>.
           Here's an example:</p
         >
-        <pre
-          class="language-html"
-        ><code>&lt;img src="example.jpg" alt="Example Image" height="200" width="300"&gt;</code></pre>
+        <pre class="language-csharp"><code>// For loop
+for (int i = 0; i &lt; 10; i++)
+{
+  Console.WriteLine(i);
+}
+// While loop
+int j = 0;
+while (j < 10)
+{
+  Console.WriteLine(j);
+  j++;
+}
+
+// Do while loop
+int k = 0;
+do
+{
+  Console.WriteLine(k);
+  k++;
+} while (k < 10);</code></pre>
+
+        <h3>Jump statements</h3>
         <p
-          >This will display the image with a height of 200 pixels and a width
-          of 300 pixels.</p
+          >Jump statements are used to transfer control to another part of the
+          program. The most common jump statements in C# are <code>break</code>,
+          <code>continue</code>, and <code>return</code>. Here's an example:</p
         >
-        <p
-          >It's important to use appropriate image formats for the web, such as
-          JPEG, PNG, and GIF. Additionally, you should always use images that
-          are optimized for the web to ensure that your webpage loads quickly
-          and efficiently.</p
-        >
-        <p
-          >Adding images to your website can be a great way to enhance its
-          visual appeal and make it more engaging for your audience.</p
-        >
-      </article>
-      <article>
-        <h2>09. Using Tables in HTML</h2>
-        <p
-          >Tables can be used to display data in a structured and organized way
-          on your webpage. Here's an example of how to create a basic table:</p
-        >
-        <pre class="language-html"><code>&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Column 1&lt;/th&gt;
-    &lt;th&gt;Column 2&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
-    &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
-    &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
-        <p
-          >In this example, we've created a table with two columns and two rows.
-          The <code>&lt;th&gt;</code> tag is used to define table headers, while
-          the <code>&lt;td&gt;</code> tag is used to define table cells.</p
-        >
-        <p
-          >You can also add attributes to your table elements to further
-          customize their appearance and behavior. Here are some common
-          attributes:</p
-        >
-        <ul>
-          <li><code>border</code>: adds a border to the table</li>
-          <li><code>cellpadding</code>: adds padding to the cells</li>
-          <li><code>cellspacing</code>: adds space between the cells</li>
-        </ul>
-        <p>Here's an example:</p>
-        <pre
-          class="language-html"
-        ><code>&lt;table border="1" cellpadding="10" cellspacing="0"&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Column 1&lt;/th&gt;
-    &lt;th&gt;Column 2&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
-    &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
-    &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
-        <p
-          >This table has a border, cell padding of 10 pixels, and no cell
-          spacing.</p
-        >
-        <p
-          >Using tables can help you present data in an organized and
-          easy-to-read manner on your webpage.</p
-        >
-      </article>
-      <article>
-        <h2>10. Creating Forms in HTML</h2>
-        <p
-          >Forms are used to gather information from users on a webpage. Here's
-          an example of how to create a basic form:</p
-        >
-        <pre class="language-html"><code>&lt;form&gt;
-    &lt;label for="name"&gt;Name:&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-    &lt;br&gt;
-    &lt;label for="email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="email" name="email"&gt;
-    &lt;br&gt;
-    &lt;label for="message"&gt;Message:&lt;/label&gt;
-    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
-    &lt;br&gt;
-    &lt;input type="submit" value="Submit"&gt;
-&lt;/form&gt;</code></pre>
-        <p
-          >In this example, we've created a form with three input fields: a text
-          field for the user's name, an email field for their email address, and
-          a textarea for their message. We've also added a submit button to send
-          the form data to the server.</p
-        >
-        <p
-          >You can customize the appearance and behavior of your form elements
-          using various attributes. Here are some common ones:</p
-        >
-        <ul>
-          <li
-            ><code>type</code>: specifies the type of input (e.g. text, email,
-            password, etc.)</li
-          >
-          <li><code>id</code>: uniquely identifies the input field</li>
-          <li
-            ><code>name</code>: specifies the name of the input field, which is
-            used to identify the field in the server-side code</li
-          >
-          <li
-            ><code>placeholder</code>: adds placeholder text to the input
-            field</li
-          >
-          <li
-            ><code>required</code>: makes the input field required, so the user
-            must fill it out before submitting the form</li
-          >
-        </ul>
-        <p
-          >You can also add labels to your form elements to make them more
-          accessible. The <code>for</code> attribute of the label should match
-          the <code>id</code> of the corresponding input field.</p
-        >
-        <p
-          >Using forms can help you collect information from users on your
-          webpage. Just be sure to validate the form data on the server-side to
-          prevent malicious attacks and user errors.</p
-        >
-      </article>
-      <article>
-        <h2>11. Creating Dropdown Menus in HTML</h2>
-        <p
-          >Dropdown menus allow users to select an option from a list of
-          choices. Here's an example of how to create a basic dropdown menu:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;label for="gender"&gt;Gender:&lt;/label&gt;
-&lt;select id="gender" name="gender"&gt;
-  &lt;option value="male"&gt;Male&lt;/option&gt;
-  &lt;option value="female"&gt;Female&lt;/option&gt;
-  &lt;option value="other"&gt;Other&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-        <p
-          >In this example, we've created a dropdown menu with three options:
-          Male, Female, and Other. The <code>select</code> element contains the
-          options as <code>option</code> child elements. The
-          <code>value</code> attribute of each option is what gets submitted to
-          the server when the form is submitted.</p
-        >
-        <p
-          >You can also set a default option using the
-          <code>selected</code> attribute:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;label for="color"&gt;Favorite Color:&lt;/label&gt;
-&lt;select id="color" name="color"&gt;
-  &lt;option value="red"&gt;Red&lt;/option&gt;
-  &lt;option value="blue" selected&gt;Blue&lt;/option&gt;
-  &lt;option value="green"&gt;Green&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-        <p
-          >In this example, the "Blue" option is selected by default because we
-          added the <code>selected</code> attribute to that option.</p
-        >
-        <p
-          >You can also group related options together using the
-          <code>optgroup</code> element:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
-&lt;select id="cars" name="cars"&gt;
-  &lt;optgroup label="Japanese Cars"&gt;
-    &lt;option value="toyota"&gt;Toyota&lt;/option&gt;
-    &lt;option value="honda"&gt;Honda&lt;/option&gt;
-    &lt;option value="nissan"&gt;Nissan&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="American Cars"&gt;
-    &lt;option value="ford"&gt;Ford&lt;/option&gt;
-    &lt;option value="chevy"&gt;Chevy&lt;/option&gt;
-    &lt;option value="dodge"&gt;Dodge&lt;/option&gt;
-  &lt;/optgroup&gt;
-&lt;/select&gt;</code></pre>
-        <p
-          >In this example, we've grouped the car options by their country of
-          origin using the <code>optgroup</code> element.</p
-        >
-        <p
-          >Dropdown menus can be a useful way to provide users with a list of
-          choices on your webpage. Just be sure to consider the user experience
-          and make sure the dropdown is easy to use and accessible.</p
-        >
-      </article>
-      <article>
-        <h2>12. Creating Radio Buttons and Checkboxes in HTML</h2>
-        <p
-          >Radio buttons and checkboxes are two types of form input elements
-          that allow users to select one or more options, respectively. Here's
-          an example of how to create a group of radio buttons:</p
-        >
-        <pre class="language-html"><code>&lt;fieldset&gt;
-  &lt;legend&gt;Choose a drink:&lt;/legend&gt;
-  &lt;label&gt;
-    &lt;input type="radio" name="drink" value="coffee"&gt;
-    Coffee
-  &lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type="radio" name="drink" value="tea"&gt;
-    Tea
-  &lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type="radio" name="drink" value="soda"&gt;
-    Soda
-  &lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
-        <p
-          >In this example, we've created a group of radio buttons that allow
-          the user to select one drink option. The <code>input</code> elements
-          have a type of "radio" and share the same name attribute, which groups
-          them together. The <code>value</code> attribute of each radio button
-          is what gets submitted to the server when the form is submitted.</p
-        >
-        <p>Here's an example of how to create a group of checkboxes:</p>
-        <pre class="language-html"><code>&lt;fieldset&gt;
-  &lt;legend&gt;Choose your toppings:&lt;/legend&gt;
-  &lt;label&gt;
-    &lt;input type="checkbox" name="toppings[]" value="cheese"&gt;
-    Cheese
-  &lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type="checkbox" name="toppings[]" value="pepperoni"&gt;
-    Pepperoni
-  &lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type="checkbox" name="toppings[]" value="mushrooms"&gt;
-    Mushrooms
-  &lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
-        <p
-          >In this example, we've created a group of checkboxes that allow the
-          user to select multiple toppings for a pizza, for example. The
-          <code>input</code> elements have a type of "checkbox" and share the
-          same name attribute, which groups them together. The
-          <code>value</code> attribute of each checkbox is what gets submitted
-          to the server when the form is submitted. Note that we've added square
-          brackets <code>[]</code> to the end of the name attribute to indicate
-          that it should be treated as an array on the server-side.</p
-        >
-        <p
-          >Radio buttons and checkboxes can be a useful way to provide users
-          with a set of options to choose from on your webpage. Just be sure to
-          consider the user experience and make sure the input elements are easy
-          to use and accessible.</p
-        >
-      </article>
-      <article>
-        <h2>13. Adding Audio to Your HTML Page</h2>
-        <p
-          >HTML5 introduced a new <code>audio</code> element that allows you to
-          embed audio content directly into your webpages. Here's an example of
-          how to add an audio file:</p
-        >
-        <pre class="language-html"><code>&lt;audio controls&gt;
-  &lt;source src="example.mp3" type="audio/mpeg"&gt;
-  Your browser does not support the audio element.
-&lt;/audio&gt;</code></pre>
-        <p
-          >In this example, we've added an audio file in the MP3 format using
-          the <code>source</code> element. The <code>type</code> attribute
-          specifies the MIME type of the audio file, which allows the browser to
-          select the appropriate codec for playing the audio. The
-          <code>controls</code> attribute adds audio controls such as a
-          play/pause button, volume control, and progress bar. If the browser
-          doesn't support the audio element, the text "Your browser does not
-          support the audio element." will be displayed.</p
-        >
-        <p
-          >There are other attributes you can use with the
-          <code>audio</code> element, such as <code>loop</code> to loop the
-          audio playback, <code>autoplay</code> to start playback automatically,
-          and <code>preload</code> to preload the audio data. Here's an example
-          of how to use these attributes:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;audio controls loop autoplay preload="metadata"&gt;
-  &lt;source src="example.ogg" type="audio/ogg"&gt;
-  &lt;source src="example.mp3" type="audio/mpeg"&gt;
-  Your browser does not support the audio element.
-&lt;/audio&gt;</code></pre>
-        <p
-          >In this example, we've added an Ogg Vorbis audio file in addition to
-          the MP3 file. We've also added the <code>loop</code>,
-          <code>autoplay</code>, and <code>preload</code> attributes to loop the
-          audio playback, start playback automatically, and preload only the
-          metadata of the audio file, respectively.</p
-        >
-        <p
-          >Adding audio to your webpages can be a great way to enhance the user
-          experience and make your content more engaging. Just be mindful of the
-          file size and ensure that the audio files are accessible and
-          compatible with a wide range of browsers and devices.</p
-        >
-      </article>
-      <article>
-        <h2>14. Adding Video to Your HTML Page</h2>
-        <p
-          >HTML5 introduced a new <code>video</code> element that allows you to
-          embed video content directly into your webpages. Here's an example of
-          how to add a video file:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;video controls width="640" height="360"&gt;
-  &lt;source src="example.mp4" type="video/mp4"&gt;
-  Your browser does not support the video element.
-&lt;/video&gt;</code></pre>
-        <p
-          >In this example, we've added a video file in the MP4 format using the
-          <code>source</code> element. The <code>type</code> attribute specifies
-          the MIME type of the video file, which allows the browser to select
-          the appropriate codec for playing the video. The
-          <code>controls</code> attribute adds video controls such as a
-          play/pause button, volume control, and progress bar. If the browser
-          doesn't support the video element, the text "Your browser does not
-          support the video element." will be displayed.</p
-        >
-        <p
-          >There are other attributes you can use with the
-          <code>video</code> element, such as <code>loop</code> to loop the
-          video playback, <code>autoplay</code> to start playback automatically,
-          and <code>preload</code> to preload the video data. Here's an example
-          of how to use these attributes:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;video controls loop autoplay preload="metadata" width="640" height="360"&gt;
-  &lt;source src="example.webm" type="video/webm"&gt;
-  &lt;source src="example.mp4" type="video/mp4"&gt;
-  Your browser does not support the video element.
-&lt;/video&gt;</code></pre>
-        <p
-          >In this example, we've added a WebM video file in addition to the MP4
-          file. We've also added the <code>loop</code>, <code>autoplay</code>,
-          and <code>preload</code> attributes to loop the video playback, start
-          playback automatically, and preload only the metadata of the video
-          file, respectively. We've also set the <code>width</code> and
-          <code>height</code> attributes to specify the dimensions of the video
-          player.</p
-        >
-        <p
-          >Adding video to your webpages can be a great way to enhance the user
-          experience and make your content more engaging. Just be mindful of the
-          file size and ensure that the video files are accessible and
-          compatible with a wide range of browsers and devices.</p
-        >
-      </article>
-      <article>
-        <h2>15. Using the Canvas Element in HTML</h2>
-        <p
-          >The <code>canvas</code> element in HTML provides a way to draw
-          graphics, animations, and other visual effects on a web page using
-          JavaScript. Here's an example of how to create a canvas element:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;canvas id="myCanvas" width="400" height="400"&gt;&lt;/canvas&gt;</code></pre>
-        <p
-          >In this example, we've created a canvas element with an ID of
-          "myCanvas" and specified its dimensions as 400 pixels wide and 400
-          pixels high using the <code>width</code> and
-          <code>height</code> attributes.</p
-        >
-        <p
-          >Once you have created the canvas element, you can use JavaScript to
-          draw on it. Here's an example of how to draw a rectangle on the
-          canvas:</p
-        >
-        <pre
-          class="language-javascript"
-        ><code>var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "#FF0000";
-ctx.fillRect(0, 0, 150, 75);</code></pre>
-        <p
-          >In this example, we've used the <code>getElementById</code> method to
-          get a reference to the canvas element and the
-          <code>getContext</code> method to get a reference to the 2D drawing
-          context for the canvas. We've then set the fill style to red using the
-          <code>fillStyle</code> property and drawn a rectangle using the
-          <code>fillRect</code> method with the top-left corner at (0, 0) and
-          the width and height of 150 and 75 pixels, respectively.</p
-        >
-        <p
-          >The canvas element provides a powerful and flexible way to create
-          dynamic and interactive visual effects on a web page using JavaScript.
-          You can draw shapes, text, images, and animations, and even create
-          interactive games and simulations. Just be sure to keep your code
-          organized and optimized for performance, as canvas animations can be
-          resource-intensive and may affect the performance of your web page.</p
-        >
-      </article>
-      <article>
-        <h2>16. Embedding HTML Code in Your Web Page</h2>
-        <p
-          >HTML code can be embedded in a web page using the
-          <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code> elements. The
-          <code>&lt;code&gt;</code> element is used to indicate a short piece of
-          code or a single command, while the <code>&lt;pre&gt;</code> element
-          is used to display multiple lines of code or formatted text.</p
-        >
-        <p
-          >Here's an example of how to use the <code>&lt;code&gt;</code> element
-          to display a short piece of HTML code:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
-        <p
-          >In this example, we've used the <code>&lt;p&gt;</code> element to
-          create a paragraph of text and wrapped the HTML code for the paragraph
-          in the <code>&lt;code&gt;</code> element to indicate that it is
-          code.</p
-        >
-        <p
-          >If you want to display multiple lines of code, you can use the
-          <code>&lt;pre&gt;</code> element. Here's an example:</p
-        >
-        <pre class="language-html"><code>&lt;pre&gt;
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-      &lt;head&gt;
-        &lt;title&gt;My Web Page&lt;/title&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-        &lt;h1&gt;Welcome to my web page!&lt;/h1&gt;
-        &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
-      &lt;/body&gt;
-    &lt;/html&gt;
-&lt;/pre&gt;</code></pre>
-        <p
-          >In this example, we've used the <code>&lt;pre&gt;</code> element to
-          display a block of HTML code that includes the document type
-          declaration, the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
-          and <code>&lt;body&gt;</code> elements, and some content for the web
-          page.</p
-        >
-        <p
-          >Embedding HTML code in your web page can be a useful way to display
-          code examples, provide instructions for using HTML tags and
-          attributes, and teach HTML coding skills to beginners. Just be sure to
-          format your code correctly using the <code>&lt;code&gt;</code> and
-          <code>&lt;pre&gt;</code> elements, and provide clear explanations and
-          context for your code examples.</p
-        >
-      </article>
-      <article>
-        <h2>17. Working with HTML Comments</h2>
-        <p
-          >HTML comments are a way to add notes or reminders to your code
-          without affecting how the page is displayed in the browser. Comments
-          are useful for leaving notes for yourself or other developers, or for
-          temporarily disabling a section of code during testing or
-          debugging.</p
-        >
-        <p>To add a comment to your HTML code, use the following syntax:</p>
-        <pre
-          class="language-html"
-        ><code>&lt;!-- This is a comment. --&gt;</code></pre>
-        <p
-          >Anything you put between the <code>&lt;!--</code> and
-          <code>--&gt;</code> tags will be treated as a comment and ignored by
-          the browser. Here's an example of how you might use comments to leave
-          a note for yourself or other developers:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;!-- TODO: Add more content to this page. --&gt;</code></pre>
-        <p
-          >You can also use comments to temporarily disable a section of code
-          during testing or debugging. For example:</p
-        >
-        <pre class="language-html"><code>&lt;!--
-  &lt;div class="problematic-div"&gt;
-    &lt;p&gt;This div is causing layout issues.&lt;/p&gt;
-  &lt;/div&gt;
---&gt;</code></pre>
-        <p
-          >In this example, we've wrapped a problematic section of code in a
-          comment to disable it while we work on fixing the layout issues.</p
-        >
-        <p
-          >Comments can also be used to add explanations or documentation to
-          your code. For example, you might include a comment to explain how a
-          complex section of code works:</p
-        >
-        <pre class="language-html"><code>&lt;!--
-  This code uses jQuery to animate a menu dropdown.1. When the user clicks on the menu link, the dropdown is shown.
-  2. When the user clicks on the menu link again, the dropdown is hidden.
---&lt;</code></pre>
-        <p
-          >Adding comments to your code can make it easier to understand and
-          maintain over time, especially as your codebase grows and becomes more
-          complex. Just be sure to use comments sparingly and only when they add
-          value to your code.</p
-        >
-      </article>
-      <article>
-        <h2>18. Creating HTML Templates</h2>
-        <p
-          >HTML templates are a way to define a section of code that can be
-          reused throughout your website. Templates are useful for creating
-          consistent layouts and designs, and for reducing the amount of
-          duplicate code you need to write.</p
-        >
-        <p
-          >To create an HTML template, you can use the
-          <code>&lt;template&gt;</code> element. Here's an example:</p
-        >
-        <pre class="language-html"><code>&lt;template id="my-template"&gt;
-  &lt;div class="my-template"&gt;
-    &lt;h3&gt;{{title}}&lt;/h3&gt;
-    &lt;p&gt;{{content}}&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</code></pre>
-        <p
-          >In this example, we've defined a template with an ID of
-          "my-template". The template contains a
-          <code>&lt;div&gt;</code> element with a class of "my-template", as
-          well as a <code>&lt;h3&gt;</code> element and a
-          <code>&lt;p&gt;</code> element that will be populated with data later
-          on.</p
-        >
-        <p
-          >To use the template, you can use JavaScript to clone the template and
-          replace the placeholders with actual data. Here's an example:</p
-        >
-        <pre class="language-js"><code>const myData = {
-  title: "My Template",
-  content: "This is the content of my template."
-};
-const template = document.querySelector('#my-template');
-const instance = document.importNode(template.content, true);
-instance.querySelector('h3').innerText = myData.title;
-instance.querySelector('p').innerText = myData.content;
-document.body.appendChild(instance);</code></pre>
+        <pre class="language-csharp"><code>// Break statement
+for (int i = 0; i &lt; 10; i++)
+{
+  if (i == 5)
+  {
+    break;
+  }
+  Console.WriteLine(i);
+}
+// Continue statement
+for (int j = 0; j < 10; j++)
+{
+if (j == 5)
+{
+continue;
+}
+  Console.WriteLine(j);
+}
+
+// Return statement
+int Sum(int a, int b)
+{
+return a + b;
+}</code></pre>
 
         <p
-          >In this example, we've defined an object called "myData" with two
-          properties: "title" and "content". We've then selected the
-          "my-template" element using <code>document.querySelector()</code>, and
-          used <code>document.importNode()</code> to create a copy of the
-          template. We've then replaced the placeholders in the template with
-          actual data by using <code>instance.querySelector()</code> to select
-          the <code>&lt;h3&gt;</code> and <code>&lt;p&gt;</code> elements and
-          update their text content. Finally, we've appended the instance to the
-          document body using <code>document.body.appendChild()</code>.</p
-        >
-        <p
-          >HTML templates can be a powerful tool for creating reusable code and
-          maintaining consistent designs across your website. Just be sure to
-          use them appropriately and avoid overusing them, as too many templates
-          can make your code difficult to manage and maintain over time.</p
+          >Understanding control flow statements is essential for writing C#
+          programs. Experiment with different conditional statements, loop
+          statements, and jump statements to gain a better understanding of how
+          they work.</p
         >
       </article>
       <article>
-        <h2>19. Understanding HTML Attributes</h2>
+        <h2>08. Working with arrays and collections</h2>
         <p
-          >HTML attributes provide additional information about an element. They
-          are placed within the opening tag of an element and have a name and a
-          value.</p
+          >Arrays and collections are used to store multiple values of the same
+          type in a single variable. In C#, arrays and collections are both used
+          for this purpose, but they have different characteristics and usage
+          patterns.</p
         >
-        <p>Here is an example of an HTML attribute:</p>
+        <h3>Arrays</h3>
+        <p
+          >An array is a fixed-size data structure that stores a collection of
+          elements of the same type. To create an array in C#, you need to
+          specify the type of the elements and the size of the array. Here's an
+          example:</p
+        >
+        <pre class="language-csharp"><code>// Create an integer array of size 5
+int[] myArray = new int[5];
+// Initialize the array
+myArray[0] = 1;
+myArray[1] = 2;
+myArray[2] = 3;
+myArray[3] = 4;
+myArray[4] = 5;
+      
+// Accessing array elements
+Console.WriteLine(myArray[2]); // Output: 3</code></pre>
+
+        <p
+          >You can also use an array initializer to initialize the values of an
+          array at the time of its creation. Here's an example:</p
+        >
         <pre
-          class="language-html"
-        ><code>&lt;img src="example.jpg" alt="Example image"&gt;</code></pre>
+          class="language-csharp"
+        ><code>// Create an integer array using an array initializer
+int[] myArray = new int[] { 1, 2, 3, 4, 5 };
+// Accessing array elements
+Console.WriteLine(myArray[2]); // Output: 3</code></pre>
+
+        <h3>Collections</h3>
         <p
-          >In this example, the <span>src</span> and <span>alt</span> attributes
-          are used to specify the source file of an image and provide
-          alternative text for the image, respectively.</p
+          >A collection is a dynamic-size data structure that stores a
+          collection of elements of the same or different types. In C#,
+          collections are implemented using classes from the
+          <code>System.Collections</code> and
+          <code>System.Collections.Generic</code> namespaces. Here's an example
+          of using the <code>List</code> class:</p
         >
-        <p>Attributes can also be used to set the dimensions of an element:</p>
+        <pre class="language-csharp"><code>// Create a list of integers
+List&lt;int&gt; myList = new List&lt;int&gt;();
+// Add elements to the list
+myList.Add(1);
+myList.Add(2);
+myList.Add(3);
+myList.Add(4);
+myList.Add(5);
+      
+// Accessing list elements
+Console.WriteLine(myList[2]); // Output: 3</code></pre>
+
+        <p
+          >The <code>List</code> class provides many useful methods for working
+          with collections, such as <code>Add</code>, <code>Remove</code>,
+          <code>Insert</code>, and <code>Contains</code>.</p
+        >
+        <p
+          >Arrays and collections are powerful tools for managing large sets of
+          data in your C# programs. Experiment with different types of arrays
+          and collections to learn more about their characteristics and usage
+          patterns.</p
+        >
+      </article>
+      <article>
+        <h2>09. Methods and functions in C#</h2>
+        <p
+          >Methods and functions are used to encapsulate a block of code that
+          performs a specific task. In C#, methods and functions are used
+          interchangeably and have the same syntax. A method or function can
+          take zero or more parameters, and it can return a value of a specific
+          type or void (no value).</p
+        >
+        <h3>Creating a method or function</h3>
+        <p
+          >To create a method or function in C#, you need to specify the access
+          modifier (public, private, protected, or internal), the return type
+          (if any), the name of the method or function, and the parameters (if
+          any). Here's an example of a simple method that takes two integers and
+          returns their sum:</p
+        >
         <pre
-          class="language-html"
-        ><code>&lt;img src="example.jpg" alt="Example image" width="500" height="500"&gt;</code></pre>
+          class="language-csharp"
+        ><code>// Define a method that takes two integers and returns their sum
+public int AddNumbers(int num1, int num2)
+{
+    int sum = num1 + num2;
+    return sum;
+}
+// Call the method and print the result
+int result = AddNumbers(3, 5);
+Console.WriteLine(result); // Output: 8</code></pre>
+
         <p
-          >The <span>width</span> and <span>height</span> attributes are used to
-          specify the width and height of an image in pixels.</p
+          >You can also create a function that does not return a value by using
+          the <code>void</code> keyword as the return type:</p
         >
-        <p>Here is an example of how to use attributes with links:</p>
         <pre
-          class="language-html"
-        ><code>&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;Example link&lt;/a&gt;</code></pre>
+          class="language-csharp"
+        ><code>// Define a function that takes a string parameter and prints it to the console
+public void PrintMessage(string message)
+{
+    Console.WriteLine(message);
+}
+// Call the function
+PrintMessage("Hello, world!"); // Output: Hello, world!</code></pre>
+
+        <h3>Passing arguments by value or by reference</h3>
         <p
-          >In this example, the <span>href</span> attribute is used to specify
-          the URL of the link, the <span>target</span> attribute is used to
-          specify that the link should open in a new window, and the
-          <span>rel</span> attribute is used for security reasons.</p
+          >When you pass an argument to a method or function, you can choose to
+          pass it by value or by reference. By default, C# passes arguments by
+          value, which means that a copy of the argument is passed to the method
+          or function. If you pass an argument by reference, the method or
+          function can modify the original value of the argument. Here's an
+          example:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>// Define a method that takes an integer parameter by reference and modifies its value
+public void IncrementNumber(ref int num)
+{
+    num++;
+}
+// Call the method and print the result
+int myNumber = 5;
+IncrementNumber(ref myNumber);
+Console.WriteLine(myNumber); // Output: 6</code></pre>
+
+        <p
+          >In this example, the <code>IncrementNumber</code> method takes an
+          integer parameter by reference using the <code>ref</code> keyword.
+          When the method is called, it modifies the value of the original
+          argument, which is reflected in the output.</p
         >
         <p
-          >Overall, attributes are an essential part of HTML and allow you to
-          customize the behavior and appearance of your elements.</p
-        >
-      </article>
-      <article>
-        <h2>20. Understanding HTML Tags</h2>
-        <p
-          >HTML tags are used to define the structure and content of a web page.
-          They are placed within angle brackets and can have attributes that
-          provide additional information about the tag.</p
-        >
-        <p>Here is an example of a basic HTML document:</p>
-        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Page title&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Page heading&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-        <p
-          >In this example, the <span>!DOCTYPE html</span> tag specifies the
-          HTML version and document type, the <span>html</span> tag is the root
-          element of the HTML document, and the <span>head</span> and
-          <span>body</span> tags are used to define the document's head and body
-          sections, respectively.</p
-        >
-        <p>Here is a list of some commonly used HTML tags:</p>
-        <pre class="language-html"><code>&lt;h1&gt;...&lt;h6&gt; - Headings
-&lt;p&gt; - Paragraph
-&lt;a&gt; - Link
-&lt;img&gt; - Image
-&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt; - Unordered/Ordered List and List Items
-&lt;table&gt; / &lt;tr&gt; / &lt;td&gt; - Table, Table Row, and Table Data Cell
-&lt;form&gt; / &lt;input&gt; / &lt;button&gt; - Form, Input Field, and Button</code></pre>
-        <p
-          >There are many more HTML tags available, and you can find a full list
-          and their descriptions in the HTML documentation.</p
-        >
-        <p
-          >Understanding HTML tags and how to use them is essential for creating
-          web pages and designing their layout and content.</p
+          >Methods and functions are essential building blocks of any C#
+          program. By encapsulating code in methods and functions, you can make
+          your programs more modular and easier to understand and maintain.</p
         >
       </article>
       <article>
-        <h2>21. HTML Best Practices: Writing Clean and Accessible Code</h2>
+        <h2>10. Debugging your code in Visual Studio</h2>
         <p
-          >Writing clean and accessible HTML code is essential for creating web
-          pages that are easy to read, maintain, and navigate. Here are some
-          best practices to follow:</p
+          >Debugging is the process of finding and fixing errors in your code.
+          Visual Studio provides a powerful set of debugging tools that can help
+          you identify and solve problems in your C# programs. Here's a quick
+          overview of how to use the debugging tools in Visual Studio:</p
         >
-        <ol>
-          <li
-            >Use semantic HTML tags to describe the content and structure of
-            your page. For example, use <span>&lt;header&gt;</span> for the top
-            section of your page, <span>&lt;nav&gt;</span> for the navigation
-            menu, <span>&lt;main&gt;</span> for the main content, and
-            <span>&lt;footer&gt;</span> for the bottom section.</li
-          >
-          <li
-            >Provide descriptive text for images and other non-text content
-            using the <span>alt</span> attribute. This helps users with visual
-            impairments understand the content of the page.</li
-          >
-          <li
-            >Use meaningful and descriptive text for links instead of using
-            generic phrases like "click here." This helps users understand the
-            purpose of the link and improves the accessibility of the page.</li
-          >
-          <li
-            >Avoid using tables for layout purposes. Tables should only be used
-            for displaying data in a tabular format.</li
-          >
-          <li
-            >Use HTML headings (<span>&lt;h1&gt;</span> to
-            <span>&lt;h6&gt;</span>) to provide a clear hierarchy of content on
-            the page. Use <span>&lt;p&gt;</span> tags for paragraphs and
-            <span>&lt;br&gt;</span> tags for line breaks.</li
-          >
-          <li
-            >Use HTML lists (<span>&lt;ul&gt;</span> and
-            <span>&lt;ol&gt;</span>) to organize content into lists. Use
-            <span>&lt;li&gt;</span> tags for list items.</li
-          >
-          <li
-            >Include a <span>&lt;title&gt;</span> tag in the
-            <span>&lt;head&gt;</span> section of your page to provide a
-            descriptive title for the page that will be displayed in the browser
-            tab.</li
-          >
-          <li
-            >Use valid and well-formed HTML code. Use a validator like the W3C
-            Markup Validation Service to check for errors.</li
-          >
-        </ol>
+        <h3>Setting breakpoints</h3>
         <p
-          >Following these best practices will not only improve the
-          accessibility and usability of your web pages but also make your code
-          easier to read and maintain.</p
+          >A breakpoint is a marker in your code that tells Visual Studio to
+          pause execution of the program at that point. You can set a breakpoint
+          by clicking in the left margin of the code editor, or by pressing
+          <code>F9</code> on your keyboard. When the program reaches the
+          breakpoint, execution will pause and you can inspect the state of the
+          program.</p
+        >
+        <pre class="language-csharp"><code>int[] numbers = { 1, 2, 3, 4, 5 };
+int sum = 0;
+// Set a breakpoint on this line
+for (int i = 0; i < numbers.Length; i++)
+{
+sum += numbers[i];
+}
+      
+Console.WriteLine(sum);</code></pre>
+
+        <h3>Stepping through code</h3>
+        <p
+          >Once the program is paused at a breakpoint, you can use the debugging
+          tools to step through the code line by line. The <code>F10</code> key
+          steps over the current line of code, while the <code>F11</code> key
+          steps into a method or function call.</p
+        >
+        <pre class="language-csharp"><code>int[] numbers = { 1, 2, 3, 4, 5 };
+int sum = 0;
+for (int i = 0; i < numbers.Length; i++)
+{
+  // Step into this line of code
+  sum += numbers[i];
+}
+      
+Console.WriteLine(sum);</code></pre>
+
+        <h3>Inspecting variables</h3>
+        <p
+          >While debugging, you can inspect the value of variables in your
+          program by hovering over them in the code editor or by using the
+          Locals or Watch windows. The Locals window shows all variables in the
+          current scope, while the Watch window allows you to manually specify
+          variables to track.</p
+        >
+        <pre class="language-csharp"><code>int[] numbers = { 1, 2, 3, 4, 5 };
+int sum = 0;
+for (int i = 0; i < numbers.Length; i++)
+{
+  sum += numbers[i];
+}
+
+// Add a watch on the sum variable
+Console.WriteLine(sum);</code></pre>
+
+        <p
+          >By using breakpoints, stepping through code, and inspecting
+          variables, you can quickly identify and fix errors in your C#
+          programs. Debugging is an essential skill for any developer, and
+          Visual Studio provides a powerful set of tools to help you get the job
+          done.</p
+        >
+      </article>
+
+      <!-- Secound One
+      
+      
+      -->
+
+      <article>
+        <h2>11. Object-oriented programming in C#</h2>
+        <p
+          >Object-oriented programming (OOP) is a programming paradigm that
+          organizes code into objects that interact with each other. C# is an
+          object-oriented programming language that supports many OOP concepts,
+          including classes, objects, inheritance, and polymorphism.</p
+        >
+        <h3>Classes and objects</h3>
+        <p
+          >A class is a blueprint for creating objects. It defines the
+          properties and methods that an object of that class will have. To
+          create an object of a class, you use the <code>new</code> keyword
+          followed by the name of the class:</p
+        >
+        <pre class="language-csharp"><code>// Define a class
+class Person
+{
+    public string Name;
+    public int Age;
+}
+// Create an object of the Person class
+Person person = new Person();
+person.Name = "Alice";
+person.Age = 30;</code></pre>
+
+        <h3>Inheritance</h3>
+        <p
+          >Inheritance is a way to create a new class that is a variation of an
+          existing class. The new class, called the subclass or derived class,
+          inherits all the properties and methods of the existing class, called
+          the superclass or base class, and can add or modify its own properties
+          and methods. To create a subclass, you use the <code>:</code> symbol
+          followed by the name of the base class:</p
+        >
+        <pre class="language-csharp"><code>// Define a base class
+class Animal
+{
+    public string Name;
+}
+// Define a subclass that inherits from Animal
+class Dog : Animal
+{
+public string Bark()
+{
+return "Woof!";
+}
+}
+
+// Create an object of the Dog class
+Dog dog = new Dog();
+dog.Name = "Fido";
+string bark = dog.Bark();</code></pre>
+
+        <h3>Polymorphism</h3>
+        <p
+          >Polymorphism is the ability of objects of different classes to be
+          treated as if they were objects of the same class. This is achieved
+          through inheritance and interfaces. An interface defines a contract
+          that a class must implement, and allows objects of different classes
+          to be treated as if they implement the same interface:</p
+        >
+        <pre class="language-csharp"><code>// Define an interface
+interface IAnimal
+{
+    string Name { get; }
+}
+// Implement the interface in the Dog class
+class Dog : IAnimal
+{
+public string Name { get; set; }
+public string Bark()
+{
+    return "Woof!";
+}
+}
+
+// Create objects of the Dog and Cat classes and treat them as IAnimal
+IAnimal animal1 = new Dog();
+IAnimal animal2 = new Cat();</code></pre>
+
+        <p
+          >Object-oriented programming is a powerful paradigm for organizing and
+          structuring code. C# provides a rich set of features for implementing
+          OOP concepts, including classes, objects, inheritance, and
+          polymorphism. By mastering these concepts, you can write more
+          organized, maintainable, and extensible code.</p
         >
       </article>
       <article>
-        <h2>22. Debugging Your HTML Code</h2>
+        <h2>12. Classes and objects in C#</h2>
         <p
-          >Debugging is an important part of web development. Here are some tips
-          for debugging your HTML code:</p
+          >A class is a blueprint for creating objects that encapsulate data and
+          behavior. In C#, you define a class using the
+          <code>class</code> keyword followed by the name of the class:</p
         >
-        <ol>
-          <li
-            >Use the browser's developer tools to inspect the HTML code and see
-            how it's being rendered. You can use the inspector to view the HTML
-            code, CSS styles, and JavaScript code associated with each element
-            on the page.</li
-          >
-          <li
-            >Check for syntax errors in your HTML code. Use a validator like the
-            W3C Markup Validation Service to check for errors.</li
-          >
-          <li
-            >Use the <span>&lt;!-- comment --&gt;</span> syntax to comment out
-            sections of code that may be causing errors. This will help you
-            isolate the problem and find a solution.</li
-          >
-          <li
-            >Test your code in different browsers and devices to ensure it works
-            correctly on all platforms.</li
-          >
-          <li
-            >Use descriptive and meaningful names for HTML elements, classes,
-            and IDs. This will make it easier to read and understand your
-            code.</li
-          >
-          <li
-            >Check for missing or mismatched tags. Use the indentation to help
-            you visualize the structure of your code and ensure all tags are
-            properly closed.</li
-          >
-          <li
-            >Use the <span>&lt;meta charset="UTF-8"&gt;</span> tag in the
-            <span>&lt;head&gt;</span> section to specify the character encoding
-            of your page. This can help prevent encoding issues that may cause
-            errors.</li
-          >
-          <li
-            >Validate your HTML code regularly to ensure it meets web standards
-            and is error-free.</li
-          >
-        </ol>
+        <pre class="language-csharp"><code>class Person
+{
+    // Fields
+    public string Name;
+    public int Age;
+    // Methods
+    public void SayHello()
+{
+    Console.WriteLine("Hello, my name is " + Name + " and I'm " + Age + " years old.");
+}
+}</code></pre>
+
         <p
-          >Debugging can be frustrating, but with these tips and techniques, you
-          can quickly identify and fix errors in your HTML code.</p
+          >In this example, the <code>Person</code> class has two fields (<code
+            >Name</code
+          >
+          and <code>Age</code>) and one method (<code>SayHello</code>). The
+          <code>public</code> keyword makes these members accessible from
+          outside the class.</p
+        >
+        <p
+          >To create an object of a class, you use the <code>new</code> keyword
+          followed by the name of the class:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>// Create an object of the Person class
+Person person = new Person();
+// Set the values of the fields
+person.Name = "Alice";
+person.Age = 30;
+
+// Call the SayHello method
+person.SayHello();</code></pre>
+
+        <p
+          >This code creates an object of the <code>Person</code> class, sets
+          the values of its fields, and calls its <code>SayHello</code> method,
+          which prints a greeting to the console.</p
+        >
+        <p
+          >Classes and objects are a fundamental concept in C# and
+          object-oriented programming. By defining classes and creating objects,
+          you can encapsulate data and behavior in a modular, reusable way.</p
         >
       </article>
       <article>
-        <h2
-          >23. Creating Hyperlinks to Jump to Specific Sections of Your Web
-          Page</h2
+        <h2>13. Inheritance and polymorphism in C#</h2>
+        <p
+          >Inheritance is a mechanism in object-oriented programming that allows
+          you to define a new class based on an existing class. The new class
+          inherits the properties and methods of the existing class, and can add
+          new properties and methods or override existing ones.</p
         >
         <p
-          >Creating hyperlinks that jump to specific sections of your web page
-          can improve user experience and make your content more accessible.
-          Here's how to create these hyperlinks:</p
+          >In C#, you define a new class that inherits from an existing class
+          using the colon (<code>:</code>) operator, like this:</p
         >
-        <ol>
-          <li
-            >First, create an ID for the section you want to link to. For
-            example,
-            <span>&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;</span>.</li
-          >
-          <li
-            >Next, create a hyperlink that points to the ID you just created.
-            For example,
-            <span>&lt;a href="#section1"&gt;Jump to Section 1&lt;/a&gt;</span
-            >.</li
-          >
-          <li
-            >When the user clicks on the hyperlink, the browser will scroll down
-            to the section with the corresponding ID.</li
-          >
-          <li
-            >You can also create a link to jump back to the top of the page by
-            adding an ID to the <span>&lt;body&gt;</span> tag and creating a
-            hyperlink that points to that ID. For example,
-            <span>&lt;a href="#top"&gt;Back to Top&lt;/a&gt;</span>.</li
-          >
-        </ol>
-        <p>Here's an example of how to use these techniques:</p>
-        <pre class="language-html"><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My Web Page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body id="top"&gt;
-    &lt;h1&gt;My Web Page&lt;/h1&gt;
-    &lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
-    &lt;p&gt;This is the content for Section 1.&lt;/p&gt;
-    &lt;a href="#top"&gt;Back to Top&lt;/a&gt;
-    &lt;h2 id="section2"&gt;Section 2&lt;/h2&gt;
-    &lt;p&gt;This is the content for Section 2.&lt;/p&gt;
-    &lt;a href="#top"&gt;Back to Top&lt;/a&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+        <pre class="language-csharp"><code>// Define a base class
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound.");
+    }
+}
+// Define a derived class that inherits from Animal
+class Dog : Animal
+{
+  public override void MakeSound()
+  {
+    Console.WriteLine("The dog barks.");
+  }
+}</code></pre>
+
         <p
-          >In this example, we've created two sections with IDs and created
-          hyperlinks to jump to each section and back to the top of the page.
+          >In this example, the <code>Animal</code> class has a method called
+          <code>MakeSound</code> that prints a generic message to the console.
+          The <code>Dog</code> class inherits from <code>Animal</code> and
+          overrides the <code>MakeSound</code> method to print a message
+          specific to dogs.</p
+        >
+        <p
+          >Polymorphism is another important concept in object-oriented
+          programming that allows you to treat objects of different classes as
+          if they were of the same class. In C#, you can achieve polymorphism
+          using inheritance and interfaces.</p
+        >
+        <p>Here's an example of how to use polymorphism in C#:</p>
+        <pre class="language-csharp"><code>// Define a list of animals
+List&lt;Animal&gt; animals = new List&lt;Animal&gt;();
+// Add a dog and a cat to the list
+animals.Add(new Dog());
+animals.Add(new Cat());
+
+// Make each animal in the list make a sound
+foreach (Animal animal in animals)
+{
+  animal.MakeSound();
+}</code></pre>
+
+        <p
+          >This code creates a list of animals and adds a dog and a cat to it.
+          It then uses a <code>foreach</code> loop to call the
+          <code>MakeSound</code> method of each animal in the list. Since both
+          the dog and the cat classes inherit from the <code>Animal</code> class
+          and override its <code>MakeSound</code> method, the correct sound is
+          played for each animal.</p
+        >
+        <p
+          >Inheritance and polymorphism are powerful tools in C# that allow you
+          to write modular and reusable code. By using inheritance and
+          polymorphism, you can create hierarchies of classes that model
+          real-world relationships, and write code that is more flexible and
+          easier to maintain.</p
+        >
+      </article>
+      <article>
+        <h2>14. Interfaces and abstract classes</h2>
+        <p
+          >Interfaces and abstract classes are important concepts in
+          object-oriented programming that allow you to define common behavior
+          and contracts for classes that share a common interface or inheritance
+          hierarchy.</p
+        >
+        <p
+          >An interface is a contract that defines a set of properties, methods,
+          and events that a class must implement. In C#, you define an interface
+          using the <code>interface</code> keyword, like this:</p
+        >
+        <pre class="language-csharp"><code>interface IAnimal
+{
+    void MakeSound();
+}</code></pre>
+        <p
+          >This interface defines a single method called
+          <code>MakeSound</code> that any class that implements the interface
+          must implement. You can use interfaces to define a common contract
+          that multiple classes can implement, without forcing them to inherit
+          from a common base class.</p
+        >
+        <p
+          >An abstract class is a class that cannot be instantiated, but can be
+          inherited from. Abstract classes can define abstract methods that must
+          be implemented by any derived class. In C#, you define an abstract
+          class using the <code>abstract</code> keyword, like this:</p
+        >
+        <pre class="language-csharp"><code>abstract class Animal
+{
+    public abstract void MakeSound();
+}</code></pre>
+        <p
+          >This abstract class defines an abstract method called
+          <code>MakeSound</code> that any derived class must implement. You can
+          use abstract classes to define a common interface that multiple
+          classes can inherit from, while providing some basic implementation
+          details.</p
+        >
+        <p
+          >Here's an example of how to use interfaces and abstract classes in
+          C#:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>// Define an interface for animals that can fly
+interface IFlyingAnimal
+  {
+    void Fly();
+  }
+  // Define an abstract class for animals
+  abstract class Animal
+  {
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public abstract void MakeSound();
+  }
+
+  // Define a derived class for birds that can fly
+  class Bird : Animal, IFlyingAnimal
+  {
+    public void Fly()
+  {
+    Console.WriteLine("The bird is flying.");
+  }
+  public override void MakeSound()
+  {
+    Console.WriteLine("The bird is chirping.");
+  }
+}</code></pre>
+
+        <p
+          >In this example, we define an interface called
+          <code>IFlyingAnimal</code> that defines a method called
+          <code>Fly</code>. We also define an abstract class called
+          <code>Animal</code> that defines properties for the name and age of an
+          animal, and an abstract method called <code>MakeSound</code>.</p
+        >
+        <p
+          >We then define a derived class called <code>Bird</code> that inherits
+          from <code>Animal</code> and implements <code>IFlyingAnimal</code>.
+          The <code>Bird</code> class provides an implementation of the
+          <code>Fly</code> method and overrides the
+          <code>MakeSound</code> method.</p
+        >
+        <p
+          >By using interfaces and abstract classes, you can define common
+          behavior and contracts for classes that share a common interface or
+          inheritance hierarchy. This makes it easier to write modular and
+          reusable code that can be extended and customized as needed.</p
+        >
+      </article>
+      <article>
+        <h2>15. Handling exceptions and errors</h2>
+        <p>Here's an example of how to handle an exception in C#:</p>
+
+        <pre class="language-csharp"><code>try
+{
+    // Some code that might throw an exception
+}
+catch (Exception ex)
+{
+    // Handle the exception
+    Console.WriteLine("An error occurred: " + ex.Message);
+}
+finally
+{
+    // Clean up any resources used by the try block
+}</code></pre>
+
+        <p
+          >In this example, the catch block will catch any exception that occurs
+          inside the try block. The exception is then passed to the catch block
+          as an argument, which allows you to handle it in any way you see fit.
+          The finally block is used to clean up any resources that were used by
+          the try block, regardless of whether an exception occurred or not.</p
+        >
+      </article>
+      <article>
+        <h2>16. Working with strings and characters</h2>
+
+        <p>To declare a string variable in C#, use the following syntax:</p>
+        <pre
+          class="language-csharp"
+        ><code>string myString = "Hello, world!";</code></pre>
+
+        <p>To declare a character variable, use the following syntax:</p>
+        <pre class="language-csharp"><code>char myChar = 'A';</code></pre>
+
+        <p>You can concatenate strings using the + operator:</p>
+        <pre class="language-csharp"><code>string name = "John";
+string message = "Hello, " + name + "!";
+Console.WriteLine(message); // Output: "Hello, John!"</code></pre>
+
+        <p>You can access individual characters in a string using indexing:</p>
+        <pre class="language-csharp"><code>string myString = "Hello, world!";
+char firstChar = myString[0];
+Console.WriteLine(firstChar); // Output: 'H'</code></pre>
+
+        <p
+          >You can also use various string methods to manipulate and compare
+          strings:</p
+        >
+        <pre class="language-csharp"><code>string myString = "Hello, world!";
+bool startsWithHello = myString.StartsWith("Hello");
+bool endsWithWorld = myString.EndsWith("world!");
+int indexOfComma = myString.IndexOf(",");
+string upperCaseString = myString.ToUpper();
+string lowaseString = myString.ToLower();
+string[] words = myString.Split(" ");</code></pre>
+
+        <p
+          >These are just a few examples of what you can do with strings and
+          characters in C#. There are many more methods and properties available
+          for working with these data types.</p
+        >
+      </article>
+      <article>
+        <h2>17. File and directory manipulation in C#</h2>
+
+        <p>To write text to a file, use the `StreamWriter` class:</p>
+        <pre
+          class="language-csharp"
+        ><code>string filePath = @"C:\temp\example.txt";
+using (StreamWriter writer = new StreamWriter(filePath))
+{
+    writer.WriteLine("Hello, world!");
+}</code></pre>
+
+        <p>To read text from a file, use the `StreamReader` class:</p>
+        <pre
+          class="language-csharp"
+        ><code>string filePath = @"C:\temp\example.txt";
+using (StreamReader reader = new StreamReader(filePath))
+{
+          string line = reader.ReadLine();
+          Console.WriteLine(line); // Output: "Hello, world!"
+}</code></pre>
+
+        <p
+          >You can also use the `File` and `Directory` classes to manipulate
+          files and directories:</p
+        >
+        <pre class="language-csharp"><code>// Create a directory
+string directoryPath = @"C:\temp\example";
+Directory.CreateDirectory(directoryPath);
+      
+// Create a file and write text to it
+string filePath = Path.Combine(directoryPath, "example.txt");
+File.WriteAllText(filePath, "Hello, world!");
+      
+// Read text from a file
+string text = File.ReadAllText(filePath);
+Console.WriteLine(text); // Output: "Hello, world!"
+      
+// Delete a file and directory
+File.Delete(filePath);
+Directory.Delete(directoryPath);</code></pre>
+
+        <p
+          >These are just a few examples of what you can do with files and
+          directories in C#. There are many more methods and properties
+          available for working with these classes.</p
+        >
+      </article>
+      <article>
+        <h2>18. Introduction to LINQ (Language Integrated Query)</h2>
+
+        <p>Suppose we have an array of integers:</p>
+        <pre
+          class="language-csharp"
+        ><code>int[] numbers = { 1, 2, 3, 4, 5 };</code></pre>
+
+        <p
+          >We can use the `Where` method to filter the array based on a
+          condition:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>var evenNumbers = numbers.Where(n => n % 2 == 0);
+foreach (var number in evenNumbers)
+{
+    Console.WriteLine(number); // Output: 2 4
+}</code></pre>
+
+        <p>We can also use the `Select` method to transform the array:</p>
+        <pre
+          class="language-csharp"
+        ><code>var squares = numbers.Select(n => n * n);
+foreach (var square in squares)
+{
+    Console.WriteLine(square); // Output: 1 4 9 16 25
+}</code></pre>
+
+        <p
+          >These are just a few examples of what you can do with LINQ. The
+          `System.Linq` namespace provides many more operators that can be used
+          to write complex queries over different data sources.</p
+        >
+      </article>
+      <article>
+        <h2>19. Delegates and Events in C#</h2>
+
+        <p
+          >First, let's define a delegate that represents a method with a
+          specific signature:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>public delegate void MyDelegate(string message);</code></pre>
+
+        <p>Next, let's create a class that uses this delegate:</p>
+        <pre class="language-csharp"><code>public class MyClass
+{
+    public event MyDelegate MyEvent;
+
+    public void RaiseEvent(string message)
+    {
+        if (MyEvent != null)
+        {
+            MyEvent(message);
+        }
+    }
+}</code></pre>
+
+        <p
+          >In this example, `MyClass` has an event named `MyEvent` that uses the
+          `MyDelegate` delegate. The `RaiseEvent` method raises the event by
+          invoking the delegate if it's not null.</p
+        >
+
+        <p>Now, let's create a client class that subscribes to the event:</p>
+        <pre class="language-csharp"><code>public class MyClient
+{
+    public void HandleEvent(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+      
+MyClass myClass = new MyClass();
+MyClient myClient = new MyClient();
+      
+myClass.MyEvent += new MyDelegate(myClient.HandleEvent);
+      
+myClass.RaiseEvent("Hello, world!"); // Output: Hello, world!
+      </code></pre>
+
+        <p
+          >In this example, `MyClient` defines a method named `HandleEvent` that
+          handles the event by writing the message to the console. `MyClass`
+          creates an instance of `MyClient`, subscribes to the `MyEvent` event
+          using the `+=` operator, and raises the event by calling the
+          `RaiseEvent` method.</p
+        >
+
+        <p
+          >Delegates and events are powerful tools for creating flexible and
+          extensible code in C#. By defining delegates and events, you can allow
+          other classes to register for notifications when something interesting
+          happens, and you can decouple the implementation of the event from its
+          subscribers.</p
+        >
+      </article>
+      <article>
+        <h2>20. Working with Generic Collections in C#</h2>
+
+        <p>First, let's create a list of strings:</p>
+        <pre
+          class="language-csharp"
+        ><code>List&lt;string&gt; myList = new List&lt;string&gt;();
+      
+myList.Add("apple");
+myList.Add("banana");
+myList.Add("cherry");
+      </code></pre>
+
+        <p
+          >In this example, we create a List of strings named `myList`, and we
+          add three items to the list using the `Add` method.</p
+        >
+
+        <p>Next, let's iterate over the list and print out each item:</p>
+        <pre class="language-csharp"><code>foreach (string item in myList)
+{
+    Console.WriteLine(item);
+}</code></pre>
+
+        <p
+          >In this example, we use a foreach loop to iterate over the items in
+          the list, and we print out each item to the console.</p
+        >
+
+        <p>Now, let's create a dictionary that maps strings to integers:</p>
+        <pre
+          class="language-csharp"
+        ><code>Dictionary&lt;string, int&gt; myDictionary = new Dictionary&lt;string, int&gt;();
+      
+myDictionary.Add("apple", 1);
+myDictionary.Add("banana", 2);
+myDictionary.Add("cherry", 3);
+      </code></pre>
+
+        <p
+          >In this example, we create a Dictionary that maps strings to
+          integers, and we add three key-value pairs to the dictionary using the
+          `Add` method.</p
+        >
+
+        <p>Next, let's retrieve the value associated with a specific key:</p>
+        <pre class="language-csharp"><code>int value;
+if (myDictionary.TryGetValue("banana", out value))
+{
+    Console.WriteLine(value); // Output: 2
+}</code></pre>
+
+        <p
+          >In this example, we use the `TryGetValue` method to retrieve the
+          value associated with the key "banana". If the key exists in the
+          dictionary, the method returns true and sets the `value` variable to
+          the associated value. We then print out the value to the console.</p
+        >
+
+        <p
+          >Generic collections are a powerful tool for working with collections
+          of data in C#. By using generic collections, you can create type-safe
+          collections that can be used with any type, and you can take advantage
+          of the built-in methods and functionality provided by the collection
+          classes.</p
+        >
+      </article>
+      <article>
+        <h2>21. Advanced LINQ techniques</h2>
+        <p>
+          Language Integrated Query (LINQ) is a powerful tool that allows you to
+          perform complex queries on various data sources, such as collections,
+          databases, and XML files. In addition to basic LINQ operations, such
+          as filtering, sorting, and grouping, there are several advanced
+          techniques that can be used to make your code more efficient and
+          expressive.
+        </p>
+        <h3>1. Deferred Execution</h3>
+        <p>
+          One of the most powerful features of LINQ is its ability to perform
+          deferred execution. This means that LINQ queries are not executed
+          immediately, but are instead executed only when the results are
+          needed. This allows you to write code that is more efficient, because
+          LINQ will only retrieve the data that is actually required.
+        </p>
+        <pre class="language-csharp"><code>var query = from c in customers
+where c.City == "London"
+select c;
+foreach (var c in query)
+{
+    Console.WriteLine(c.Name);
+}</code></pre>
+        <p>
+          In this example, the LINQ query is not executed until the foreach loop
+          is run. If there are a large number of customers in the list, this can
+          save a significant amount of memory and processing time.
+        </p>
+        <h3>2. Concatenating and Combining Queries</h3>
+        <p>
+          Another useful feature of LINQ is its ability to combine multiple
+          queries into a single query. This can be done using the Concat and
+          Union methods.
+        </p>
+        <pre class="language-csharp"><code>var query1 = from c in customers
+where c.City == "London"
+  select c;
+var query2 = from c in customers
+where c.City == "Paris"
+  select c;
+var combinedQuery = query1.Concat(query2);
+foreach (var c in combinedQuery)
+{
+    Console.WriteLine(c.Name);
+}</code></pre>
+        <p>
+          In this example, the Concat method is used to combine the results of
+          two queries into a single query.
+        </p>
+        <h3>3. Aggregating Data</h3>
+        <p>
+          LINQ provides several methods for aggregating data, such as Sum,
+          Count, and Average. These methods allow you to quickly and easily
+          calculate the total, count, and average of a set of values.
+        </p>
+        <pre
+          class="language-csharp"
+        ><code>var prices = new List&lt;decimal&gt; { 10.5m, 20.4m, 15.8m, 30.6m };
+var totalPrice = prices.Sum();
+var averagePrice = prices.Average();
+var count = prices.Count();
+Console.WriteLine("Total Price: " + totalPrice);
+Console.WriteLine("Average Price: " + averagePrice);
+Console.WriteLine("Count: " + count);</code></pre>
+        <p>
+          In this example, the Sum, Average, and Count methods are used to
+          calculate the total price, average price, and count of a list of
+          prices.
         </p>
       </article>
       <article>
-        <h2>25. Creating a Responsive HTML Design</h2>
+        <h2>22. Multi-threading and asynchronous programming in C#</h2>
         <p
-          >Creating a responsive HTML design means making your web page look
-          good on any device, whether it's a desktop computer, a tablet, or a
-          smartphone. Here are some tips:</p
+          >Multi-threading and asynchronous programming are powerful tools in C#
+          for improving the performance of your applications and making them
+          more responsive to user input.</p
+        >
+        <p
+          >Multi-threading involves creating multiple threads of execution
+          within a single application, allowing different parts of the program
+          to run concurrently. This can be useful for performing tasks in the
+          background while the user continues to interact with the application.
+          Here's an example of how to create a new thread in C#:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>Thread thread = new Thread(SomeMethod);
+thread.Start();</code></pre>
+        <p
+          >Asynchronous programming, on the other hand, allows you to perform
+          non-blocking I/O operations without tying up the main thread of your
+          application. This can be especially useful for network communication
+          or disk I/O, where the response time can be unpredictable. Here's an
+          example of how to perform an asynchronous operation using C#'s
+          async/await syntax:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>public async Task&lt;string&gt; DownloadWebPageAsync(string url)
+{
+  HttpClient client = new HttpClient();
+  return await client.GetStringAsync(url);
+}</code></pre>
+        <p
+          >Note that the method signature includes the "async" keyword,
+          indicating that it is an asynchronous method, and the return type is
+          "Task&lt;string&gt;", indicating that the method will return a string
+          when it completes.</p
+        >
+        <p
+          >These are just a couple of examples of how multi-threading and
+          asynchronous programming can be used in C# to improve the performance
+          and responsiveness of your applications. With a little bit of
+          practice, you can take full advantage of these powerful features to
+          create high-performance, responsive applications that will delight
+          your users.</p
+        >
+      </article>
+      <article>
+        <h2>23. Working with databases using ADO.NET</h2>
+        <p
+          >ADO.NET is a powerful framework in C# for working with databases. It
+          provides a set of classes that allow you to connect to a database,
+          execute queries, and retrieve data in a variety of formats.</p
+        >
+        <p
+          >The first step in working with a database using ADO.NET is to
+          establish a connection. Here's an example of how to create a
+          connection to a SQL Server database:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>string connectionString = "Data Source=myServerAddress;Initial Catalog=myDataBase;User Id=myUsername;Password=myPassword;";
+SqlConnection connection = new SqlConnection(connectionString);
+connection.Open();</code></pre>
+        <p
+          >Once you have a connection, you can execute queries using a
+          SqlCommand object. Here's an example of how to execute a SELECT
+          query:</p
+        >
+        <pre
+          class="language-csharp"
+        ><code>string queryString = "SELECT * FROM Customers";
+SqlCommand command = new SqlCommand(queryString, connection);
+SqlDataReader reader = command.ExecuteReader();
+while (reader.Read())
+{
+  Console.WriteLine(reader["CustomerID"].ToString());
+}</code></pre>
+        <p
+          >This code creates a SqlCommand object with a SELECT query, executes
+          the query using the ExecuteReader method, and then iterates through
+          the results using a SqlDataReader object.</p
+        >
+        <p
+          >Of course, ADO.NET provides many more features for working with
+          databases, including support for stored procedures, transactions, and
+          more. With a little bit of practice, you can become a master of
+          ADO.NET and build powerful database-driven applications in C#.</p
+        >
+      </article>
+      <article>
+        <h2>24. Building desktop applications with Windows Forms</h2>
+        <p
+          >Windows Forms is a powerful framework in C# for building desktop
+          applications with a graphical user interface (GUI). It provides a set
+          of classes for creating windows, dialog boxes, menus, buttons, and
+          other common GUI elements.</p
+        >
+        <p
+          >The first step in building a Windows Forms application is to create a
+          new project in Visual Studio. Choose "Windows Forms App (.NET
+          Framework)" from the list of project templates, and give your project
+          a name and location. Visual Studio will create a new project with a
+          default form.</p
+        >
+        <p
+          >You can customize the form by dragging and dropping controls from the
+          Toolbox onto the form. Here's an example of how to add a button to the
+          form:</p
         >
         <ol>
           <li
-            >Use a mobile-first approach, where you design your web page for
-            mobile devices first and then scale up for larger screens.</li
+            >Open the Toolbox by clicking on the Toolbox tab on the left-hand
+            side of the screen.</li
+          >
+          <li>Find the Button control in the Toolbox.</li>
+          <li>Drag the Button control onto the form.</li>
+        </ol>
+        <p
+          >You can customize the properties of the button by selecting it on the
+          form and using the Properties window. For example, you can change the
+          text of the button by setting the Text property.</p
+        >
+        <p
+          >You can also add event handlers to the button to handle user input.
+          Here's an example of how to add a click event handler to a button:</p
+        >
+        <ol>
+          <li>Select the button on the form.</li>
+          <li>Open the Properties window.</li>
+          <li
+            >Click on the Events button (the lightning bolt icon) to see a list
+            of available events.</li
           >
           <li
-            >Use CSS media queries to adjust the layout of your web page based
-            on the screen size. For example:</li
+            >Double-click on the Click event to create a new event handler
+            method.</li
           >
         </ol>
-        <pre class="language-html"><code>&lt;style&gt;
-  /* styles for mobile devices */
-  body {
-    font-size: 16px;
-  }
-  /* styles for tablets */
-  @media only screen and (min-width: 600px) {
-    body {
-    font-size: 18px;
-    }
-  }
-  
-  /* styles for desktops */
-  @media only screen and (min-width: 1024px) {
-    body {
-    font-size: 20px;
-    }
-  }
-&lt;/style&gt;</code></pre>
-
         <p
-          >In this example, we're using CSS media queries to adjust the font
-          size of the body based on the screen size. For devices with a screen
-          width of less than 600px, the font size will be 16px. For devices with
-          a screen width of at least 600px but less than 1024px, the font size
-          will be 18px. For devices with a screen width of at least 1024px, the
-          font size will be 20px.</p
+          >Visual Studio will create a new method for you and open it in the
+          code editor. You can add code to the method to handle the button click
+          event.</p
         >
-        <ol start="3">
-          <li
-            >Use a responsive grid system, such as Bootstrap or Foundation, to
-            create a flexible layout that adjusts to different screen sizes.</li
-          >
-          <li
-            >Optimize images for the web, so they load quickly on mobile devices
-            with slower connections.</li
-          >
-          <li
-            >Use the viewport meta tag to specify how your web page should be
-            displayed on mobile devices. For example:</li
-          >
-        </ol>
-        <pre
-          class="language-html"
-        ><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
         <p
-          >This meta tag tells the browser to set the width of the viewport to
-          the width of the device and to set the initial zoom level to 1.0.</p
+          >These are just a few examples of how to build a desktop application
+          with Windows Forms. With a little bit of practice, you can create
+          sophisticated applications with rich GUIs and powerful
+          functionality.</p
         >
       </article>
       <article>
-        <h2>26. Creating HTML Forms That Submit Data to a Server</h2>
+        <h2>25. Building web applications with ASP.NET</h2>
         <p
-          >HTML forms allow users to input data and submit it to a server for
-          processing. Here's an example form:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;form action="submit-form.php" method="post"&gt;
-  &lt;label for="name"&gt;Name:&lt;/label&gt;
-  &lt;input type="text" id="name" name="name" required&gt;
-  &lt;label for="email"&gtEmail:&lt;/label&gt
-  &lt;input type="email" id="email" name="email" required&gt
-
-  &lt;label for="message"&gtMessage:&lt;/label&gt
-  &lt;textarea id="message" name="message" required>&lt;/textarea&gt
-
-  &lt;button type="submit">Submit&lt;/button&gt
-&lt;/form &gt;</code></pre>
-
-        <p
-          >In this example, we're using the <code>&lt;form&gt;</code> element to
-          create a form with three fields: a text field for the user's name, an
-          email field for the user's email address, and a textarea field for the
-          user's message. We're also using the
-          <code>&lt;label&gt;</code> element to associate each field with its
-          label for better accessibility, and the
-          <code>&lt;button&gt;</code> element to create a submit button.</p
+          >ASP.NET is a powerful framework in C# for building web applications.
+          It provides a set of classes and tools for creating web pages,
+          handling HTTP requests and responses, and working with databases.</p
         >
         <p
-          >The <code>action</code> attribute of the
-          <code>&lt;form&gt;</code> element specifies the URL of the script that
-          will process the form data on the server side. In this example, the
-          URL is "submit-form.php".</p
+          >The first step in building an ASP.NET application is to create a new
+          project in Visual Studio. Choose "ASP.NET Web Application" from the
+          list of project templates, and give your project a name and location.
+          Visual Studio will create a new project with a default web page.</p
         >
         <p
-          >The <code>method</code> attribute of the
-          <code>&lt;form&gt;</code> element specifies the HTTP method that will
-          be used to submit the form data. The two most common methods are
-          <code>GET</code> and <code>POST</code>. In this example, we're using
-          the <code>POST</code> method, which sends the form data in the body of
-          the HTTP request.</p
+          >You can customize the web page by editing the HTML and adding
+          server-side code. Here's an example of how to create a web page with a
+          text box and a button:</p
         >
-        <p
-          >On the server side, you can access the form data using the
-          <code>$_POST</code> superglobal variable in PHP or the
-          <code>request.POST</code> dictionary in Python, for example.</p
-        >
-      </article>
-      <article>
-        <h2>27. Using the HTML5 DOCTYPE Declaration</h2>
-        <p
-          >The DOCTYPE declaration is an instruction to the web browser about
-          what version of HTML the web page is written in. It's placed at the
-          very beginning of the HTML document, before the
-          <code>&lt;html&gt;</code> tag. The HTML5 DOCTYPE declaration looks
-          like this:</p
-        >
-        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;</code></pre>
-        <p
-          >This declaration tells the browser that the document is written in
-          HTML5. It's a self-closing tag, so you don't need to include a closing
-          angle bracket.</p
-        >
-        <p
-          >It's important to include the DOCTYPE declaration in your HTML
-          document because it helps the browser to render the page correctly.
-          Without it, the browser may fall back to quirks mode, which can cause
-          unexpected behavior and layout issues.</p
-        >
-      </article>
-      <article>
-        <h2>28. Adding Metadata to Your Web Page</h2>
-        <p
-          >Metadata provides additional information about your web page, such as
-          the author, description, and keywords. This information can be used by
-          search engines, social media platforms, and other tools to help users
-          find and understand your content. Here's an example of how to add
-          metadata to your HTML document:</p
-        >
-        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+        <pre class="language-csharp"><code>&lt;%@ Page Language="C#" %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;My Awesome Web Page&lt;/title&gt;
-    &lt;meta name="description" content="This is an awesome web page about..."/&gt;
-    &lt;meta name="keywords" content="HTML, CSS, JavaScript, web development"/&gt;
-    &lt;meta name="author" content="Your Name"/&gt;
+    &lt;title&gt;My Web Page&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    ...
+    &lt;form runat="server"&gt;
+      &lt;asp:TextBox ID="myTextBox" runat="server"&gt;&lt;/asp:TextBox&gt;
+      &lt;asp:Button ID="myButton" runat="server" Text="Click Me" OnClick="myButton_Click" /&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+&lt;%@ Page Language="C#" %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form runat="server"&gt;
+      &lt;asp:TextBox ID="myTextBox" runat="server"&gt;&lt;/asp:TextBox&gt;
+      &lt;asp:Button ID="myButton" runat="server" Text="Click Me" OnClick="myButton_Click" /&gt;
+    &lt;/form&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         <p
-          >In this example, we're using the <code>&lt;meta&gt;</code> element to
-          add various types of metadata to our HTML document. Here's a breakdown
-          of each <code>&lt;meta&gt;</code> tag:</p
-        >
-        <ul>
-          <li
-            ><code>&lt;meta charset="UTF-8"&gt;</code>: Specifies the character
-            encoding used in the document. This is important for ensuring that
-            special characters and symbols are displayed correctly.</li
-          >
-          <li
-            ><code
-              >&lt;meta name="viewport" content="width=device-width,
-              initial-scale=1.0"&gt;</code
-            >: Configures the viewport meta tag, which is used by mobile devices
-            to determine how to scale the web page. This is important for
-            ensuring that your page looks good on mobile devices.</li
-          >
-          <li
-            ><code>&lt;title&gt;My Awesome Web Page&lt;/title&gt;</code>:
-            Specifies the title of the web page. This is displayed in the
-            browser's title bar and is also used by search engines.</li
-          >
-          <li
-            ><code
-              >&lt;meta name="description" content="This is an awesome web page
-              about..."/&gt;</code
-            >: Specifies a brief description of the web page. This is used by
-            search engines and social media platforms to display a summary of
-            the page content.</li
-          >
-          <li
-            ><code
-              >&lt;meta name="keywords" content="HTML, CSS, JavaScript, web
-              development"/&gt;</code
-            >: Specifies a list of comma-separated keywords that are relevant to
-            the page content. This is used by search engines to help users find
-            your page.</li
-          >
-          <li
-            ><code>&lt;meta name="author" content="Your Name"/&gt;</code>:
-            Specifies the name of the author of the web page.</li
-          >
-        </ul>
-      </article>
-      <article>
-        <h2>29. Understanding HTML Entities</h2>
-        <p
-          >HTML entities are special codes that represent characters that are
-          not normally allowed in HTML, such as angle brackets and ampersands.
-          By using these codes, you can include special characters in your web
-          pages without them being misinterpreted as HTML markup. Here are a few
-          examples of HTML entities:</p
-        >
-        <ul>
-          <li><code>&amp;lt;</code>: Represents the less-than sign (<).</li>
-          <li><code>&amp;gt;</code>: Represents the greater-than sign (>).</li>
-          <li><code>&amp;amp;</code>: Represents the ampersand (&).</li>
-          <li
-            ><code>&amp;quot;</code>: Represents the double-quote character
-            (").</li
-          >
-          <li
-            ><code>&amp;apos;</code>: Represents the single-quote character
-            (').</li
-          >
-        </ul>
-        <p>Here's an example of how to use HTML entities in your web page:</p>
-        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Using HTML Entities&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Here's an example of a sentence with a special character: &amp;lt; This is a less-than sign.&lt;/p&gt;
-    &lt;p&gt;Here's another example: &amp;quot;This is a quote.&amp;quot;&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-        <p
-          >In this example, we're using the <code>&amp;lt;</code> and
-          <code>&amp;quot;</code> entities to include special characters in our
-          web page without them being interpreted as HTML markup. The resulting
-          output would look like this:</p
+          >This code creates a web page with a text box and a button. The text
+          box and button are both server-side controls, which means that they
+          can be accessed from server-side code.</p
         >
         <p
-          >Here's an example of a sentence with a special character: &lt; This
-          is a less-than sign.</p
-        >
-        <p>Here's another example: "This is a quote."</p>
-      </article>
-      <article>
-        <h2>30. Creating Image Maps in HTML</h2>
-        <p
-          >Image maps are a way to add clickable areas to an image. With an
-          image map, you can define specific regions of an image that can be
-          clicked, each with its own associated link. Here's an example of how
-          to create an image map in HTML:</p
+          >You can add server-side code to handle events like button clicks.
+          Here's an example of how to handle a button click event:</p
         >
         <pre
-          class="language-html"
-        ><code>&lt;img src="example.jpg" alt="Example Image" usemap="#examplemap"&gt;
-&lt;map name="examplemap"&gt;
-  &lt;area shape="rect" coords="0,0,100,100" href="https://www.example.com"&gt;
-  &lt;area shape="circle" coords="150,150,50" href="https://www.google.com"&gt;
-  &lt;area shape="poly" coords="250,100,300,150,200,200,150,150" href="https://www.yahoo.com"&gt;
-&lt;/map&gt;</code></pre>
+          class="language-csharp"
+        ><code>protected void myButton_Click(object sender, EventArgs e)
+{
+  string text = myTextBox.Text;
+  // do something with the text
+}</code></pre>
+        <p
+          >This code defines a method that will be called when the button is
+          clicked. The method gets the text from the text box and does something
+          with it.</p
+        >
+        <p
+          >These are just a few examples of how to build a web application with
+          ASP.NET. With a little bit of practice, you can create sophisticated
+          applications with rich functionality and a great user experience.</p
+        >
+      </article>
+      <article>
+        <h2>26. Introduction to web services and REST APIs</h2>
+        <p
+          >Web services and REST APIs are a way for applications to communicate
+          with each other over the internet. They provide a standard way of
+          exchanging data and making use of remote functionality.</p
+        >
+        <p
+          >A web service is a software system designed to support interoperable
+          machine-to-machine interaction over a network. It has an interface
+          described in a machine-processable format (specifically WSDL), usually
+          an XML schema, that other systems can interact with. The interaction
+          is described using SOAP protocol, which is based on XML.</p
+        >
+        <p
+          >A REST API is a type of web service that uses HTTP protocol for
+          exchanging data. It relies on a stateless, client-server architecture
+          where data and functionality are separated. RESTful APIs use standard
+          HTTP methods like GET, POST, PUT, and DELETE to perform operations on
+          resources. The resources are identified by URLs, and the data is often
+          exchanged in JSON or XML format.</p
+        >
+        <p>Here's an example of a REST API call using the HTTP GET method:</p>
+        <pre class="language-csharp"><code>using System;
+using System.Net.Http;
 
+class Program
+{
+    static async System.Threading.Tasks.Task Main(string[] args)
+    {
+        var client = new HttpClient();
+
+        var response = await client.GetAsync("https://jsonplaceholder.typicode.com/posts/1");
+
+        var content = await response.Content.ReadAsStringAsync();
+
+        Console.WriteLine(content);
+    }
+}</code></pre>
         <p
-          >In this example, we have an <code>&lt;img&gt;</code> element with the
-          source file "example.jpg" and alt text "Example Image". We've also
-          added a <code>usemap</code> attribute with the value "#examplemap".
-          This tells the browser to use the image map with the name
-          "examplemap".</p
+          >This code makes an HTTP GET request to a RESTful API endpoint at
+          "https://jsonplaceholder.typicode.com/posts/1", which returns a JSON
+          object representing a blog post. The code reads the response content
+          as a string and outputs it to the console.</p
         >
         <p
-          >Next, we define the image map using the
-          <code>&lt;map&gt;</code> element with the name "examplemap". Inside
-          the <code>&lt;map&gt;</code> element, we define three clickable areas
-          using the <code>&lt;area&gt;</code> element. Each area has a different
-          shape, coordinates, and href attribute (the link that the area leads
-          to). The first area is a rectangle, the second is a circle, and the
-          third is a polygon.</p
-        >
-        <p>Here's what the resulting image map would look like:</p>
-        <img
-          src="https://www.w3schools.com/html/workplace.jpg"
-          alt="Example Image Map"
-        />
-      </article>
-      <article>
-        <h2>31. Creating Special Characters in HTML</h2>
-        <p
-          >HTML provides a way to display special characters, such as copyright
-          symbols, registered trademarks, and accented letters, using special
-          codes called HTML entities. Here are some commonly used HTML
-          entities:</p
-        >
-        <table>
-          <tr>
-            <th>Character</th>
-            <th>Entity Name</th>
-            <th>Entity Number</th>
-          </tr>
-          <tr>
-            <td>&amp;</td>
-            <td>ampersand</td>
-            <td>&amp;#38;</td>
-          </tr>
-          <tr>
-            <td>&lt;</td>
-            <td>less than</td>
-            <td>&amp;#60;</td>
-          </tr>
-          <tr>
-            <td>&gt;</td>
-            <td>greater than</td>
-            <td>&amp;#62;</td>
-          </tr>
-          <tr>
-            <td>&copy;</td>
-            <td>copyright</td>
-            <td>&amp;#169;</td>
-          </tr>
-          <tr>
-            <td>&reg;</td>
-            <td>registered trademark</td>
-            <td>&amp;#174;</td>
-          </tr>
-          <tr>
-            <td>&euro;</td>
-            <td>euro</td>
-            <td>&amp;#8364;</td>
-          </tr>
-        </table>
-        <p
-          >To display a special character using an HTML entity, you can use
-          either the entity name or the entity number. For example, to display a
-          copyright symbol, you can use either <code>&amp;copy;</code> or
-          <code>&amp;#169;</code>.</p
-        >
-        <p
-          >Here's an example of how to use HTML entities to display a special
-          character:</p
-        >
-        <pre
-          class="language-html"
-        ><code>&lt;p&gt;This web page is &amp;copy; 2023 by John Doe.&lt;/p&gt;</code></pre>
-        <p>This would display the following text:</p>
-        <p>This web page is &copy; 2023 by John Doe.</p>
-      </article>
-      <article>
-        <h2>32. Using the HTML Script Tag to Load JavaScript Files</h2>
-        <p
-          >JavaScript is a powerful programming language that can be used to add
-          interactivity and dynamic behavior to web pages. To use JavaScript in
-          a web page, you need to include the JavaScript code in the HTML file
-          using the <code>&lt;script&gt;</code> tag.</p
-        >
-        <p
-          >You can include JavaScript code either inline in the HTML file, or in
-          an external JavaScript file that is loaded using the
-          <code>&lt;script&gt;</code> tag. Here's an example of how to load an
-          external JavaScript file:</p
-        >
-        <pre class="language-html"><code>&lt;!-- Load the JavaScript file --&gt;
-&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></pre>
-        <p
-          >In this example, the <code>src</code> attribute specifies the
-          location of the external JavaScript file. The browser will load and
-          execute the code in the JavaScript file when it encounters this
-          <code>&lt;script&gt;</code> tag.</p
-        >
-        <p
-          >It's a best practice to include the <code>&lt;script&gt;</code> tag
-          at the bottom of the HTML file, just before the closing
-          <code>&lt;/body&gt;</code> tag. This ensures that the HTML content is
-          loaded and displayed before the JavaScript code is executed.</p
+          >With web services and REST APIs, applications can leverage the power
+          of the internet to share data and functionality. They enable
+          developers to build applications that are more flexible, scalable, and
+          interoperable.</p
         >
       </article>
       <article>
-        <h2>33. Adding Favicon to Your Web Page</h2>
+        <h2>27. Creating and consuming REST APIs in C#</h2>
         <p
-          >A favicon is a small icon that appears in the browser tab next to the
-          page title. It's also used as the icon for bookmarks and on the home
-          screen of mobile devices. Adding a favicon to your web page can make
-          it more recognizable and professional-looking.</p
+          >C# provides several libraries and frameworks for creating and
+          consuming RESTful APIs. In this note, we'll cover how to create a
+          simple RESTful API using ASP.NET Web API and how to consume it using
+          HttpClient.</p
+        >
+        <h3>Creating a RESTful API with ASP.NET Web API</h3>
+        <p
+          >ASP.NET Web API is a framework for building RESTful APIs on top of
+          the .NET Framework. It provides a set of libraries and tools for
+          creating HTTP services that can reach a broad range of clients,
+          including browsers and mobile devices.</p
         >
         <p
-          >To add a favicon to your web page, you need to create an icon file in
-          the .ico format. There are many tools available online to help you
-          create a favicon file, or you can create one yourself using an image
-          editing program.</p
+          >Here's an example of a simple Web API controller that exposes a
+          RESTful API endpoint:</p
+        >
+        <pre class="language-csharp"><code>using System.Collections.Generic;
+using System.Web.Http;
+
+public class ProductsController : ApiController
+{
+    public IEnumerable&lt;string&gt; Get()
+    {
+        return new string[] { "Product 1", "Product 2", "Product 3" };
+    }
+}</code></pre>
+        <p
+          >This controller defines a single endpoint that returns an array of
+          strings representing product names. The endpoint is exposed via an
+          HTTP GET request to the URL "/api/products".</p
+        >
+        <h3>Consuming a RESTful API with HttpClient</h3>
+        <p
+          >HttpClient is a class in the System.Net.Http namespace that provides
+          a convenient way to consume RESTful APIs from C# applications. It
+          supports all HTTP methods and can handle both synchronous and
+          asynchronous requests.</p
         >
         <p
-          >Once you have your favicon file, you can add it to your web page
-          using the following HTML code:</p
+          >Here's an example of how to consume the API endpoint we defined
+          earlier using HttpClient:</p
+        >
+        <pre class="language-csharp"><code>using System;
+using System.Net.Http;
+
+class Program
+{
+    static async System.Threading.Tasks.Task Main(string[] args)
+    {
+        var client = new HttpClient();
+
+        var response = await client.GetAsync("http://localhost/api/products");
+
+        var content = await response.Content.ReadAsStringAsync();
+
+        Console.WriteLine(content);
+    }
+}</code></pre>
+        <p
+          >This code makes an HTTP GET request to the
+          "http://localhost/api/products" URL, which is the endpoint we defined
+          earlier. It reads the response content as a string and outputs it to
+          the console.</p
+        >
+        <p
+          >With ASP.NET Web API and HttpClient, you can create and consume
+          RESTful APIs in C# with ease. They provide a flexible and powerful way
+          to build web applications that can communicate with other systems over
+          the internet.</p
+        >
+      </article>
+      <article>
+        <h2>28.Test-driven development in C#</h2>
+        <p
+          >Test-driven development (TDD) is a software development approach in
+          which developers write automated tests for their code before writing
+          the actual code. This helps ensure that the code meets the
+          requirements and catches bugs early in the development process.</p
+        >
+        <h3>Writing tests in C#</h3>
+        <p
+          >C# provides a built-in testing framework called MSTest for writing
+          unit tests. Here's an example of a simple unit test:</p
         >
         <pre
-          class="language-html"
-        ><code>&lt;!-- Add the favicon to the head section of the HTML file --&gt;
-&lt;head&gt;
-  &lt;link rel="icon" href="favicon.ico"&gt;
-&lt;/head&gt;</code></pre>
+          class="language-csharp"
+        ><code>using Microsoft.VisualStudio.TestTools.UnitTesting;
+      
+[TestClass]
+public class MyMathTests
+{
+    [TestMethod]
+    public void TestAdd()
+    {
+        var result = MyMath.Add(2, 3);
+        Assert.AreEqual(5, result);
+    }
+}</code></pre>
         <p
-          >In this example, the <code>rel</code> attribute specifies the
-          relationship between the HTML document and the icon file, and the
-          <code>href</code> attribute specifies the location of the icon file.
-          Note that the <code>href</code> attribute should point to the location
-          of your favicon file on the server.</p
+          >This test is for a simple "Add" method in a hypothetical "MyMath"
+          class. The test checks that the result of adding 2 and 3 is equal to
+          5.</p
         >
+        <h3>Implementing the code</h3>
         <p
-          >You can also add a larger icon file for use on high-resolution
-          displays, such as those found on mobile devices, using the following
-          HTML code:</p
+          >After writing the test, the next step is to implement the code to
+          make the test pass. Here's an example implementation of the "Add"
+          method:</p
         >
-        <pre
-          class="language-html"
-        ><code>&lt;!-- Add the larger icon for high-resolution displays --&gt;
-&lt;head&gt;
-  &lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;
-&lt;/head&gt;</code></pre>
+        <pre class="language-csharp"><code>public static int Add(int a, int b)
+{
+    return a + b;
+}</code></pre>
         <p
-          >In this example, the <code>rel</code> attribute is set to
-          "apple-touch-icon" to indicate that this is the icon used on Apple
-          devices, and the <code>sizes</code> attribute specifies the size of
-          the icon file in pixels. Note that the icon file should be in the .png
-          format for use on Apple devices.</p
+          >Now that we have the implementation, we can run the test to verify
+          that it passes.</p
+        >
+        <h3>Benefits of TDD</h3>
+        <p>There are several benefits to using TDD in your C# development:</p>
+        <ul>
+          <li>Ensures that the code meets the requirements</li>
+          <li>Catches bugs early in the development process</li>
+          <li>Improves code quality and maintainability</li>
+          <li>Provides a safety net for refactoring</li>
+          <li>Encourages better design and modularity</li>
+        </ul>
+        <p
+          >TDD is a powerful technique for improving the quality of your C#
+          code. By writing tests before the code, you can ensure that your code
+          is correct, reliable, and maintainable.</p
+        >
+      </article>
+      <article>
+        <h2>29. Code profiling and optimization techniques in C#</h2>
+        <p
+          >Profiling is the process of analyzing the performance of your code to
+          identify areas that can be optimized. In C#, there are several
+          profiling and optimization techniques that you can use to improve the
+          performance of your code.</p
+        >
+        <h3>Profiling tools</h3>
+        <p
+          >C# provides several built-in profiling tools, including the Visual
+          Studio Profiler and the dotTrace Profiler from JetBrains. These tools
+          allow you to analyze the performance of your code at runtime and
+          identify areas that are causing performance bottlenecks.</p
+        >
+        <h3>Code optimization techniques</h3>
+        <p
+          >Once you've identified areas that need optimization, there are
+          several techniques you can use to improve the performance of your C#
+          code:</p
+        >
+        <h4>Use the right data structures and algorithms</h4>
+        <p
+          >Choosing the right data structures and algorithms can have a
+          significant impact on the performance of your code. For example, using
+          a HashSet instead of a List for membership tests can result in a
+          significant performance improvement.</p
+        >
+        <h4>Avoid unnecessary object creation</h4>
+        <p
+          >C# is a garbage-collected language, which means that creating and
+          destroying objects can be an expensive operation. Try to avoid
+          unnecessary object creation by reusing existing objects or using value
+          types instead of reference types where possible.</p
+        >
+        <h4>Minimize I/O operations</h4>
+        <p
+          >I/O operations, such as reading from and writing to disk or network
+          resources, are typically slower than other operations in C#. Minimize
+          I/O operations by buffering data or using asynchronous I/O
+          operations.</p
+        >
+        <h4>Profile and optimize performance-critical code</h4>
+        <p
+          >Identify code that is critical to the performance of your application
+          and profile it to identify areas that can be optimized. For example,
+          you might use a profiler to identify bottlenecks in your code and then
+          optimize the code to eliminate the bottlenecks.</p
+        >
+        <h3>Conclusion</h3>
+        <p
+          >Code profiling and optimization techniques are essential for
+          improving the performance of your C# applications. By using profiling
+          tools and optimization techniques, you can identify areas that need
+          improvement and optimize your code for better performance.</p
+        >
+      </article>
+      <article>
+        <h2>30. Using third-party libraries and NuGet packages in C#</h2>
+        <p
+          >C# developers often use third-party libraries and NuGet packages to
+          add functionality to their applications and avoid reinventing the
+          wheel. Here are some tips for effectively using third-party libraries
+          and NuGet packages in your C# projects:</p
+        >
+        <h3>Choose reliable and well-maintained packages</h3>
+        <p
+          >When selecting a third-party library or NuGet package, it's important
+          to choose one that is reliable and well-maintained. Check the
+          package's documentation, user ratings and reviews, and update history
+          to make sure it is a good fit for your project.</p
+        >
+        <h3>Use package managers like NuGet</h3>
+        <p
+          >Package managers like NuGet make it easy to install and manage
+          third-party libraries and packages in your C# projects. Use a package
+          manager to manage dependencies, update packages, and install new
+          packages.</p
+        >
+        <h3>Stay up-to-date with package updates</h3>
+        <p
+          >It's important to keep your third-party libraries and packages
+          up-to-date to ensure that your application remains secure and
+          functional. Use a package manager to update packages regularly and
+          test your application after updating to ensure that it still works as
+          expected.</p
+        >
+        <h3>Use namespaces to avoid naming conflicts</h3>
+        <p
+          >When using third-party libraries, it's possible to encounter naming
+          conflicts with your own code or with other libraries. To avoid naming
+          conflicts, use namespaces to organize your code and qualify your
+          references to third-party libraries with the appropriate namespace.</p
+        >
+        <h3>Read and follow package documentation</h3>
+        <p
+          >Each third-party library and NuGet package comes with its own
+          documentation and usage instructions. Read and follow the
+          documentation to ensure that you're using the package correctly and
+          effectively.</p
+        >
+        <h3>Conclusion</h3>
+        <p
+          >Using third-party libraries and NuGet packages can save time and
+          effort in C# development, but it's important to choose packages
+          wisely, use package managers, stay up-to-date with updates, avoid
+          naming conflicts, and read and follow package documentation to ensure
+          successful integration.</p
+        >
+      </article>
+      <article>
+        <h2>31. Version control with Git and GitHub</h2>
+        <p
+          >Version control is an essential part of software development that
+          helps you track changes to your code, collaborate with other
+          developers, and manage code releases. Git is a popular version control
+          system, and GitHub is a popular platform for hosting Git repositories
+          and collaborating with others. Here are some tips for using Git and
+          GitHub effectively:</p
+        >
+        <h3>Learn the basics of Git</h3>
+        <p
+          >Before using Git, it's important to learn the basics of how it works
+          and how to use it. Some key concepts to understand include
+          repositories, branches, commits, and pull requests. There are many
+          resources available online for learning Git, including documentation
+          and tutorials.</p
+        >
+        <h3>Use GitHub for collaboration and code hosting</h3>
+        <p
+          >GitHub is a popular platform for hosting Git repositories and
+          collaborating with other developers. Use GitHub to create
+          repositories, collaborate with others, and contribute to open-source
+          projects.</p
+        >
+        <h3>Follow best practices for branching and merging</h3>
+        <p
+          >Branching and merging are important aspects of Git that allow you to
+          work on different features or fixes without affecting the main
+          codebase. Follow best practices for branching and merging, such as
+          creating feature branches, merging frequently, and resolving merge
+          conflicts.</p
+        >
+        <h3>Write good commit messages</h3>
+        <p
+          >Commit messages are important for tracking changes to your code and
+          understanding the history of a project. Write clear, descriptive
+          commit messages that explain the changes you've made and why you made
+          them.</p
+        >
+        <h3>Use Git hooks to automate tasks</h3>
+        <p
+          >Git hooks are scripts that run automatically when certain Git actions
+          are performed, such as committing code. Use Git hooks to automate
+          tasks such as running tests or formatting code.</p
+        >
+        <h3>Conclusion</h3>
+        <p
+          >Version control with Git and GitHub is an important part of software
+          development. Learn the basics of Git, use GitHub for collaboration and
+          code hosting, follow best practices for branching and merging, write
+          good commit messages, and use Git hooks to automate tasks for a smooth
+          and efficient development workflow.</p
         >
       </article>
     </div>

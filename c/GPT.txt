@@ -12,4 +12,13 @@ If you need to write a code exmple, use this : <pre class="language-csharp"><cod
 If you need to add list, use <ol> and <li> tags.
 Use <span> for one line of code, instead of <code> tag
 
-My first title is "19. Understanding HTML Attributes".
+My twenty second title is "22. Multi-threading and asynchronous programming in C#".
+
+
+
+
+
+I need to create a PHP for beginners course.
+Give me a list of titles I should put in my course.
+I need this course to be comprehensive (Course should contain a to z details about PHP).
+Your list should have more than 30 titles. 

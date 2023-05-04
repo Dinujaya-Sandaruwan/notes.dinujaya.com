@@ -1,0 +1,33 @@
+01. Introduction to C# programming language
+02. Understanding the .NET framework
+03. Setting up your development environment
+04. Creating your first C# program
+05. Data types and variables in C#
+06. Operators and expressions in C#
+07. Control flow statements in C#
+08. Working with arrays and collections
+09. Methods and functions in C#
+10. Debugging your code in Visual Studio
+
+11. Object-oriented programming in C#
+12. Classes and objects in C#
+13. Inheritance and polymorphism in C#
+14. Interfaces and abstract classes
+15. Handling exceptions and errors
+16. Working with strings and characters
+17. File and directory manipulation in C#
+18. Introduction to LINQ (Language Integrated Query)
+19. Delegates and events in C#
+20. Working with generic collections
+21. Advanced LINQ techniques
+
+22. Multi-threading and asynchronous programming in C#
+23. Working with databases using ADO.NET
+24. Building desktop applications with Windows Forms
+25. Building web applications with ASP.NET
+26. Introduction to web services and REST APIs
+27. Creating and consuming REST APIs in C#
+28. Test-driven development in C#
+29. Code profiling and optimization techniques
+30. Using third-party libraries and NuGet packages in C#
+31. Version control with Git and GitHub
