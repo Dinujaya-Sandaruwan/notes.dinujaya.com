@@ -1,0 +1,24 @@
+I recently finished my python course. So I need to create a note for first main topic of this course which is "Getting Started".
+I will give you a title and you should write a short note including code examples for me. 
+I need to put those notes in my website so, notes should be written in HTML. 
+
+Here is your institutions :
+
+Everything should be inside a HTML <article> element.
+If you need to write a title, use <h2 tag> like, <h2>Title goes here</h2>.
+Other text shound be inside <p> tag like <P>text goes here</p>.
+If you need a line braek, use two <br/> tags.
+If you need to write a code exmple, use this : <pre class="language-python"><code>Code goes here</code></pre>.
+If you need to add list, use <ol> and <li> tags.
+Use <span> for one line of code, instead of <code> tag
+
+My twentieth title is "01- What is Python".
+
+
+
+
+
+I need to create a PHP for beginners course.
+Give me a list of titles I should put in my course.
+I need this course to be comprehensive (Course should contain a to z details about PHP).
+Your list should have more than 30 titles. 
