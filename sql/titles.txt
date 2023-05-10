@@ -1,0 +1,121 @@
+continue writting
+
+Getting Started
+
+01 Introduction to SQL and Relational Databases
+02 Installing and Configuring SQL Server
+03 Basic SQL Syntax and Structure
+04 Writing Your First SQL Query
+05 Using SQL Clients and Tools
+
+Retrieving Data From a Single Table
+
+01 SELECT Statement and Clauses
+02 Filtering Data with WHERE
+03 Sorting Data with ORDER BY
+04 Limiting Results with TOP/LIMIT
+05 Using Aggregate Functions (COUNT, SUM, AVG, etc.)
+
+Retrieving Data From Multiple Tables
+
+01 Joining Tables with INNER JOIN, LEFT JOIN, RIGHT JOIN
+02 Combining Results with UNION and UNION ALL
+03 Working with Subqueries
+04 Using Common Table Expressions (CTEs)
+05 Using Window Functions
+
+Inserting, Updating, and Deleting Data
+
+01 Inserting Data with INSERT INTO
+02 Updating Data with UPDATE
+03 Deleting Data with DELETE
+04 Working with Transactions and Rollbacks
+05 Managing Constraints (UNIQUE, NOT NULL, FOREIGN KEY)
+
+Summarizing Data
+
+01 Grouping Data with GROUP BY
+02 Filtering Groups with HAVING
+03 Using Aggregate Functions (COUNT, SUM, AVG, etc.)
+04 Pivoting Data with PIVOT and UNPIVOT
+05 Analyzing Data with ROLLUP and CUBE
+
+Writing Complex Query
+
+01 Combining Clauses (WHERE, GROUP BY, HAVING, ORDER BY)
+02 Using Subqueries and Nested Queries
+03 Using Derived Tables and Views
+04 Creating Dynamic Queries with Parameters
+05 Optimizing Query Performance
+
+Essential MySQL Functions
+
+01 String Functions (LEN, SUBSTRING, REPLACE, etc.)
+02 Numeric Functions (ABS, CEILING, FLOOR, etc.)
+03 Date and Time Functions (NOW, DATEADD, DATEDIFF, etc.)
+04 Conditional Functions (CASE, IF, NULLIF, etc.)
+05 Conversion Functions (CAST, CONVERT, etc.)
+
+Views
+
+01 Creating Views and Using Them
+02 Modifying and Dropping Views
+03 Combining Views with Joins and Subqueries
+04 Securing Views with Permissions
+05 Performance Considerations with Views
+
+Stored Procedures
+
+01 Creating Stored Procedures
+02 Passing Parameters to Procedures
+03 Returning Results from Procedures
+04 Managing Transactions in Procedures
+05 Using Stored Procedures in Applications
+
+Triggers and Events
+
+01 Creating Triggers and Events
+02 Trigger Types (BEFORE, AFTER, INSTEAD OF)
+03 Triggering Events (INSERT, UPDATE, DELETE)
+04 Managing Triggers and Events
+05 Securing Triggers and Events with Permissions
+
+Transactions and Concurrency
+
+01 Understanding Transactions and ACID
+02 Managing Transactions in SQL
+03 Concurrency Control with Locking
+04 Optimistic Concurrency Control with Versioning
+05 Isolation Levels and Transaction Scopes
+
+Data Types
+
+01 Numeric Data Types (INTEGER, DECIMAL, FLOAT, etc.)
+02 Character Data Types (CHAR, VARCHAR, TEXT, etc.)
+03 Date and Time Data Types (DATE, DATETIME, TIMESTAMP, etc.)
+04 Binary Data Types (BINARY, VARBINARY, BLOB, etc.)
+05 Custom Data Types and User-Defined Types
+
+Designing Databases
+
+01 Database Design Principles and Concepts
+02 Normalization and Denormalization
+03 Creating and Modifying Tables
+04 Defining Relationships (ONE-TO-ONE, ONE-TO-MANY, MANY-TO-MANY)
+05 Database Design Tools and Best Practices
+
+Indexing for High Performance
+
+01 Understanding Indexing and Query Optimization
+02 Creating Indexes (CLUSTERED, NONCLUSTERED)
+03 Using Indexes to Optimize Queries
+04 Analyzing Query Performance with Execution Plans and Indexing Tools
+05 Best Practices for Indexing and Query Optimization
+
+Securing Databases
+
+01 Database Security Principles and Concepts
+02 Managing User Accounts and Permissions
+03 Auditing and Logging Database Activity
+04 Protecting Data with Encryption and Hashing
+05 Backup and Recovery Strategies

@@ -13,6 +13,7 @@ continue writting
 09- Running Python Code
 10- Python Implementations
 11- How Python Code is Executed
+12- Python interpreter types 
 
 2- Primitive Types
 
@@ -56,7 +57,7 @@ continue writting
 
 5- Data Structures
 
-01- Lists-l8bubjmcmw
+01- Lists
 02- Accessing Items
 03- List Unpacking
 04- Looping over Lists
@@ -194,9 +195,8 @@ continue writting
 17- Raising 404 Errors
 18- Referencing Urls
 19- Creating APIs
-20- Adding the Homepage
-21- Getting Ready to Deploy
-22- Deployment
+20- Getting Ready to Deploy
+21- Deployment
 
 13- Machine Learning with Python
 
