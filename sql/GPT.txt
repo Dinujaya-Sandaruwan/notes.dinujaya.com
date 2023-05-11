@@ -1,5 +1,5 @@
 I recently finished my SQL course.
-So I need to create a note for one of main topics of this course which is "Getting Started".
+So I need to create a note for one of main topics of this course which is "Securing Databasese".
 I will give you a title and you should write a short note including code examples for me. 
 I need to put those notes in my website so, notes should be written in HTML. 
 
@@ -15,7 +15,7 @@ Use <span> for one line of code, instead of <code> tag
 Don't write more than 300 words
 Everything should be inside a HTML <article> element. (important)
 
-My first title is "01 Introduction to SQL and Relational Databases".
+My first title is "01 Database Security Principles and Concepts".
 
 
 

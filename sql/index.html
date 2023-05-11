@@ -67,12 +67,3639 @@
       </div>
     </nav>
 
-    <h1 class="heading">PYTHON NOTES</h1>
+    <h1 class="heading">SQL NOTES</h1>
 
     <!-- Content of this page -->
 
-    <div class="content"></div>
+    <div class="content">
+      <h2 class="a-main-topic">01 Getting Started</h2>
+      <article>
+        <h2>01 Introduction to SQL and Relational Databases</h2>
+        <p>
+          SQL stands for Structured Query Language and it is used to manage
+          relational databases. Relational databases store data in tables with
+          rows and columns. Each table represents a specific entity such as
+          customers, orders or products and each row represents an instance of
+          that entity. SQL allows us to interact with these databases by
+          querying, updating or deleting data.
+        </p>
+        <p> Here's an example of how to create a table in SQL: </p>
+        <pre class="language-sql"><code>
+          CREATE TABLE Customers (
+            CustomerID INT PRIMARY KEY,
+            FirstName VARCHAR(50),
+            LastName VARCHAR(50),
+            Email VARCHAR(255)
+          );
+        </code></pre>
+        <p>
+          The above SQL code creates a table called "Customers" with four
+          columns: "CustomerID", "FirstName", "LastName" and "Email". The
+          "CustomerID" column is designated as the primary key which means it
+          will uniquely identify each row in the table. The "VARCHAR" data type
+          is used for variable length character strings and the number in
+          parentheses specifies the maximum length of the string.
+        </p>
+        <p>
+          Another important aspect of SQL is querying data from tables. Here's
+          an example of how to select all the data from the "Customers" table:
+        </p>
+        <pre class="language-sql"><code>
+          SELECT * FROM Customers;
+        </code></pre>
+        <p>
+          The above SQL code selects all the data from the "Customers" table and
+          returns it in a result set. The "*" symbol is a wildcard character
+          that represents all columns in the table. We can also specify which
+          columns we want to select by listing them after the "SELECT" keyword
+          separated by commas.
+        </p>
+        <p>
+          SQL is a powerful tool for managing data in relational databases.
+          Understanding the basics of SQL and relational databases is an
+          essential skill for any data professional.
+        </p>
+      </article>
+      <article>
+        <h2>02 Installing and Configuring SQL Server</h2>
+        <p>
+          Before we can start working with SQL Server, we need to install and
+          configure it. SQL Server is a relational database management system
+          developed by Microsoft. It can be installed on Windows, Linux or
+          Docker containers.
+        </p>
+        <p>
+          Here are the steps to install and configure SQL Server on Windows:
+        </p>
+        <ol>
+          <li
+            >Download the SQL Server installation file from the Microsoft
+            website.</li
+          >
+          <li
+            >Run the installation file and follow the prompts to install SQL
+            Server.</li
+          >
+          <li
+            >During the installation process, choose the appropriate options for
+            your needs such as the edition of SQL Server, the default instance
+            name, and the authentication mode.</li
+          >
+          <li
+            >After the installation is complete, open SQL Server Management
+            Studio (SSMS), which is the primary interface for managing SQL
+            Server.</li
+          >
+          <li
+            >Connect to the SQL Server instance using either Windows or SQL
+            Server authentication.</li
+          >
+        </ol>
+        <p>
+          Once we have installed SQL Server, we can start configuring it to suit
+          our needs. One important aspect of configuration is setting up
+          security. Here's an example of how to create a login and user in SQL
+          Server:
+        </p>
+        <pre class="language-sql"><code>
+          -- Create a login for SQL Server authentication
+          CREATE LOGIN [username] WITH PASSWORD = 'password';
+          -- Create a user for the login in a specific database
+          USE [database];
+          CREATE USER [username] FOR LOGIN [username];
+  </code></pre>
 
+        <p>
+          The above SQL code creates a login called "username" with the password
+          "password". It then creates a user with the same name in the
+          "database" database. The user will have the same permissions as the
+          login.
+        </p>
+        <p>
+          SQL Server can be further configured to improve performance, enable
+          high availability, or provide additional security. These topics go
+          beyond the scope of this note but are important to consider when
+          setting up a production database environment.
+        </p>
+      </article>
+      <article>
+        <h2>03 Basic SQL Syntax and Structure</h2>
+        <p>
+          SQL syntax is based on a set of rules and guidelines for writing
+          statements. The syntax of SQL is relatively simple and easy to
+          understand, but it is important to follow the rules to avoid syntax
+          errors and ensure proper functionality of your queries.
+        </p>
+        <p> Here are some basic SQL syntax rules and structure: </p>
+        <ul>
+          <li
+            >All SQL statements begin with a keyword such as SELECT, INSERT,
+            UPDATE, DELETE, CREATE, DROP, etc.</li
+          >
+          <li
+            >SQL keywords are not case-sensitive, but it is a good practice to
+            write them in uppercase for readability.</li
+          >
+          <li>SQL statements are terminated with a semicolon (;).</li>
+          <li>Whitespace (spaces, tabs, line breaks) is ignored by SQL.</li>
+          <li
+            >Comments can be added to SQL code using "--" for single-line
+            comments or "/* */" for multi-line comments.</li
+          >
+        </ul>
+        <p> Here's an example of a basic SQL SELECT statement: </p>
+        <pre class="language-sql"><code>
+          SELECT column1, column2, ...
+          FROM table_name
+          WHERE condition;
+        </code></pre>
+        <p>
+          The above SQL code selects data from a table called "table_name" and
+          returns the columns specified in the SELECT statement. The WHERE
+          clause is used to filter the data based on a condition.
+        </p>
+        <p> Here's an example of a basic SQL INSERT statement: </p>
+        <pre class="language-sql"><code>
+          INSERT INTO table_name (column1, column2, ...)
+          VALUES (value1, value2, ...);
+        </code></pre>
+        <p>
+          The above SQL code inserts a new row into the "table_name" table with
+          the values specified in the VALUES clause. The columns to insert data
+          into are specified in the INSERT INTO clause.
+        </p>
+        <p>
+          SQL syntax can be further extended with advanced features such as
+          JOINs, GROUP BY, HAVING, and more. It is important to have a good
+          understanding of basic SQL syntax and structure before moving on to
+          more advanced topics.
+        </p>
+      </article>
+      <article>
+        <h2>04 Writing Your First SQL Query</h2>
+        <p>
+          Writing your first SQL query can be intimidating, but once you get the
+          hang of it, it becomes much easier. In this note, we'll walk through
+          the process of writing a basic SQL SELECT query.
+        </p>
+        <p>
+          Let's say we have a table called "employees" with the following
+          columns: "id", "first_name", "last_name", "email", "hire_date", and
+          "salary". Our goal is to select all columns from this table where the
+          employee's last name is "Smith".
+        </p>
+        <p> Here's the SQL code to achieve this: </p>
+        <pre class="language-sql"><code>
+          SELECT * 
+          FROM employees 
+          WHERE last_name = 'Smith';
+        </code></pre>
+        <p> Let's break down what this code is doing: </p>
+        <ul>
+          <li
+            >The SELECT statement is used to select columns from a table. In
+            this case, we're using an asterisk (*) to select all columns.</li
+          >
+          <li
+            >The FROM clause specifies which table to select data from. In this
+            case, we're selecting from the "employees" table.</li
+          >
+          <li
+            >The WHERE clause is used to filter data based on a condition. In
+            this case, we're filtering by last name equal to 'Smith'.</li
+          >
+        </ul>
+        <p>
+          When you run this query, it will return all columns for employees
+          whose last name is "Smith". It's important to note that SQL is
+          case-insensitive, so 'Smith' and 'smith' would return the same
+          results.
+        </p>
+        <p>
+          SQL queries can be much more complex than this, but this example
+          should give you a good starting point for writing your own queries.
+          With practice, you'll become more comfortable with SQL syntax and be
+          able to write more advanced queries.
+        </p>
+      </article>
+      <article>
+        <h2>05 Using SQL Clients and Tools</h2>
+        <p>
+          SQL clients and tools are essential for working with SQL databases.
+          They provide an interface for executing SQL queries and managing
+          database schemas and data. In this note, we'll go over some of the
+          most commonly used SQL clients and tools.
+        </p>
+        <h3>1. SQL Server Management Studio</h3>
+        <p>
+          SQL Server Management Studio (SSMS) is a Microsoft tool used to manage
+          SQL Server databases. It's a comprehensive tool that allows you to
+          perform administrative tasks, execute queries, and manage database
+          objects. SSMS is free to download and is widely used in the SQL Server
+          community.
+        </p>
+        <h3>2. MySQL Workbench</h3>
+        <p>
+          MySQL Workbench is a tool used to manage MySQL databases. It provides
+          a visual interface for designing database schemas, executing queries,
+          and managing database objects. MySQL Workbench is free to download and
+          is widely used in the MySQL community.
+        </p>
+        <h3>3. pgAdmin</h3>
+        <p>
+          pgAdmin is a tool used to manage PostgreSQL databases. It provides a
+          graphical interface for managing database objects, executing queries,
+          and performing administrative tasks. pgAdmin is free to download and
+          is widely used in the PostgreSQL community.
+        </p>
+        <h3>4. DBeaver</h3>
+        <p>
+          DBeaver is a free and open-source SQL client tool that supports
+          multiple database management systems, including MySQL, PostgreSQL, SQL
+          Server, Oracle, and many more. It provides a visual interface for
+          managing database objects, executing queries, and performing
+          administrative tasks. DBeaver is a popular tool in the SQL community
+          due to its support for multiple database systems and its ease of use.
+        </p>
+        <p>
+          These are just a few examples of SQL clients and tools available to
+          use. Each tool has its own strengths and weaknesses, so it's important
+          to choose one that fits your needs and preferences. With the right SQL
+          client or tool, working with SQL databases can be a breeze.
+        </p>
+      </article>
+      <h2 class="a-main-topic">02. Retrieving Data From a Single Table</h2>
+      <article>
+        <h2>01 SELECT Statement and Clauses</h2>
+        <p
+          >The SELECT statement is the most commonly used statement in SQL. It
+          is used to retrieve data from one or more tables in a database. The
+          basic syntax of the SELECT statement is as follows:</p
+        >
+        <pre class="language-sql"><code>SELECT column1, column2, ...
+    FROM table_name;</code></pre>
+        <p
+          >The columns that you want to retrieve are listed after the SELECT
+          keyword, separated by commas. The table from which you want to
+          retrieve data is listed after the FROM keyword.</p
+        >
+        <p
+          >There are various clauses that can be used with the SELECT statement
+          to retrieve data more selectively. Some of the commonly used clauses
+          are:</p
+        >
+        <ol>
+          <li
+            ><b>WHERE Clause:</b> The WHERE clause is used to filter the rows
+            that are retrieved. You can specify one or more conditions that must
+            be met by the rows. For example:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+    FROM customers
+    WHERE country = 'USA';</code></pre>
+        <p
+          >This statement retrieves all the columns and rows from the customers
+          table where the country is USA.</p
+        >
+        <ol start="2">
+          <li
+            ><b>ORDER BY Clause:</b> The ORDER BY clause is used to sort the
+            rows that are retrieved. You can specify one or more columns to sort
+            by, and you can specify whether the sorting should be in ascending
+            or descending order. For example:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+    FROM customers
+    ORDER BY last_name ASC;</code></pre>
+        <p
+          >This statement retrieves all the columns and rows from the customers
+          table and sorts them by the last name column in ascending order.</p
+        >
+        <ol start="3">
+          <li
+            ><b>GROUP BY Clause:</b> The GROUP BY clause is used to group rows
+            that have the same values in one or more columns. You can also use
+            aggregate functions, such as COUNT, SUM, AVG, MAX, and MIN, to
+            perform calculations on the grouped rows. For example:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT country, COUNT(*)
+    FROM customers
+    GROUP BY country;</code></pre>
+        <p
+          >This statement retrieves the country column and the count of rows for
+          each country from the customers table.</p
+        >
+      </article>
+      <article>
+        <h2>02 Filtering Data with WHERE</h2>
+        <p
+          >The WHERE clause is used to filter the rows that are retrieved from a
+          table based on one or more conditions. The basic syntax of the WHERE
+          clause is as follows:</p
+        >
+        <pre class="language-sql"><code>SELECT column1, column2, ...
+  FROM table_name
+  WHERE condition;</code></pre>
+        <p
+          >The condition can be a simple comparison between a column and a
+          value, or it can be a more complex expression that combines multiple
+          conditions using logical operators.</p
+        >
+        <p
+          >Some of the comparison operators that can be used in the WHERE clause
+          are:</p
+        >
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>=</td>
+              <td>Equal to</td>
+            </tr>
+            <tr>
+              <td>&lt;&gt; or !=</td>
+              <td>Not equal to</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>Greater than</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>Less than</td>
+            </tr>
+            <tr>
+              <td>&gt;=</td>
+              <td>Greater than or equal to</td>
+            </tr>
+            <tr>
+              <td>&lt;=</td>
+              <td>Less than or equal to</td>
+            </tr>
+          </tbody>
+        </table>
+        <p
+          >Here are some examples of how the WHERE clause can be used to filter
+          data:</p
+        >
+        <ol>
+          <li
+            ><b>Simple Comparison:</b> This example retrieves all the rows from
+            the customers table where the country is 'USA':</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+  FROM customers
+  WHERE country = 'USA';</code></pre>
+        <ol start="2">
+          <li
+            ><b>Multiple Conditions:</b> This example retrieves all the rows
+            from the orders table where the quantity is greater than 10 and the
+            price is less than 100:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+  FROM orders
+  WHERE quantity > 10 AND price < 100;</code></pre>
+        <ol start="3">
+          <li
+            ><b>Pattern Matching:</b> This example retrieves all the rows from
+            the products table where the product name starts with 'C':</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+  FROM products
+  WHERE product_name LIKE 'C%';</code></pre>
+        <p
+          >The % symbol is used as a wildcard to match any string of zero or
+          more characters.</p
+        >
+      </article>
+      <article>
+        <h2>03 Sorting Data with ORDER BY</h2>
+        <p
+          >The ORDER BY clause is used to sort the result set in either
+          ascending or descending order based on one or more columns. The basic
+          syntax of the ORDER BY clause is as follows:</p
+        >
+        <pre class="language-sql"><code>SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1 [ASC | DESC], column2 [ASC | DESC], ...;</code></pre>
+        <p
+          >The ASC keyword is used to sort the result set in ascending order
+          (which is the default), while the DESC keyword is used to sort the
+          result set in descending order.</p
+        >
+        <p
+          >Here are some examples of how the ORDER BY clause can be used to sort
+          data:</p
+        >
+        <ol>
+          <li
+            ><b>Sorting by a Single Column:</b> This example retrieves all the
+            rows from the customers table and sorts them in ascending order
+            based on the customer name:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+FROM customers
+ORDER BY customer_name;</code></pre>
+        <ol start="2">
+          <li
+            ><b>Sorting by Multiple Columns:</b> This example retrieves all the
+            rows from the orders table and sorts them in ascending order based
+            on the customer ID and then by the order date:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+FROM orders
+ORDER BY customer_id, order_date;</code></pre>
+        <p
+          >In this example, the result set is first sorted by the customer ID in
+          ascending order, and then within each group of rows with the same
+          customer ID, the rows are sorted by the order date in ascending
+          order.</p
+        >
+        <ol start="3">
+          <li
+            ><b>Sorting in Descending Order:</b> This example retrieves all the
+            rows from the products table and sorts them in descending order
+            based on the product price:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT *
+FROM products
+ORDER BY product_price DESC;</code></pre>
+        <p
+          >In this example, the result set is sorted by the product price in
+          descending order.</p
+        >
+      </article>
+      <article>
+        <h2>04 Limiting Results with TOP/LIMIT</h2>
+        <p
+          >When working with large datasets, it is often useful to limit the
+          number of results returned by a query. This can be accomplished using
+          the TOP or LIMIT clause, depending on the specific database system
+          being used.</p
+        >
+        <ol>
+          <li
+            ><b>TOP Clause:</b> The TOP clause is used in SQL Server and
+            Microsoft Access to limit the number of rows returned by a query.
+            The basic syntax of the TOP clause is as follows:</li
+          >
+        </ol>
+        <pre
+          class="language-sql"
+        ><code>SELECT TOP number|percent column1, column2, ...
+FROM table_name;</code></pre>
+        <p
+          >The TOP keyword is followed by either a number or a percentage, which
+          specifies the maximum number of rows to return. For example, the
+          following query retrieves the top 10 rows from the customers table:</p
+        >
+        <pre class="language-sql"><code>SELECT TOP 10 *
+FROM customers;</code></pre>
+        <ol start="2">
+          <li
+            ><b>LIMIT Clause:</b> The LIMIT clause is used in MySQL, PostgreSQL,
+            SQLite, and some other databases to limit the number of rows
+            returned by a query. The basic syntax of the LIMIT clause is as
+            follows:</li
+          >
+        </ol>
+        <pre class="language-sql"><code>SELECT column1, column2, ...
+FROM table_name
+LIMIT [offset,] row_count;</code></pre>
+        <p
+          >The LIMIT keyword is followed by two parameters, the first of which
+          specifies the starting row (offset) and the second of which specifies
+          the maximum number of rows to return. For example, the following query
+          retrieves the first 10 rows from the customers table:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+FROM customers
+LIMIT 10;</code></pre>
+        <p
+          >The LIMIT clause also allows for specifying the starting row using an
+          offset value. For example, to retrieve rows 11-20 from the customers
+          table, the following query can be used:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+FROM customers
+LIMIT 10, 10;</code></pre>
+        <p
+          >This query skips the first 10 rows and retrieves the next 10 rows.</p
+        >
+      </article>
+      <article>
+        <h2>05 Using Aggregate Functions (COUNT, SUM, AVG, etc.)</h2>
+        <p
+          >Aggregate functions are used to perform calculations on sets of
+          values and return a single value. Some common aggregate functions in
+          SQL include:</p
+        >
+        <ul>
+          <li>COUNT(): Returns the number of rows in a specified column.</li>
+          <li>SUM(): Returns the sum of values in a specified column.</li>
+          <li>AVG(): Returns the average value of a specified column.</li>
+          <li>MAX(): Returns the maximum value in a specified column.</li>
+          <li>MIN(): Returns the minimum value in a specified column.</li>
+        </ul>
+        <p>The syntax for using an aggregate function is as follows:</p>
+        <pre class="language-sql"><code>SELECT aggregate_function(column_name)
+FROM table_name
+WHERE condition;</code></pre>
+        <p
+          >For example, the following query calculates the total number of
+          customers in the customers table:</p
+        >
+        <pre class="language-sql"><code>SELECT COUNT(*)
+FROM customers;</code></pre>
+        <p>The following query calculates the average price of all orders:</p>
+        <pre class="language-sql"><code>SELECT AVG(price)
+FROM orders;</code></pre>
+        <p
+          >Aggregate functions can also be combined with other SQL clauses such
+          as GROUP BY to group the results based on one or more columns. For
+          example, the following query calculates the total number of customers
+          in each country:</p
+        >
+        <pre class="language-sql"><code>SELECT country, COUNT(*)
+FROM customers
+GROUP BY country;</code></pre>
+        <p
+          >This query groups the results by country and calculates the number of
+          customers in each country.</p
+        >
+      </article>
+      <h2 class="a-main-topic">03. Retrieving Data From Multiple Tables</h2>
+      <article>
+        <h2>Joining Tables with INNER JOIN, LEFT JOIN, RIGHT JOIN</h2>
+        <p
+          >One of the main benefits of using SQL is the ability to join data
+          from multiple tables to get a more complete picture of the information
+          you are querying. The most common types of joins are INNER JOIN, LEFT
+          JOIN, and RIGHT JOIN.</p
+        >
+        <h3>INNER JOIN</h3>
+        <p
+          >The INNER JOIN returns only the rows that have matching values in
+          both tables. Here's an example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT orders.order_id, customers.customer_name
+      FROM orders
+      INNER JOIN customers
+      ON orders.customer_id = customers.customer_id;</code></pre>
+        <p
+          >In this example, the orders table is joined with the customers table
+          using the customer_id column. The resulting table will contain only
+          the rows where there is a matching customer_id value in both
+          tables.</p
+        >
+        <h3>LEFT JOIN</h3>
+        <p
+          >The LEFT JOIN returns all the rows from the left table and matching
+          rows from the right table. If there are no matching rows, the result
+          will contain NULL values for the right table columns. Here's an
+          example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT customers.customer_name, orders.order_id
+      FROM customers
+      LEFT JOIN orders
+      ON customers.customer_id = orders.customer_id;</code></pre>
+        <p
+          >In this example, the customers table is joined with the orders table
+          using the customer_id column. The resulting table will contain all
+          rows from the customers table and matching rows from the orders table.
+          If there are no matching rows in the orders table, the result will
+          contain NULL values for the order_id column.</p
+        >
+        <h3>RIGHT JOIN</h3>
+        <p
+          >The RIGHT JOIN returns all the rows from the right table and matching
+          rows from the left table. If there are no matching rows, the result
+          will contain NULL values for the left table columns. Here's an
+          example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT customers.customer_name, orders.order_id
+      FROM customers
+      RIGHT JOIN orders
+      ON customers.customer_id = orders.customer_id;</code></pre>
+        <p
+          >In this example, the orders table is joined with the customers table
+          using the customer_id column. The resulting table will contain all
+          rows from the orders table and matching rows from the customers table.
+          If there are no matching rows in the customers table, the result will
+          contain NULL values for the customer_name column.</p
+        >
+      </article>
+      <article>
+        <h2>Combining Results with UNION and UNION ALL</h2>
+        <p
+          >Sometimes you may need to combine the results of two or more SELECT
+          statements into a single result set. SQL provides two operators for
+          doing this: UNION and UNION ALL.</p
+        >
+        <h3>UNION</h3>
+        <p
+          >The UNION operator is used to combine the results of two SELECT
+          statements into a single result set. The resulting columns from both
+          SELECT statements must be of the same data type. Here's an example:</p
+        >
+        <pre class="language-sql"><code>SELECT customer_name, city
+      FROM customers
+      WHERE country = 'USA'
+      UNION
+      SELECT supplier_name, city
+      FROM suppliers
+      WHERE country = 'USA';</code></pre>
+        <p
+          >In this example, the results of two SELECT statements are combined
+          into a single result set using the UNION operator. The first SELECT
+          statement retrieves customer names and cities for customers located in
+          the USA. The second SELECT statement retrieves supplier names and
+          cities for suppliers located in the USA. The resulting table will
+          contain all unique combinations of customer names and cities, and
+          supplier names and cities located in the USA.</p
+        >
+        <h3>UNION ALL</h3>
+        <p
+          >The UNION ALL operator is used to combine the results of two SELECT
+          statements into a single result set, including duplicate rows. Here's
+          an example:</p
+        >
+        <pre class="language-sql"><code>SELECT customer_name, city
+      FROM customers
+      WHERE country = 'USA'
+      UNION ALL
+      SELECT supplier_name, city
+      FROM suppliers
+      WHERE country = 'USA';</code></pre>
+        <p
+          >In this example, the results of two SELECT statements are combined
+          into a single result set using the UNION ALL operator. The resulting
+          table will contain all rows from both SELECT statements, including
+          duplicate rows if they exist.</p
+        >
+      </article>
+      <article>
+        <h2>Working with Subqueries</h2>
+        <p
+          >A subquery is a SELECT statement that is nested within another SELECT
+          statement or another SQL statement. Subqueries are often used to
+          return a single value that will be used in the main query, or to
+          filter data based on a specific condition. Here's an example:</p
+        >
+        <pre class="language-sql"><code>SELECT customer_name, city
+      FROM customers
+      WHERE country = (
+        SELECT country
+        FROM suppliers
+        WHERE supplier_name = 'ABC Company'
+      );</code></pre>
+        <p
+          >In this example, the main query retrieves customer names and cities
+          for customers located in the same country as the supplier named 'ABC
+          Company'. The subquery is used to retrieve the country for the
+          supplier named 'ABC Company', and this value is used as a filter
+          condition in the main query.</p
+        >
+        <h3>Types of Subqueries</h3>
+        <p
+          >There are two types of subqueries in SQL: the single-row subquery and
+          the multiple-row subquery.</p
+        >
+        <h4>Single-Row Subquery</h4>
+        <p
+          >A single-row subquery returns only one row of results to the outer
+          query. The result is used in a comparison to filter or join the outer
+          query. Here's an example:</p
+        >
+        <pre class="language-sql"><code>SELECT product_name, unit_price
+      FROM products
+      WHERE unit_price = (
+        SELECT MAX(unit_price)
+        FROM products
+      );</code></pre>
+        <p
+          >In this example, the main query retrieves product names and unit
+          prices for products that have the maximum unit price in the products
+          table. The subquery returns the maximum unit price value from the
+          products table, which is used as a filter condition in the main
+          query.</p
+        >
+        <h4>Multiple-Row Subquery</h4>
+        <p
+          >A multiple-row subquery returns more than one row of results to the
+          outer query. The result is used in a comparison to filter or join the
+          outer query. Here's an example:</p
+        >
+        <pre class="language-sql"><code>SELECT customer_name, city
+      FROM customers
+      WHERE country IN (
+        SELECT country
+        FROM suppliers
+        WHERE supplier_name LIKE 'A%'
+      );</code></pre>
+        <p
+          >In this example, the main query retrieves customer names and cities
+          for customers located in the same country as suppliers whose names
+          start with the letter 'A'. The subquery returns all countries where
+          suppliers have names starting with 'A', and this list of countries is
+          used as a filter condition in the main query.</p
+        >
+      </article>
+      <article>
+        <h2>Using Common Table Expressions (CTEs)</h2>
+        <p
+          >A Common Table Expression (CTE) is a named temporary result set that
+          you can reference within a SELECT, INSERT, UPDATE, or DELETE
+          statement. CTEs can simplify complex queries and make them easier to
+          read and maintain. Here's an example:</p
+        >
+        <pre class="language-sql"><code>WITH top_products AS (
+        SELECT product_name, unit_price, category_id
+        FROM products
+        ORDER BY unit_price DESC
+        LIMIT 10
+      )
+      SELECT category_name, AVG(unit_price) AS avg_price
+      FROM top_products
+      JOIN categories ON top_products.category_id = categories.category_id
+      GROUP BY category_name;</code></pre>
+        <p
+          >In this example, the CTE named 'top_products' selects the top 10
+          products with the highest unit price, along with their category IDs.
+          The main query then joins the top_products CTE with the categories
+          table on the category_id column, and calculates the average unit price
+          for each category.</p
+        >
+        <p
+          >CTEs can also be recursive, allowing you to perform hierarchical
+          queries. Here's an example:</p
+        >
+        <pre class="language-sql"><code>WITH RECURSIVE category_tree AS (
+        SELECT category_id, category_name, parent_category_id, 1 AS level
+        FROM categories
+        WHERE parent_category_id IS NULL
+        UNION ALL
+        SELECT c.category_id, c.category_name, c.parent_category_id, level + 1
+        FROM categories c
+        JOIN category_tree ct ON c.parent_category_id = ct.category_id
+      )
+      SELECT category_name, level
+      FROM category_tree
+      ORDER BY level, category_name;</code></pre>
+        <p
+          >In this example, the recursive CTE named 'category_tree' selects the
+          root categories (i.e., those with a null parent_category_id), and then
+          recursively selects their child categories along with the level of
+          each category in the hierarchy. The main query then selects the
+          category name and level columns from the category_tree CTE and orders
+          the results by level and category name.</p
+        >
+      </article>
+      <article>
+        <h2>Using Window Functions</h2>
+        <p
+          >Window functions in SQL allow you to perform calculations across rows
+          that are related to the current row. This is different from regular
+          aggregate functions, which operate on the entire result set. Window
+          functions can be used for tasks such as calculating running totals,
+          rankings, and moving averages. Here's an example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT order_date, SUM(total_amount) OVER (ORDER BY order_date) AS running_total
+      FROM orders
+      ORDER BY order_date;</code></pre>
+        <p
+          >In this example, the window function 'SUM(total_amount) OVER (ORDER
+          BY order_date)' calculates a running total of the 'total_amount'
+          column, partitioned by the 'order_date' column. The result set
+          includes the 'order_date' column and the running total column, ordered
+          by 'order_date'.</p
+        >
+        <p
+          >Window functions can also be used for ranking rows based on a certain
+          criteria. Here's an example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT customer_id, order_date, total_amount, 
+             RANK() OVER (PARTITION BY customer_id ORDER BY total_amount DESC) AS rank
+      FROM orders;</code></pre>
+        <p
+          >In this example, the window function 'RANK() OVER (PARTITION BY
+          customer_id ORDER BY total_amount DESC)' ranks each order by total
+          amount, within each customer group. The result set includes the
+          'customer_id', 'order_date', 'total_amount', and 'rank' columns.</p
+        >
+        <p
+          >Window functions can also be used for calculating moving averages.
+          Here's an example:</p
+        >
+        <pre class="language-sql"><code>SELECT order_date, total_amount,
+             AVG(total_amount) OVER (ORDER BY order_date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg
+      FROM orders
+      ORDER BY order_date;</code></pre>
+        <p
+          >In this example, the window function 'AVG(total_amount) OVER (ORDER
+          BY order_date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW)' calculates a
+          moving average of the 'total_amount' column, using a window of three
+          rows (the current row and the two preceding rows). The result set
+          includes the 'order_date', 'total_amount', and 'moving_avg' columns,
+          ordered by 'order_date'.</p
+        >
+      </article>
+      <h2 class="a-main-topic">04. Inserting, Updating, and Deleting Data</h2>
+      <article>
+        <h2>01 Inserting Data with INSERT INTO</h2>
+        <p
+          >The INSERT INTO statement is used to add new rows of data to a table
+          in a database. The basic syntax of the INSERT INTO statement is:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>INSERT INTO table_name (column1, column2, column3, ...)
+        VALUES (value1, value2, value3, ...);</code></pre>
+        <p
+          >Here's an example of how to insert a new row of data into a table:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>INSERT INTO customers (first_name, last_name, email)
+        VALUES ('John', 'Doe', 'john.doe@email.com');</code></pre>
+        <p
+          >This will insert a new customer with the first name "John", last name
+          "Doe", and email "john.doe@email.com" into the "customers" table.</p
+        >
+        <br />
+        <h2>02 Updating Data with UPDATE</h2>
+        <p
+          >The UPDATE statement is used to modify existing data in a table. The
+          basic syntax of the UPDATE statement is:</p
+        >
+        <pre class="language-sql"><code>UPDATE table_name
+        SET column1 = value1, column2 = value2, ...
+        WHERE condition;</code></pre>
+        <p
+          >Here's an example of how to update the email of a customer in the
+          "customers" table:</p
+        >
+        <pre class="language-sql"><code>UPDATE customers
+        SET email = 'new_email@email.com'
+        WHERE id = 1;</code></pre>
+        <p
+          >This will update the email of the customer with an ID of 1 to
+          "new_email@email.com".</p
+        >
+        <br />
+        <h2>03 Deleting Data with DELETE</h2>
+        <p
+          >The DELETE statement is used to remove data from a table. The basic
+          syntax of the DELETE statement is:</p
+        >
+        <pre class="language-sql"><code>DELETE FROM table_name
+        WHERE condition;</code></pre>
+        <p
+          >Here's an example of how to delete a customer from the "customers"
+          table:</p
+        >
+        <pre class="language-sql"><code>DELETE FROM customers
+        WHERE id = 1;</code></pre>
+        <p
+          >This will delete the customer with an ID of 1 from the "customers"
+          table.</p
+        >
+      </article>
+      <article>
+        <h2>02 Updating Data with UPDATE</h2>
+        <p
+          >The UPDATE statement is used to modify existing data in a table. The
+          basic syntax of the UPDATE statement is:</p
+        >
+        <pre class="language-sql"><code>UPDATE table_name
+        SET column1 = value1, column2 = value2, ...
+        WHERE condition;</code></pre>
+        <p
+          >The "SET" clause specifies which columns to update and the new values
+          to set, while the "WHERE" clause specifies which rows to update based
+          on a given condition.</p
+        >
+        <h3>Updating a Single Column</h3>
+        <p>Here's an example of how to update a single column in a table:</p>
+        <pre class="language-sql"><code>UPDATE customers
+        SET email = 'new_email@email.com'
+        WHERE id = 1;</code></pre>
+        <p
+          >This will update the email of the customer with an ID of 1 to
+          "new_email@email.com".</p
+        >
+        <h3>Updating Multiple Columns</h3>
+        <p>Here's an example of how to update multiple columns in a table:</p>
+        <pre class="language-sql"><code>UPDATE customers
+        SET first_name = 'Jane', last_name = 'Doe'
+        WHERE id = 2;</code></pre>
+        <p
+          >This will update the first name and last name of the customer with an
+          ID of 2 to "Jane" and "Doe", respectively.</p
+        >
+        <h3>Updating with Calculations</h3>
+        <p
+          >You can also perform calculations in the "SET" clause when updating a
+          table:</p
+        >
+        <pre class="language-sql"><code>UPDATE products
+        SET price = price * 1.1
+        WHERE category = 'electronics';</code></pre>
+        <p
+          >This will increase the price of all products in the "electronics"
+          category by 10%.</p
+        >
+        <h3>Updating with Subqueries</h3>
+        <p
+          >You can use a subquery in the "SET" clause to update a table based on
+          the result of another query:</p
+        >
+        <pre class="language-sql"><code>UPDATE orders
+        SET status = 'shipped'
+        WHERE id IN (SELECT order_id FROM order_items WHERE product_id = 5);</code></pre>
+        <p
+          >This will update the status of all orders that contain the product
+          with an ID of 5 in their order items.</p
+        >
+      </article>
+      <article>
+        <h2>03 Deleting Data with DELETE</h2>
+        <p
+          >The DELETE statement is used to remove one or more rows from a table.
+          The basic syntax of the DELETE statement is:</p
+        >
+        <pre class="language-sql"><code>DELETE FROM table_name
+        WHERE condition;</code></pre>
+        <p
+          >The "WHERE" clause specifies which rows to delete based on a given
+          condition. If no condition is provided, all rows in the table will be
+          deleted.</p
+        >
+        <h3>Deleting All Rows</h3>
+        <p>Here's an example of how to delete all rows in a table:</p>
+        <pre class="language-sql"><code>DELETE FROM customers;</code></pre>
+        <p>This will delete all rows in the "customers" table.</p>
+        <h3>Deleting Specific Rows</h3>
+        <p>Here's an example of how to delete specific rows in a table:</p>
+        <pre class="language-sql"><code>DELETE FROM customers
+        WHERE id = 1;</code></pre>
+        <p
+          >This will delete the row in the "customers" table where the ID is
+          1.</p
+        >
+        <h3>Deleting with Subqueries</h3>
+        <p
+          >You can use a subquery in the "WHERE" clause to delete rows based on
+          the result of another query:</p
+        >
+        <pre class="language-sql"><code>DELETE FROM orders
+        WHERE id IN (SELECT order_id FROM order_items WHERE product_id = 5);</code></pre>
+        <p
+          >This will delete all orders that contain the product with an ID of 5
+          in their order items.</p
+        >
+        <h3>Deleting with JOINs</h3>
+        <p
+          >You can also use a JOIN in the "DELETE" statement to delete rows from
+          multiple tables:</p
+        >
+        <pre class="language-sql"><code>DELETE customers, orders
+        FROM customers
+        JOIN orders ON customers.id = orders.customer_id
+        WHERE customers.country = 'USA';</code></pre>
+        <p
+          >This will delete all customers and their associated orders from the
+          "customers" and "orders" tables where the customer is from the USA.</p
+        >
+      </article>
+      <article>
+        <h2>04 Working with Transactions and Rollbacks</h2>
+        <p
+          >A transaction is a sequence of one or more SQL statements that are
+          treated as a single unit of work. Transactions allow you to make
+          multiple changes to a database while ensuring data consistency and
+          integrity. If a transaction fails for any reason, you can use a
+          rollback to undo all the changes made in the transaction.</p
+        >
+        <h3>Starting a Transaction</h3>
+        <p>You can start a transaction using the "BEGIN" statement:</p>
+        <pre class="language-sql"><code>BEGIN;</code></pre>
+        <p
+          >Once you've started a transaction, any changes made to the database
+          will be temporary until you either commit the transaction or rollback
+          the changes.</p
+        >
+        <h3>Committing a Transaction</h3>
+        <p>You can commit a transaction using the "COMMIT" statement:</p>
+        <pre class="language-sql"><code>COMMIT;</code></pre>
+        <p>This will make all the changes made in the transaction permanent.</p>
+        <h3>Rolling Back a Transaction</h3>
+        <p>You can rollback a transaction using the "ROLLBACK" statement:</p>
+        <pre class="language-sql"><code>ROLLBACK;</code></pre>
+        <p
+          >This will undo all the changes made in the transaction and restore
+          the database to its previous state.</p
+        >
+        <h3>Using Transactions with INSERT, UPDATE, and DELETE Statements</h3>
+        <p
+          >You can use transactions with INSERT, UPDATE, and DELETE statements
+          to make sure that all changes are either committed or rolled back:</p
+        >
+        <pre class="language-sql"><code>BEGIN;
+        INSERT INTO customers (name, email) VALUES ('John Smith', 'john.smith@example.com');
+        UPDATE accounts SET balance = balance - 100 WHERE customer_id = 1;
+        COMMIT;</code></pre>
+        <p
+          >This transaction will insert a new customer into the "customers"
+          table, update the balance of the customer's account in the "accounts"
+          table, and then commit the changes.</p
+        >
+        <h3>Using Transactions with Stored Procedures</h3>
+        <p>You can also use transactions with stored procedures:</p>
+        <pre
+          class="language-sql"
+        ><code>CREATE PROCEDURE transfer_funds (IN sender INT, IN recipient INT, IN amount DECIMAL(10,2))
+        BEGIN
+        DECLARE EXIT HANDLER FOR SQLEXCEPTION ROLLBACK;
+        START TRANSACTION;
+        UPDATE accounts SET balance = balance - amount WHERE customer_id = sender;
+        UPDATE accounts SET balance = balance + amount WHERE customer_id = recipient;
+        COMMIT;
+        END;</code></pre>
+        <p
+          >This stored procedure transfers funds from one account to another,
+          using a transaction to ensure that both updates are either committed
+          or rolled back.</p
+        >
+      </article>
+      <article>
+        <h2>05 Managing Constraints (UNIQUE, NOT NULL, FOREIGN KEY)</h2>
+        <p
+          >Constraints are rules that you can apply to your database tables to
+          ensure data consistency and integrity. In SQL, there are several types
+          of constraints that you can use, including UNIQUE, NOT NULL, and
+          FOREIGN KEY constraints.</p
+        >
+        <h3>UNIQUE Constraints</h3>
+        <p
+          >A UNIQUE constraint ensures that all values in a column or group of
+          columns are unique. You can create a UNIQUE constraint using the
+          following syntax:</p
+        >
+        <pre class="language-sql"><code>CREATE TABLE customers (
+          customer_id INT NOT NULL,
+          email VARCHAR(255) NOT NULL UNIQUE,
+          name VARCHAR(255) NOT NULL,
+          PRIMARY KEY (customer_id)
+        );</code></pre>
+        <p
+          >In this example, the "email" column has a UNIQUE constraint, which
+          means that no two rows in the "customers" table can have the same
+          value in the "email" column.</p
+        >
+        <h3>NOT NULL Constraints</h3>
+        <p
+          >A NOT NULL constraint ensures that a column cannot contain null
+          values. You can create a NOT NULL constraint using the following
+          syntax:</p
+        >
+        <pre class="language-sql"><code>CREATE TABLE customers (
+          customer_id INT NOT NULL,
+          email VARCHAR(255) NOT NULL UNIQUE,
+          name VARCHAR(255) NOT NULL,
+          phone VARCHAR(20) NOT NULL,
+          PRIMARY KEY (customer_id)
+        );</code></pre>
+        <p
+          >In this example, the "phone" column has a NOT NULL constraint, which
+          means that every row in the "customers" table must have a value in the
+          "phone" column.</p
+        >
+        <h3>FOREIGN KEY Constraints</h3>
+        <p
+          >A FOREIGN KEY constraint ensures that the values in a column or group
+          of columns in one table correspond to the values in a column or group
+          of columns in another table. You can create a FOREIGN KEY constraint
+          using the following syntax:</p
+        >
+        <pre class="language-sql"><code>CREATE TABLE orders (
+          order_id INT NOT NULL,
+          customer_id INT NOT NULL,
+          order_date DATE NOT NULL,
+          PRIMARY KEY (order_id),
+          FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+        );</code></pre>
+        <p
+          >In this example, the "orders" table has a FOREIGN KEY constraint on
+          the "customer_id" column, which references the "customer_id" column in
+          the "customers" table. This ensures that every value in the
+          "customer_id" column in the "orders" table corresponds to a valid
+          value in the "customer_id" column in the "customers" table.</p
+        >
+        <h3>Dropping Constraints</h3>
+        <p
+          >If you need to remove a constraint from a table, you can use the
+          ALTER TABLE statement with the DROP CONSTRAINT option:</p
+        >
+        <pre class="language-sql"><code>ALTER TABLE orders
+        DROP CONSTRAINT order_customer_fk;</code></pre>
+        <p
+          >In this example, the FOREIGN KEY constraint with the name
+          "order_customer_fk" is removed from the "orders" table.</p
+        >
+      </article>
+      <h2 class="a-main-topic">05. Summarizing Data</h2>
+      <article>
+        <h2>01 Grouping Data with GROUP BY</h2>
+        <p
+          >When working with large datasets, it is often useful to summarize the
+          data by grouping it according to some criteria. The GROUP BY clause in
+          SQL allows us to group rows in a table based on one or more columns.
+          We can then apply aggregate functions to the grouped data to calculate
+          summary statistics.</p
+        >
+        <p>Here's an example:</p>
+        <pre class="language-sql"><code>SELECT column1, SUM(column2)
+        FROM table
+        GROUP BY column1;</code></pre>
+        <p
+          >This SQL query groups the rows in 'table' by 'column1' and calculates
+          the sum of 'column2' for each group. Here's a breakdown of the
+          syntax:</p
+        >
+        <ul>
+          <li
+            ><code>SELECT</code>: specifies the columns we want to retrieve from
+            the table</li
+          >
+          <li
+            ><code>SUM</code>: an aggregate function that adds up all the values
+            in a column</li
+          >
+          <li
+            ><code>FROM</code>: specifies the table we want to retrieve data
+            from</li
+          >
+          <li
+            ><code>GROUP BY</code>: specifies the column(s) we want to group the
+            data by</li
+          >
+        </ul>
+        <p>Here's an example of the output we might expect:</p>
+        <table>
+          <tr>
+            <th>column1</th>
+            <th>SUM(column2)</th>
+          </tr>
+          <tr>
+            <td>group1</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>group2</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>group3</td>
+            <td>5</td>
+          </tr>
+        </table>
+        <p
+          >Here, we can see that the data has been grouped by 'column1' and the
+          sum of 'column2' has been calculated for each group.</p
+        >
+      </article>
+      <article>
+        <h2>02 Filtering Groups with HAVING</h2>
+        <p
+          >When using the GROUP BY clause, we may want to filter the groups
+          based on some condition. The HAVING clause in SQL allows us to apply a
+          condition to the grouped data, similar to the WHERE clause for
+          individual rows.</p
+        >
+        <p>Here's an example:</p>
+        <pre class="language-sql"><code>SELECT column1, SUM(column2)
+        FROM table
+        GROUP BY column1
+        HAVING SUM(column2) > 10;</code></pre>
+        <p
+          >This SQL query groups the rows in 'table' by 'column1' and calculates
+          the sum of 'column2' for each group. The HAVING clause filters the
+          groups so that only those with a sum greater than 10 are returned.</p
+        >
+        <p>Here's a breakdown of the syntax:</p>
+        <ul>
+          <li
+            ><code>SELECT</code>: specifies the columns we want to retrieve from
+            the table</li
+          >
+          <li
+            ><code>SUM</code>: an aggregate function that adds up all the values
+            in a column</li
+          >
+          <li
+            ><code>FROM</code>: specifies the table we want to retrieve data
+            from</li
+          >
+          <li
+            ><code>GROUP BY</code>: specifies the column(s) we want to group the
+            data by</li
+          >
+          <li><code>HAVING</code>: applies a condition to the grouped data</li>
+        </ul>
+        <p>Here's an example of the output we might expect:</p>
+        <table>
+          <tr>
+            <th>column1</th>
+            <th>SUM(column2)</th>
+          </tr>
+          <tr>
+            <td>group2</td>
+            <td>15</td>
+          </tr>
+        </table>
+        <p
+          >Here, we can see that the data has been grouped by 'column1' and the
+          sum of 'column2' has been calculated for each group. However, only the
+          group with a sum greater than 10 has been returned due to the HAVING
+          clause.</p
+        >
+      </article>
+      <article>
+        <h2>03 Using Aggregate Functions (COUNT, SUM, AVG, etc.)</h2>
+        <p
+          >Aggregate functions in SQL are used to perform calculations on groups
+          of rows or entire tables. Some of the most commonly used aggregate
+          functions include COUNT, SUM, AVG, MAX, and MIN.</p
+        >
+        <p>Here are some examples:</p>
+        <pre class="language-sql"><code>SELECT COUNT(*) 
+        FROM table;</code></pre>
+        <p>This SQL query returns the total number of rows in 'table'.</p>
+        <pre class="language-sql"><code>SELECT SUM(column1)
+        FROM table;</code></pre>
+        <p
+          >This SQL query calculates the sum of 'column1' for all rows in
+          'table'.</p
+        >
+        <pre class="language-sql"><code>SELECT AVG(column2)
+        FROM table
+        WHERE column1 = 'value';</code></pre>
+        <p
+          >This SQL query calculates the average of 'column2' for all rows in
+          'table' where 'column1' equals 'value'.</p
+        >
+        <pre class="language-sql"><code>SELECT MAX(column3), MIN(column3)
+        FROM table
+        GROUP BY column1;</code></pre>
+        <p
+          >This SQL query groups the rows in 'table' by 'column1' and calculates
+          the maximum and minimum values of 'column3' for each group.</p
+        >
+        <p>Here's a breakdown of the syntax:</p>
+        <ul>
+          <li
+            ><code>SELECT</code>: specifies the aggregate function(s) we want to
+            apply</li
+          >
+          <li
+            ><code>COUNT</code>: counts the number of rows or non-null values in
+            a column</li
+          >
+          <li><code>SUM</code>: calculates the sum of values in a column</li>
+          <li
+            ><code>AVG</code>: calculates the average of values in a column</li
+          >
+          <li><code>MAX</code>: finds the maximum value in a column</li>
+          <li><code>MIN</code>: finds the minimum value in a column</li>
+          <li
+            ><code>FROM</code>: specifies the table we want to retrieve data
+            from</li
+          >
+          <li
+            ><code>WHERE</code>: applies a condition to the rows in the
+            table</li
+          >
+          <li
+            ><code>GROUP BY</code>: specifies the column(s) we want to group the
+            data by</li
+          >
+        </ul>
+        <p
+          >Aggregate functions can be used in conjunction with the GROUP BY
+          clause to perform calculations on groups of rows.</p
+        >
+      </article>
+      <article>
+        <h2>04 Pivoting Data with PIVOT and UNPIVOT</h2>
+        <p
+          >Pivoting and unpivoting data is a common task in SQL when we need to
+          transform data from rows into columns or vice versa. The
+          <code>PIVOT</code> and <code>UNPIVOT</code> operators in SQL can help
+          us accomplish this.</p
+        >
+        <h3>PIVOT</h3>
+        <p
+          >The <code>PIVOT</code> operator allows us to transform rows into
+          columns based on the values in a specific column. Here's an
+          example:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+        FROM (
+          SELECT category, product, sales
+          FROM sales_data
+        ) src
+        PIVOT (
+          SUM(sales)
+          FOR category IN ('Category A', 'Category B', 'Category C')
+        ) pvt;</code></pre>
+        <p
+          >This SQL query transforms the rows in 'sales_data' into columns based
+          on the values in the 'category' column, and calculates the sum of
+          'sales' for each 'product' in each 'category'. The resulting table
+          will have one row for each 'product', and three columns for each
+          'category' ('Category A', 'Category B', and 'Category C').</p
+        >
+        <h3>UNPIVOT</h3>
+        <p
+          >The <code>UNPIVOT</code> operator allows us to transform columns into
+          rows. Here's an example:</p
+        >
+        <pre class="language-sql"><code>SELECT product, category, sales
+        FROM sales_data
+        UNPIVOT (
+          sales FOR category IN ('Category A', 'Category B', 'Category C')
+        ) unpvt;</code></pre>
+        <p
+          >This SQL query transforms the columns in 'sales_data' into rows based
+          on the values in the 'category' column, and returns the 'product',
+          'category', and 'sales' values for each row. The resulting table will
+          have one row for each combination of 'product' and 'category'.</p
+        >
+        <p
+          >Keep in mind that the <code>PIVOT</code> and
+          <code>UNPIVOT</code> operators are only available in certain SQL
+          database systems, such as Microsoft SQL Server, Oracle, and
+          PostgreSQL.</p
+        >
+      </article>
+      <article>
+        <h2>05 Analyzing Data with ROLLUP and CUBE</h2>
+        <p
+          >The <code>ROLLUP</code> and <code>CUBE</code> operators are used in
+          SQL to perform advanced analysis of data. They can be used to generate
+          subtotals and totals for groups of data, and can be particularly
+          useful in financial and accounting applications.</p
+        >
+        <h3>ROLLUP</h3>
+        <p
+          >The <code>ROLLUP</code> operator allows us to create subtotals for
+          groups of data. Here's an example:</p
+        >
+        <pre class="language-sql"><code>SELECT region, department, SUM(sales)
+        FROM sales_data
+        GROUP BY ROLLUP(region, department);</code></pre>
+        <p
+          >This SQL query groups the 'sales_data' table by both 'region' and
+          'department', and calculates the sum of 'sales' for each group. It
+          also generates subtotals for each region and a grand total for all
+          regions and departments.</p
+        >
+        <h3>CUBE</h3>
+        <p
+          >The <code>CUBE</code> operator is similar to <code>ROLLUP</code>, but
+          generates subtotals and totals for all possible combinations of
+          grouping columns. Here's an example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT region, department, category, SUM(sales)
+        FROM sales_data
+        GROUP BY CUBE(region, department, category);</code></pre>
+        <p
+          >This SQL query groups the 'sales_data' table by 'region',
+          'department', and 'category', and calculates the sum of 'sales' for
+          each group. It also generates subtotals and totals for all possible
+          combinations of grouping columns, including subtotals for each
+          combination of two columns and a grand total for all three columns.</p
+        >
+        <p
+          >Both <code>ROLLUP</code> and <code>CUBE</code> can be used in
+          combination with other SQL clauses, such as <code>WHERE</code> and
+          <code>ORDER BY</code>, to perform complex analysis of data.</p
+        >
+      </article>
+      <h2 class="a-main-topic">06. Writing Complex Query</h2>
+      <article>
+        <h2>01 Combining Clauses (WHERE, GROUP BY, HAVING, ORDER BY)</h2>
+        <p
+          >One of the main tasks of SQL is to retrieve data from a database.
+          Writing complex queries is essential to extract the exact data we
+          need. Combining different clauses, such as WHERE, GROUP BY, HAVING,
+          and ORDER BY, helps us to achieve this goal. In this note, we will
+          discuss how we can combine these clauses to write complex queries.</p
+        >
+        <h3>WHERE Clause</h3>
+        <p
+          >The WHERE clause is used to filter data based on a specific
+          condition. We can use logical operators such as AND, OR, and NOT to
+          combine multiple conditions. For example:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+        FROM orders
+        WHERE customer_id = 1
+          AND order_date BETWEEN '2022-01-01' AND '2022-12-31';</code></pre>
+        <h3>GROUP BY Clause</h3>
+        <p
+          >The GROUP BY clause is used to group rows that have the same values
+          in one or more columns. This clause is often used with aggregate
+          functions like SUM, COUNT, AVG, MAX, and MIN to summarize data. For
+          example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT customer_id, COUNT(*) as total_orders
+        FROM orders
+        GROUP BY customer_id
+        HAVING total_orders > 10;</code></pre>
+        <h3>HAVING Clause</h3>
+        <p
+          >The HAVING clause is used to filter groups based on a specific
+          condition. This clause is often used with the GROUP BY clause and
+          aggregate functions. For example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT customer_id, COUNT(*) as total_orders
+        FROM orders
+        GROUP BY customer_id
+        HAVING total_orders > 10;</code></pre>
+        <h3>ORDER BY Clause</h3>
+        <p
+          >The ORDER BY clause is used to sort the result set based on one or
+          more columns. We can specify ASC (ascending) or DESC (descending)
+          order for each column. For example:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+        FROM orders
+        WHERE customer_id = 1
+        ORDER BY order_date DESC, order_id ASC;</code></pre>
+        <p
+          >By combining these clauses, we can write complex queries to retrieve
+          the exact data we need from a database.</p
+        >
+      </article>
+      <article>
+        <h2>02 Using Subqueries and Nested Queries</h2>
+        <p
+          >Subqueries and nested queries are two powerful features of SQL that
+          allow us to write complex queries to retrieve data from a database. In
+          this note, we will discuss how we can use subqueries and nested
+          queries to write more advanced SQL queries.</p
+        >
+        <h3>Subqueries</h3>
+        <p
+          >A subquery is a query that is nested inside another query. We can use
+          subqueries to retrieve data from one or more tables and use that data
+          in the outer query. Subqueries can be used in the WHERE, HAVING, and
+          FROM clauses. For example:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+          FROM orders
+          WHERE customer_id IN (
+            SELECT customer_id
+            FROM customers
+            WHERE city = 'New York'
+          );</code></pre>
+        <p
+          >In the above example, the subquery retrieves the customer IDs of
+          customers who live in New York, and the outer query retrieves the
+          orders made by those customers.</p
+        >
+        <h3>Nested Queries</h3>
+        <p
+          >A nested query is a query that contains multiple subqueries. Nested
+          queries can be used to retrieve data from multiple tables and combine
+          that data to produce the desired result. For example:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+          FROM (
+            SELECT customer_id, COUNT(*) as total_orders
+            FROM orders
+            GROUP BY customer_id
+          ) AS customer_orders
+          WHERE customer_id IN (
+            SELECT customer_id
+            FROM customers
+            WHERE city = 'New York'
+          )
+          ORDER BY total_orders DESC;</code></pre>
+        <p
+          >In the above example, the nested query first retrieves the total
+          number of orders made by each customer, and the outer query retrieves
+          the customer IDs and total orders for customers who live in New York.
+          The result set is then sorted in descending order by the total number
+          of orders.</p
+        >
+        <p
+          >By using subqueries and nested queries, we can write more advanced
+          SQL queries to retrieve data from a database.</p
+        >
+      </article>
+      <article>
+        <h2>03 Using Derived Tables and Views</h2>
+        <p
+          >Derived tables and views are two useful features of SQL that allow us
+          to simplify complex queries and reuse query logic. In this note, we
+          will discuss how we can use derived tables and views in SQL.</p
+        >
+        <h3>Derived Tables</h3>
+        <p
+          >A derived table is a table that is created as a result of a subquery.
+          We can use derived tables to simplify complex queries by breaking them
+          down into smaller, more manageable parts. For example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SELECT customer_id, order_date, total_amount
+            FROM (
+              SELECT customer_id, order_date, SUM(amount) as total_amount
+              FROM orders
+              GROUP BY customer_id, order_date
+            ) AS customer_orders
+            WHERE total_amount > 1000;</code></pre>
+        <p
+          >In the above example, the derived table is created by the subquery
+          that retrieves the total amount of orders made by each customer on
+          each order date. The outer query then retrieves the customer IDs,
+          order dates, and total amounts for orders that exceed $1000.</p
+        >
+        <h3>Views</h3>
+        <p
+          >A view is a virtual table that is created as a result of a SELECT
+          statement. We can use views to simplify complex queries and reuse
+          query logic. For example:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW customer_orders AS
+            SELECT customer_id, order_date, SUM(amount) as total_amount
+            FROM orders
+            GROUP BY customer_id, order_date;</code></pre>
+        <p
+          >In the above example, the view is created to retrieve the total
+          amount of orders made by each customer on each order date. We can then
+          use this view in other queries, like this:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+            FROM customer_orders
+            WHERE customer_id = 1;</code></pre>
+        <p
+          >By using derived tables and views, we can simplify complex queries
+          and reuse query logic in SQL.</p
+        >
+      </article>
+      <article>
+        <h2>04 Creating Dynamic Queries with Parameters</h2>
+        <p
+          >Dynamic queries with parameters are a powerful feature of SQL that
+          allow us to create queries that can be customized at runtime. In this
+          note, we will discuss how we can use parameters to create dynamic
+          queries in SQL.</p
+        >
+        <h3>Using Parameters</h3>
+        <p
+          >A parameter is a placeholder in a SQL query that can be replaced with
+          a value at runtime. We can use parameters in queries to create dynamic
+          queries that can be customized based on user input or other factors.
+          For example:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+              FROM orders
+              WHERE customer_id = ? AND order_date BETWEEN ? AND ?;</code></pre>
+        <p
+          >In the above example, the question marks are placeholders for
+          parameters that can be replaced with actual values at runtime. We can
+          then use a programming language or other tool to pass in values for
+          these parameters and execute the query.</p
+        >
+        <h3>Creating Dynamic Queries</h3>
+        <p
+          >We can use parameters to create dynamic queries that can be
+          customized based on user input or other factors. For example:</p
+        >
+        <pre class="language-sql"><code>SELECT *
+              FROM orders
+              WHERE customer_id = ? AND status = ?
+              ORDER BY ? ?;</code></pre>
+        <p
+          >In the above example, we can create a dynamic query that retrieves
+          orders for a specific customer and status, and orders the results by a
+          specified column and direction. We can use parameters to replace the
+          customer ID, status, column, and direction with actual values at
+          runtime.</p
+        >
+        <p
+          >By using parameters to create dynamic queries, we can create more
+          flexible and customizable SQL queries that can adapt to changing
+          requirements or user input.</p
+        >
+      </article>
+      <article>
+        <h2>05 Optimizing Query Performance</h2>
+        <p
+          >Optimizing query performance is an important consideration in SQL
+          development. Poorly performing queries can lead to slow response
+          times, decreased user satisfaction, and even system failures. In this
+          note, we will discuss some techniques for optimizing query performance
+          in SQL.</p
+        >
+        <h3>Indexes</h3>
+        <p
+          >Indexes are a powerful feature of SQL that can greatly improve query
+          performance. An index is a data structure that helps to speed up data
+          retrieval by allowing the database to quickly find the data that
+          matches a specific search criteria. We can create indexes on columns
+          that are frequently used in WHERE, JOIN, and ORDER BY clauses to speed
+          up query performance. For example:</p
+        >
+        <pre class="language-sql"><code>CREATE INDEX idx_customer_id
+                ON orders (customer_id);</code></pre>
+        <p
+          >In the above example, we are creating an index on the customer_id
+          column of the orders table. This will speed up queries that search for
+          orders for a specific customer.</p
+        >
+        <h3>Query Optimization</h3>
+        <p
+          >There are several techniques we can use to optimize queries for
+          better performance:</p
+        >
+        <ol>
+          <li
+            >Use efficient join operations like INNER JOIN and LEFT JOIN instead
+            of subqueries or UNION operations.</li
+          >
+          <li
+            >Avoid using SELECT * and instead specify only the columns that are
+            required.</li
+          >
+          <li
+            >Avoid using functions and expressions in WHERE and JOIN clauses as
+            they can slow down query performance.</li
+          >
+          <li
+            >Use UNION ALL instead of UNION to combine results from multiple
+            queries, as UNION ALL does not remove duplicates.</li
+          >
+        </ol>
+        <h3>Query Execution Plan</h3>
+        <p
+          >The query execution plan is a roadmap that shows how the database
+          will execute a given query. We can use the query execution plan to
+          identify performance bottlenecks and optimize queries for better
+          performance. For example:</p
+        >
+        <pre class="language-sql"><code>EXPLAIN SELECT *
+                FROM orders
+                WHERE customer_id = 1;</code></pre>
+        <p
+          >In the above example, we are using the EXPLAIN statement to generate
+          the query execution plan for a query that retrieves orders for a
+          specific customer. We can use the output of the EXPLAIN statement to
+          identify which parts of the query are slow and optimize them for
+          better performance.</p
+        >
+        <p
+          >By using indexes, optimizing queries, and analyzing query execution
+          plans, we can greatly improve query performance in SQL.</p
+        >
+      </article>
+      <h2 class="a-main-topic">07. Essential MySQL Functions</h2>
+
+      <article>
+        <h2>01 String Functions (LEN, SUBSTRING, REPLACE, etc.)</h2>
+        <p
+          >MySQL provides a range of string functions that can help you
+          manipulate text data in various ways. Here are some of the most
+          commonly used string functions:</p
+        >
+        <ul>
+          <li
+            ><span>LENGTH(str)</span> - Returns the length of the given string.
+            For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT LENGTH('hello world'); -- returns 11</code></pre>
+          <li
+            ><span>SUBSTRING(str, start, length)</span> - Returns a substring
+            from the given string starting at the specified index and with the
+            specified length. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT SUBSTRING('hello world', 7, 5); -- returns 'world'</code></pre>
+          <li
+            ><span>REPLACE(str, from_str, to_str)</span> - Replaces all
+            occurrences of the given substring with another string. For
+            example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT REPLACE('hello world', 'hello', 'hi'); -- returns 'hi world'</code></pre>
+          <li
+            ><span>CONCAT(str1, str2, ...)</span> - Concatenates two or more
+            strings into a single string. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT CONCAT('hello', ' ', 'world'); -- returns 'hello world'</code></pre>
+        </ul>
+        <p
+          >These are just a few examples of the many string functions available
+          in MySQL. You can learn more about them in the official MySQL
+          documentation.</p
+        >
+      </article>
+      <article>
+        <h2>02 Numeric Functions (ABS, CEILING, FLOOR, etc.)</h2>
+        <p
+          >MySQL also provides a variety of numeric functions to help you
+          manipulate numeric data in your database. Here are some commonly used
+          numeric functions:</p
+        >
+        <ul>
+          <li
+            ><span>ABS(x)</span> - Returns the absolute value of the given
+            number. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT ABS(-10); -- returns 10</code></pre>
+          <li
+            ><span>CEILING(x)</span> - Returns the smallest integer that is
+            greater than or equal to the given number. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT CEILING(4.2); -- returns 5</code></pre>
+          <li
+            ><span>FLOOR(x)</span> - Returns the largest integer that is less
+            than or equal to the given number. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT FLOOR(4.9); -- returns 4</code></pre>
+          <li
+            ><span>ROUND(x, d)</span> - Returns the given number rounded to the
+            specified number of decimal places. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT ROUND(4.555, 2); -- returns 4.56</code></pre>
+        </ul>
+        <p
+          >There are many more numeric functions available in MySQL, such as
+          trigonometric functions, logarithmic functions, and statistical
+          functions. You can learn more about them in the official MySQL
+          documentation.</p
+        >
+      </article>
+      <article>
+        <h2>03 Date and Time Functions (NOW, DATEADD, DATEDIFF, etc.)</h2>
+        <p
+          >MySQL provides a set of functions to work with date and time data
+          types. Here are some of the most commonly used date and time
+          functions:</p
+        >
+        <ul>
+          <li
+            ><span>NOW()</span> - Returns the current date and time. For
+            example:</li
+          >
+          <pre class="language-sql"><code>SELECT NOW();</code></pre>
+          <li
+            ><span>DATE_ADD(date, INTERVAL value unit)</span> - Adds a specified
+            time interval to a date and returns the resulting date. For example,
+            to add 1 month to the current date:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT DATE_ADD(NOW(), INTERVAL 1 MONTH);</code></pre>
+          <li
+            ><span>DATE_DIFF(date1, date2)</span> - Returns the difference
+            between two dates in days. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT DATEDIFF('2023-05-11', '2023-05-01'); -- returns 10</code></pre>
+          <li
+            ><span>DATE_FORMAT(date, format)</span> - Returns a formatted date
+            string. For example, to display the date in 'YYYY-MM-DD' format:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT DATE_FORMAT(NOW(), '%Y-%m-%d');</code></pre>
+        </ul>
+        <p
+          >MySQL also provides many other date and time functions, such as
+          <span>YEAR()</span>, <span>MONTH()</span>, <span>DAY()</span>,
+          <span>HOUR()</span>, <span>MINUTE()</span>, <span>SECOND()</span>, and
+          more. You can find more information about these functions in the
+          official MySQL documentation.</p
+        >
+      </article>
+      <article>
+        <h2>04 Conditional Functions (CASE, IF, NULLIF, etc.)</h2>
+        <p
+          >MySQL provides a variety of conditional functions that allow you to
+          control the flow of your queries based on certain conditions. Here are
+          some commonly used conditional functions:</p
+        >
+        <ul>
+          <li
+            ><span>CASE</span> - Allows you to perform conditional logic within
+            your query. You can use it to specify different results for
+            different conditions. For example:</li
+          >
+          <pre class="language-sql"><code>SELECT 
+            CASE 
+              WHEN grade >= 90 THEN 'A' 
+              WHEN grade >= 80 THEN 'B' 
+              WHEN grade >= 70 THEN 'C' 
+              WHEN grade >= 60 THEN 'D' 
+              ELSE 'F' 
+            END AS 'letter_grade'
+          FROM scores;</code></pre>
+          <li
+            ><span>IF(expr, true_value, false_value)</span> - Returns one value
+            if the expression is true, and another value if the expression is
+            false. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT IF(score >= 70, 'Pass', 'Fail') FROM scores;</code></pre>
+          <li
+            ><span>NULLIF(expr1, expr2)</span> - Returns NULL if the two
+            expressions are equal, otherwise returns the value of expr1. For
+            example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT NULLIF(10, 10); -- returns NULL</code></pre>
+        </ul>
+        <p
+          >There are many more conditional functions available in MySQL, such as
+          <span>COALESCE()</span>, <span>IFNULL()</span>, and
+          <span>NULLIF()</span>. You can learn more about them in the official
+          MySQL documentation.</p
+        >
+      </article>
+      <article>
+        <h2>05 Conversion Functions (CAST, CONVERT, etc.)</h2>
+        <p
+          >MySQL provides conversion functions that allow you to convert data
+          types from one type to another. Here are some commonly used conversion
+          functions:</p
+        >
+        <ul>
+          <li
+            ><span>CAST(expr AS type)</span> - Converts an expression to a
+            specified data type. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT CAST('123' AS UNSIGNED); -- returns 123 as an unsigned integer</code></pre>
+          <li
+            ><span>CONVERT(expr, type)</span> - Converts an expression to a
+            specified data type. This function is similar to CAST, but supports
+            additional data types and options. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT CONVERT('123.45', DECIMAL(5,2)); -- returns 123.45 as a decimal with 5 total digits and 2 decimal places</code></pre>
+          <li
+            ><span>DATE(expr)</span> - Converts an expression to a DATE data
+            type. For example:</li
+          >
+          <pre
+            class="language-sql"
+          ><code>SELECT DATE('2023-05-11 14:30:00'); -- returns '2023-05-11'</code></pre>
+        </ul>
+        <p
+          >MySQL also provides other conversion functions such as
+          <span>FROM_UNIXTIME()</span> to convert a Unix timestamp to a date,
+          and <span>STR_TO_DATE()</span> to convert a string to a date. You can
+          learn more about these functions in the official MySQL
+          documentation.</p
+        >
+      </article>
+      <h2 class="a-main-topic">08. Views</h2>
+      <article>
+        <h2>01 Creating Views and Using Them</h2>
+        <p
+          >In SQL, a view is a virtual table that is based on the result-set of
+          an SQL statement. It consists of a SELECT statement that is stored in
+          the database with an associated name, which can be used in other
+          queries, just like a regular table.
+        </p>
+        <p
+          >Views can be used for various purposes, such as hiding the complexity
+          of a query, providing a simplified interface to data, or restricting
+          access to sensitive data. Views are created using the CREATE VIEW
+          statement, which has the following syntax:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW view_name AS
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition;</code></pre>
+        <p
+          >For example, let's create a view that shows the names and salaries of
+          employees whose salary is greater than $50,000:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW high_salary_employees AS
+        SELECT first_name, last_name, salary
+        FROM employees
+        WHERE salary > 50000;</code></pre>
+        <p>We can now use this view just like a regular table:</p>
+        <pre
+          class="language-sql"
+        ><code>SELECT * FROM high_salary_employees;</code></pre>
+        <p
+          >We can also use views to simplify complex queries. For example, let's
+          create a view that shows the total sales by each salesperson:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW sales_by_salesperson AS
+        SELECT salesperson_id, SUM(amount) AS total_sales
+        FROM sales
+        GROUP BY salesperson_id;</code></pre>
+        <p
+          >We can now use this view to find the salesperson with the highest
+          total sales:</p
+        >
+        <pre class="language-sql"><code>SELECT * FROM sales_by_salesperson
+        WHERE total_sales = (SELECT MAX(total_sales) FROM sales_by_salesperson);</code></pre>
+        <p
+          >Views can also be used to restrict access to sensitive data. For
+          example, let's create a view that shows the names and addresses of
+          customers, but hides their credit card numbers:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW customer_info AS
+        SELECT customer_id, first_name, last_name, address
+        FROM customers;</code></pre>
+        <p
+          >We can now grant access to this view to a user who needs to see
+          customer information, without giving them access to the credit card
+          numbers:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>GRANT SELECT ON customer_info TO user1;</code></pre>
+        <p
+          >Overall, views are a powerful tool in SQL that can help simplify
+          complex queries, provide a simplified interface to data, and restrict
+          access to sensitive information.</p
+        >
+      </article>
+
+      <article>
+        <h2>02 Modifying and Dropping Views</h2>
+        <p
+          >Once you have created a view, you may need to modify or delete it at
+          some point. Here is how to modify and drop views in SQL:</p
+        >
+        <h3>Modifying Views</h3>
+        <p
+          >If you want to modify the SELECT statement of an existing view, you
+          can use the ALTER VIEW statement. The syntax is as follows:</p
+        >
+        <pre class="language-sql"><code>ALTER VIEW view_name AS
+  SELECT column1, column2, ...
+  FROM table_name
+  WHERE condition;</code></pre>
+        <p
+          >For example, let's say we want to modify the high_salary_employees
+          view we created earlier to include only employees from the Sales
+          department:</p
+        >
+        <pre class="language-sql"><code>ALTER VIEW high_salary_employees AS
+  SELECT first_name, last_name, salary
+  FROM employees
+  WHERE salary > 50000 AND department = 'Sales';</code></pre>
+        <p
+          >The view will now only show the high-salary employees from the Sales
+          department.</p
+        >
+        <h3>Dropping Views</h3>
+        <p
+          >If you no longer need a view, you can drop it using the DROP VIEW
+          statement. The syntax is as follows:</p
+        >
+        <pre class="language-sql"><code>DROP VIEW view_name;</code></pre>
+        <p
+          >For example, to drop the high_salary_employees view we created
+          earlier, we would use the following statement:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>DROP VIEW high_salary_employees;</code></pre>
+        <p>Once a view is dropped, it can no longer be used in any queries.</p>
+        <p
+          >It is important to note that dropping a view does not affect the
+          underlying tables or data. It only removes the view itself.</p
+        >
+        <p
+          >In conclusion, modifying and dropping views can be useful when you
+          need to update or delete a view that you no longer need. It is
+          important to be careful when dropping views, as it can affect any
+          queries that rely on them.</p
+        >
+      </article>
+      <article>
+        <h2>03 Combining Views with Joins and Subqueries</h2>
+        <p
+          >Views can be used to simplify complex queries by breaking them down
+          into smaller, more manageable pieces. In addition, views can be
+          combined with joins and subqueries to create even more powerful
+          queries. Here are some examples:</p
+        >
+        <h3>Joining Views</h3>
+        <p
+          >Suppose we have two views, one that lists all employees and their
+          salaries and another that lists all departments and their budgets. We
+          can join these views together to create a report showing each
+          employee's salary and the budget for their department:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW employee_budgets AS
+    SELECT employees.first_name, employees.last_name, employees.salary, departments.budget
+    FROM employees
+    JOIN departments
+    ON employees.department_id = departments.department_id;</code></pre>
+        <p>We can then query this view to get the information we need:</p>
+        <pre
+          class="language-sql"
+        ><code>SELECT * FROM employee_budgets;</code></pre>
+        <p
+          >By joining views together, we can avoid having to write long, complex
+          queries that include multiple tables.</p
+        >
+        <h3>Using Subqueries with Views</h3>
+        <p
+          >Subqueries can also be used with views to create more complex
+          queries. For example, let's say we have a view that lists all
+          high-salary employees:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW high_salary_employees AS
+    SELECT first_name, last_name, salary
+    FROM employees
+    WHERE salary > 50000;</code></pre>
+        <p
+          >We can use this view in a subquery to find all departments that have
+          at least one high-salary employee:</p
+        >
+        <pre class="language-sql"><code>SELECT department_name
+    FROM departments
+    WHERE department_id IN (
+      SELECT department_id
+      FROM employees
+      WHERE salary > 50000
+    );</code></pre>
+        <p
+          >This query will return a list of all departments that have at least
+          one employee with a salary greater than 50,000.</p
+        >
+        <p
+          >Combining views with joins and subqueries can greatly simplify
+          complex queries and make them easier to read and understand.</p
+        >
+      </article>
+      <article>
+        <h2>04 Securing Views with Permissions</h2>
+        <p
+          >Views can be used to provide a layer of security to your database by
+          allowing you to control access to certain columns of a table. By
+          creating a view that only includes the columns that a user needs to
+          access, you can prevent them from accessing sensitive data. Here's how
+          to secure views with permissions:</p
+        >
+        <h3>Creating Views with Permissions</h3>
+        <p
+          >To create a view with specific permissions, you can use the CREATE
+          VIEW statement with the WITH CHECK OPTION clause. This clause ensures
+          that any updates made to the view meet the specified conditions:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>CREATE VIEW view_name (column1, column2, ...)
+      AS SELECT column1, column2, ...
+      FROM table_name
+      WHERE condition
+      WITH CHECK OPTION;</code></pre>
+        <p
+          >For example, let's say we have a table called "employees" that
+          includes sensitive information such as social security numbers and
+          salaries. We can create a view that only includes the employee's first
+          and last names and their job titles, and grant users permission to
+          access this view:</p
+        >
+        <pre class="language-sql"><code>CREATE VIEW employee_names
+      AS SELECT first_name, last_name, job_title
+      FROM employees
+      WITH CHECK OPTION;
+      
+      GRANT SELECT ON employee_names TO user1;</code></pre>
+        <p
+          >The user "user1" can now access the employee_names view but will not
+          be able to see any other columns from the "employees" table.</p
+        >
+        <h3>Modifying Permissions</h3>
+        <p
+          >If you need to modify the permissions for a view, you can use the
+          GRANT and REVOKE statements. For example, to grant a user permission
+          to update the "employee_names" view, you can use the following
+          statement:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>GRANT UPDATE ON employee_names TO user1;</code></pre>
+        <p>To revoke this permission, you can use the following statement:</p>
+        <pre
+          class="language-sql"
+        ><code>REVOKE UPDATE ON employee_names FROM user1;</code></pre>
+        <p
+          >By controlling access to specific views, you can ensure that
+          sensitive data is only accessible to authorized users.</p
+        >
+        <h3>Conclusion</h3>
+        <p
+          >Views can be used to provide a layer of security to your database by
+          controlling access to sensitive data. By creating views with specific
+          permissions and modifying those permissions as needed, you can ensure
+          that your data is secure.</p
+        >
+      </article>
+      <article>
+        <h2>05 Performance Considerations with Views</h2>
+        <p
+          >Views can be a useful tool for simplifying complex queries and
+          presenting data in a more meaningful way. However, it's important to
+          consider performance implications when working with views. Here are
+          some things to keep in mind:</p
+        >
+        <h3>View Overhead</h3>
+        <p
+          >Views are essentially virtual tables that are created by executing a
+          SELECT statement. Whenever a view is queried, the underlying SELECT
+          statement must be executed to generate the results. This means that
+          there is some overhead associated with using views, and queries that
+          involve views may take longer to execute than queries against the base
+          tables.</p
+        >
+        <h3>Query Optimization</h3>
+        <p
+          >One of the advantages of using views is that they can simplify
+          complex queries by abstracting away details of the underlying data
+          structure. However, this abstraction can make it difficult for the
+          query optimizer to generate an efficient execution plan. In some
+          cases, the optimizer may be able to use indexes or other optimizations
+          to speed up queries against base tables, but these optimizations may
+          not be possible with views.</p
+        >
+        <h3>Caching and Materialized Views</h3>
+        <p
+          >One way to improve the performance of queries involving views is to
+          use caching or materialized views. Caching involves storing the
+          results of a query in memory, so that subsequent queries can be served
+          directly from the cache without having to execute the underlying
+          SELECT statement. Materialized views are similar to regular views, but
+          they are stored as physical tables that are updated periodically based
+          on changes to the underlying data. Materialized views can be
+          especially useful in cases where the underlying data changes
+          infrequently but queries against the view are frequent.</p
+        >
+        <h3>Conclusion</h3>
+        <p
+          >Views can be a powerful tool for simplifying complex queries and
+          presenting data in a more meaningful way. However, it's important to
+          consider performance implications when working with views. By
+          understanding the overhead associated with views, optimizing queries,
+          and using caching or materialized views where appropriate, you can
+          ensure that your queries are fast and efficient.</p
+        >
+      </article>
+      <h2 class="a-main-topic">09. Stored Procedures</h2>
+
+      <article>
+        <h2>01 Creating Stored Procedures</h2>
+        <p
+          >A stored procedure is a pre-written SQL code that can be saved and
+          reused many times in an application. It's a set of SQL statements that
+          perform a specific task and can accept input parameters and return
+          output values.</p
+        >
+        <p
+          >To create a stored procedure, we can use the CREATE PROCEDURE
+          statement in SQL. Here is an example of a simple stored procedure that
+          selects data from a table:</p
+        >
+        <pre class="language-sql"><code>CREATE PROCEDURE sp_select_data
+  AS
+  BEGIN
+    SELECT * FROM my_table;
+  END</code></pre>
+        <p
+          >In the above example, we created a stored procedure named
+          "sp_select_data" that selects all data from the "my_table" table. The
+          "AS" keyword is used to indicate the beginning of the stored procedure
+          code block, and the "END" keyword is used to indicate the end of the
+          code block.</p
+        >
+        <p
+          >We can also create a stored procedure with parameters. Here's an
+          example:</p
+        >
+        <pre class="language-sql"><code>CREATE PROCEDURE sp_select_data_by_id
+  @id INT
+  AS
+  BEGIN
+    SELECT * FROM my_table WHERE id = @id;
+  END</code></pre>
+        <p
+          >In the above example, we created a stored procedure named
+          "sp_select_data_by_id" that accepts an integer parameter named "id".
+          The parameter is used in the SELECT statement to filter the data based
+          on the "id" value.</p
+        >
+        <p
+          >To execute a stored procedure, we can use the EXECUTE statement in
+          SQL. Here's an example:</p
+        >
+        <pre class="language-sql"><code>EXECUTE sp_select_data;</code></pre>
+        <p
+          >In the above example, we executed the "sp_select_data" stored
+          procedure that we created earlier.</p
+        >
+        <p
+          >Overall, stored procedures are a powerful feature in SQL that can
+          help improve application performance and simplify code maintenance.
+          They can be created, modified, and executed easily, and can accept
+          input parameters and return output values.</p
+        >
+      </article>
+      <article>
+        <h2>02 Passing Parameters to Procedures</h2>
+        <p
+          >Stored procedures can accept input parameters that can be used in the
+          procedure's code to perform specific tasks. To pass parameters to a
+          stored procedure, we need to specify them when creating the procedure
+          using the <code>@parameter_name data_type</code> syntax.</p
+        >
+        <p
+          >Here's an example of a stored procedure that accepts two
+          parameters:</p
+        >
+        <pre class="language-sql"><code>CREATE PROCEDURE sp_insert_data
+  @name VARCHAR(50),
+  @age INT
+  AS
+  BEGIN
+    INSERT INTO my_table (name, age) VALUES (@name, @age);
+  END</code></pre>
+        <p
+          >In the above example, we created a stored procedure named
+          "sp_insert_data" that accepts two parameters: a
+          <code>VARCHAR(50)</code> parameter named "name" and an
+          <code>INT</code> parameter named "age". The parameters are used in the
+          INSERT statement to insert data into the "my_table" table.</p
+        >
+        <p
+          >To execute the "sp_insert_data" stored procedure and pass values to
+          its parameters, we can use the EXECUTE statement and specify the
+          parameter values after the procedure name:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>EXECUTE sp_insert_data 'John Smith', 30;</code></pre>
+        <p
+          >In the above example, we executed the "sp_insert_data" stored
+          procedure and passed the values "John Smith" and 30 to its
+          parameters.</p
+        >
+        <p
+          >Stored procedures can also have default parameter values that will be
+          used if no value is provided when executing the procedure. Here's an
+          example:</p
+        >
+        <pre class="language-sql"><code>CREATE PROCEDURE sp_select_data_by_age
+  @age INT = 18
+  AS
+  BEGIN
+    SELECT * FROM my_table WHERE age = @age;
+  END</code></pre>
+        <p
+          >In the above example, we created a stored procedure named
+          "sp_select_data_by_age" that accepts an <code>INT</code> parameter
+          named "age" with a default value of 18. If no value is provided when
+          executing the procedure, the default value of 18 will be used. The
+          parameter is used in the SELECT statement to filter the data based on
+          the "age" value.</p
+        >
+        <p
+          >To execute the "sp_select_data_by_age" stored procedure, we can use
+          the EXECUTE statement and provide a value for the "age" parameter if
+          we want to override the default value:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>EXECUTE sp_select_data_by_age @age = 30;</code></pre>
+        <p
+          >In the above example, we executed the "sp_select_data_by_age" stored
+          procedure and passed the value 30 to its "age" parameter, which will
+          be used to filter the data.</p
+        >
+      </article>
+      <article>
+        <h2>03 Returning Results from Procedures</h2>
+        <p
+          >Stored procedures can return result sets that can be used by other
+          parts of our application. To return a result set from a stored
+          procedure, we need to use the <code>SELECT</code> statement.</p
+        >
+        <p
+          >Here's an example of a stored procedure that returns a result set:</p
+        >
+        <pre class="language-sql"><code>CREATE PROCEDURE sp_select_data_by_age
+  @age INT
+  AS
+  BEGIN
+    SELECT * FROM my_table WHERE age = @age;
+  END</code></pre>
+        <p
+          >In the above example, we created a stored procedure named
+          "sp_select_data_by_age" that accepts an <code>INT</code> parameter
+          named "age". The stored procedure uses the
+          <code>SELECT</code> statement to return all the rows from the
+          "my_table" table where the "age" column matches the value of the "age"
+          parameter.</p
+        >
+        <p
+          >To execute the "sp_select_data_by_age" stored procedure and retrieve
+          the result set, we can use the <code>EXECUTE</code> statement with the
+          <code>SELECT</code> keyword:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>EXECUTE sp_select_data_by_age 30;</code></pre>
+        <p
+          >In the above example, we executed the "sp_select_data_by_age" stored
+          procedure and passed the value 30 to its "age" parameter. The stored
+          procedure returns a result set that can be used by other parts of our
+          application.</p
+        >
+        <p
+          >Stored procedures can also return scalar values, which are single
+          values like strings, integers, or booleans. To return a scalar value
+          from a stored procedure, we need to use the
+          <code>RETURN</code> statement.</p
+        >
+        <p
+          >Here's an example of a stored procedure that returns a scalar
+          value:</p
+        >
+        <pre class="language-sql"><code>CREATE PROCEDURE sp_get_data_count
+  AS
+  BEGIN
+    DECLARE @count INT;
+    SELECT @count = COUNT(*) FROM my_table;
+    RETURN @count;
+  END</code></pre>
+        <p
+          >In the above example, we created a stored procedure named
+          "sp_get_data_count" that returns the count of rows in the "my_table"
+          table as a scalar value. The stored procedure uses the
+          <code>DECLARE</code> statement to create a variable named "@count" to
+          store the count of rows, and the <code>SELECT</code> statement to
+          retrieve the count of rows and store it in the "@count" variable. The
+          stored procedure uses the <code>RETURN</code> statement to return the
+          value of the "@count" variable as the scalar value returned by the
+          stored procedure.</p
+        >
+        <p
+          >To execute the "sp_get_data_count" stored procedure and retrieve the
+          scalar value it returns, we can use the <code>EXECUTE</code> statement
+          with the <code>RETURN</code> keyword:</p
+        >
+        <pre class="language-sql"><code>DECLARE @result INT;
+  EXECUTE @result = sp_get_data_count;
+  SELECT @result;</code></pre>
+        <p
+          >In the above example, we declared a variable named "@result" to store
+          the scalar value returned by the "sp_get_data_count" stored procedure.
+          We executed the stored procedure using the
+          <code>EXECUTE</code> statement and stored the returned scalar value in
+          the "@result" variable. Finally, we retrieved the value of the
+          "@result" variable using the <code>SELECT</code> statement.</p
+        >
+      </article>
+      <article>
+        <h2>04 Managing Transactions in Procedures</h2>
+        <p
+          >Transactions are a way to ensure data consistency in our database.
+          They allow us to group a series of operations and treat them as a
+          single unit of work that either succeeds or fails as a whole.</p
+        >
+        <p
+          >Stored procedures can help us manage transactions by allowing us to
+          define a transaction boundary and commit or rollback the transaction
+          based on the success or failure of our operation.</p
+        >
+        <p
+          >Here's an example of a stored procedure that manages a
+          transaction:</p
+        >
+        <pre class="language-sql"><code>
+  CREATE PROCEDURE sp_transfer_funds
+  @from_account INT,
+  @to_account INT,
+  @amount DECIMAL(10, 2)
+  AS
+  BEGIN
+    SET NOCOUNT ON;
+    BEGIN TRY
+      BEGIN TRANSACTION;
+      UPDATE accounts SET balance = balance - @amount WHERE account_number = @from_account;
+      UPDATE accounts SET balance = balance + @amount WHERE account_number = @to_account;
+    
+      COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+      ROLLBACK TRANSACTION;
+      THROW;
+    END CATCH
+    END</code></pre>
+
+        <p
+          >In the above example, we created a stored procedure named
+          "sp_transfer_funds" that accepts three parameters: "from_account",
+          "to_account", and "amount". The stored procedure starts a transaction
+          using the <code>BEGIN TRANSACTION</code> statement and updates the
+          "balance" column of the "accounts" table for the "from_account" and
+          "to_account" based on the "amount" parameter. If the updates succeed,
+          the stored procedure commits the transaction using the
+          <code>COMMIT TRANSACTION</code> statement. If the updates fail, the
+          stored procedure rolls back the transaction using the
+          <code>ROLLBACK TRANSACTION</code> statement and throws an error using
+          the <code>THROW</code> statement.</p
+        >
+        <p
+          >To execute the "sp_transfer_funds" stored procedure, we can use the
+          <code>EXECUTE</code> statement:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>EXECUTE sp_transfer_funds 12345, 67890, 100.00;</code></pre>
+        <p
+          >In the above example, we executed the "sp_transfer_funds" stored
+          procedure and passed the values 12345, 67890, and 100.00 to its
+          "from_account", "to_account", and "amount" parameters,
+          respectively.</p
+        >
+        <p
+          >By using transactions in our stored procedures, we can ensure that
+          our data remains consistent and avoid potential errors and data
+          corruption.</p
+        >
+      </article>
+      <article>
+        <h2>05 Using Stored Procedures in Applications</h2>
+        <p
+          >Stored procedures can be used in applications to encapsulate database
+          operations and provide a layer of abstraction between the application
+          and the database. Using stored procedures in applications has several
+          advantages, including improved performance, increased security, and
+          simplified maintenance.</p
+        >
+        <p
+          >Here's an example of how to use a stored procedure in a .NET
+          application:</p
+        >
+        <pre class="language-csharp"><code>// Create a SqlConnection object
+        SqlConnection conn = new SqlConnection("Data Source=myServer;Initial Catalog=myDatabase;Integrated Security=True");
+      // Create a SqlCommand object with the stored procedure name and connection object
+      SqlCommand cmd = new SqlCommand("sp_get_customer_info", conn);
+      cmd.CommandType = CommandType.StoredProcedure;
+      
+      // Add parameters to the SqlCommand object
+      cmd.Parameters.AddWithValue("@customer_id", 123);
+      
+      // Open the database connection
+      conn.Open();
+      
+      // Execute the stored procedure and get the results
+      SqlDataReader reader = cmd.ExecuteReader();
+      
+      // Process the results
+      while (reader.Read())
+      {
+      // Do something with the data
+      }
+      
+      // Close the database connection and dispose of the objects
+      reader.Close();
+      cmd.Dispose();
+      conn.Close();</code></pre>
+
+        <p
+          >In the above example, we created a SqlConnection object and a
+          SqlCommand object with the stored procedure name
+          "sp_get_customer_info". We set the CommandType property of the
+          SqlCommand object to "StoredProcedure" and added a parameter named
+          "@customer_id" with a value of 123 to the SqlCommand object. We then
+          opened the database connection, executed the stored procedure using
+          the ExecuteReader method of the SqlCommand object, and processed the
+          results using a SqlDataReader object.</p
+        >
+        <p
+          >Using stored procedures in applications can help improve performance
+          by reducing the amount of data that needs to be transmitted between
+          the application and the database. Stored procedures can also help
+          increase security by allowing the database administrator to grant the
+          application user access to specific stored procedures without giving
+          them direct access to the database tables. Finally, using stored
+          procedures in applications can simplify maintenance by allowing
+          database changes to be made without requiring changes to the
+          application code.</p
+        >
+      </article>
+      <h2 class="a-main-topic">10. Triggers and Events</h2>
+
+      <article>
+        <h2>01 Creating Triggers and Events</h2>
+        <p
+          >In SQL, triggers and events are used to monitor and respond to
+          changes in a database. A trigger is a set of instructions that are
+          automatically executed in response to a certain event occurring in a
+          database, such as an insert, update, or delete operation. Events are
+          used to specify the type of operation that will trigger the execution
+          of a trigger.</p
+        >
+        <p>Here is an example of how to create a trigger:</p>
+        <pre class="language-sql"><code>CREATE TRIGGER update_customer_balance
+  AFTER INSERT ON orders
+  FOR EACH ROW
+  BEGIN
+    UPDATE customers
+    SET balance = balance + NEW.amount
+    WHERE customers.id = NEW.customer_id;
+  END;</code></pre>
+        <p
+          >This trigger will execute after a new record is inserted into the
+          "orders" table. The trigger will update the "balance" field of the
+          customer associated with the new order by adding the amount of the
+          order to their current balance.</p
+        >
+        <p>Here is an example of how to create an event:</p>
+        <pre class="language-sql"><code>CREATE EVENT archive_logs
+  ON SCHEDULE EVERY 1 WEEK
+  DO
+    BEGIN
+      DELETE FROM logs
+      WHERE created_at &lt; DATE_SUB(NOW(), INTERVAL 1 YEAR);
+    END;</code></pre>
+        <p
+          >This event will execute once per week and will delete all records
+          from the "logs" table that are more than a year old. The "ON SCHEDULE"
+          clause specifies how often the event should be executed, and the "DO"
+          clause contains the instructions that should be executed when the
+          event is triggered.</p
+        >
+      </article>
+      <article>
+        <h2>02 Trigger Types (BEFORE, AFTER, INSTEAD OF)</h2>
+        <p
+          >There are three types of triggers in SQL: BEFORE triggers, AFTER
+          triggers, and INSTEAD OF triggers. The type of trigger you choose
+          depends on the specific use case you are working with.</p
+        >
+        <h3>BEFORE Triggers</h3>
+        <p
+          >BEFORE triggers are executed before an INSERT, UPDATE, or DELETE
+          operation occurs. They can be used to modify or validate the data
+          being inserted, updated, or deleted before it is written to the
+          database. Here is an example:</p
+        >
+        <pre class="language-sql"><code>CREATE TRIGGER validate_order
+  BEFORE INSERT ON orders
+  FOR EACH ROW
+  BEGIN
+    IF NEW.amount &lt; 0 THEN
+      SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Order amount must be positive';
+    END IF;
+  END;</code></pre>
+        <p
+          >This BEFORE trigger checks that the "amount" field of any new order
+          being inserted into the "orders" table is a positive value. If it is
+          not, an error is thrown and the insertion is prevented.</p
+        >
+        <h3>AFTER Triggers</h3>
+        <p
+          >AFTER triggers are executed after an INSERT, UPDATE, or DELETE
+          operation occurs. They can be used to perform additional actions after
+          the data has been written to the database. Here is an example:</p
+        >
+        <pre class="language-sql"><code>CREATE TRIGGER update_product_inventory
+  AFTER UPDATE ON products
+  FOR EACH ROW
+  BEGIN
+    UPDATE inventory
+    SET quantity = quantity + (NEW.quantity - OLD.quantity)
+    WHERE product_id = NEW.id;
+  END;</code></pre>
+        <p
+          >This AFTER trigger updates the "quantity" field of the "inventory"
+          table whenever a product's "quantity" field is updated. It calculates
+          the difference between the old and new "quantity" values and updates
+          the "inventory" table accordingly.</p
+        >
+        <h3>INSTEAD OF Triggers</h3>
+        <p
+          >INSTEAD OF triggers are executed instead of the standard INSERT,
+          UPDATE, or DELETE operation. They can be used to perform custom
+          actions or modifications to the data being written to the database.
+          Here is an example:</p
+        >
+        <pre class="language-sql"><code>CREATE TRIGGER instead_of_insert
+  INSTEAD OF INSERT ON customers
+  FOR EACH ROW
+  BEGIN
+    INSERT INTO customers_audit (id, name, address)
+    VALUES (NEW.id, NEW.name, NEW.address);
+    INSERT INTO customers (id, name, address)
+    VALUES (NEW.id, NEW.name, NEW.address);
+  END;</code></pre>
+        <p
+          >This INSTEAD OF trigger is executed instead of a standard INSERT
+          operation on the "customers" table. It inserts a new record into the
+          "customers_audit" table to track changes, and then inserts the new
+          record into the "customers" table.</p
+        >
+      </article>
+      <article>
+        <h2>03 Triggering Events (INSERT, UPDATE, DELETE)</h2>
+        <p
+          >Triggers are created in response to specific events in the database,
+          which include INSERT, UPDATE, and DELETE operations. By defining
+          triggers for these events, you can automatically execute custom code
+          whenever data is modified in the database.</p
+        >
+        <h3>INSERT Triggers</h3>
+        <p
+          >An INSERT trigger is executed when a new record is inserted into a
+          table. Here is an example:</p
+        >
+        <pre class="language-sql"><code>CREATE TRIGGER new_order_notification
+  AFTER INSERT ON orders
+  FOR EACH ROW
+  BEGIN
+    INSERT INTO notifications (message)
+    VALUES ('New order received');
+  END;</code></pre>
+        <p
+          >This trigger is executed after a new record is inserted into the
+          "orders" table. It inserts a new record into the "notifications" table
+          with the message "New order received".</p
+        >
+        <h3>UPDATE Triggers</h3>
+        <p
+          >An UPDATE trigger is executed when an existing record is updated in a
+          table. Here is an example:</p
+        >
+        <pre class="language-sql"><code>CREATE TRIGGER update_customer_status
+  AFTER UPDATE ON customers
+  FOR EACH ROW
+  BEGIN
+    IF NEW.status != OLD.status THEN
+      INSERT INTO customer_status_changes (customer_id, old_status, new_status)
+      VALUES (NEW.id, OLD.status, NEW.status);
+    END IF;
+  END;</code></pre>
+        <p
+          >This trigger is executed after an existing record in the "customers"
+          table is updated. It checks if the "status" field has changed, and if
+          so, it inserts a new record into the "customer_status_changes" table
+          to track the change.</p
+        >
+        <h3>DELETE Triggers</h3>
+        <p
+          >A DELETE trigger is executed when a record is deleted from a table.
+          Here is an example:</p
+        >
+        <pre class="language-sql"><code>CREATE TRIGGER delete_user_data
+  AFTER DELETE ON users
+  FOR EACH ROW
+  BEGIN
+    DELETE FROM user_logs
+    WHERE user_id = OLD.id;
+  END;</code></pre>
+        <p
+          >This trigger is executed after a record is deleted from the "users"
+          table. It deletes all records from the "user_logs" table where the
+          "user_id" matches the ID of the deleted record.</p
+        >
+      </article>
+      <article>
+        <h2>04 Managing Triggers and Events</h2>
+        <p
+          >Once you have created triggers and events in your database, you may
+          need to modify or delete them at some point. Here are some basic SQL
+          statements to help you manage your triggers and events:</p
+        >
+        <h3>Listing Triggers and Events</h3>
+        <p
+          >You can list all the triggers and events defined for a particular
+          table using the following SQL statement:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SHOW TRIGGERS FROM database_name WHERE table_name = 'table_name';</code></pre>
+        <p
+          >This statement returns a list of all triggers defined for the
+          specified table in the specified database.</p
+        >
+        <h3>Modifying Triggers and Events</h3>
+        <p
+          >You can modify an existing trigger or event using the ALTER
+          statement. Here is an example:</p
+        >
+        <pre class="language-sql"><code>ALTER TRIGGER trigger_name
+  AFTER INSERT ON table_name
+  FOR EACH ROW
+  BEGIN
+    -- modified trigger code here
+  END;</code></pre>
+        <p
+          >This statement modifies the trigger named "trigger_name" that was
+          originally defined to execute after an INSERT event on the
+          "table_name" table. You can modify the trigger code inside the BEGIN
+          and END blocks as needed.</p
+        >
+        <h3>Deleting Triggers and Events</h3>
+        <p
+          >You can delete a trigger or event using the DROP statement. Here is
+          an example:</p
+        >
+        <pre class="language-sql"><code>DROP TRIGGER trigger_name;</code></pre>
+        <p
+          >This statement deletes the trigger named "trigger_name" from the
+          database. Be careful when deleting triggers, as it can have unintended
+          consequences on your database's behavior.</p
+        >
+        <p
+          >By using these basic SQL statements, you can manage your triggers and
+          events effectively and keep your database running smoothly.</p
+        >
+      </article>
+      <article>
+        <h2>05 Securing Triggers and Events with Permissions</h2>
+        <p
+          >Triggers and events in a database can perform sensitive operations,
+          such as modifying or deleting data. Therefore, it's important to
+          ensure that only authorized users can create or modify them. In this
+          section, we will explore how to secure triggers and events with
+          permissions.</p
+        >
+        <h3>Granting Permissions</h3>
+        <p
+          >You can grant a user permission to create or modify triggers and
+          events using the GRANT statement. Here's an example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>GRANT TRIGGER ON database_name.* TO 'user'@'localhost';</code></pre>
+        <p
+          >This statement grants the user 'user'@'localhost' permission to
+          create triggers on any table in the 'database_name' database.</p
+        >
+        <h3>Revoking Permissions</h3>
+        <p
+          >If you need to revoke a user's permission to create or modify
+          triggers and events, you can use the REVOKE statement. Here's an
+          example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>REVOKE TRIGGER ON database_name.* FROM 'user'@'localhost';</code></pre>
+        <p
+          >This statement revokes the user 'user'@'localhost' permission to
+          create triggers on any table in the 'database_name' database.</p
+        >
+        <h3>Viewing Permissions</h3>
+        <p
+          >You can view the permissions granted to a user using the SHOW GRANTS
+          statement. Here's an example:</p
+        >
+        <pre
+          class="language-sql"
+        ><code>SHOW GRANTS FOR 'user'@'localhost';</code></pre>
+        <p
+          >This statement displays the permissions granted to the user
+          'user'@'localhost'.</p
+        >
+        <p
+          >By granting and revoking permissions to create and modify triggers
+          and events, you can ensure that only authorized users are allowed to
+          perform these sensitive operations in your database.</p
+        >
+      </article>
+      <h2 class="a-main-topic">11. Transactions and Concurrency</h2>
+      <article>
+        <h2>01 Understanding Transactions and ACID</h2>
+        <p>
+          In SQL, a transaction is a set of one or more operations performed on a database that should be treated as a single unit of work. Transactions ensure data consistency and integrity by allowing multiple users to access and modify data simultaneously without interfering with each other. The ACID (Atomicity, Consistency, Isolation, Durability) properties ensure that transactions are executed in a reliable and predictable manner. 
+          <br/><br/>
+          Atomicity guarantees that all operations within a transaction will be completed successfully, or none will be completed at all. Consistency ensures that data will always be in a valid state before and after a transaction. Isolation guarantees that multiple transactions can be executed concurrently without interfering with each other. Durability ensures that once a transaction is committed, it is permanent and cannot be undone even in the event of a system failure.
+          <br/><br/>
+          Here's an example of a transaction that transfers funds from one account to another:
+          <pre class="language-sql"><code>
+      BEGIN TRANSACTION;
+      UPDATE accounts SET balance = balance - 500 WHERE account_id = 1234;
+      UPDATE accounts SET balance = balance + 500 WHERE account_id = 5678;
+      COMMIT TRANSACTION;
+          </code></pre>
+         <p> In this example, the transaction begins with the BEGIN TRANSACTION statement, followed by two updates that modify the balances of two accounts. Finally, the transaction is committed with the COMMIT TRANSACTION statement. If any of the statements fail, the transaction can be rolled back with the ROLLBACK TRANSACTION statement, which will undo all changes made by the transaction.
+        </p>
+      </article>
+      <article>
+        <h2>02 Managing Transactions in SQL</h2>
+        <p>
+          In SQL, transactions can be managed using the BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION statements. BEGIN TRANSACTION starts a new transaction, COMMIT TRANSACTION ends a transaction and makes all changes permanent, and ROLLBACK TRANSACTION cancels a transaction and undoes all changes made since the transaction began.
+          <br/><br/>
+          Here's an example of managing a transaction in SQL:
+          <pre class="language-sql"><code>
+      BEGIN TRANSACTION;
+      UPDATE products SET quantity = quantity - 1 WHERE product_id = 1234;
+      INSERT INTO order_items (order_id, product_id, quantity) VALUES (5678, 1234, 1);
+      COMMIT TRANSACTION;
+          </code></pre>
+          In this example, a transaction begins with the BEGIN TRANSACTION statement, followed by an update to decrement the quantity of product with ID 1234, and an insert to add a new item to an order with ID 5678. If the transaction is successful, COMMIT TRANSACTION is called to make all changes permanent. However, if an error occurs, such as a constraint violation or a network failure, the transaction can be rolled back using the ROLLBACK TRANSACTION statement to undo all changes.
+          <br/><br/>
+          It's important to note that transactions should be used when multiple statements must be executed together as a single unit of work. Additionally, it's important to keep transactions as short as possible to minimize the potential for locking and blocking of database resources. 
+        </p>
+      </article>
+      <article>
+        <h2>03 Concurrency Control with Locking</h2>
+        <p>
+          Concurrency control is the process of managing access to shared resources in a multi-user environment. Locking is one method of concurrency control that is commonly used in SQL to prevent multiple users from modifying the same data simultaneously. 
+          <br/><br/>
+          Locks can be obtained at different levels, such as at the row, page, or table level. When a lock is obtained, other transactions are prevented from accessing the locked resource until the lock is released. This helps prevent conflicts and maintain data consistency.
+          <br/><br/>
+          Here's an example of using locking in SQL:
+          <pre class="language-sql"><code>
+      BEGIN TRANSACTION;
+      SELECT * FROM orders WHERE order_id = 1234 FOR UPDATE;
+      UPDATE orders SET status = 'shipped' WHERE order_id = 1234;
+      COMMIT TRANSACTION;
+          </code></pre>
+          In this example, a lock is obtained on the row with order ID 1234 using the FOR UPDATE clause in the SELECT statement. This ensures that no other transaction can modify the same row until the lock is released. Once the lock is obtained, the transaction proceeds to update the status of the order to "shipped" and then commits the transaction.
+          <br/><br/>
+          However, it's important to use locking judiciously as it can cause performance issues and potential deadlocks. Deadlocks occur when two or more transactions are waiting for each other to release locks, and can cause the database to become unresponsive. Therefore, it's important to keep transactions as short as possible and release locks as soon as they are no longer needed. 
+        </p>
+      </article>
+      <h2 class="a-main-topic">12. Data Types</h2>
+      <article>
+        <h2>01 Numeric Data Types (INTEGER, DECIMAL, FLOAT, etc.)</h2>
+        <p>In SQL, numeric data types are used to store numbers. There are several numeric data types that can be used to define a column in a table:</p>
+        <ul>
+          <li><b>INTEGER:</b> Used to store whole numbers (positive, negative, or zero) without a fractional part. The size of an INTEGER can vary, but it usually takes up 4 bytes of storage.</li>
+          <li><b>DECIMAL:</b> Used to store numbers with a fixed precision and scale. The precision is the total number of digits in the number, and the scale is the number of digits to the right of the decimal point. For example, DECIMAL(5,2) can store a number up to 999.99.</li>
+          <li><b>FLOAT:</b> Used to store numbers with a floating-point precision. The size of a FLOAT can vary, but it usually takes up 4 or 8 bytes of storage.</li>
+          <li><b>DOUBLE:</b> Used to store numbers with a high floating-point precision. The size of a DOUBLE can vary, but it usually takes up 8 bytes of storage.</li>
+        </ul>
+        <p>Here are some examples of how to use numeric data types:</p>
+        <pre class="language-sql"><code>CREATE TABLE employee (
+        id INTEGER,
+        salary DECIMAL(8,2),
+        commission_rate FLOAT,
+        bonus DOUBLE
+      );</code></pre>
+        <p>In this example, we are creating a table called "employee" with four columns. The "id" column is an INTEGER data type, the "salary" column is a DECIMAL data type with a precision of 8 and a scale of 2, the "commission_rate" column is a FLOAT data type, and the "bonus" column is a DOUBLE data type.</p>
+        <p>It's important to choose the correct data type for your columns to ensure that your data is stored accurately and efficiently.</p>
+      </article>
+      
+<article>
+  <h2>02 Character Data Types (CHAR, VARCHAR, TEXT, etc.)</h2>
+  <p>In SQL, character data types are used to store strings of text. There are several character data types that can be used to define a column in a table:</p>
+  <ul>
+    <li><b>CHAR:</b> Used to store fixed-length strings up to a maximum size of 255 characters. If the string is shorter than the maximum size, it is padded with spaces to fill the remaining space.</li>
+    <li><b>VARCHAR:</b> Used to store variable-length strings up to a maximum size of 65,535 characters. The actual size of the string is stored, so there is no wasted space.</li>
+    <li><b>TEXT:</b> Used to store large blocks of text up to a maximum size of 4GB. TEXT columns are useful for storing long paragraphs, articles, or even entire books.</li>
+  </ul>
+  <p>Here are some examples of how to use character data types:</p>
+  <pre class="language-sql"><code>CREATE TABLE customer (
+  id INTEGER,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  address TEXT
+);</code></pre>
+  <p>In this example, we are creating a table called "customer" with four columns. The "id" column is an INTEGER data type, the "first_name" and "last_name" columns are VARCHAR data types with a maximum size of 50 characters, and the "address" column is a TEXT data type.</p>
+  <p>It's important to choose the correct data type for your columns to ensure that your data is stored accurately and efficiently. If you know the maximum length of a string in advance, it's usually better to use CHAR or VARCHAR instead of TEXT, as TEXT columns can take up a lot of storage space.</p>
+</article>
+<article>
+  <h2>03 Date and Time Data Types (DATE, DATETIME, TIMESTAMP, etc.)</h2>
+  <p>In SQL, date and time data types are used to store dates and times. There are several date and time data types that can be used to define a column in a table:</p>
+  <ul>
+    <li><b>DATE:</b> Used to store dates in the format of YYYY-MM-DD.</li>
+    <li><b>DATETIME:</b> Used to store dates and times in the format of YYYY-MM-DD HH:MM:SS.</li>
+    <li><b>TIMESTAMP:</b> Used to store dates and times in the format of YYYY-MM-DD HH:MM:SS, with the ability to store fractions of a second. TIMESTAMP values are stored as the number of seconds since January 1, 1970, 00:00:00 UTC.</li>
+  </ul>
+  <p>Here are some examples of how to use date and time data types:</p>
+  <pre class="language-sql"><code>CREATE TABLE order (
+  id INTEGER,
+  order_date DATE,
+  delivery_datetime DATETIME,
+  last_updated TIMESTAMP
+);</code></pre>
+  <p>In this example, we are creating a table called "order" with four columns. The "id" column is an INTEGER data type, the "order_date" column is a DATE data type, the "delivery_datetime" column is a DATETIME data type, and the "last_updated" column is a TIMESTAMP data type.</p>
+  <p>When working with date and time data types, it's important to be aware of the time zone that your data is being stored in. Different time zones can affect the way that date and time values are displayed and calculated.</p>
+</article>
+<article>
+  <h2>04 Binary Data Types (BINARY, VARBINARY, BLOB, etc.)</h2>
+  <p>In SQL, binary data types are used to store binary data such as images, audio, and video files. There are several binary data types that can be used to define a column in a table:</p>
+  <ul>
+    <li><b>BINARY:</b> Used to store fixed-length binary data up to a maximum size of 255 bytes. If the binary data is shorter than the maximum size, it is padded with zeros to fill the remaining space.</li>
+    <li><b>VARBINARY:</b> Used to store variable-length binary data up to a maximum size of 65,535 bytes. The actual size of the binary data is stored, so there is no wasted space.</li>
+    <li><b>BLOB:</b> Used to store large blocks of binary data up to a maximum size of 4GB. BLOB columns are useful for storing images, audio files, video files, and other large binary objects.</li>
+  </ul>
+  <p>Here are some examples of how to use binary data types:</p>
+  <pre class="language-sql"><code>CREATE TABLE product (
+  id INTEGER,
+  image BLOB,
+  audio VARBINARY(5000),
+  video BLOB
+);</code></pre>
+  <p>In this example, we are creating a table called "product" with four columns. The "id" column is an INTEGER data type, the "image" and "video" columns are BLOB data types, and the "audio" column is a VARBINARY data type with a maximum size of 5000 bytes.</p>
+  <p>It's important to choose the correct data type for your binary data to ensure that your data is stored accurately and efficiently. If you know the maximum size of your binary data in advance, it's usually better to use BINARY or VARBINARY instead of BLOB, as BLOB columns can take up a lot of storage space.</p>
+</article>
+<article>
+  <h2>05 Custom Data Types and User-Defined Types</h2>
+  <p>In SQL, it's possible to create custom data types and user-defined types that can be used to define columns in tables. Custom data types and user-defined types can make your SQL code more readable and maintainable, as well as provide additional functionality that is not available with standard SQL data types.</p>
+  <p>Here are some examples of how to create custom data types and user-defined types:</p>
+  <pre class="language-sql"><code>CREATE DOMAIN email AS VARCHAR(255) CHECK (VALUE LIKE '%@%.%');
+CREATE TYPE address AS (
+street VARCHAR(255),
+city VARCHAR(255),
+state VARCHAR(2),
+zip VARCHAR(10)
+);
+
+CREATE TABLE customer (
+id INTEGER,
+email_address email,
+shipping_address address,
+billing_address address
+);</code></pre>
+
+  <p>In this example, we are creating a custom data type called "email" using the DOMAIN keyword. The "email" data type is a VARCHAR data type with a maximum length of 255 characters, and it includes a check constraint to ensure that the value contains an "@" symbol and a "." symbol.</p>
+  <p>We are also creating a user-defined type called "address" using the TYPE keyword. The "address" type is a composite type that includes four fields: "street", "city", "state", and "zip".</p>
+  <p>Finally, we are creating a table called "customer" with three columns. The "id" column is an INTEGER data type, the "email_address" column is a custom data type called "email", and the "shipping_address" and "billing_address" columns are user-defined types called "address".</p>
+  <p>Custom data types and user-defined types can be useful for organizing and standardizing your SQL code, as well as providing additional functionality that is not available with standard SQL data types.</p>
+</article>
+      <h2 class="a-main-topic">13. Designing Databases</h2>
+      <article>
+        <h2>01 Database Design Principles and Concepts</h2>
+        <p>Database design is the process of creating a blueprint for a database that meets the requirements of the system or application it will be used for. The design process involves identifying the data to be stored, organizing it into tables, and establishing relationships between the tables. Here are some key principles and concepts to consider when designing a database:</p>
+        <ol>
+          <li><strong>Normalization:</strong> This is the process of organizing data in a database to minimize redundancy and dependency. It involves breaking up larger tables into smaller, more specialized ones, which reduces data duplication and improves efficiency. The goal is to create a database that is easy to maintain and modify.</li>
+          <li><strong>Entity-Relationship Modeling:</strong> This is a technique used to represent the relationships between different entities in a database. It involves identifying the entities (such as customers, orders, or products), defining the attributes for each entity, and specifying the relationships between the entities.</li>
+          <li><strong>Data Types:</strong> When creating a table, it's important to choose the appropriate data type for each field. This will help ensure data integrity and efficient storage. Common data types include integers, decimals, dates, and strings.</li>
+          <li><strong>Constraints:</strong> Constraints are rules that help ensure data integrity. They can be used to restrict the type of data that can be entered into a field, enforce referential integrity between tables, or specify default values for fields.</li>
+        </ol>
+        <p>Here's an example of a basic database design for an e-commerce site:</p>
+        <table>
+          <tr>
+            <th>Table Name</th>
+            <th>Fields</th>
+          </tr>
+          <tr>
+            <td>Customers</td>
+            <td>
+              <ul>
+                <li>customer_id (integer)</li>
+                <li>first_name (string)</li>
+                <li>last_name (string)</li>
+                <li>email (string)</li>
+                <li>phone (string)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Orders</td>
+            <td>
+              <ul>
+                <li>order_id (integer)</li>
+                <li>customer_id (integer)</li>
+                <li>order_date (date)</li>
+                <li>total (decimal)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Order_Items</td>
+            <td>
+              <ul>
+                <li>order_id (integer)</li>
+                <li>product_id (integer)</li>
+                <li>quantity (integer)</li>
+                <li>price (decimal)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Products</td>
+            <td>
+              <ul>
+                <li>product_id (integer)</li>
+                <li>name (string)</li>
+                <li>description (string)</li>
+                <li>price (decimal)</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <p>This design includes four tables: Customers, Orders, Order_Items, and Products. Customers and Products are both standalone tables, while Orders and Order_Items are related to each other through the order_id field. This design is normalized, with each table containing only the fields necessary for its purpose.</p>
+      </article>
+      <article>
+        <h2>02 Normalization and Denormalization</h2>
+        <p>Normalization is a process used to reduce data redundancy and dependency in a database. The goal is to create a database that is easy to maintain, modify, and query. Normalization involves dividing larger tables into smaller, more specialized ones, which reduces data duplication and improves efficiency. There are different levels of normalization, each with specific requirements for data organization.</p>
+        <p>Denormalization, on the other hand, is the process of intentionally adding redundancy to a database. The goal is to improve performance by reducing the need for complex joins and queries. Denormalization involves combining tables or adding redundant data to existing tables, which can speed up certain types of queries.</p>
+        <p>Here are the different levels of normalization:</p>
+        <ol>
+          <li><strong>First Normal Form (1NF):</strong> Each column in a table must contain atomic values (values that cannot be further divided). For example, a customer's full name should be split into separate columns for first name and last name.</li>
+          <li><strong>Second Normal Form (2NF):</strong> A table must be in 1NF and must not have any partial dependencies (where a non-key attribute depends on only part of the primary key). For example, if a table has a composite primary key consisting of order_id and product_id, and the price of the product depends on the order_id alone, then the price should be moved to a separate table to eliminate the partial dependency.</li>
+          <li><strong>Third Normal Form (3NF):</strong> A table must be in 2NF and must not have any transitive dependencies (where a non-key attribute depends on another non-key attribute). For example, if a table has a column for customer_city and another column for customer_state, and the state can be determined from the city, then the state column should be removed to eliminate the transitive dependency.</li>
+        </ol>
+        <p>Here's an example of a denormalized table:</p>
+        <pre class="language-sql"><code>CREATE TABLE customers (
+        customer_id INT PRIMARY KEY,
+        first_name VARCHAR(50),
+        last_name VARCHAR(50),
+        email VARCHAR(100),
+        phone VARCHAR(20),
+        city VARCHAR(50),
+        state VARCHAR(50)
+      );</code></pre>
+        <p>In this table, the city and state are both stored in the same table as the customer information. This can be useful for queries that involve searching for customers by location, but it can also lead to data redundancy and potential inconsistencies (for example, if a customer changes cities but their state is not updated).</p>
+        <p>Here's an example of a normalized version of the same data:</p>
+        <pre class="language-sql"><code>CREATE TABLE customers (
+        customer_id INT PRIMARY KEY,
+        first_name VARCHAR(50),
+        last_name VARCHAR(50),
+        email VARCHAR(100),
+        phone VARCHAR(20)
+      );
+      CREATE TABLE customer_locations (
+      customer_id INT,
+      city VARCHAR(50),
+      state VARCHAR(50),
+      PRIMARY KEY (customer_id, city)
+      );</code></pre>
+      
+        <p>In this design, the customer information is stored in one table, while the location information is stored in a separate table. This eliminates redundancy and allows for more efficient queries, but it also requires more complex joins to retrieve all the necessary information.</p>
+      </article>
+      <article>
+        <h2>03 Creating and Modifying Tables</h2>
+        <p>One of the fundamental tasks in database design is creating and modifying tables. In SQL, you can use the <code>CREATE TABLE</code> statement to create a new table, and the <code>ALTER TABLE</code> statement to modify an existing table.</p>
+        <p>Here's an example of how to create a simple table:</p>
+        <pre class="language-sql"><code>CREATE TABLE employees (
+        employee_id INT PRIMARY KEY,
+        first_name VARCHAR(50),
+        last_name VARCHAR(50),
+        email VARCHAR(100),
+        hire_date DATE
+      );</code></pre>
+        <p>This creates a table called "employees" with five columns: "employee_id", "first_name", "last_name", "email", and "hire_date". The "employee_id" column is the primary key, which means that each row in the table will have a unique identifier.</p>
+        <p>You can also use the <code>ALTER TABLE</code> statement to modify an existing table. For example, you can add a new column to a table:</p>
+        <pre class="language-sql"><code>ALTER TABLE employees ADD COLUMN department VARCHAR(50);</code></pre>
+        <p>This adds a new column called "department" to the "employees" table.</p>
+        <p>You can also modify an existing column by using the <code>ALTER TABLE</code> statement with the <code>ALTER COLUMN</code> clause:</p>
+        <pre class="language-sql"><code>ALTER TABLE employees ALTER COLUMN email VARCHAR(255);</code></pre>
+        <p>This modifies the "email" column to have a maximum length of 255 characters.</p>
+        <p>If you want to delete a table, you can use the <code>DROP TABLE</code> statement:</p>
+        <pre class="language-sql"><code>DROP TABLE employees;</code></pre>
+        <p>This deletes the "employees" table and all its data.</p>
+        <p>It's important to be careful when modifying or deleting tables, as these actions can have serious consequences for your data. Always make sure to back up your data before making any major changes to your database.</p>
+      </article>
+      
+<article>
+  <h2>04 Defining Relationships (ONE-TO-ONE, ONE-TO-MANY, MANY-TO-MANY)</h2>
+  <p>In database design, relationships between tables are established to create a logical connection between the data. There are three types of relationships: One-to-One, One-to-Many, and Many-to-Many. </p>
+  <ul>
+    <li><b>One-to-One Relationship:</b> This relationship occurs when one record in a table is related to only one record in another table. For example, a person has only one passport number.</li>
+    <li><b>One-to-Many Relationship:</b> This relationship occurs when one record in a table is related to multiple records in another table. For example, a customer can have multiple orders, but each order belongs to only one customer.</li>
+    <li><b>Many-to-Many Relationship:</b> This relationship occurs when multiple records in a table are related to multiple records in another table. For example, a student can enroll in multiple courses, and a course can have multiple students enrolled in it.</li>
+  </ul>
+  <p>In SQL, you can define relationships between tables using foreign keys. A foreign key is a field in one table that refers to the primary key in another table. Here are some examples:</p>
+  <p><b>One-to-One Relationship:</b></p>
+  <pre class="language-sql"><code>CREATE TABLE person (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  passport_number VARCHAR(20)
+);
+CREATE TABLE passport (
+id INT PRIMARY KEY,
+number VARCHAR(20),
+person_id INT UNIQUE,
+FOREIGN KEY (person_id) REFERENCES person(id)
+);</code></pre>
+
+  <p>In this example, the "person" table has a primary key called "id". The "passport" table also has a primary key called "id", and a foreign key called "person_id" that references the "id" column in the "person" table. This establishes a one-to-one relationship between the "person" and "passport" tables.</p>
+  <p><b>One-to-Many Relationship:</b></p>
+  <pre class="language-sql"><code>CREATE TABLE customer (
+  id INT PRIMARY KEY,
+  name VARCHAR(50)
+);
+CREATE TABLE order (
+id INT PRIMARY KEY,
+customer_id INT,
+order_date DATE,
+FOREIGN KEY (customer_id) REFERENCES customer(id)
+);</code></pre>
+
+  <p>In this example, the "customer" table has a primary key called "id". The "order" table also has a primary key called "id", and a foreign key called "customer_id" that references the "id" column in the "customer" table. This establishes a one-to-many relationship between the "customer" and "order" tables.</p>
+  <p><b>Many-to-Many Relationship:</b></p>
+  <pre class="language-sql"><code>CREATE TABLE student (
+  id INT PRIMARY KEY,
+  name VARCHAR(50)
+);
+CREATE TABLE course (
+id INT PRIMARY KEY,
+name VARCHAR(50)
+);
+
+CREATE TABLE student_course (
+student_id INT,
+course_id INT,
+PRIMARY KEY (student_id, course_id),
+FOREIGN KEY (student_id) REFERENCES student(id),
+FOREIGN KEY (course_id) REFERENCES course(id)
+);</code></pre>
+
+  <p>In this example, the "student" table has a primary key called "id". The "course" table also has a primary key called "id". To establish a many-to-many relationship between the "student" and "course" tables, a third table called "student_course" is created. This table has foreign keys that reference the "id" columns in both the "student" and "course" tables, and a primary key that is a combination of the two foreign keys. This establishes a many-to-many relationship between the "student" and "course" tables.</p>
+
+  <p>When defining relationships in SQL, it is important to consider the cardinality and optionality of the relationship. The cardinality refers to the number of records that can be related in each table, while the optionality refers to whether a record in one table must be related to a record in another table.</p>
+  <p>By understanding and properly implementing relationships in your database design, you can ensure that your data is organized, efficient, and easy to work with.</p>
+</article>
+<article>
+  <h2>Database Design Tools and Best Practices</h2>
+  <p>Designing a database can be a complex task, especially for larger systems with many tables and relationships. Fortunately, there are many tools available to help simplify the process. Here are some of the best practices and tools you can use to create an effective database design:</p>
+  <h3>1. Understand the Business Requirements</h3>
+  <p>The first step in designing a database is to understand the business requirements. This involves identifying the data that needs to be stored, how it will be used, and who will be using it. By understanding these requirements, you can ensure that your database design meets the needs of the business.</p>
+  <h3>2. Create a Conceptual Data Model</h3>
+  <p>The next step is to create a conceptual data model, which is a high-level view of the database. This involves identifying the entities (such as customers, products, and orders) and their relationships. A tool such as ERD (Entity-Relationship Diagram) can be used to create a graphical representation of the data model.</p>
+  <h3>3. Create a Logical Data Model</h3>
+  <p>Once the conceptual data model is complete, the next step is to create a logical data model. This involves defining the tables and columns that will be used to store the data. A tool such as SQL Designer can be used to create a graphical representation of the logical data model.</p>
+  <h3>4. Normalization</h3>
+  <p>Normalization is a process of organizing data in a database to reduce redundancy and dependency. This involves breaking down larger tables into smaller, more specific tables and establishing relationships between them. Proper normalization can improve data consistency, reduce data redundancy, and improve query performance.</p>
+  <h3>5. Denormalization</h3>
+  <p>While normalization is important for database efficiency, sometimes it is necessary to denormalize the database to improve performance. This involves combining smaller tables into larger tables to reduce the number of joins required for queries. However, denormalization should be done with caution and only after careful analysis of the query performance.</p>
+  <h3>6. Use Constraints</h3>
+  <p>Constraints can be used to ensure data integrity and enforce business rules. Common constraints include primary keys, foreign keys, unique constraints, and check constraints. Proper use of constraints can prevent data inconsistencies and errors.</p>
+  <h3>7. Test and Optimize</h3>
+  <p>Once the database is designed, it is important to test and optimize its performance. This involves testing the database with realistic data, monitoring performance, and optimizing queries and indexes to improve performance.</p>
+  <p>By following these best practices and using tools such as ERD and SQL Designer, you can create a well-designed and efficient database that meets the needs of your business.</p>
+</article>
+      <h2 class="a-main-topic">14. Indexing for High Performance</h2>
+      <article>
+        <h2>01 Understanding Indexing and Query Optimization</h2>
+        <p>Indexing is a technique that helps improve the performance of SQL queries by providing fast access to data in tables. By creating an index on one or more columns, you can speed up the query execution time and reduce the overall cost of executing the query.</p>
+        <p>Let's take an example of a table named "users" with columns "id", "name", "email", and "created_at". If you frequently run queries to search for users by their email address, creating an index on the "email" column can significantly improve the query performance.</p>
+        <pre class="language-sql"><code>
+    CREATE INDEX index_name
+    ON table_name (column_name);
+        </code></pre>
+        <p>The above code creates an index on the specified column of the table.</p>
+        <p>Query optimization is another technique that helps improve the performance of SQL queries. Query optimization involves selecting the most efficient execution plan for a query, which can significantly improve the query execution time.</p>
+        <p>Here's an example of a query:</p>
+        <pre class="language-sql"><code>
+    SELECT *
+    FROM users
+    WHERE email = 'example@example.com';
+        </code></pre>
+        <p>To optimize this query, you can create an index on the "email" column:</p>
+        <pre class="language-sql"><code>
+    CREATE INDEX index_name
+    ON users (email);
+        </code></pre>
+        <p>Now, when the query is executed, the database engine will use the index to quickly locate the rows with the specified email address instead of scanning the entire table. This can significantly improve the query performance.</p>
+        <p>It's important to note that indexing can also have a downside. Creating too many indexes can slow down the performance of INSERT, UPDATE, and DELETE operations, as the indexes need to be updated whenever a change is made to the table. Therefore, it's important to carefully consider which columns to index and how many indexes to create.</p>
+    </article>
+    <article>
+      <h2>02 Creating Indexes (CLUSTERED, NONCLUSTERED)</h2>
+      <p>In SQL, there are two main types of indexes: clustered and nonclustered. Both types of indexes help to improve the performance of SQL queries by providing faster access to data in tables.</p>
+      <h3>CLUSTERED INDEXES</h3>
+      <p>A clustered index determines the physical order of data in a table. When you create a clustered index, the data is physically sorted and stored in the order specified by the index. Therefore, each table can have only one clustered index.</p>
+      <p>Here's an example of how to create a clustered index:</p>
+      <pre class="language-sql"><code>
+  CREATE CLUSTERED INDEX index_name
+  ON table_name (column_name);
+      </code></pre>
+      <p>The above code creates a clustered index on the specified column of the table.</p>
+      <h3>NONCLUSTERED INDEXES</h3>
+      <p>A nonclustered index is a separate structure from the data in a table. When you create a nonclustered index, the data in the table is not physically sorted and stored according to the index. Instead, the index contains a copy of the column or columns specified in the index, along with a pointer to the actual data in the table. A table can have multiple nonclustered indexes.</p>
+      <p>Here's an example of how to create a nonclustered index:</p>
+      <pre class="language-sql"><code>
+  CREATE NONCLUSTERED INDEX index_name
+  ON table_name (column_name);
+      </code></pre>
+      <p>The above code creates a nonclustered index on the specified column of the table.</p>
+      <p>When deciding whether to use a clustered or nonclustered index, it's important to consider the type of queries that will be executed against the table. If queries frequently search for a range of values within a specific column, a clustered index may be more appropriate. On the other hand, if queries frequently search for specific values within a specific column, a nonclustered index may be more appropriate.</p>
+      <p>It's also important to note that creating indexes can be a resource-intensive process, particularly for large tables. Therefore, it's important to carefully consider which columns to index and how many indexes to create to ensure the best performance.</p>
+  </article>
+  <article>
+    <h2>03 Using Indexes to Optimize Queries</h2>
+    <p>Indexes can significantly improve the performance of queries by allowing the database engine to quickly locate the required data without scanning the entire table. However, simply creating indexes is not enough to guarantee optimal query performance. It's also important to use them effectively in queries. </p>
+    <p>Here are a few tips for using indexes to optimize queries:</p>
+    <ol>
+        <li>Identify the columns that are frequently used in WHERE clauses or JOIN conditions, and create indexes on those columns.</li>
+        <li>Avoid using functions or expressions in WHERE clauses that reference indexed columns, as this can prevent the database engine from using the index. For example, instead of using WHERE YEAR(date_column) = 2022, consider using WHERE date_column BETWEEN '2022-01-01' AND '2022-12-31'.</li>
+        <li>Avoid using wildcard characters such as % at the beginning of search patterns, as this can prevent the database engine from using the index. For example, instead of using WHERE column_name LIKE '%search_term', consider using WHERE column_name LIKE 'search_term%'</li>
+        <li>Avoid using SELECT * in queries, as this can cause the database engine to read unnecessary data. Instead, specify only the columns that are required.</li>
+    </ol>
+    <p>It's also important to regularly analyze the performance of queries using indexes, and make adjustments as needed. For example, if a query is not performing well despite the presence of an index, consider creating a composite index that includes all of the columns referenced in the query.</p>
+    <p>Here's an example of how to create a composite index:</p>
+    <pre class="language-sql"><code>
+CREATE INDEX index_name
+ON table_name (column1, column2, column3);
+    </code></pre>
+    <p>The above code creates a composite index on the specified columns of the table.</p>
+    <p>By following these best practices, you can ensure that indexes are used effectively to optimize query performance, leading to faster and more efficient database operations.</p>
+</article>
+<article>
+  <h2>04 Analyzing Query Performance with Execution Plans and Indexing Tools</h2>
+  <p>While creating indexes can help improve query performance, it's also important to analyze query performance using execution plans and indexing tools. This will help you identify any performance bottlenecks and make necessary adjustments.</p>
+  <h3>Execution Plans</h3>
+  <p>An execution plan is a graphical representation of how a query is executed by the database engine. It shows the steps that the engine takes to retrieve the data and how it uses the available indexes. By analyzing the execution plan, you can identify areas where the query can be optimized.</p>
+  <p>To view the execution plan of a query in SQL Server Management Studio, you can use the following steps:</p>
+  <ol>
+      <li>Open a new query window and enter the query you want to analyze.</li>
+      <li>Click on the "Include Actual Execution Plan" button in the toolbar (or press CTRL+M).</li>
+      <li>Execute the query.</li>
+      <li>The execution plan will appear in a separate tab.</li>
+  </ol>
+  <p>Here's an example of how an execution plan can help identify performance bottlenecks:</p>
+  <pre class="language-sql"><code>
+SELECT *
+FROM orders
+WHERE order_date BETWEEN '2022-01-01' AND '2022-12-31'
+AND customer_id IN (SELECT customer_id FROM customers WHERE country = 'USA');
+  </code></pre>
+  <p>Assuming that there is an index on the order_date and customer_id columns, the execution plan might show that the subquery is causing a performance bottleneck. To optimize the query, you could rewrite it using a JOIN instead of a subquery:</p>
+  <pre class="language-sql"><code>
+SELECT *
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.order_date BETWEEN '2022-01-01' AND '2022-12-31'
+AND c.country = 'USA';
+  </code></pre>
+  <p>By analyzing the execution plan, you can also determine which indexes are being used by the query, and whether additional indexes are needed.</p>
+  <h3>Indexing Tools</h3>
+  <p>Indexing tools can help identify missing or redundant indexes in a database. Some popular indexing tools for SQL Server include:</p>
+  <ul>
+      <li>SQL Server Management Studio</li>
+      <li>SQL Profiler</li>
+      <li>Database Tuning Advisor</li>
+      <li>SQL Sentry Plan Explorer</li>
+  </ul>
+  <p>These tools can analyze the queries executed against a database and suggest indexes that could improve performance. However, it's important to carefully review the suggestions before implementing them, as some suggestions may not be applicable or may even be harmful to performance.</p>
+  <p>By using execution plans and indexing tools, you can identify performance bottlenecks and optimize queries to improve overall database performance.</p>
+</article>
+<article>
+  <h2>05 Best Practices for Indexing and Query Optimization</h2>
+  <p>Indexing and query optimization are important aspects of database design and performance tuning. Here are some best practices to follow:</p>
+  <h3>1. Identify the right columns to index</h3>
+  <p>Not all columns need to be indexed. Identify the columns that are frequently used in queries and create indexes on those columns. Avoid creating indexes on columns with low selectivity (i.e., columns with many duplicates) as they may not provide much benefit.</p>
+  <h3>2. Use the appropriate type of index</h3>
+  <p>There are two main types of indexes in SQL Server: clustered and nonclustered. Clustered indexes determine the physical order of the data in a table, while nonclustered indexes are separate structures that point to the data in the table. Choose the appropriate type of index based on the query patterns and table structure.</p>
+  <h3>3. Avoid over-indexing</h3>
+  <p>Creating too many indexes can actually hurt performance. Each index requires additional disk space and maintenance overhead. Only create indexes that are necessary for query performance.</p>
+  <h3>4. Regularly monitor query performance</h3>
+  <p>Regularly analyze query performance using execution plans and indexing tools to identify performance bottlenecks. Make necessary adjustments to improve query performance.</p>
+  <h3>5. Use parameterized queries</h3>
+  <p>Parameterized queries can help improve query performance by reusing query plans and reducing the overhead of parsing and optimizing queries. They can also help prevent SQL injection attacks.</p>
+  <h3>6. Use appropriate data types</h3>
+  <p>Using appropriate data types can help improve query performance. For example, using integers instead of strings for primary keys and foreign keys can improve join performance.</p>
+  <h3>7. Be mindful of data skew</h3>
+  <p>Data skew occurs when the distribution of data in a column is not uniform. This can cause some queries to perform poorly. Consider using filtered indexes or partitioning to address data skew.</p>
+  <h3>8. Regularly maintain indexes</h3>
+  <p>Regularly maintain indexes by rebuilding or reorganizing them to keep them optimized. This can help prevent fragmentation and improve query performance.</p>
+  <p>Following these best practices can help ensure that your database is optimized for performance and can handle the workload of your application.</p>
+</article>
+      <h2 class="a-main-topic">15. Securing Databases</h2>
+      <article>
+        <h2>01 Database Security Principles and Concepts</h2>
+        <p>
+          Database security is essential to prevent unauthorized access, data breaches, and data theft. Here are some of the fundamental principles and concepts of database security:
+        </p>
+        <h3>1. Authentication and Authorization</h3>
+        <p>
+          Authentication is the process of verifying the identity of a user or application. Authorization is the process of determining whether a user or application has the necessary permissions to access the database. In SQL, we can use the CREATE USER statement to create a new user and the GRANT statement to assign privileges to a user:
+        </p>
+        <pre class="language-sql"><code>
+          CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+          GRANT SELECT, INSERT, UPDATE ON database.table TO 'username'@'localhost';
+        </code></pre>
+        <h3>2. Encryption</h3>
+        <p>
+          Encryption is the process of transforming data into a coded form to prevent unauthorized access. In MySQL, we can use the AES_ENCRYPT() and AES_DECRYPT() functions to encrypt and decrypt data:
+        </p>
+        <pre class="language-sql"><code>
+          INSERT INTO users (username, password)
+          VALUES ('user1', AES_ENCRYPT('pass123', 'encryption_key'));
+          SELECT username, AES_DECRYPT(password, 'encryption_key')
+          FROM users;
+        </code></pre>
+
+        <h3>3. Auditing and Logging</h3>
+        <p>
+          Auditing and logging are critical to track changes made to the database and to identify any suspicious activity. In MySQL, we can enable general query logging to record all SQL statements executed on the server:
+        </p>
+        <pre class="language-sql"><code>
+          SET GLOBAL general_log = 'ON';
+          SET GLOBAL log_output = 'TABLE';
+        </code></pre>
+        <p>
+          This will create a log table in the mysql schema named general_log. We can query this table to retrieve the SQL statements executed on the server:
+        </p>
+        <pre class="language-sql"><code>
+          SELECT event_time, user_host, argument
+          FROM mysql.general_log;
+        </code></pre>
+        <h3>4. Physical Security</h3>
+        <p>
+          Physical security is essential to protect the database from theft, vandalism, or natural disasters. The server should be kept in a secure location, and access to the server room should be restricted. Backups should be stored off-site to protect against data loss.
+        </p>
+      </article>
+      <article>
+        <h2>02 Managing User Accounts and Permissions</h2>
+        <p>
+          Managing user accounts and permissions is a crucial part of database security. Here are some SQL commands that can help you manage user accounts and permissions:
+        </p>
+        <h3>1. Creating a New User Account</h3>
+        <p>
+          To create a new user account, use the CREATE USER command:
+        </p>
+        <pre class="language-sql"><code>
+          CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+        </code></pre>
+        <p>
+          This command creates a new user account with the username 'username' and password 'password'. The '@' symbol separates the username from the hostname. In this example, the user can only connect to the database from the 'localhost'.
+        </p>
+        <h3>2. Granting Permissions</h3>
+        <p>
+          To grant permissions to a user account, use the GRANT command:
+        </p>
+        <pre class="language-sql"><code>
+          GRANT SELECT, INSERT, UPDATE ON database.table TO 'username'@'localhost';
+        </code></pre>
+        <p>
+          This command grants the SELECT, INSERT, and UPDATE privileges on the 'table' in the 'database' to the user 'username' connecting from 'localhost'.
+        </p>
+        <h3>3. Revoking Permissions</h3>
+        <p>
+          To revoke permissions from a user account, use the REVOKE command:
+        </p>
+        <pre class="language-sql"><code>
+          REVOKE SELECT, INSERT, UPDATE ON database.table FROM 'username'@'localhost';
+        </code></pre>
+        <p>
+          This command revokes the SELECT, INSERT, and UPDATE privileges on the 'table' in the 'database' from the user 'username' connecting from 'localhost'.
+        </p>
+        <h3>4. Changing User Passwords</h3>
+        <p>
+          To change a user's password, use the SET PASSWORD command:
+        </p>
+        <pre class="language-sql"><code>
+          SET PASSWORD FOR 'username'@'localhost' = PASSWORD('newpassword');
+        </code></pre>
+        <p>
+          This command changes the password for the user 'username' connecting from 'localhost' to 'newpassword'.
+        </p>
+        <h3>5. Removing User Accounts</h3>
+        <p>
+          To remove a user account, use the DROP USER command:
+        </p>
+        <pre class="language-sql"><code>
+          DROP USER 'username'@'localhost';
+        </code></pre>
+        <p>
+          This command removes the user account for 'username' connecting from 'localhost'.
+        </p>
+      </article>
+      <article>
+        <h2>03 Auditing and Logging Database Activity</h2>
+        <p>
+          Auditing and logging database activity is important for monitoring and maintaining the security of a database. Here are some SQL commands and techniques for auditing and logging database activity:
+        </p>
+        <h3>1. Enabling Logging</h3>
+        <p>
+          To enable logging, you can use the general query log. You can enable it by setting the 'general_log' system variable to 'ON':
+        </p>
+        <pre class="language-sql"><code>
+          SET GLOBAL general_log = 'ON';
+        </code></pre>
+        <p>
+          This command enables the general query log, which logs all SQL statements executed on the server.
+        </p>
+        <h3>2. Disabling Logging</h3>
+        <p>
+          To disable logging, set the 'general_log' system variable to 'OFF':
+        </p>
+        <pre class="language-sql"><code>
+          SET GLOBAL general_log = 'OFF';
+        </code></pre>
+        <p>
+          This command disables the general query log.
+        </p>
+        <h3>3. Viewing the Log</h3>
+        <p>
+          To view the log, you can use the mysqlbinlog utility. Here is an example command to view the general query log:
+        </p>
+        <pre class="language-sql"><code>
+          mysqlbinlog /var/log/mysql/mysql.log
+        </code></pre>
+        <p>
+          This command displays the contents of the general query log file '/var/log/mysql/mysql.log'.
+        </p>
+        <h3>4. Auditing User Activity</h3>
+        <p>
+          You can audit user activity by creating a trigger that logs user activity to a table. Here is an example trigger:
+        </p>
+        <pre class="language-sql"><code>
+          CREATE TRIGGER audit_trigger AFTER INSERT ON my_table
+          FOR EACH ROW
+          INSERT INTO audit_log (user, action, timestamp)
+          VALUES (USER(), 'insert', NOW());
+        </code></pre>
+        <p>
+          This trigger logs the username, action ('insert' in this example), and timestamp of each insert into 'my_table' to an 'audit_log' table.
+        </p>
+        <h3>5. Auditing Failed Login Attempts</h3>
+        <p>
+          You can audit failed login attempts by using the 'Failed_login_attempts' plugin. This plugin logs failed login attempts to the error log. To enable it, add the following line to your MySQL configuration file:
+        </p>
+        <pre class="language-sql"><code>
+          plugin-load-add = auth_failed_login_attempts.so
+        </code></pre>
+        <p>
+          This line enables the 'Failed_login_attempts' plugin. Failed login attempts will be logged to the error log, which is usually located in '/var/log/mysql/error.log'.
+        </p>
+      </article>
+      <article>
+        <h2>04 Protecting Data with Encryption and Hashing</h2>
+        <p>
+          Protecting data with encryption and hashing is an important aspect of database security. Here are some SQL commands and techniques for encrypting and hashing data in a database:
+        </p>
+        <h3>1. Encryption</h3>
+        <p>
+          Encryption is the process of converting data into a form that is unreadable by unauthorized parties. MySQL provides several encryption functions, such as AES_ENCRYPT and AES_DECRYPT. Here is an example of using AES_ENCRYPT to encrypt a column in a table:
+        </p>
+        <pre class="language-sql"><code>
+          CREATE TABLE my_table (
+            id INT PRIMARY KEY,
+            sensitive_data VARBINARY(255)
+          );
+          INSERT INTO my_table (id, sensitive_data)
+          VALUES (1, AES_ENCRYPT('my sensitive data', 'my secret key'));
+        </code></pre>
+        <p>
+          This code creates a table 'my_table' with an 'id' column and a 'sensitive_data' column. The 'sensitive_data' column is defined as a VARBINARY type to store the encrypted data. The AES_ENCRYPT function is used to encrypt the string 'my sensitive data' with the key 'my secret key' and insert it into the 'sensitive_data' column.
+        </p>
+        <h3>2. Decryption</h3>
+        <p>
+          Decryption is the process of converting encrypted data back into its original form. MySQL provides several decryption functions, such as AES_DECRYPT. Here is an example of using AES_DECRYPT to decrypt the 'sensitive_data' column from the previous example:
+        </p>
+        <pre class="language-sql"><code>
+          SELECT id, AES_DECRYPT(sensitive_data, 'my secret key') AS decrypted_data
+          FROM my_table;
+        </code></pre>
+        <p>
+          This code selects the 'id' column and the decrypted 'sensitive_data' column from the 'my_table' table. The AES_DECRYPT function is used to decrypt the 'sensitive_data' column using the same key used for encryption.
+        </p>
+        <h3>3. Hashing</h3>
+        <p>
+          Hashing is the process of converting data into a fixed-length string of characters, called a hash, that represents the original data. One-way hash functions cannot be reversed to obtain the original data. MySQL provides several hashing functions, such as SHA2 and MD5. Here is an example of using SHA2 to hash a column in a table:
+        </p>
+        <pre class="language-sql"><code>
+          CREATE TABLE my_table (
+            id INT PRIMARY KEY,
+            password_hash CHAR(64)
+          );
+          INSERT INTO my_table (id, password_hash)
+          VALUES (1, SHA2('my password', 256));
+        </code></pre>
+        <p>
+          This code creates a table 'my_table' with an 'id' column and a 'password_hash' column. The 'password_hash' column is defined as a CHAR type to store the hashed data. The SHA2 function is used to hash the string 'my password' with a length of 256 bits and insert it into the 'password_hash' column.
+        </p>
+        <h3>4. Verifying Hashes</h3>
+        <p>
+          To verify a hashed value, you can compare the hash of the input value with the stored hash. Here is an example of using the SHA2 function to verify a password:
+        </p>
+        <pre class="language-sql"><code>
+          SELECT id
+          FROM my_table
+          WHERE password_hash = SHA2('user entered password', 256);
+          </code></pre>
+          
+            <p>
+              This code selects the 'id' column from the 'my_table' table where the 'password_hash' column matches the hash of the user-entered password. If a row is returned, the password is verified.
+            </p>
+            <h3>5. Salting</h3>
+            <p>
+              Salting is the process of adding random data, called a salt, to the input data before hashing to make it more difficult for attackers to crack the hash. Here is an example of using the SHA2 function with a salt to hash a column in a table:
+            </p>
+            <pre class="language-sql"><code>
+              CREATE TABLE my_table (
+                id INT PRIMARY KEY,
+                password_hash CHAR(64),
+                salt CHAR(64)
+              );
+              INSERT INTO my_table (id, password_hash, salt)
+              VALUES (1, SHA2(CONCAT('my password', salt), 256), 'random salt value');
+            </code></pre>
+            <p>
+              This code creates a table 'my_table' with an 'id' column, a 'password_hash' column, and a 'salt' column. The 'password_hash' column is defined as a CHAR type to store the hashed data. The CONCAT function is used to concatenate the password with the salt before hashing with SHA2. The salt value is stored in the 'salt' column.
+            </p>
+            <p>
+              These are some of the techniques for protecting data with encryption and hashing in a database. It's important to keep in mind that encryption and hashing are not foolproof and should be used in combination with other security measures.
+            </p>
+          </article>
+
+          <article><h2>05 Backup and Recovery Strategies</h2>
+            <p>
+            One of the most important aspects of database security is ensuring that your data is backed up and can be recovered in the event of a disaster. Without proper backups and recovery strategies in place, you risk losing all of your data and potentially crippling your organization.
+            </p>
+            <h3>1. Regular Backups</h3>
+            <p>
+            One of the most important backup strategies is to regularly backup your database. The frequency of your backups will depend on how often your data changes and how critical it is to your organization. For example, if you are running a financial application, you may want to backup your data every day or even every hour.
+            </p>
+            <p>
+            There are many tools available to backup your database, and most database systems come with built-in backup utilities. For example, in SQL Server, you can use the BACKUP DATABASE statement to backup your database to a file:
+            </p>
+            <pre class="language-sql"><code>
+            BACKUP DATABASE MyDatabase TO DISK = 'C:\MyDatabase.bak'
+            </code></pre>
+            <p>
+            This code creates a backup of the 'MyDatabase' database and stores it in the file 'C:\MyDatabase.bak'.
+            </p>
+            <h3>2. Offsite Backups</h3>
+            <p>
+            In addition to regular backups, it's important to keep copies of your backups offsite. This provides protection against disasters that could destroy your on-site backups, such as fires, floods, or earthquakes. You can store your offsite backups in a secure location, such as a safe deposit box, or use a cloud-based backup service.
+            </p>
+            <h3>3. Test Restores</h3>
+            <p>
+            It's important to regularly test your backups by performing test restores. This ensures that your backups are valid and can be restored in the event of a disaster. Without testing your backups, you risk discovering that your backups are corrupt or incomplete when you need them the most.
+            </p>
+            <p>
+            To perform a test restore, you can restore your backup to a test environment and verify that your data is intact and that your application is functioning correctly.
+            </p>
+            <h3>4. Point-in-Time Recovery</h3>
+            <p>
+            In addition to full backups, you can also perform point-in-time recovery. Point-in-time recovery allows you to recover your database to a specific point in time, rather than just restoring to the last backup. This can be useful if you discover that your data has been corrupted or lost and you need to recover to a specific point in time before the corruption occurred.
+            </p>
+            <p>
+            In SQL Server, you can use the STOPAT option with the RESTORE DATABASE statement to perform point-in-time recovery. For example, the following code restores the 'MyDatabase' database to a point in time before 3:00 PM on May 11, 2023:
+            </p>
+            <pre class="language-sql"><code>
+            RESTORE DATABASE MyDatabase FROM DISK = 'C:\MyDatabase.bak' WITH STOPAT = '2023-05-11 15:00:00.000'
+            </code></pre>
+            <p>
+            These are some of the backup and recovery strategies you can use to protect your database from disasters and ensure that your data is recoverable in the event of a problem. By implementing these strategies, you can help protect your organization's most valuable asset - its data. 
+            </p>
+            </article>
+    </div>
     <script src="../script.js"></script>
     <script src="../prism.js"></script>
   </body>
