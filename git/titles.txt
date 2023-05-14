@@ -1,0 +1,44 @@
+continue writting
+
+01. Introduction to version control systems
+02. What is Git and why use it?
+03. Git vs other version control systems
+04. Installing Git on your system
+05. Basic Git commands and terminology
+06. Creating your first Git repository
+07. Understanding Git's workflow
+08. Git branching and merging
+09. Handling conflicts in Git
+10. Collaborating with Git
+11. Git remote repositories
+12. Cloning and forking Git repositories
+13. Creating and managing branches in Git
+14. Switching between branches in Git
+15. Merging branches in Git
+16. Rebasing in Git
+17. Stashing changes in Git
+18. Undoing changes in Git
+19. Git ignore files and folders
+20. Git submodules
+21. Git hooks
+22. Git aliases
+23. Git log and history
+24. Git diff and patch
+25. Git blame
+26. Git workflows (centralized, feature branching, Gitflow)
+27. Setting up a Git server
+28. GitHub vs GitLab vs Bitbucket
+29. Git hosting services
+30. Git GUI tools (SourceTree, GitKraken, etc.)
+31. Using Git from the command line
+32. Introduction to Git Bash (Windows)
+33. Git on Mac OS X
+34. Git on Linux
+35. Advanced Git concepts (rebase, cherry-pick, squash, etc.)
+36. Understanding Git objects
+37. Git branches as pointers
+38. Git tags and releases
+39. Git and Continuous Integration (CI)
+40. Git and Continuous Delivery (CD)
+41. Best practices for using Git
+42. Troubleshooting common Git issues
