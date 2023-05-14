@@ -1,4 +1,5 @@
-I recently finished my python course. So I need to create a note for eleventh main topic of this course which is "Machine Learning with Python".
+I recently finished my Electron JS course.
+So I need to create a note for one of the main topics of this course which is "10. Best Practices and Tips".
 I will give you a title and you should write a short note including code examples for me. 
 I need to put those notes in my website so, notes should be written in HTML. 
 
@@ -7,19 +8,19 @@ Here is your institutions :
 If you need to write a title, use <h2 tag> like, <h2>Title goes here</h2>.
 Other text shound be inside <p> tag like <P>text goes here</p>.
 If you need a line braek, use two <br/> tags.
-If you need to write a code exmple, use this : <pre class="language-python"><code>Code goes here</code></pre>.
+If you need to write a code exmple, use this : <pre class="language-javascript"><code>Code goes here</code></pre>.
 If you need to add list, use <ol> and <li> tags.
 Use <span> for one line of code, instead of <code> tag
 Don't write more than 300 words
 Everything should be inside a HTML <article> element. (important)
 
-My first title is "01- What is Machine Learning".
+My first title is "01. Best practices for Electron development".
 
 
 
 
 
-I need to create a PHP for beginners course.
+I need to create a Electron JS for beginners course.
 Give me a list of titles I should put in my course.
-I need this course to be comprehensive (Course should contain a to z details about PHP).
-Your list should have more than 30 titles. 
+I need this course to be comprehensive (Course should contain a to z details about how to use Electron).
+Your list should have more than 15 titles 70 subtitles. 

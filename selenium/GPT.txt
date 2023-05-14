@@ -1,0 +1,31 @@
+I recently finished my Selenium with Node JS course.
+So I need to create a note for some titles in this course.
+I will give you a title and you should write a short note including code examples for me. 
+I need to put those notes in my website so, notes should be written in HTML. 
+
+Here is your institutions :
+
+If you need to write a title, use <h2 tag> like, <h2>Title goes here</h2>.
+Other text shound be inside <p> tag like <P>text goes here</p>.
+If you need a line braek, use two <br/> tags.
+If you need to write a code exmple, use this : <pre class="language-javascript"><code>Code goes here</code></pre>.
+If you need to add list, use <ol> and <li> tags.
+If you need to add a table, use <table>, <th>, <tr>, <td> tags
+Use <span> for one line of code, instead of <code> tag
+Don't write more than 300 words (very important)
+Don't forget to add given title number inside <h2> tag
+Everything should be inside a HTML <article> element. (very important)
+
+My first title is "41. Using Selenium with other Node.js libraries (e.g. Cheerio, Request)".
+
+
+
+
+
+
+
+
+I need to create a Selenium for beginners course.
+Give me lists of titles I should put in my course.
+I need this course to be comprehensive (Course should contain a to z details about hwo to use selenium with node).
+You should write more than 50 titles
