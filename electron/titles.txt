@@ -1,0 +1,213 @@
+continue writting
+
+1- Getting Started
+
+01- What is Python
+02- Installing Python
+03- Python Interpreter
+04- Code Editors
+05- Your First Python Program
+06- Python Extensions for vscode
+07- Linting Python Code
+08- Formatting Python Code (VsCode)
+09- Running Python Code
+10- Python Implementations
+11- How Python Code is Executed
+12- Python interpreter types 
+
+2- Primitive Types
+
+01- Variables
+02- Variable Names
+03- Strings
+04- Escape Sequences
+05- Formatted Strings
+06- String Methods
+07- Numbers
+08- Working with Numbers
+09- Type Conversion
+
+3- Control Flow
+
+01- Comparison Operators
+02- Conditional Statements
+03- Ternary Operator
+04- Logical Operators
+05- Short-circuit Evaluation
+06- Chaining Comparison Operators
+08- For Loops
+09- For..Else
+10- Nested Loops
+11- Iterables
+12- While Loops
+13- Infinite Loops
+
+4- Functions
+
+01- Defining Functions
+02- Arguments
+03- Types of Functions
+04- Keyword Arguments
+05- Default Arguments
+06- xargs
+07- xxargs
+08- Scope
+09- Debugging
+10- VSCode Coding Tricks
+
+5- Data Structures
+
+01- Lists
+02- Accessing Items
+03- List Unpacking
+04- Looping over Lists
+05- Adding or Removing Items
+06- Finding Items
+07- Sorting Lists
+08- Lambda Functions
+09- Map Function
+10- Filter Function
+11- List Comprehensions
+12- Zip Function
+13- Stacks
+14- Queues
+15- Tuples
+16- Swapping Variables
+17- Arrays
+18- Sets
+19- Dictionaries
+20- Dictionary Comprehensions
+21- Generator Expressions
+22- Unpacking Operator
+
+6- Exceptions
+
+01- Exceptions
+02- Handling Exceptions
+03- Handling Different Exceptions
+04- Cleaning Up
+05- The With Statement
+06- Raising Exceptions
+07- Cost of Raising Exceptions
+
+7- Classes
+
+01- Classes (introduction)
+02- Creating Classes
+03- Constructors
+04- Class vs Instance Attributes
+05- Class vs Instance Methods
+06- Magic Methods
+07- Comparing Objects
+08- Performing Arithmetic Operations
+09- Making Custom Containers
+10- Private Members
+11- Properties
+12- Inheritance
+13- The Object Class
+14- Method Overriding
+15- Multi-level Inheritance
+16- Multiple Inheritance
+17- A Good Example of Inheritance
+18- Abstract Base Classes
+19- Polymorphism
+20- Duck Typing
+21- Extending Built-in Types
+22- Data Classes
+
+8- Modules
+
+01- Creating Modules
+02- Compiled Python Files
+03- Module Search Path
+04- Packages
+05- Sub-packages
+06- Intra-package References
+07- The dir Function
+08- Executing Modules as Scripts
+
+9- Python Standard Library
+
+01- Python Standard Library
+02- Working With Paths
+03- Working with Directories
+04- Working with Files
+05- Working with Zip Files
+06- Working with CSV Files
+07- Working with JSON Files
+08- Working with a SQLite Database
+09- Working with Timestamps
+10- Working with DateTimes
+11- Working with Time Deltas
+12- Generating Random Values
+13- Opening the Browser
+14- Sending Emails
+15- Templates
+16- Command-line Arguments
+17- Running External Programs
+
+10- Python Package Index
+
+01- Pypi
+02- Pip
+03- Virtual Environments
+04- Pipenv
+05- Virtual Environments in VSCode
+06- Pipfile
+07- Managing Dependencies
+08- Publishing Packages
+09- Docstrings
+10- Pydoc
+
+11- Popular Python Packages
+
+01- Introduction (Python Packages)
+02- What are APIs
+03- Yelp API
+04- Searching for Businesses
+05- Hiding API Keys
+06- Sending Text Messages
+07- Web Scraping
+08- Browser Automation
+09- Working with PDFs
+10- Working with Excel Spreadsheets
+11- Command Query Separation Principle
+12- NumPy
+
+12- Building Web Applications with Django
+
+01- Introduction
+02- Your First Django Project
+03- Your First App
+04- Views
+05- Models
+06- Migrations
+07- Changing the Models
+08- Admin
+09- Customizing the Admin
+10- Database Abstraction API
+11- Templates
+12- Adding Bootstrap
+13- Customizing the Layout
+14- Sharing a Template Across Multiple Apps
+15- Url Parameters
+16- Getting a Single Object
+17- Raising 404 Errors
+18- Referencing Urls
+19- Creating APIs
+20- Getting Ready to Deploy
+21- Deployment
+
+13- Machine Learning with Python
+
+01- What is Machine Learning
+02- Machine Learning in Action
+03- Libraries and Tools
+04- Importing a Data Set
+05- Jupyter Shortcuts
+06- A Real Machine Learning Problem
+07- Preparing the Data
+08- Learning and Predicting
+09- Calculating the Accuracy
+10- Persisting Models
+11- Visualizing a Decision Tree
